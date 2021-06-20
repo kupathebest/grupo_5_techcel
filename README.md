@@ -1,20 +1,26 @@
-Como tematica del Proyecto elegimos "TECHCEL Ecommerce de celulares", orientado a un publico general.
+<h1>Proyecto integrador comisiòn 9 TECHCEL</h1>
 
-Integrantes del grupo:
+![logo](https://i.imgur.com/TiKgLia.jpeg)
 
-Juan Pablo Silva,
-Gaston Lafuente,
-Ana Rolon,
-Angel Diaz,
-Melisa Diaz.
+<h3>Como tematica del Proyecto elegimos ** TECHCEL ** * E-commerce de celulares * orientado a un publico general.<h3>
 
-Sitios similares de referencia elegidos por su tematica, estetica y detalles de productos:
+<h2>Integrantes del grupo:</h2>
 
-La tipografia a utilizar es Orbitron (https://fonts.google.com/specimen/Orbitron
-), la gama de colores oscila entre azules, violetas, grises y blancos y el logo ya esta diseñado.
+- Juan Pablo Silva,
+- Gaston Lafuente,
+- Ana Rolon,
+- Angel Diaz,
+- Melisa Diaz.
 
-https://www.mgmstore.com.ar/
-https://www.smart-gsm.com/moviles/samsung-galaxy-a10
-https://zelucash.com/home
-http://www.sgntech.com.ar/
-https://www.digitalcenter.com.ar/183-celulares-libres
+
+La tipografia a utilizar es [Orbitron](https://fonts.google.com/specimen/Orbitron)
+   
+<h4>La gama de colores oscila entre *azules*, *violetas*, *grises* y *blancos*.<h4>
+
+<h4>Sitios similares de referencia elegidos por su tematica, estetica y detalles de productos:<h4>
+
+- [Mgm store](https://www.mgmstore.com.ar/)
+- [Smart-gsm](https://www.smart-gsm.com/moviles/samsung-galaxy-a10)
+- [Zelucash](https://zelucash.com/home)
+- [Sgntech](http://www.sgntech.com.ar/)
+- [Digital center](https://www.digitalcenter.com.ar/183-celulares-libres)
