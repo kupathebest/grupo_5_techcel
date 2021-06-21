@@ -1,6 +1,6 @@
 <h1>Proyecto integrador comisiòn 9 TECHCEL</h1>
 
-![logo](https://i.imgur.com/TiKgLia.jpeg)
+![logo](https://i.imgur.com/r0dxGxa.jpeg)
 
 <h3>Como tematica del Proyecto elegimos ** TECHCEL ** * E-commerce de celulares * orientado a un publico general.<h3>
 
