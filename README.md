@@ -2,20 +2,22 @@
 
 ![logo](https://i.imgur.com/r0dxGxa.jpeg)
 
-<h3>Como tematica del Proyecto elegimos ** TECHCEL ** * E-commerce de celulares * orientado a un publico general.<h3>
+<h3>Como tematica del Proyecto elegimos ** TECHCEL ** E-commerce de celulares orientado a un publico general.<h3>
 
 <h2>Integrantes del grupo:</h2>
 
-- Juan Pablo Silva,
-- Gaston Lafuente,
-- Ana Rolon,
-- Angel Diaz,
-- Melisa Diaz.
+- :man:Juan Pablo Silva: Estudiante de programacion web full stack en Digital-House
+- :man:Gaston Lafuente,
+- :woman:Ana Rolon,
+- :man:Angel Diaz,
+- :woman:Melisa Diaz.
 
 
-La tipografia a utilizar es [Orbitron](https://fonts.google.com/specimen/Orbitron)
+:pushpin:La tipografia a utilizar en el header es [Orbitron](https://fonts.google.com/specimen/Orbitron)
    
-<h4>La gama de colores oscila entre *azules*, *violetas*, *grises* y *blancos*.<h4>
+:pushpin:La tipografia a utilizar en el main es [Roboto](https://fonts.google.com/specimen/Roboto?query=roboto)
+   
+<h4>La gama de colores oscila entre azul (#04287e) , violeta (#6008a5), gris (#757575), negro (#000000) y blanco (#ffffff)<h4>
 
 <h4>Sitios similares de referencia elegidos por su tematica, estetica y detalles de productos:<h4>
 
