@@ -2,7 +2,14 @@
 
 ![logo](https://i.imgur.com/r0dxGxa.jpeg)
 
-Como tematica del Proyecto elegimos **TECHCEL** E-commerce de celulares orientado a un publico general.
+Desde lo cotidiano, con amigos, familiares, hasta en el ámbito laboral, estar conectados es fundamental.
+
+Podes grabar a tu niño mientras disfruta de su juego en la plaza, en una foto ver esos momentos únicos con amigos y familia, ver películas, escuchar música, hasta trabajar y tener  esa reunión urgente donde te encuentres.
+
+Tener un celular es tener unión con todo lo que realmente importa. 
+
+Así también elegimos el E commerce de celulares **TECHCEL** porque nos da la posibilidad de implementar de forma completa todo lo aprendido. 
+
 
 <h2>Acerca de nosotros:</h2>
 
