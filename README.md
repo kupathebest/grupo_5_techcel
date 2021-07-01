@@ -24,6 +24,8 @@ Somos un grupo de estudiantes de Fundación Formar en Digital-House, actualmente
 
 
 :pushpin:La tipografia a utilizar en el header es [Orbitron](https://fonts.google.com/specimen/Orbitron)
+
+![orbitron](https://i.ibb.co/z44Xp1H/Orbitron-ejemplo.png)
    
 :pushpin:La tipografia a utilizar en el main es [Roboto](https://fonts.google.com/specimen/Roboto?query=roboto)
    
