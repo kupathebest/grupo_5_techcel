@@ -32,9 +32,20 @@ Somos un grupo de estudiantes de Fundación Formar en Digital-House, actualmente
 ![roboto](https://i.ibb.co/B6SXYVV/Roboto-ejemplo.png)
 
    
-<h4>La gama de colores oscila entre azul (#04287e) , violeta (#6008a5), gris (#757575), negro (#000000) y blanco (#ffffff)<h4>
+<h2>Gama de colores:</h2>
 
-<h4>Sitios similares de referencia elegidos por su tematica, estetica y detalles de productos:<h4>
+![fucsia](https://i.ibb.co/5RZYbgT/6008a5.png) **Fucsia (#6008a5)** 
+
+![azul](https://i.ibb.co/Pwkkc7h/04287e.png) **Azul (#04287e)** 
+
+![gris](https://i.ibb.co/YbMxDY6/757575.png) **Gris (#757575)** 
+
+![blanco](https://i.ibb.co/87gFKJz/ffffff.png) **Blanco (#ffffff)** 
+
+![negro](https://i.ibb.co/4NkrY3w/000000.png) **Negro (#000000)** 
+
+
+<h2>Sitios similares de referencia elegidos por su tematica, estetica y detalles de productos:</h2>
 
 - [Mgm store](https://www.mgmstore.com.ar/)
 - [Smart-gsm](https://www.smart-gsm.com/moviles/samsung-galaxy-a10)
