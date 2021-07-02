@@ -45,10 +45,10 @@ Somos un grupo de estudiantes de Fundación Formar en Digital-House, actualmente
 ![negro](https://i.ibb.co/4NkrY3w/000000.png) **Negro (#000000)** 
 
 
-<h2>Sitios similares de referencia elegidos por su tematica, estetica y detalles de productos:</h2>
+<h2>Sitios similares de referencia elegidos:</h2>
 
-- [Mgm store](https://www.mgmstore.com.ar/)
-- [Smart-gsm](https://www.smart-gsm.com/moviles/samsung-galaxy-a10)
-- [Zelucash](https://zelucash.com/home)
-- [Sgntech](http://www.sgntech.com.ar/)
-- [Digital center](https://www.digitalcenter.com.ar/183-celulares-libres)
+- [Mgm store](https://www.mgmstore.com.ar/) : Por su header dinamico, y la simpleza del footer.
+- [Smart-gsm](https://www.smart-gsm.com/moviles/samsung-galaxy-a10) : Por la estructura en el detalle de producto y sus especificaciones.
+- [Zelucash](https://zelucash.com/home) : Por la estetica, distribución de sus productos del home y colores.
+- [Sgntech](http://www.sgntech.com.ar/) : Por su menú desplegable en el header, el carrousel, y el logo.
+- [Nokia](https://www.nokia.com/phones/es_es) : Por la animación de despliegue del producto.
