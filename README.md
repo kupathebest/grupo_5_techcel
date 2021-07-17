@@ -52,3 +52,13 @@ Somos un grupo de estudiantes de Fundación Formar en Digital-House, actualmente
 - [Zelucash](https://zelucash.com/home) : Por la estetica, distribución de sus productos del home y colores.
 - [Sgntech](http://www.sgntech.com.ar/) : Por su menú desplegable en el header, el carrousel, y el logo.
 - [Nokia](https://www.nokia.com/phones/es_es) : Por la animación de despliegue del producto.
+
+
+<h2>Tablero de trabajo TRELLO:</h2>
+
+https://trello.com/b/AJ6vGYav/proyecto-techcel-grupo-5-comision-9
+
+
+<h2>Link repositorio GitHub del proyecto:</h2>
+
+https://github.com/kupathebest/c9_techcel_grupo5.git
