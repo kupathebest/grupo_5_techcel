@@ -1,6 +1,5 @@
 .detail main h1{
     width: 100%;
-    text-align: center;
     margin-bottom: 30px;
 }
 
@@ -8,7 +7,7 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid black;
+    justify-content: space-between;
 }
 
 .detail main .card .imagenes{
@@ -25,4 +24,69 @@
 
 .detail main .card .contenido{
     width: 38%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.detail main .card .contenido .star{
+    width: 100%;
+    align-self: center;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.detail main .card .contenido span{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.detail main .card .contenido .cart-button{
+    color: white;
+    background-color: var(--Fucsia);
+    border: 1px solid var(--Negro);
+    height: 70px;
+    display: flex;
+    text-align: center;
+    border-radius: 10px;
+    width: 120px;
+    margin-top: 15px
+}
+
+.detail main .card .contenido .cart-button div{
+    align-self: center;
+}
+
+.detail main .card .contenido .cart-button a{
+    color: white;
+}
+
+.detail main .card h4{
+    margin: 20px 0;
+}
+
+.detail h3{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.detail .caracteristicas{
+    margin: 2px;
+    border: 1px black solid;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 1.1rem;
+}
+
+.detail .caracteristicas p{
+    display: inline;
+    margin-left: 5px;
+}
+
+.detail .caracteristicas i{
+    width: 40px;
+    text-align: center;
 }
