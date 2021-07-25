@@ -1,0 +1,28 @@
+.detail main h1{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.detail main .card{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+.detail main .card .imagenes{
+    width: 58%;
+}
+
+.detail main .card .imagenes img{
+    width: 25%;
+}
+
+.detail main .card .imagenes img.principal{
+    width: 100%;
+}
+
+.detail main .card .contenido{
+    width: 38%;
+}
