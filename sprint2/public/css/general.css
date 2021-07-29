@@ -2,8 +2,10 @@
     --Fucsia : #6008a5;
     --Azul : #04287e;
     --Gris : #757575;
+    --Gris-Fondo : #EBEBEB;
     --Blanco : #ffffff;
     --Negro : #000000;
+    --Verde : rgba(47, 172, 47, 0.76);
     --Orbitron-letra-header: 'Orbitron', sans-serif;
     --Roboto-letra-main: 'Roboto', sans-serif;
 }
@@ -24,6 +26,9 @@ li{
     list-style: none;
 }
 
+.mayusculas{
+    text-transform: uppercase;
+}
 /*
 Tablet : Min 768px;
 Desktop : Min 1024px;
