@@ -42,7 +42,7 @@ main{
 .container-descripcion{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 20px;
     padding-top: 10px;
     border-top: 1px solid var(--Fucsia);
@@ -67,7 +67,7 @@ main{
 
 
 .imagen-carrito img{
-    width: 50%;
+    width: 80%;
 }
 
 .tacho{
@@ -141,7 +141,7 @@ div.boton-comprar button{
    .container-2{
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 40%;
     padding-top: 0px;
     margin: 10px auto;
     border-radius: 5px;
@@ -176,5 +176,19 @@ div.boton-comprar button{
     }
     .container-2{
         width: 25%;
+    }
+    .descripcion-carrito{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 3;
+        margin-right: 20px;
+    }
+    .imagen-carrito{
+        display: flex;
+        flex-shrink: 3;
+        justify-content: center;
+        width: 33%;
     }
 }
