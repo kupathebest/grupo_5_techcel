@@ -106,6 +106,7 @@
 .detail .caracteristicas p{
     display: inline;
     margin-left: 5px;
+    text-transform: capitalize;
 }
 
 .detail .caracteristicas i{
@@ -116,6 +117,27 @@
 .detail .mas h3{
     margin: 15px auto;
     text-align: center;
+}
+
+.detail .mas .dato{
+    display: flex;
+    width: 100%;
+}
+
+.detail .mas h4{
+    font-size: 1.1rem;
+    text-decoration: underline;
+}
+
+.detail .mas .dato span.info{
+    margin-left: 5px;
+    width: 70%;
+    height: 80px;
+}
+
+.detail .mas .dato span.titulo{
+    width: 25%;
+    margin-right: 10px;
 }
 
 .detail h4{
@@ -197,6 +219,27 @@
 
     .detail .caracteristicas div{
        width: 48%;
+    }
+
+    .detail main div.mas-datos{
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .detail .mas h4{
+        font-size: 1.3rem;
+    }
+
+    .detail .mas span{
+        font-size: 1.1rem;
+    }
+
+    .detail .mas .dato span.info{
+        height: 65px;
+    }
+
+    .detail h4{
+        font-size: 1.3rem;
     }
     
     .detail .carrousel .card-interes{
