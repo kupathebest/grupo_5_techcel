@@ -1,4 +1,4 @@
-main{
+.product-cart{
     font-family: var(--Roboto-letra-main);
     background-color: #EBEBEB;
     color: var(--Negro);
@@ -132,7 +132,7 @@ div.boton-comprar button{
 
 
 @media (min-width: 425px){
-   main {
+    .product-cart {
        display: flex;
        flex-direction: row;
    }
