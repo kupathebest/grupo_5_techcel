@@ -2,6 +2,7 @@ main{
     font-family: var(--Roboto-letra-main);
     background-color: #EBEBEB;
     color: var(--Negro);
+    max-width: 1124px;
 }
 .container-productos{
     width: 90%;
@@ -98,7 +99,7 @@ div.boton-comprar{
     justify-content: center;
 }
 div.boton-comprar button:hover{
-    background-color: rgba(47, 172, 47, 0.76);
+    background-color: var(--Gris);
     color: black;
     transition: all .5s;
 }
