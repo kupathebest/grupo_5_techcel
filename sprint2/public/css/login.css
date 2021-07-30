@@ -1,0 +1,122 @@
+
+.login{
+
+    background-color: #EBEBEB;
+    
+}
+.login main{
+    width:100%;
+    margin-bottom: 20px;
+    max-width: 1124px;
+    margin: 0 auto;
+         
+} 
+
+.login form div.box-inicia h3{
+    color: var(--Azul);
+    text-align: center;
+    
+}
+
+
+.login form div.box-cuenta h3{
+        color: var(--Azul);
+        text-align: center;
+        display:none;
+
+}
+.login form div.box-techcel h3{
+    color: var(--Azul);
+    text-align: center;
+    display: none;
+    font-family: var(--Orbitron-letra-header);
+}
+
+
+.login form div.box-form input#Email{
+    text-align: center;
+    width: 80%;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 8px;
+    margin:0 auto;
+    border-radius: 10px;
+  }
+
+.login form div.box-form input#password{
+    
+    text-align: center;
+    width: 80%;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 8px;
+    border-radius: 10px;
+      
+}
+
+.login main form div.recordarId label{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    padding: 1%;
+}
+.login form div.box-form{
+    text-align: center;
+
+}
+
+.login main form div.recordarId label{
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+        padding: 1%;
+} 
+    
+.login input{
+    margin:3px;
+}
+
+.login form div.inicio-sesion{
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    
+}
+
+.login form div.inicio-sesion button{
+    
+    justify-content: center;
+    border-radius: 5px;
+    padding: 8px;
+    width: 100px;
+    background-color:#00c4cc;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+  
+.login form div.inicio-sesion button:hover{
+    color:black;
+    font-size: 12px;
+}
+
+@media (min-width :425px){
+
+.login form div.box-cuenta h3{
+   
+     display: block
+
+        
+}
+.login form div.box-techcel h3{
+   display: block;
+}
+
+
+.login form div.box-inicia h3{
+    display: none;
+}
+}
