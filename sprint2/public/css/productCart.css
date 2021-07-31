@@ -1,6 +1,10 @@
 body{
     background-color: #EBEBEB;
 }
+.mayusculas{
+    text-transform: uppercase;
+}
+
 .product-cart{
     font-family: var(--Roboto-letra-main);
     background-color: #EBEBEB;
