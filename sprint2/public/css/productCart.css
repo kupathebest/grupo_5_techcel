@@ -1,5 +1,5 @@
 body{
-    background-color: #EBEBEB;
+    background-color: var(--Gris-Fondo);
 }
 .mayusculas{
     text-transform: uppercase;
@@ -7,7 +7,7 @@ body{
 
 .product-cart{
     font-family: var(--Roboto-letra-main);
-    background-color: #EBEBEB;
+    background-color: var(--Gris-Fondo);
     color: var(--Negro);
     max-width: 1124px;
 }
