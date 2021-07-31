@@ -1,0 +1,321 @@
+/* color de fondo main #EBEBEB
+ */
+
+ /* color de fondo hover botones */
+
+ .detail{
+    background-color: #EBEBEB;
+ }
+
+ .detail main{
+     
+     max-width: 1124px;
+     margin: 0 auto;
+ }
+
+.detail main h1{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.detail main .card{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.detail main .card .imagenes{
+    width: 58%;
+}
+
+.detail main .card .imagenes img{
+    width: 25%;
+}
+
+.detail main .card .imagenes img.principal{
+    width: 100%;
+}
+
+.detail main .card .contenedor{
+    width: 38%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.detail main .card .contenedor .star{
+    width: 100%;
+    align-self: center;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.detail main .card .contenedor span{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.detail main .card .contenedor .cart-button{
+    color: var(--Negro);
+    background-color:#00c4cc;
+    height: 70px;
+    display: flex;
+    text-align: center;
+    border-radius: 10px;
+    width: 120px;
+    margin-top: 15px
+}
+.detail main .card .contenedor .cart-button div{
+    align-self: center;
+}
+
+.detail main .card .contenedor .cart-button a{
+    color: var(--Negro);
+}
+
+.detail main .card .contenedor .fullname{
+    display: none;
+}
+
+.detail main .card .contenedor .main-caracteristicas-desktop{
+    display: none;
+}
+
+.detail main .card h4{
+    font-size: 1.1rem;
+}
+
+.detail h3{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.detail .caracteristicas{
+    margin: 2px;
+    border: 2px black solid;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 1.1rem;
+    padding: 2px;
+}
+
+.detail .caracteristicas p{
+    display: inline;
+    margin-left: 5px;
+    text-transform: capitalize;
+}
+
+.detail .caracteristicas i{
+    width: 40px;
+    text-align: center;
+}
+
+.detail .mas h3{
+    margin: 15px auto;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.detail .mas .dato{
+    display: flex;
+    width: 100%;
+}
+
+.detail .mas h4{
+    font-size: 1.1rem;
+    text-decoration: underline;
+}
+
+.detail .mas .dato span.info{
+    margin-left: 5px;
+    width: 70%;
+    height: 80px;
+}
+
+.detail .mas .dato span.titulo{
+    width: 25%;
+    margin-right: 10px;
+}
+
+.detail h4{
+    text-transform: capitalize;
+    margin: 20px 0
+}
+
+.detail .carrousel{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.detail .carrousel i{
+    align-self: center;
+    font-size: 5rem;
+    color: var(--Fucsia)
+}
+
+.detail .carrousel .card-interes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: .9rem;
+}
+
+.detail .carrousel img{
+    width: 40%;
+}
+
+@media (min-width: 425px) {
+
+    .detail main .card .imagenes{
+        width: 35%;
+    }
+
+    .detail main .card .contenedor{
+        width: 60%;
+    }
+    
+    .detail main .card .contenedor .fullname{
+        display: block;
+        order: -1;
+        
+    }
+
+    .detail main .card .contenedor .fullname h4{
+        font-size: 1.3rem;
+    }
+    
+
+    .detail main .card h4.name-mobile{
+       display: none;
+    }
+
+    .detail main .card .contenedor .star{
+        margin-top: 10px;
+    }
+
+    .detail main .card .contenedor span{
+        font-size: 2.5rem;
+    }
+
+    .detail main .card .contenedor .cart-button{
+        height: 60px;
+        width: 200px;
+        justify-content: center;
+        margin: 30px auto 0;
+    }
+
+    .detail main .card .contenedor .cart-button:hover{
+        background-color: var(--Gris);
+    }
+
+    .detail .caracteristicas{
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 1.1rem;
+    }
+
+    .detail .caracteristicas div{
+       width: 48%;
+    }
+
+    .detail main div.mas-datos{
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .detail .mas h4{
+        font-size: 1.3rem;
+    }
+
+    .detail .mas span{
+        font-size: 1.1rem;
+    }
+
+    .detail .mas .dato span.info{
+        height: 65px;
+    }
+
+    .detail h4{
+        font-size: 1.3rem;
+    }
+    
+    .detail .carrousel .card-interes{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 1.2rem;
+    }
+
+    .detail .carrousel img{
+        align-self: center;
+        width: 30%;
+    }
+
+    .detail .carrousel i{
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 768px){
+
+    .detail main .contenedor{
+        width: 60%;
+    }
+
+    .detail main .card .contenedor .main-caracteristicas-desktop{
+        display: block;
+    }
+
+    .detail main .card{
+        display: flex;
+    }
+
+    .detail main .card .imagenes{
+        width: 35%;
+    }
+
+
+    .detail main .card .contenido .cart-button{
+        height: 80px;
+        width: 250px;
+        margin: 30px 0 0;
+    }
+
+    .detail main .card .contenido .cart-button a,.detail main .card .contenido .cart-button i {
+        font-size: 1.2rem;
+    }
+
+    .detail main .main-caracteristicas-mobile{
+        display: none;
+    }
+
+    .detail main .main-caracteristicas-desktop h3{
+        margin-top: 50px;
+    }
+
+    .detail .mas h3:hover{
+        font-size: 1.7rem;
+        border: .2px solid rgba(128, 128, 128, 0.5);
+
+    }
+    
+    .detail main .main-caracteristicas-desktop .caracteristicas div {
+        margin: 4px;
+    }
+
+    .detail main .main-caracteristicas-desktop .caracteristicas div p {
+        text-transform: capitalize;
+    }
+    
+    
+}
