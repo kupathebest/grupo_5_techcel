@@ -1,0 +1,98 @@
+footer{
+    display:flex;
+    flex-direction:column;
+    background-color: var(--Gris);
+    padding-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+    width:100%;
+   
+}
+
+footer div.logo img{
+   width: 40%;
+   display:flex;
+   align-self: center;
+   margin: 0 auto;
+   
+}
+
+footer div.logo{
+    display:flex;
+    align-self:center;
+    
+}
+
+footer nav.redes{
+      
+    justify-content: center;
+    justify-content: space-around;
+    margin-right: 60px;
+    padding: 0px;
+    margin:2px;
+    width: 100%;
+    
+}
+
+footer .redes a i{
+    padding: 8px;
+    margin: 4px;
+    color:white;
+    border-radius: 5px;
+}   
+
+footer .icono-contacto{
+    
+    color: white;
+    padding: 8px;
+    margin: 6%;
+    margin-right: 2%;
+    border-radius: 5px;
+ 
+}
+ 
+
+footer div.contact1{
+    display:flex;
+    flex-direction: row;
+    align-self:center;
+    justify-content:center;
+  
+}
+
+footer .tarjetas img{
+    width: 40px;
+
+}
+
+footer .tarjetas .master{
+  
+    width: 58px;
+}
+
+footer p {
+    display: none;
+}
+
+@media (min-width :425px){
+    footer p{
+    display: block;
+    color: var(--Blanco);
+    font-size: 18px;
+}
+
+    footer .tarjetas{
+    margin-left: 15px;
+
+    }
+   
+}
+
+@media (min-width :768px){
+
+   
+    
+}
+
+

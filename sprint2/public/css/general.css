@@ -2,6 +2,7 @@
     --Fucsia : #6008a5;
     --Azul : #04287e;
     --Gris : #757575;
+    --Gris-Fondo : #EBEBEB;
     --Blanco : #ffffff;
     --Negro : #000000;
     --Orbitron-letra-header: 'Orbitron', sans-serif;
@@ -23,6 +24,7 @@ a{
 li{
     list-style: none;
 }
+
 
 /*
 Tablet : Min 768px;

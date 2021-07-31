@@ -1,0 +1,202 @@
+body{
+    background-color: var(--Gris-Fondo);
+}
+.mayusculas{
+    text-transform: uppercase;
+}
+/*.*/
+.product-cart{
+    font-family: var(--Roboto-letra-main);
+    background-color: var(--Gris-Fondo);
+    color: var(--Negro);
+    max-width: 1124px;
+}
+.container-productos{
+    width: 90%;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 5px;
+    border: var(--Fucsia) solid 1px;
+    background-color: var(--Blanco);
+}
+
+/** inicio costos*/
+
+.container-total{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 auto 10px;
+    border-radius: 5px;
+    padding: 5px;
+    border: var(--Fucsia) solid 1px;
+    background-color: var(--Blanco);
+    line-height: 40px;
+}
+
+.cuentas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.total-cuenta{
+    border-top: var(--Fucsia) 1px solid;
+    padding-top: 5px;
+    margin-top: 5px;
+}
+/** FIN costos*/
+.container-descripcion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid var(--Fucsia);
+}
+.container-descripcion:hover{
+    background-color: var(--Gris-Fondo);
+    border-radius: 10px;
+    transition: all .5s;
+}
+.descuento{
+    color: var(--Negro);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    border-radius: 5px;
+    background-color: #00c4cc;
+    padding: 3px;
+    margin: 0 auto;
+}
+
+
+
+.imagen-carrito img{
+    width: 80%;
+}
+
+.tacho{
+    margin-left: 5px;
+    align-self:center;
+}
+
+/*/***BOTONES****/
+div.seguir-comprando{
+    display: flex;
+    justify-content: center;
+}
+div.seguir-comprando button{
+    background-color: #00c4cc    ;
+    color: var(--Negro);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    width: 90%;
+}
+div.seguir-comprando button:hover{
+    background-color:var(--Gris);
+    transition: all .5s;
+}
+div.boton-comprar{
+    display: flex;
+    justify-content: center;
+}
+div.boton-comprar button:hover{
+    background-color: var(--Gris);
+    color: black;
+    transition: all .5s;
+}
+div.boton-comprar button{
+    background-color: #00c4cc;
+    color: var(--Negro);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    width: 50%;
+}
+/*/*** fin BOTONES****/
+.titulo{
+    color: var(--Fucsia);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.descuento-mas{
+    margin-right: 20px;
+}
+
+.fa-trash:hover{
+    color:red;
+}
+
+
+
+
+@media (min-width: 425px){
+    .product-cart {
+       display: flex;
+       flex-direction: row;
+   }
+   .container-productos{
+       width: 60%;
+   }
+   .container-2{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding-top: 0px;
+    margin: 10px auto;
+    border-radius: 5px;
+   }
+   .container-total{
+       order: -1;
+   }
+   .descuento{
+       order: 0;
+   }
+   .boton-comprar{
+       order: 1;
+       margin-top: 20px;
+       height: 50px;
+       width: 100%;
+   }
+   div.boton-comprar button{
+       width: 90%;
+   }
+   .seguir-comprando{
+       order: 2;
+       margin: auto 0 0;
+   }
+}
+
+@media (min-width: 768px){
+    .container-productos{
+        width: 70%;
+    }  
+    .seguir-comprando{
+        margin: 10px 0;
+    }
+    .container-2{
+        width: 25%;
+    }
+    .descripcion-carrito{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 3;
+        margin-right: 20px;
+    }
+    .imagen-carrito{
+        display: flex;
+        flex-shrink: 3;
+        justify-content: center;
+        width: 33%;
+    }
+}
