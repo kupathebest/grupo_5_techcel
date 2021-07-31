@@ -1,3 +1,6 @@
+body{
+    background-color: #EBEBEB;
+}
 .product-cart{
     font-family: var(--Roboto-letra-main);
     background-color: #EBEBEB;
