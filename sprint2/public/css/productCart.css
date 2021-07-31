@@ -1,17 +1,17 @@
-body{
+body .cart{
     background-color: var(--Gris-Fondo);
 }
-.mayusculas{
+.cart .mayusculas{
     text-transform: uppercase;
 }
 /*.*/
-.product-cart{
+.cart .product-cart{
     font-family: var(--Roboto-letra-main);
     background-color: var(--Gris-Fondo);
     color: var(--Negro);
     max-width: 1124px;
 }
-.container-productos{
+.cart .container-productos{
     width: 90%;
     padding: 20px;
     margin: 10px auto;
@@ -22,7 +22,7 @@ body{
 
 /** inicio costos*/
 
-.container-total{
+.cart .container-total{
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -35,19 +35,19 @@ body{
     line-height: 40px;
 }
 
-.cuentas{
+.cart .cuentas{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.total-cuenta{
+.cart .total-cuenta{
     border-top: var(--Fucsia) 1px solid;
     padding-top: 5px;
     margin-top: 5px;
 }
 /** FIN costos*/
-.container-descripcion{
+.cart .container-descripcion{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -55,12 +55,12 @@ body{
     padding-top: 10px;
     border-top: 1px solid var(--Fucsia);
 }
-.container-descripcion:hover{
+.cart .container-descripcion:hover{
     background-color: var(--Gris-Fondo);
     border-radius: 10px;
     transition: all .5s;
 }
-.descuento{
+.cart .descuento{
     color: var(--Negro);
     display: flex;
     align-items: center;
@@ -74,21 +74,21 @@ body{
 
 
 
-.imagen-carrito img{
+.cart .imagen-carrito img{
     width: 80%;
 }
 
-.tacho{
+.cart .tacho{
     margin-left: 5px;
     align-self:center;
 }
 
 /*/***BOTONES****/
-div.seguir-comprando{
+.cart div.seguir-comprando{
     display: flex;
     justify-content: center;
 }
-div.seguir-comprando button{
+.cart div.seguir-comprando button{
     background-color: #00c4cc    ;
     color: var(--Negro);
     border: none;
@@ -97,20 +97,20 @@ div.seguir-comprando button{
     margin: 5px;
     width: 90%;
 }
-div.seguir-comprando button:hover{
+.cart div.seguir-comprando button:hover{
     background-color:var(--Gris);
     transition: all .5s;
 }
-div.boton-comprar{
+.cart div.boton-comprar{
     display: flex;
     justify-content: center;
 }
-div.boton-comprar button:hover{
+.cast div.boton-comprar button:hover{
     background-color: var(--Gris);
     color: black;
     transition: all .5s;
 }
-div.boton-comprar button{
+.cart div.boton-comprar button{
     background-color: #00c4cc;
     color: var(--Negro);
     border: none;
@@ -120,18 +120,18 @@ div.boton-comprar button{
     width: 50%;
 }
 /*/*** fin BOTONES****/
-.titulo{
+.cart .titulo{
     color: var(--Fucsia);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.descuento-mas{
+.cart .descuento-mas{
     margin-right: 20px;
 }
 
-.fa-trash:hover{
+.cart .fa-trash:hover{
     color:red;
 }
 
@@ -139,14 +139,14 @@ div.boton-comprar button{
 
 
 @media (min-width: 425px){
-    .product-cart {
+   .cart .product-cart {
        display: flex;
        flex-direction: row;
    }
-   .container-productos{
+ .cart  .container-productos{
        width: 60%;
    }
-   .container-2{
+  .cart .container-2{
     display: flex;
     flex-direction: column;
     width: 40%;
@@ -154,38 +154,38 @@ div.boton-comprar button{
     margin: 10px auto;
     border-radius: 5px;
    }
-   .container-total{
+  .cart .container-total{
        order: -1;
    }
-   .descuento{
+   .cart .descuento{
        order: 0;
    }
-   .boton-comprar{
+  .cart .boton-comprar{
        order: 1;
        margin-top: 20px;
        height: 50px;
        width: 100%;
    }
-   div.boton-comprar button{
+ .cart  div.boton-comprar button{
        width: 90%;
    }
-   .seguir-comprando{
+  .cart .seguir-comprando{
        order: 2;
        margin: auto 0 0;
    }
 }
 
 @media (min-width: 768px){
-    .container-productos{
+   .cart .container-productos{
         width: 70%;
     }  
-    .seguir-comprando{
+   .cart .seguir-comprando{
         margin: 10px 0;
     }
-    .container-2{
+    .cart .container-2{
         width: 25%;
     }
-    .descripcion-carrito{
+   .cart .descripcion-carrito{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -193,7 +193,7 @@ div.boton-comprar button{
         flex-grow: 3;
         margin-right: 20px;
     }
-    .imagen-carrito{
+  .cart  .imagen-carrito{
         display: flex;
         flex-shrink: 3;
         justify-content: center;
