@@ -7,7 +7,7 @@
 .login main{
     width:100%;
     margin-bottom: 20px;
-    max-width: 1124px;
+    max-width: 700px;
     margin: 0 auto;
          
 } 
@@ -15,6 +15,7 @@
 .login form div.box-inicia h3{
     color: var(--Azul);
     text-align: center;
+    margin-bottom:20px;
     
 }
 
@@ -66,13 +67,6 @@
     text-align: center;
 
 }
-
-.login main form div.recordarId label{
-        display: flex;
-        justify-content: center;
-        margin-top: 5px;
-        padding: 1%;
-} 
     
 .login input{
     margin:3px;
@@ -93,14 +87,14 @@
     padding: 8px;
     width: 100px;
     background-color:#00c4cc;
-    margin-top: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 10px 20px;
+    border:none;
 }
   
 .login form div.inicio-sesion button:hover{
-    color:black;
-    font-size: 12px;
+    background-color: var(--Gris);
+    
+   
 }
 
 @media (min-width :425px){
@@ -113,6 +107,7 @@
 }
 .login form div.box-techcel h3{
    display: block;
+   margin-bottom: 20px;
 }
 
 

@@ -35,37 +35,12 @@ footer nav.redes{
     
 }
 
-footer a.facebook{
+footer .redes a i{
     padding: 8px;
     margin: 4px;
     color:white;
     border-radius: 5px;
-}
-
-footer a.twitter{
-   
-    color:white;
-    padding: 8px;
-    margin: 4px;
-    border-radius: 5px;
-}
-
-footer a.instagram{
-    
-    color:white;
-    padding: 8px;
-    margin: 4px;
-    border-radius: 5px;
-}
-
-footer a.Google{
-    
-    color: white;
-    padding: 8px;
-    margin: 4px;
-    border-radius: 5px;
-}
-
+}   
 
 footer .icono-contacto{
     
@@ -86,17 +61,38 @@ footer div.contact1{
   
 }
 
+footer .tarjetas img{
+    width: 40px;
+
+}
+
+footer .tarjetas .master{
+  
+    width: 58px;
+}
+
 footer p {
     display: none;
-
 }
-@media (min-width :768px){
 
-    footer p {
+@media (min-width :425px){
+    footer p{
     display: block;
     color: var(--Blanco);
-    font-size: 23px;
+    font-size: 18px;
 }
+
+    footer .tarjetas{
+    margin-left: 15px;
+
+    }
+   
+}
+
+@media (min-width :768px){
+
+   
+    
 }
 
 
