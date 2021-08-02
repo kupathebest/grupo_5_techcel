@@ -1,11 +1,9 @@
 
-header{
-    
-    min-width: 392px;
+header{    
     font-family: var(--Orbitron-letra-header);
     background-color:#6008a5 ;
     width: 100%;
-    margin:0;
+    margin:0 auto;
     padding: 0;
 }
 
@@ -24,9 +22,9 @@ header .burger{
 
 header .iconos{
     color: white;
-    margin-left: 10px ;
-    width: 40%;
-    font-size: 25px;
+    margin-right: 10px ;
+    width:30%;
+    font-size: 18px;
     display: flex;
     flex-direction: row;
     justify-content: space-around; 
@@ -34,7 +32,13 @@ header .iconos{
 
 header .logo{
     width: 60%;
-    padding-right: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+header .logo img{
+    width: 85%;
 }
 
 header .buscador {
@@ -48,9 +52,7 @@ header .contenedor{
     align-items: center; 
     transition: all .5s;              
 }      
-header .logo:hover{
-    transform: scale(1.5);
-}
+
 
 /*tablet*/
 
@@ -103,24 +105,21 @@ header .listas a, header .listas i{
     margin: 5px;
     font-size: 20px;
 } 
-   header .listas i:hover{
-   
-    font-size: 25px;
 
-   
+   header .listas .lista2 a:hover > i,
+   header .listas .contactanos a:hover > i{
+        font-size: 25px;
    }
   
-
  header .lista1{
         color: var(--Azul);
         font-size: 30px;
     }
+
   header  .lista2{
-        
-      color: var(--Azul);
+        color: var(--Azul);
         font-size: 30px;
-        display: flex;  
-       
+        display: flex;
     }
     
    header ul .lista2{
@@ -129,17 +128,23 @@ header .listas a, header .listas i{
         display: flex;
       
     }
- header   .listas{
+ header  .listas{
        background-color: white;
        width: 100%;
        display: flex;
        flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
+        padding: 0 5px;
      }    
-  header   .border{
-        border-left: 3px solid var(--Azul);
-        
+
+  header  .border{
+        border-left: 1.5px solid var(--Azul);
+        padding-left: 5px;
     }
+
+header .contenedor{
+    margin-top: 10px;
+}
 
     header .buscador .searc-button{
         display: block;       
@@ -149,23 +154,31 @@ header .listas a, header .listas i{
       text-align: center;
         
     }
+
+header .logo img{
+   width: 60%;
+}
+
   header  .buscador{
-        width: 50%;
+        width: 60%;
         align-self: center;
         display: flex;
+        margin-top: 50px;
     }
-   header header .buscador input{
-        width: 60%;
+   header .buscador input{
+        width: 80%;
+        padding-left: 15px;
         height: 25px;
         border: none;
+        border-radius: 4px 0 0 4px;
     }
     
     header .buscador i{
             font-size: 15px;
             background-color: white;
             padding: 4px;
-           
-        }
+            border-radius: 0 4px 4px 0;
+     }
    header .lista3{
         
         width: 65%;

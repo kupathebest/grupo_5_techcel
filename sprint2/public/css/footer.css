@@ -7,7 +7,7 @@ footer{
     justify-content: center;
     align-items:center;
     width:100%;
-   
+    
 }
 
 footer div.logo img{
@@ -25,7 +25,7 @@ footer div.logo{
 }
 
 footer nav.redes{
-      
+      display: flex;
     justify-content: center;
     justify-content: space-around;
     margin-right: 60px;
@@ -67,7 +67,6 @@ footer .tarjetas img{
 }
 
 footer .tarjetas .master{
-  
     width: 58px;
 }
 
@@ -76,7 +75,7 @@ footer p {
 }
 
 @media (min-width :425px){
-    footer p{
+    footer p.p-redes{
     display: block;
     color: var(--Blanco);
     font-size: 18px;
@@ -84,15 +83,106 @@ footer p {
 
     footer .tarjetas{
     margin-left: 15px;
-
     }
    
-}
+
+    footer .tarjetas img{
+        width: 60px;
+        margin:5px;
+    }
+
+    footer .tarjetas .master{
+        width: 82px;
+        margin: 5px 0;
+    }
+
+    footer .redes .iconos-redes{
+       text-align: center;
+       font-size: 29px;
+    }  
+
+    footer div.contact1{
+        font-size: 25px;
+    }
+
+   }
 
 @media (min-width :768px){
 
-   
+   footer{
+       flex-direction: row;
+   }
+
+   footer p{
+       display: inline-block;
+   }
+
+   footer .logo{
+      order:-1;
+      width: 30%;
+   }
+
+   footer div.logo img{
+       width: 80%;
+       margin: 0;
+   }
     
+footer div p.p-redes{
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+}
+
+footer div.redes{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-self:flex-start;
+    margin: 120px 0;
+    }
+
+footer .redes .iconos-redes{
+     font-size: 23px;
+     }
+
+footer div.contact1{
+    width: 30%;
+    display:flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 60px;
+    }
+
+    footer div.contact1 i{
+       margin: 0;
+       margin-left: 20px;
+    }
+
+    footer div.contact1 p{
+      font-size: 14px;
+      margin-left: 10px;
+    }
+
+footer div.tarjetas{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+}
+
+
+footer .tarjetas img{
+    width: 40px;
+    margin:5px;
+}
+
+footer .tarjetas .master{
+    width: 60px;
+    margin: 5px 0;
+}
+
+
+
 }
 
 
