@@ -1,21 +1,24 @@
 
 .login{
 
-    background-color: #EBEBEB;
+    background-color: #ebebeb;
     
 }
+
 .login main{
-    width:100%;
-    margin-bottom: 20px;
+    width:95%;
     max-width: 700px;
-    margin: 0 auto;
-         
+    margin: auto;
+    min-height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 } 
 
 .login form div.box-inicia h3{
     color: var(--Azul);
     text-align: center;
-    margin-bottom:20px;
+    margin: 20px 0;
     
 }
 
@@ -36,7 +39,7 @@
 
 .login form div.box-form input#Email{
     text-align: center;
-    width: 80%;
+    width: 236px;
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
@@ -48,7 +51,7 @@
 .login form div.box-form input#password{
     
     text-align: center;
-    width: 80%;
+    width: 236px;
     margin-top: 10px;
     margin-left: 20px;
     margin-right: 20px;
@@ -68,9 +71,7 @@
 
 }
     
-.login input{
-    margin:3px;
-}
+
 
 .login form div.inicio-sesion{
     text-align: center;
@@ -114,4 +115,20 @@
 .login form div.box-inicia h3{
     display: none;
 }
+
+.login form div.box-form input#Email,
+.login form div.box-form input#password{
+    width: 350px;
+      
+}
+
+
+}
+
+@media (min-width :768px){
+.login form div.box-form input#Email,
+.login form div.box-form input#password{
+    width: 420px;
+}
+
 }

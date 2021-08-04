@@ -1,15 +1,17 @@
-body .cart{
+.cart{
     background-color: var(--Gris-Fondo);
 }
 .cart .mayusculas{
     text-transform: uppercase;
 }
 /*.*/
+
 .cart .product-cart{
     font-family: var(--Roboto-letra-main);
     background-color: var(--Gris-Fondo);
     color: var(--Negro);
     max-width: 1124px;
+    margin: 10px auto;
 }
 .cart .container-productos{
     width: 90%;
@@ -70,6 +72,7 @@ body .cart{
     background-color: #00c4cc;
     padding: 3px;
     margin: 0 auto;
+    font-size: 12px;
 }
 
 
@@ -127,6 +130,10 @@ body .cart{
     align-items: center;
 }
 
+.cart .titulo .titulo-carrito{
+    font-size: 12px;
+}
+
 .cart .descuento-mas{
     margin-right: 20px;
 }
@@ -139,9 +146,11 @@ body .cart{
 
 
 @media (min-width: 425px){
+
    .cart .product-cart {
        display: flex;
        flex-direction: row;
+       padding:10px;
    }
  .cart  .container-productos{
        width: 60%;
@@ -149,6 +158,7 @@ body .cart{
   .cart .container-2{
     display: flex;
     flex-direction: column;
+    align-self: flex-start;
     width: 40%;
     padding-top: 0px;
     margin: 10px auto;
@@ -156,12 +166,13 @@ body .cart{
    }
   .cart .container-total{
        order: -1;
+       font-size: 14px;
    }
    .cart .descuento{
        order: 0;
    }
   .cart .boton-comprar{
-       order: 1;
+       order: 2;
        margin-top: 20px;
        height: 50px;
        width: 100%;
@@ -170,8 +181,12 @@ body .cart{
        width: 90%;
    }
   .cart .seguir-comprando{
-       order: 2;
-       margin: auto 0 0;
+       order: 1;
+       margin: 20px 0 0;
+   }
+
+   .cart .container-descripcion p{
+       font-size: 14px;
    }
 }
 
@@ -185,10 +200,19 @@ body .cart{
     .cart .container-2{
         width: 25%;
     }
+
+   .cart .marca-precio{
+       display: flex;
+   }
+
+   .cart .marca-precio p{
+       margin: 0 10px;
+   }
+
    .cart .descripcion-carrito{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         flex-grow: 3;
         margin-right: 20px;

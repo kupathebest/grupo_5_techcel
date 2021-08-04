@@ -1,20 +1,22 @@
 .register{
     background-color: #EBEBEB;
 }
+
 .register main{
     max-width: 1124px;
-    min-width: 392px;
     background-color: #EBEBEB;
     font-family: var(--Roboto-letra-main);
-    padding: 10px;
-    
+    padding: 20px 10px;
+    margin: 0 auto;
 }
     
 .register main h1{
     text-align: center;
     margin: 5px;
-    color: var(--Azul)
+    color: var(--Azul);
+    font-size: 24px;
 }
+
 .register main form{
     margin: 5px;
     display: flex;
@@ -26,19 +28,19 @@
 }
 
 .register main input{
-    font-size: 20px;
     padding: 5px;
     margin-top: 10px;
     display: flex;
     flex-direction: column;
-    border-radius: 5px;
+    border-radius: 10px;
+    width: 236px;
 }
 
 
 
 .register .rojo{
     color: red;
-    font-size: 15px;
+    
 }
 .register main h4{
     text-align: center;
@@ -46,9 +48,9 @@
     padding-bottom: 15px;
 }
 .register main button{
-   padding: 5px;
+   padding: 8px;
    text-align: center;
-    font-size: 20px;
+    
     background-color:#00c4cc;
     border: none;
     border-radius: 5px;
@@ -73,15 +75,18 @@
 .register main a{
     color: var(--Azul);
 }
-    
-.register .terms{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-     margin-bottom: 10px;
-}
-.register .terms label{
-    align-self: flex-end;
-    margin-left: 4px;
+  
+
+@media (min-width :425px){
+.register main input{
+    width: 350px;
 }
 
+}
+
+@media (min-width :768px){
+    .register main input{
+        width: 420px;
+    }
+    
+    }

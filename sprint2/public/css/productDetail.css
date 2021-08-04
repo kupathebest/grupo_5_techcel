@@ -1,7 +1,4 @@
-/* color de fondo main #EBEBEB
- */
 
- /* color de fondo hover botones */
 
  .detail{
     background-color: #EBEBEB;
@@ -11,6 +8,7 @@
      
      max-width: 1124px;
      margin: 0 auto;
+     padding: 20px;
  }
 
 .detail main h1{
@@ -102,7 +100,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    font-size: 1.1rem;
+    font-size: 0.85rem;
     padding: 2px;
 }
 
@@ -135,20 +133,31 @@
 }
 
 .detail .mas .dato span.info{
-    margin-left: 5px;
+    margin-left: 15px;
+    padding-left: 5px;
     width: 70%;
     height: 80px;
+    font-size: 14px;
 }
 
 .detail .mas .dato span.titulo{
     width: 25%;
     margin-right: 10px;
+    font-size: 14px;
 }
 
 .detail h4{
     text-transform: capitalize;
-    margin: 20px 0
+    margin: 20px 0;
+    text-align: center;
 }
+
+.detail .mas .mas-datos .title{
+    text-align: left;
+    padding-left: 15px;
+}
+
+
 
 .detail .carrousel{
     width: 100%;
@@ -158,19 +167,30 @@
 
 .detail .carrousel i{
     align-self: center;
-    font-size: 5rem;
+    font-size: 3rem;
     color: var(--Fucsia)
 }
 
-.detail .carrousel .card-interes{
+.detail .carrousel .card-interes1{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     font-size: .9rem;
 }
 
+.detail .carrousel .card-interes2,
+.detail .carrousel .card-interes3,
+.detail .carrousel .card-interes4{
+    display: none;
+}
+
+
 .detail .carrousel img{
-    width: 40%;
+    width: 55%;
+}
+
+.detail .carrousel h2{
+    font-size: 16px;
 }
 
 @media (min-width: 425px) {
@@ -220,7 +240,7 @@
     .detail .caracteristicas{
         flex-direction: row;
         justify-content: space-between;
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
 
     .detail .caracteristicas div{
@@ -256,10 +276,22 @@
         font-size: 1.2rem;
     }
 
+    .detail .carrousel .card-interes1,
+    .detail .carrousel .card-interes2{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: .9rem;
+    }
+       
+    
     .detail .carrousel img{
         align-self: center;
-        width: 30%;
+        width: 60%;
+        padding: 15px;
     }
+
+
 
     .detail .carrousel i{
         font-size: 2.5rem;
@@ -267,6 +299,10 @@
 }
 
 @media (min-width: 768px){
+
+.detail main{
+    padding: 40px;
+}
 
     .detail main .contenedor{
         width: 60%;
@@ -286,8 +322,8 @@
 
 
     .detail main .card .contenido .cart-button{
-        height: 80px;
-        width: 250px;
+        height: 60px;
+        width: 220px;
         margin: 30px 0 0;
     }
 
@@ -317,5 +353,26 @@
         text-transform: capitalize;
     }
     
+
+    .detail .carrousel h2{
+        font-size: 14px;
+    }
+
+.detail .carrousel .card-interes1,
+.detail .carrousel .card-interes2,
+.detail .carrousel .card-interes3,
+.detail .carrousel .card-interes4{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: .9rem;
+}
+
+.detail .carrousel img{
+        align-self: center;
+        width: 60%;
+        padding: 15px;
+}
+
     
 }

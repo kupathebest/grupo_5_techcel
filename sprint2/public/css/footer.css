@@ -7,7 +7,7 @@ footer{
     justify-content: center;
     align-items:center;
     width:100%;
-    
+    min-height: 235px;
 }
 
 footer div.logo img{
@@ -75,6 +75,11 @@ footer p {
 }
 
 @media (min-width :425px){
+    /* footer{
+    max-height: 420px;
+}*/
+
+
     footer p.p-redes{
     display: block;
     color: var(--Blanco);
