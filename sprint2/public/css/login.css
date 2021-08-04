@@ -66,6 +66,13 @@
     margin-top: 5px;
     padding: 1%;
 }
+
+.login main form div.recordarId label input{
+    margin-top: 2.7px;
+    margin-right: 5px;
+}
+
+
 .login form div.box-form{
     text-align: center;
 

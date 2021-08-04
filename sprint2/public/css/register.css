@@ -36,6 +36,19 @@
     width: 236px;
 }
 
+.register main .terms{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 15px;}
+
+.register main .terms .check {
+   width: 30px;
+}
+
+.register main .terms .text {
+   margin-top: 8px;
+}
 
 
 .register .rojo{
