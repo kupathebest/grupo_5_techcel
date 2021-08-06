@@ -40,7 +40,8 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-bottom: 15px;}
+    margin-bottom: 15px;
+}
 
 .register main .terms .check {
    width: 30px;

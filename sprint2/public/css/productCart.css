@@ -91,15 +91,20 @@
     display: flex;
     justify-content: center;
 }
-.cart div.seguir-comprando button{
-    background-color: #00c4cc    ;
+.cart div.seguir-comprando a{
     color: var(--Negro);
+    width: 90%;
+}
+
+.cart div.seguir-comprando a button{
+    background-color: #00c4cc;
     border: none;
     border-radius: 5px;
     padding: 5px;
     margin: 5px;
-    width: 90%;
+    width: 95%;
 }
+
 .cart div.seguir-comprando button:hover{
     background-color:var(--Gris);
     transition: all .5s;
@@ -108,20 +113,27 @@
     display: flex;
     justify-content: center;
 }
+
+
 .cast div.boton-comprar button:hover{
     background-color: var(--Gris);
     color: black;
     transition: all .5s;
 }
-.cart div.boton-comprar button{
-    background-color: #00c4cc;
+.cart div.boton-comprar a {
     color: var(--Negro);
+    width: 90%;
+}
+
+.cart div.boton-comprar a button{
+    background-color: #00c4cc;
     border: none;
     border-radius: 5px;
     padding: 5px;
     margin: 5px;
-    width: 50%;
+    width: 95%;
 }
+
 /*/*** fin BOTONES****/
 .cart .titulo{
     color: var(--Fucsia);
@@ -189,6 +201,11 @@
        font-size: 14px;
    }
 }
+
+@media (min-width: 490px){
+
+}
+
 
 @media (min-width: 768px){
    .cart .container-productos{

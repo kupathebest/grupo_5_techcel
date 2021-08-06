@@ -30,6 +30,10 @@ header .iconos{
     justify-content: space-around; 
 }
 
+header .iconos a{
+    color: white;
+}
+
 header .logo{
     width: 60%;
     padding: 10px;

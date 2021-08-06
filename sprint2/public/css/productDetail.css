@@ -74,6 +74,10 @@
     color: var(--Negro);
 }
 
+.detail main .card .contenedor .cart-button a i{
+    margin-right: 5px;
+}
+
 .detail main .card .contenedor .fullname{
     display: none;
 }
@@ -165,7 +169,7 @@
     justify-content: space-around;
 }
 
-.detail .carrousel i{
+.detail .carrousel a {
     align-self: center;
     font-size: 3rem;
     color: var(--Fucsia)
