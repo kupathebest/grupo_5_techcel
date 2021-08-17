@@ -46,12 +46,16 @@
 
 .comoComprar h3{
     text-align: center;
-    background-color: #00c4cc;
     margin: 0 auto 15px;
     width: 80%;
 }
 
 @media (min-width: 425px){
+
+    .comoComprar .items article {
+        width: 95%;
+    }
+
     .comoComprar .items article i{
         font-size: 3rem;
     }
@@ -63,8 +67,9 @@
     .comoComprar .items article p{
         margin: 0 auto;
         width: 70%;
-        padding: 3px;
+        padding: 5px;
         font-size: 1.2rem;
+        border-radius: 5px ;
     }
 }
 
@@ -93,7 +98,6 @@
     }
 
     .comoComprar h3:hover{
-        background-color: var(--Gris);
         font-size: 1.5rem;
     }
 
