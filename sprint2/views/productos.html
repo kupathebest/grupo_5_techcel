@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <script src="https://kit.fontawesome.com/a36f27fccb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body class="productos">
+    <header>
+        <div class="listas">
+            <div class="lista1">
+                <nav>
+                    <ul class="contactanos">
+                        <li><a href="/contactanos"><i class="far fa-envelope"></i>Contactanos</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <nav>
+                    <ul class="lista2">
+                        <li><a href="/login"><i class="far fa-user"></i>Ingresar</a></li>
+                        <li><a class="border" href="/register">Crear Cuenta</i></a></li>
+                        <li><a href="/carrito"><i class="fas fa-shopping-cart"></i>Carrito de compras</a></li>
+                        <li><a href="/envios"><i class="far fa-paper-plane"></i>Envios</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="contenedor">
+            <div class="burger">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <div class="logo">
+                <a href="/"><img src="/images/logo-techcel-blanco.png" alt=""></a>
+            </div>
+
+            <div class="buscador">
+                <input type="text" class="searc-button" placeholder="Buscar" href=""><i class="fas fa-search"></i>
+            </div>
+            <div class="iconos">
+                <div>
+                    <a href="/"><i class="fas fa-search"></i></a>
+                </div>
+                <div>
+                    <a href="/login"><i class="far fa-user"></i></a>
+                </div>
+                <div>
+                    <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <nav class="titulo">
+
+                <ul class="lista3">
+                    <li> <a href="/"></i>Home </a></li>
+                    <li><a href="/comocomprar">¿Como comprar? </i></a></li>
+                    <li><a href="/productos"></i>Productos</i></a></li>
+                    <li><a href="/about"></i>Acerca de nosotros </a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <main>
+        <section class="seccion-boton-filtrar">
+            <div class="boton-filtrar">
+                <a href="/productos"><button type="button">FILTRAR <i class="fas fa-filter"></i></button></a>
+            </div>
+        </section>
+        <section class="filtrar">
+            <p>ORDENAR POR:</p>
+            <div class="boton-ordenar">
+                <a href="/productos"><button type="submit">MENOR PRECIO <i class="fas fa-sort-down"></i></button></a>
+            </div>
+            <p class="inicio-filtros">FILTRAR POR:</p>
+            <div class="forms">
+                <p>CATEGORIA</p>
+                <div class="categoria filtros">
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Novedades</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Ofertas</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Los más comprados</label>
+                    </div>
+                </div>
+                <p>MARCA</p>
+                <div class="marca filtros">
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Motorola</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Samsung</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Xiaomi</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">iPhone</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Nokia</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">LG</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Huawei</label>
+                    </div>
+                </div>
+                <p>COLOR</p>
+                <div class="color filtros">
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Negro</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Plateado</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Blanco</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Azul</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Purpura</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Dorado</label>
+                    </div>
+                </div>
+                <p>CAMARA</p>
+                <div class="camara filtros">
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Hasta 2 MP</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">2 MP a 5 MP</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">5 MP a 10 MP</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">10 MP a 15 MP</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">15 MP a 20 MP</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">20 MP a 25 MP</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Más de 25 MP</label>
+                    </div>
+                </div>
+                <p>MEMORIA INTERNA</p>
+                <div class="memoria-interna filtros">
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Menos de 32 GB</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">32 GB a 64 GB</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">64 GB a 128 GB</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">128 GB o más</label>
+                    </div>
+                </div>
+                <p>MEMORIA RAM</p>
+                <div class="memoria-ram filtros">
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Menos de 2 GB</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">2 GB a 3 GB</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">3 GB a 4 GB</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">4 GB o más</label>
+                    </div>
+                </div>
+                <p>PANTALLA</p>
+                <div class="pantalla filtros">
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">5" o menos</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">5" a 6"</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Más de 6"</label>
+                    </div>
+                </div>
+                <p>PRECIO</p>
+                <div class="precio filtros">
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">Menos de $21999</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">$21999 a $40202</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <label for="">$40202 o más</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="articulos">
+            <div class="productos-listado">
+                <article class="">
+                    <a href="/detail">
+                        <img src="/images/MOTOG8PLUS.jpg" alt="">
+                        <p class="">MOTO G8 PLUS</p>
+                    </a>
+                </article>
+                <article class="">
+                    <a href="/detail">
+                        <img src="/images/MOTOG8PLUS.jpg" alt="">
+                        <p class="">MOTO G8 PLUS</p>
+                    </a>
+                </article>
+                <article class="">
+                    <a href="/detail">
+                        <img src="/images/MOTOG8PLUS.jpg" alt="">
+                        <p class="">MOTO G8 PLUS</p>
+                    </a>
+                </article>
+                <article class="">
+                    <a href="/detail">
+                        <img src="/images/MOTOG8PLUS.jpg" alt="">
+                        <p class="">MOTO G8 PLUS</p>
+                    </a>
+                </article>
+                <article class="">
+                    <a href="/detail">
+                        <img src="/images/MOTOG8PLUS.jpg" alt="">
+                        <p class="">MOTO G8 PLUS</p>
+                    </a>
+                </article>
+                <article class="">
+                    <a href="/detail">
+                        <img src="/images/MOTOG8PLUS.jpg" alt="">
+                        <p class="">MOTO G8 PLUS</p>
+                    </a>
+                </article>
+                <article class="">
+                    <a href="/detail">
+                        <img src="/images/MOTOG8PLUS.jpg" alt="">
+                        <p class="">MOTO G8 PLUS</p>
+                    </a>
+                </article>
+                <article class="">
+                    <a href="/detail">
+                        <img src="/images/MOTOG8PLUS.jpg" alt="">
+                        <p class="">MOTO G8 PLUS</p>
+                    </a>
+                </article>
+                <article class="">
+                    <a href="/detail">
+                        <img src="/images/MOTOG8PLUS.jpg" alt="">
+                        <p class="">MOTO G8 PLUS</p>
+                    </a>
+                </article>
+                <article class="">
+                    <a href="/detail">
+                        <img src="/images/MOTOG8PLUS.jpg" alt="">
+                        <p class="">MOTO G8 PLUS</p>
+                    </a>
+                </article>
+                <article class="">
+                    <a href="/detail">
+                        <img src="/images/MOTOG8PLUS.jpg" alt="">
+                        <p class="">MOTO G8 PLUS</p>
+                    </a>
+                </article>
+                <article class="">
+                    <a href="/detail">
+                        <img src="/images/MOTOG8PLUS.jpg" alt="">
+                        <p class="">MOTO G8 PLUS</p>
+                    </a>
+                </article>
+                <article class="">
+                    <a href="/detail">
+                        <img src="/images/MOTOG8PLUS.jpg" alt="">
+                        <p class="">MOTO G8 PLUS</p>
+                    </a>
+                </article>
+                <article class="">
+                    <a href="/detail">
+                        <img src="/images/MOTOG8PLUS.jpg" alt="">
+                        <p class="">MOTO G8 PLUS</p>
+                    </a>
+                </article>
+                <article class="">
+                    <a href="/detail">
+                        <img src="/images/MOTOG8PLUS.jpg" alt="">
+                        <p class="">MOTO G8 PLUS</p>
+                    </a>
+                </article>
+            </div>
+            <div class="boton-ver-mas">
+                <a href=""><button type="button">VER MÁS</button></a>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+
+        <div class="redes">
+            <div>
+                <p class="p-redes">Seguinos en nuestras redes sociales</p>
+
+            </div>
+            <div class="iconos-redes">
+
+                <a href="/" class="facebook"><i class="fab fa-facebook-square"></i></a>
+                <a href="/" class="twitter"><i class="fab fa-twitter-square"></i></a>
+                <a href="/" class="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="/" class="Google"><i class="fab fa-google-plus-square"></i></a>
+            </div>
+
+        </div>
+        <div class="contact1">
+
+            <a href="/" class="icono-contacto"><i class="fas fa-map-marker-alt"></i>
+                <p>Buenos Aires</p>
+            </a>
+            <a href="/" class="icono-contacto"><i class="fas fa-phone-square-alt"></i>
+                <p>0800-333-1235</p>
+            </a>
+            <a href="/" class="icono-contacto"><i class="fas fa-envelope-square"></i>
+                <p>info@techcel.com</p>
+            </a>
+
+        </div>
+
+
+        <div class="logo">
+            <a href="/"><img src="/images/logo-techcel-blanco.png" alt="logo"></a>
+
+        </div>
+
+
+        <div class="tarjetas">
+
+            <a href=""><img src="/images/visa.png" alt=""></a>
+
+            <a href=""><img class="master" src="/images/master.png" alt=""></a>
+            <a href=""><img src="/images/american.png" alt=""></a>
+            <a href=""><img src="/images/dinners.png" alt=""></a>
+
+        </div>
+
+
+        </section>
+
+    </footer>
+
+
+</body>
+
+</html>

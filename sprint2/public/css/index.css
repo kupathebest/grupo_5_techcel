@@ -87,7 +87,7 @@
     width: 100%;
 }
 
-.home main section.seccion-main div.caja-completa div.productos article div p.detalle{
+.home main section.seccion-main div.caja-completa div.productos article p.detalle{
     font-size: 16px;
     text-align: center;
     width: 100%;
@@ -99,10 +99,16 @@
     width: 65%;
 }
 
+.home main section.seccion-main div.caja-completa div.productos article a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .home main section.seccion-main div.caja-completa div.productos article.primero{
     display: flex;
     width: 100%;
-  
+
 }
 
 .home main section.seccion-main div.caja-completa div.productos article.segundo, 

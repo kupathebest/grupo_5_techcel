@@ -17,4 +17,6 @@ app.get('/detail',(req,res) => res.sendFile(path.join(__dirname, 'views','pro
 app.get('/register',(req,res) => res.sendFile(path.join(__dirname, 'views','register.html')));
 app.get('/comocomprar',(req,res) => res.sendFile(path.join(__dirname, 'views','comoComprar.html')));
 
+app.get('/productos',(req,res) => res.sendFile(path.join(__dirname, 'views','productos.html'))); /*Nueva vista rama home/Melisa */
+
 app.listen(port,() => console.log('Servidor corriendo en http://localhost:' + port))
