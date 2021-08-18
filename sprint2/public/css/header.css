@@ -109,7 +109,9 @@ header .listas a, header .listas i{
     margin: 5px;
     font-size: 20px;
 } 
-
+    header .listas .contactanos{
+        background-color: var(--Blanco);
+    }
    header .listas .lista2 a:hover > i,
    header .listas .contactanos a:hover > i{
         font-size: 25px;
