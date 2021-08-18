@@ -15,5 +15,9 @@ app.get('/carrito',(req,res) => res.sendFile(path.join(__dirname, 'views','pr
 app.get('/detail',(req,res) => res.sendFile(path.join(__dirname, 'views','productDetail.html')));
 app.get('/register',(req,res) => res.sendFile(path.join(__dirname, 'views','register.html')));
 app.get('/envios',(req,res) => res.sendFile(path.join(__dirname,'views', 'envios.html' )));
+app.get('/shop',(req,res) => res.sendFile(path.join(__dirname, 'views','shop.html')));
+app.get('/comocomprar',(req,res) => res.sendFile(path.join(__dirname, 'views','comoComprar.html')));
+
+app.get('/productos',(req,res) => res.sendFile(path.join(__dirname, 'views','productos.html'))); /*Nueva vista rama home/Melisa */
 
 app.listen(port,() => console.log('Servidor corriendo en http://localhost:' + port))
