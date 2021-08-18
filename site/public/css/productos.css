@@ -1,0 +1,196 @@
+/*Movil*/
+
+.productos{
+    background-color: #ebebeb;
+}
+
+.productos main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    max-width: 1124px;
+    padding: auto;
+    margin: 0 auto;
+}
+
+
+
+/*seccion filtrar*/
+.productos main section.seccion-boton-filtrar div.boton-filtrar{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.productos main section.seccion-boton-filtrar div.boton-filtrar a button{
+    display: flex;
+    color: var(--Negro);
+    background-color: #00c4cc;
+    border-radius: 15px;
+    justify-content: center;
+    padding: 8px 20px;
+    border: none;
+    margin: 30px 0px 20px;
+    width: 125px;
+    text-align:center;
+    font-size: 15px;
+ }
+
+ .productos main section.seccion-boton-filtrar div.boton-filtrar a button:hover{
+    font-size: 20px;
+ }
+
+ .productos main section.seccion-boton-filtrar div.boton-filtrar a button i{
+     font-size: 12px;
+     padding: 3.5px;
+ }
+
+
+.productos main section.filtrar{
+    width: 100%;
+    border-bottom: solid 1px gray;
+    padding-bottom: 15px;
+}
+
+.productos main section.filtrar p,
+.productos main section.filtrar div.forms p{
+    padding: 25px 14px 8px;
+    font-weight: bold;
+}
+
+.productos main section.filtrar p.inicio-filtros{
+    font-size: 20px;
+    padding: 5px 2px 0;
+    border-top: solid 1px gray;
+    
+}
+
+.productos main section.filtrar div.boton-ordenar select#ordenar-por{
+    padding: 3px 5px;
+    border-radius: 3px;
+    border: solid 1px var(--Gris);
+    margin-bottom: 30px;
+}
+
+.productos main section.filtrar div.forms div.filtros div{
+    padding: 3.5px 0;
+}
+
+.productos main section.filtrar div.forms div.filtros div label {
+    color: var(--Gris);
+    padding-left: 9px;
+}
+
+
+/*seccion articulos*/
+
+.productos main section.articulos{
+    padding-top: 10px;
+    width: 100%;
+}
+
+
+.productos main section.articulos div.productos-listado article a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productos main section.articulos div.productos-listado article a img{
+    width: 100%;
+}
+
+.productos main section.articulos div.productos-listado{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.productos main section.articulos div.productos-listado article{
+    background-color: var(--Blanco);
+    border-radius: 8px;
+    border: solid 1px var(--Gris-Fondo);
+    padding: 15px 45px;
+    margin: 18px;
+    width: 85%;
+}
+
+.productos main section.articulos div.productos-listado article a p{
+    text-align: center;
+    padding-top: 5px;
+}
+/** TABLET **/
+@media (min-width:425px){
+
+/*seccion filtrar*/
+
+
+
+/*seccion articulos*/
+.productos main section.articulos div.productos-listado article{
+    width: 40%;
+    padding: 18px 30px;
+    margin: 15px;
+}
+
+}
+
+
+/** DESKTOP **/
+@media (min-width:768px){
+
+    .productos main{
+        width: 90%;
+        flex-direction: row;
+    }
+    
+/*seccion filtrar*/
+
+.productos main section.filtrar{
+    width: 20%;
+    border-bottom: none;
+}
+
+
+.productos main section.seccion-boton-filtrar div.boton-filtrar{
+    display: none;
+ }
+
+/*seccion articulos*/
+.productos main section.articulos{
+    width: 80%;
+}
+
+.productos main section.articulos div.productos-listado article{
+    width: 25%;
+}
+
+.productos main section.articulos div.productos-listado article a img{
+    width: 70%;
+}
+
+
+}
+
+
+
+/*BOTON VER MAS --OPCIONAL--*/
+.productos main section.articulos div.boton-ver-mas button{
+    color: var(--Negro);
+    background-color: #00c4cc;
+    border-radius: 15px;
+    display: none;
+    justify-content: center;
+    padding: 8px 20px;
+    border: none;
+    margin: 30px 0px 20px;
+    width: 125px;
+    text-align:center;
+    font-size: 18px;
+}
+
+

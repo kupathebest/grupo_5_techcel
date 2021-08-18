@@ -1,0 +1,62 @@
+.shop .form-container{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.shop input.form-caja{
+    width: 236px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.shop .form-container .fondo-caja{
+    margin: 10px;
+    background-color: var(--Gris-Fondo);
+    border-radius: 3px;
+    padding: 30px;
+}
+
+.shop .form-container .titulos-form{
+    text-align: center;
+}
+
+.shop .form-container #tarjetas-2 {
+    margin-top: 10px;
+    padding: 5px;
+}
+.shop .form-container {
+    text-align: center;
+}
+.shop .form-container .boton-formularios{
+    border-radius: 5px;
+    padding: 8px;
+    width: 150px;
+    background-color:#00c4cc;
+    margin: 10px 20px;
+    border:none;
+    font-size: .9rem;
+    text-align: center;
+}
+
+.shop .form-container .tarjeta-fechas{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.shop .form-container .centrar{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 425px){
+    .shop .form-container .fondo-caja {
+        width: 80%;
+    }
+}
+
+@media (min-width: 768px) {
+    .shop input.form-caja {
+        width: 600px;
+    }
+}

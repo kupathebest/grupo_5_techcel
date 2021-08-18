@@ -1,0 +1,106 @@
+.register{
+    background-color: #EBEBEB;
+}
+
+.register main{
+    max-width: 1124px;
+    background-color: #EBEBEB;
+    font-family: var(--Roboto-letra-main);
+    padding: 20px 10px;
+    margin: 0 auto;
+}
+    
+.register main h1{
+    text-align: center;
+    margin: 5px;
+    color: var(--Azul);
+    font-size: 24px;
+}
+
+.register main form{
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px ;
+    
+}
+
+.register main input{
+    padding: 5px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 236px;
+}
+
+.register main .terms{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.register main .terms .check {
+   width: 30px;
+}
+
+.register main .terms .text {
+   margin-top: 8px;
+}
+
+
+.register .rojo{
+    color: red;
+    
+}
+.register main h4{
+    text-align: center;
+    color: var(--Azul);
+    padding-bottom: 15px;
+}
+.register main button{
+   padding: 8px;
+   text-align: center;
+    
+    background-color:#00c4cc;
+    border: none;
+    border-radius: 5px;
+}
+.register button:hover{
+    
+    background-color: var(--Gris);
+    
+}
+.register .boton{
+    text-align: center;
+
+}
+
+
+.register main h5{
+    text-align: center;
+    padding: 15px;
+}
+
+
+.register main a{
+    color: var(--Azul);
+}
+  
+
+@media (min-width :425px){
+.register main input{
+    width: 350px;
+}
+
+}
+
+@media (min-width :768px){
+    .register main input{
+        width: 420px;
+    }
+    
+    }

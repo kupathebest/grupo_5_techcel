@@ -1,0 +1,206 @@
+
+header{    
+    font-family: var(--Orbitron-letra-header);
+    background-color:#6008a5 ;
+    width: 100%;
+    margin:0 auto;
+    padding: 0;
+}
+
+
+header li{
+    display:none
+}
+
+header .burger{
+    width: 20%;
+    color: white;
+    font-size: 40px;
+    padding-left: 15px;
+
+}
+
+header .iconos{
+    color: white;
+    margin-right: 10px ;
+    width:30%;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+}
+
+header .iconos a{
+    color: white;
+}
+
+header .logo{
+    width: 60%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+header .logo img{
+    width: 85%;
+}
+
+header .buscador {
+    display: none;
+}
+
+header .contenedor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    transition: all .5s;              
+}      
+
+
+/*tablet*/
+
+@media (min-width: 425px){
+header .burger{ 
+    color: white;
+    font-size: 40px;
+    width: 10%;
+}   
+       
+header .iconos{       
+    width: 40%;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+header .logo{
+    width: 50%;
+       
+    text-align: center;
+}
+header .buscador .searc-button{
+        display: none;
+}
+
+header.contenedor{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}           
+}    
+           
+/*desktop*/
+
+@media(min-width:768px){
+   header li{
+        display: block;
+    }
+   header .burger{
+        display: none;
+    }
+  header  .iconos{
+        display: none;
+
+    }
+header .listas a, header .listas i{
+    color: var(--Azul);
+    margin: 5px;
+    font-size: 20px;
+} 
+    header .listas .contactanos{
+        background-color: var(--Blanco);
+    }
+   header .listas .lista2 a:hover > i,
+   header .listas .contactanos a:hover > i{
+        font-size: 25px;
+   }
+  
+ header .lista1{
+        color: var(--Azul);
+        font-size: 30px;
+    }
+
+  header  .lista2{
+        color: var(--Azul);
+        font-size: 30px;
+        display: flex;
+    }
+    
+   header ul .lista2{
+        padding: 5px;
+        margin: 2px;
+        display: flex;
+      
+    }
+ header  .listas{
+       background-color: white;
+       width: 100%;
+       display: flex;
+       flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 5px;
+     }    
+
+  header  .border{
+        border-left: 1.5px solid var(--Azul);
+        padding-left: 5px;
+    }
+
+header .contenedor{
+    margin-top: 10px;
+}
+
+    header .buscador .searc-button{
+        display: block;       
+    }
+   header .logo{
+      width: 60%;
+      text-align: center;
+        
+    }
+
+header .logo img{
+   width: 60%;
+}
+
+  header  .buscador{
+        width: 60%;
+        align-self: center;
+        display: flex;
+        margin-top: 50px;
+    }
+   header .buscador input{
+        width: 80%;
+        padding-left: 15px;
+        height: 25px;
+        border: none;
+        border-radius: 4px 0 0 4px;
+    }
+    
+    header .buscador i{
+            font-size: 15px;
+            background-color: white;
+            padding: 4px;
+            border-radius: 0 4px 4px 0;
+     }
+   header .lista3{
+        
+        width: 65%;
+        height: 40px;
+        margin: 0 auto ;
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+header .lista3 a{
+        color: white;
+    }
+header .lista3 a:hover{
+        border: none;
+        padding: 5px;
+    }
+
+}

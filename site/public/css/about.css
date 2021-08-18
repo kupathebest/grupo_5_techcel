@@ -1,0 +1,36 @@
+.about{
+    background-color: var(--Gris-Fondo);
+    
+}
+.about main{
+    padding: 15px; 
+    max-width: 1124px;
+}
+.about main h2{
+
+     margin: 20px 0 0px;
+    display:flex ;
+    justify-content: center;
+}
+   
+
+.about main p{
+    margin: 10px;
+    text-align: center;
+}
+
+.about main .val{
+    text-align: center;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+
+}
+@media (min-width :768px){
+    .about main h2{
+        justify-content: flex-start;
+    }
+    .about main p{
+        text-align: left;
+    }
+}

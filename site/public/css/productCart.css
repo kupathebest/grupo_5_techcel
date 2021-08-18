@@ -1,0 +1,243 @@
+.cart{
+    background-color: var(--Gris-Fondo);
+}
+.cart .mayusculas{
+    text-transform: uppercase;
+}
+/*.*/
+
+.cart .product-cart{
+    font-family: var(--Roboto-letra-main);
+    background-color: var(--Gris-Fondo);
+    color: var(--Negro);
+    max-width: 1124px;
+    margin: 10px auto;
+}
+.cart .container-productos{
+    width: 90%;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 5px;
+    border: var(--Fucsia) solid 1px;
+    background-color: var(--Blanco);
+}
+
+/** inicio costos*/
+
+.cart .container-total{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 auto 10px;
+    border-radius: 5px;
+    padding: 5px;
+    border: var(--Fucsia) solid 1px;
+    background-color: var(--Blanco);
+    line-height: 40px;
+}
+
+.cart .cuentas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cart .total-cuenta{
+    border-top: var(--Fucsia) 1px solid;
+    padding-top: 5px;
+    margin-top: 5px;
+}
+/** FIN costos*/
+.cart .container-descripcion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid var(--Fucsia);
+}
+.cart .container-descripcion:hover{
+    background-color: var(--Gris-Fondo);
+    border-radius: 10px;
+    transition: all .5s;
+}
+.cart .descuento{
+    color: var(--Negro);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    border-radius: 5px;
+    background-color: #00c4cc;
+    padding: 3px;
+    margin: 0 auto;
+    font-size: 12px;
+}
+
+
+
+.cart .imagen-carrito img{
+    width: 80%;
+}
+
+.cart .tacho{
+    margin-left: 5px;
+    align-self:center;
+}
+
+/*/***BOTONES****/
+.cart div.seguir-comprando{
+    display: flex;
+    justify-content: center;
+}
+.cart div.seguir-comprando a{
+    color: var(--Negro);
+    width: 90%;
+}
+
+.cart div.seguir-comprando a button{
+    background-color: #00c4cc;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    width: 95%;
+}
+
+.cart div.seguir-comprando button:hover{
+    background-color:var(--Gris);
+    transition: all .5s;
+}
+.cart div.boton-comprar{
+    display: flex;
+    justify-content: center;
+}
+
+
+.cast div.boton-comprar button:hover{
+    background-color: var(--Gris);
+    color: black;
+    transition: all .5s;
+}
+.cart div.boton-comprar a {
+    color: var(--Negro);
+    width: 90%;
+}
+
+.cart div.boton-comprar a button{
+    background-color: #00c4cc;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    width: 95%;
+}
+
+/*/*** fin BOTONES****/
+.cart .titulo{
+    color: var(--Fucsia);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart .titulo .titulo-carrito{
+    font-size: 12px;
+}
+
+.cart .descuento-mas{
+    margin-right: 20px;
+}
+
+.cart .fa-trash:hover{
+    color:red;
+}
+
+
+
+
+@media (min-width: 425px){
+
+   .cart .product-cart {
+       display: flex;
+       flex-direction: row;
+       padding:10px;
+   }
+ .cart  .container-productos{
+       width: 60%;
+   }
+  .cart .container-2{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    width: 40%;
+    padding-top: 0px;
+    margin: 10px auto;
+    border-radius: 5px;
+   }
+  .cart .container-total{
+       order: -1;
+       font-size: 14px;
+   }
+   .cart .descuento{
+       order: 0;
+   }
+  .cart .boton-comprar{
+       order: 2;
+       margin-top: 20px;
+       height: 50px;
+       width: 100%;
+   }
+ .cart  div.boton-comprar button{
+       width: 90%;
+   }
+  .cart .seguir-comprando{
+       order: 1;
+       margin: 20px 0 0;
+   }
+
+   .cart .container-descripcion p{
+       font-size: 14px;
+   }
+}
+
+@media (min-width: 490px){
+
+}
+
+
+@media (min-width: 768px){
+   .cart .container-productos{
+        width: 70%;
+    }  
+   .cart .seguir-comprando{
+        margin: 10px 0;
+    }
+    .cart .container-2{
+        width: 25%;
+    }
+
+   .cart .marca-precio{
+       display: flex;
+   }
+
+   .cart .marca-precio p{
+       margin: 0 10px;
+   }
+
+   .cart .descripcion-carrito{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-grow: 3;
+        margin-right: 20px;
+    }
+  .cart  .imagen-carrito{
+        display: flex;
+        flex-shrink: 3;
+        justify-content: center;
+        width: 33%;
+    }
+}

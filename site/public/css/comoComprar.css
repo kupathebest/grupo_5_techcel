@@ -1,0 +1,104 @@
+.comoComprar{
+    background-color: var(--Gris-Fondo);
+}
+
+.comoComprar main {
+    margin: 0 auto;
+    max-width: 1124px;
+}
+
+.comoComprar h1{
+    margin-top: 15px;
+   text-align: center;
+}
+
+.comoComprar .items {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.comoComprar .items article {
+    width: 90%;
+    text-align: center;
+    margin: 15px;
+}
+
+.comoComprar .items article i{
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    color: var(--Fucsia);
+}
+
+.comoComprar .items article h4{
+    font-size: 1.3rem;
+    margin: 5px;
+}
+
+.comoComprar .items article p{
+    margin: 0 auto;
+    width: 60%;
+    padding: 2px;
+    background-color: var(--Fucsia);
+    color: white;
+}
+
+.comoComprar h3{
+    text-align: center;
+    margin: 0 auto 15px;
+    width: 80%;
+}
+
+@media (min-width: 425px){
+
+    .comoComprar .items article {
+        width: 95%;
+    }
+
+    .comoComprar .items article i{
+        font-size: 3rem;
+    }
+
+    .comoComprar .items article h4{
+        font-size: 1.5rem;
+    }
+
+    .comoComprar .items article p{
+        margin: 0 auto;
+        width: 70%;
+        padding: 5px;
+        font-size: 1.2rem;
+        border-radius: 5px ;
+    }
+}
+
+@media (min-width: 768px){
+    .comoComprar .items {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 50px auto;
+    }
+
+    .comoComprar .items article {
+        width: 15%;
+    }
+
+    .comoComprar .items article p{
+        width: 100%;
+    }
+
+    .comoComprar .items article h4{
+        font-size: 1.1rem;
+    }
+
+    .comoComprar h3{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .comoComprar h3:hover{
+        font-size: 1.5rem;
+    }
+
+}
