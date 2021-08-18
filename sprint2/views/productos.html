@@ -80,7 +80,12 @@
         <section class="filtrar">
             <p>ORDENAR POR:</p>
             <div class="boton-ordenar">
-                <a href="/productos"><button type="submit">MENOR PRECIO <i class="fas fa-sort-down"></i></button></a>
+                <select name="ordenar-por" id="ordenar-por">
+                    <option value="" selected hidden>MÁS RELEVANTES</option>
+                    <option value="1">MENOR PRECIO</option>
+                    <option value="2">MAYOR PRECIO</option>
+                    <option value="3">MÁS RELEVANTES</option>
+                </select>
             </div>
             <p class="inicio-filtros">FILTRAR POR:</p>
             <div class="forms">
