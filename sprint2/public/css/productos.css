@@ -64,17 +64,14 @@
     font-size: 20px;
     padding: 5px 2px 0;
     border-top: solid 1px gray;
+    
 }
 
-.productos main section.filtrar div button{
+.productos main section.filtrar div.boton-ordenar select#ordenar-por{
     padding: 3px 5px;
     border-radius: 3px;
     border: solid 1px var(--Gris);
-}
-
-.productos main section.filtrar div.boton-ordenar{
-   padding-left: 14px;    
-   padding-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .productos main section.filtrar div.forms div.filtros div{

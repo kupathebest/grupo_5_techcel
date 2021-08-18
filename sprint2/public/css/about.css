@@ -1,7 +1,8 @@
 .about{
     background-color: var(--Gris-Fondo);
+    
 }
-.about main {
+.about main{
     padding: 15px; 
     max-width: 1124px;
 }
