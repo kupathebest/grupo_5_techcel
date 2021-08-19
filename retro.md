@@ -1,4 +1,4 @@
-<h1>Retrospectiva</h1>
+<h1>Retrospectiva 1</h1>
 
 <h3>Seguir haciendo:</h3>
 
@@ -21,3 +21,40 @@
 <h3>Empezar a hacer:</h3>
 
 - Reunion martes y jueves después de clase.
+
+
+_____________________________________________________________________________________________________________________________________________________________________
+
+
+
+<h1>Retrospectiva 2</h1>
+
+<h3>Seguir haciendo:</h3>
+
+- Reunion martes y jueves después de clase.
+
+- Fechas limites entre los integrantes del grupo con las tareas
+
+- Informar al grupo de las tareas realizadas
+
+
+<h3>Hacer menos:</h3>
+ 
+ - Organizar mejor los trabajos individuales, para no dejar a ultimo momento el grupal.
+ 
+
+<h3>Dejar de hacer:</h3> 
+
+- Confiarse en hacer a lo ultimo algo que creemos "sabemos hacer" siendo que lo acabamos de aprender.
+
+- Tratar de que los problemas externos no afecten al trabajo del grupo.
+
+
+<h3>Hacer mas:</h3>
+
+- Afianzar el contenido de la cursada.
+
+
+<h3>Empezar a hacer:</h3>
+
+- Priorizar el Sprint por sobre otras tareas.
