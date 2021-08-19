@@ -17,6 +17,9 @@ module.exports = {
     },
     comoComprar : (req, res) => {
         return res.render('comoComprar')
+    },
+    about : (req,res) => {
+        return res.render('about')
     }
 
 }
