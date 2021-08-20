@@ -1,76 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/a36f27fccb.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <title>Finalizar Compra</title>
-</head>
+    <%-include('../partials/head',{title:'FINALIZAR COMPRA'})%>
 
 <body class="shop">
-    <header>
-        <div class="listas">
-            <div class="lista1">
-                <nav>
-                    <ul class="contactanos">
-                        <li><a href="/contactanos"><i class="far fa-envelope"></i>Contactanos</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div>
-                <nav>
-                    <ul class="lista2">
-                        <li><a href="/login"><i class="far fa-user"></i>Ingresar</a></li>
-                        <li><a class="border" href="/register">Crear Cuenta</i></a></li>
-                        <li><a href="/carrito"><i class="fas fa-shopping-cart"></i>Carrito de compras</a></li>
-                        <li><a href="/envios"><i class="far fa-paper-plane"></i>Envios</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-        <div class="contenedor">
-            <div class="burger">
-                <i class="fas fa-bars"></i>
-            </div>
-
-            <div class="logo">
-                <a href="/"><img src="/images/logo-techcel-blanco.png" alt=""></a>
-            </div>
-
-            <div class="buscador">
-                <input type="text" class="searc-button" placeholder="Buscar" href=""><i class="fas fa-search"></i>
-            </div>
-            <div class="iconos">
-                <div>
-                    <a href="/"><i class="fas fa-search"></i></a>
-                </div>
-                <div>
-                    <a href="/login"><i class="far fa-user"></i></a>
-                </div>
-                <div>
-                    <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
-                </div>
-            </div>
-        </div>
-        <div>
-            <nav class="titulo">
-
-                <ul class="lista3">
-                    <li> <a href="/"></i>Home </a></li>
-                    <li><a href="/comocomprar">¿Como comprar? </i></a></li>
-                    <li><a href="/productos"></i>Productos</i></a></li>
-                    <li><a href="/about"></i>Acerca de nosotros </a></li>
-                </ul>
-            </nav>
-        </div>
-
-    </header>
+    <%-include('../partials/header')%> 
     <main class="shop">
         <div class="form-container">
             <div class="identificacion fondo-caja">
@@ -174,58 +108,7 @@
 
         </div>
     </main>
-    <footer>
-
-        <div class="redes">
-            <div>
-                <p class="p-redes">Seguinos en nuestras redes sociales</p>
-
-            </div>
-            <div class="iconos-redes">
-
-                <a href="/" class="facebook"><i class="fab fa-facebook-square"></i></a>
-                <a href="/" class="twitter"><i class="fab fa-twitter-square"></i></a>
-                <a href="/" class="instagram"><i class="fab fa-instagram"></i></a>
-                <a href="/" class="Google"><i class="fab fa-google-plus-square"></i></a>
-            </div>
-
-        </div>
-        <div class="contact1">
-
-            <a href="/" class="icono-contacto"><i class="fas fa-map-marker-alt"></i>
-                <p>Buenos Aires</p>
-            </a>
-            <a href="/" class="icono-contacto"><i class="fas fa-phone-square-alt"></i>
-                <p>0800-333-1235</p>
-            </a>
-            <a href="/" class="icono-contacto"><i class="fas fa-envelope-square"></i>
-                <p>info@techcel.com</p>
-            </a>
-
-        </div>
-
-
-        <div class="logo">
-            <a href="/">
-                <img src="/images/logo-techcel-blanco.png" alt="logo">
-            </a>
-        </div>
-
-
-        <div class="tarjetas">
-
-            <a href=""><img src="/images/visa.png" alt=""></a>
-
-            <a href=""><img class="master" src="/images/master.png" alt=""></a>
-            <a href=""><img src="/images/american.png" alt=""></a>
-            <a href=""><img src="/images/dinners.png" alt=""></a>
-
-        </div>
-
-
-        </section>
-
-    </footer>
+    <%-include('../partials/footer')%>
 </body>
 
 </html>
