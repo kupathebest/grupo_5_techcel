@@ -100,6 +100,7 @@
 
 .productos main section.articulos div.productos-listado article a img{
     width: 100%;
+    min-height: 270px;
 }
 
 .productos main section.articulos div.productos-listado{
@@ -135,6 +136,10 @@
     width: 40%;
     padding: 18px 30px;
     margin: 15px;
+}
+
+.productos main section.articulos div.productos-listado article a img{
+    height: 270px;
 }
 
 }
