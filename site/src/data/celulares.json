@@ -859,6 +859,434 @@
         "imagenCompleta": "huawei-gw-completo.jpg",
         "imagenFrente": "GW-metal1-frontal.png",
         "imagenDorso": "huawei-gw-metal3-dorso.jpg"
-    }
+    },
+    {
+
+        "id": 17,
+        
+        "nombreCorto": "iPhone 7 Plus",
+        
+        "nombreLargo": "iPhone 7 Plus 256 Gb Negro",
+        
+        "marca": "iPhone",
+        
+        "precio": 495000,
+        
+        "categoria": "",
+        
+        "pantallaP": "5.5, 1080 x 1920 pixels",
+                             
+        "procesadorP": "Apple A10 Fusion",
+                                     
+        "memoriaP": "3GB",
+                                      
+        "almacenamientoP": "32GB/128GB/256GB memoria interna",
+                                     
+        "expansionP": "Sin microSD",
+                                       
+        "camaraP": "12 MP, Dual",
+                                      
+        "bateriaP": "2900 mAh",
+                                      
+        "osP": "iOS 10",
+                                      
+        "perfilP": "7.3 mm",
+                                     
+        "pesoP": "188 g",
+        
+        "color": "negro",
+        
+        "2g": "GSM 850 / 900 / 1800 / 1900",
+        
+        "3g": "HSDPA 850 / 900 / 1700 / 1900 / 2100",
+        
+        "4g": "LTE (1, 2, 3, 4, 5, 7, 8, 12, 13, 17, 18, 19, 20, 25, 26, 27, 28, 29, 30)",              
+                   
+        "5g": "No",
+                         
+        "gprs": "Si",
+                            
+        "edge": "Si",
+                        
+        "sim": "Nano-SIM y eSIM dual",
+                       
+        "dimensiones": "158.2 x 77.9 x 7.3 mm",
+                            
+        "peso": "188 g",
+                        
+        "displayTipo": "LCD IPS con luz LED de fondo, touchscreen capacitivo, 16M colores",
+        
+        "displayTamanio": "1080 x 1920 pixels, 5.5 pulgadas",
+        
+        "displayResolucion": "1125 x 2436 pixels",
+        
+        "densidad": "458 ppi",
+        
+        "proteccion": "Pantalla oleofóbica HDR10 3D Touch",
+        
+        "os": "iOS 10",
+        
+        "procesador": "Procesador Apple A10 Fusion quad-core 64 bits",
+        
+        "memoriaInterna": "32/128/256GB memoria interna",
+        
+        "slot": "No",
+        
+        "camaraPrincipal": "Dual 12 MP, apertura ƒ/1.8 + ƒ/2.8",
+        
+        "camaraVideo": "Video 2160p@30fps, 1080p@30fps, 720p@240fps slo-mo, luz de video",
+        
+        "camaraFrontal": "Cámara frontal 7 MP 1080p@30fps, ƒ/2.2, HDR",
+        
+        "wi-fi": "802.11 a/b/g/n/ac; banda dual; MIMO",
+        
+        "bluetooth": "v4.2 A2DP, LE",
+        
+        "gps": "Soporte A-GPS, GLONASS",
+        
+        "usb": "Puerto Lightning",
+        
+        "nfc": "Si",
+        
+        "infrarrojo": "No",
+        
+        "bateriaCapacidad": "2900 mAh",
+        
+        "bateriaTipo": "Standard, Li-Ion",
+        
+        "extraible": "No",
+        
+        "cargaRapida": "Si",
+        
+        "cargaInalambrica": "Si",
+        
+        "imagenCompleta": "iphone7plus_ambos.webp",
+        
+        "imagenFrente": "iphone7plus_frente.webp",
+        
+        "imagenDorso": "iphone7plus_dorso.webp"
+        
+        },
+        {
+        
+        "id": 18,
+        
+        "nombreCorto": "iPhone 8 Plus",
+        
+        "nombreLargo": "iPhone 8 Plus 64 Gb Plata",
+        
+        "marca": "iPhone",
+        
+        "precio": 457000,
+        
+        "categoria": "",
+        
+        "pantallaP": "5.5, 1080 x 1920 pixels",
+                             
+        "procesadorP": "Apple A11 Bionic",
+                                     
+        "memoriaP": "3GB",
+                                      
+        "almacenamientoP": "64GB/256GB",
+                                     
+        "expansionP": "sin microSD",
+                                       
+        "camaraP": "12 MP, Dual",
+                                      
+        "bateriaP": "2700 mAh",
+                                      
+        "osP": "iOS 11",
+                                      
+        "perfilP": "7.5 mm",
+                                     
+        "pesoP": "202 g",
+        
+        "color": "plata",
+        
+        "2g": "GSM 850 / 900 / 1800 / 1900",
+                      
+        "3g": "HSDPA 850 / 900 / 1700 / 1900 / 2100",
+                            
+        "4g": "HSDPA 850 / 900 / 1700 / 1900 / 2100",
+                        
+        "5g": "No",
+                         
+        "gprs": "Si",
+                            
+        "edge": "Si",
+                        
+        "sim": "nano-SIM y eSIM dual",
+                       
+        "dimensiones": "158.4 x 78.1 x 7.5 mm",
+                            
+        "peso": "202 g",
+                        
+        "displayTipo": "LCD IPS, touchscreen capacitivo, 16M colores",
+        
+        "displayTamanio": "5.5 pulgadas",
+        
+        "displayResolucion": "1080 x 1920 pixels",
+        
+        "densidad": "458 ppi",
+        
+        "proteccion": "Pantalla ion-x a prueba de golpes, oleofóbica resistente a rayones, certificación IP67 resistente al agua y polvo",
+        
+        "os": "iOS 11",
+        
+        "procesador": "Apple A11 Bionic hexa-core 64 bits",
+        
+        "memoriaInterna": "64/256GB",
+        
+        "slot": "No",
+        
+        "camaraPrincipal": "Dual, 12 MP, f/1.8 + f/2.8, autofocus por detección de fase",
+        
+        "camaraVideo": "2160p@30fps, 1080p@30fps, 1080p@240fps slo-mo, luz de video",
+        
+        "camaraFrontal": "7 MP 1080p@30fps, ƒ/2.2, HDR",
+        
+        "wi-fi": "802.11 a/b/g/n/ac; Wi-Fi Direct; banda dual",
+        
+        "bluetooth": "v5.0 A2DP, LE",
+        
+        "gps": "con soporte A-GPS, GLONASS",
+        
+        "usb": "Puerto Lightning",
+        
+        "nfc": "Si",
+        
+        "infrarrojo": "No",
+        
+        "bateriaCapacidad": "2700 mAh",
+        
+        "bateriaTipo": "Standard, Li-Ion",
+        
+        "extraible": "No",
+        
+        "cargaRapida": "Si",
+        
+        "cargaInalambrica": "Si",
+        
+        "imagenCompleta": "iphone8_ambos.webp",
+        
+        "imagenFrente": "iPhone8_frente.webp",
+        
+        "imagenDorso": "iPhone8_dorso.webp"
+        
+        },
+        {
+        
+        "id": 19,
+        
+        "nombreCorto": "iPhone XS Max",
+        
+        "nombreLargo": "iPhone XS Max 64 Gb Gold",
+        
+        "marca": "iPhone",
+        
+        "precio": 213000,
+        
+        "categoria": "",
+        
+        "pantallaP": "6.5, 1242 x 2688 pixels",
+                           
+        "procesadorP": "Apple A12 Bionic",
+                                     
+        "memoriaP": "4GB",
+                                      
+        "almacenamientoP": "64GB/256GB/512GB",
+                                     
+        "expansionP": "Sin microSD",
+                                       
+        "camaraP": "Dual, 12MP+12MP",
+                                      
+        "bateriaP": "3174 mAh",
+                                      
+        "osP": "iOS 12",
+                                      
+        "perfilP": "7.7 mm",
+                                     
+        "pesoP": "208 g",
+        
+        "color": "dorado",
+        
+        "2g": "GSM 850 / 900 / 1800 / 1900 (SIM 1 & SIM 2)",
+                      
+        "3g": "HSDPA 850 / 900 / 1700 (AWS) / 1900 / 2100",
+                            
+        "4g": "LTE 1(2100), 2(1900), 3(1800), 4(1700/2100), 5(850), 7(2600), 8(900), 12(700), 13(700), 17(700), 18(800), 19(800), 20(800), 25(1900), 26(850), 28(700), 29(700), 30(2300), 34(2000), 38(2600), 39(1900), 40(2300), 41(2500), 66(1700/2100)",
+                         
+        "5g": "No",
+                         
+        "gprs": "Si",
+                            
+        "edge": "Si",
+                        
+        "sim": 	"Nano-SIM y eSIM dual",
+                       
+        "dimensiones": "157.5 x 77.4 x 7.7 mm",
+                            
+        "peso": "208 g",
+                        
+        "displayTipo": "Super AMOLED touchscreen capacitivo, 16M colores",
+        
+        "displayTamanio": "6.5 pulgadas, 19.5:9",
+        
+        "displayResolucion": "1242 x 2688 pixels", 
+        
+        "densidad":"458 ppi",
+        
+        "proteccion": "Resistente a rayones, pantalla oleofóbica",
+        
+        "os": "iOS 12",
+        
+        "procesador": "Apple A12 Bionic hexa-core",
+        
+        "memoriaInterna": "4GB RAM, 64/256/512GB",
+        
+        "slot": "No",
+        
+        "camaraPrincipal": "Dual, 12 MP, f1/.8 + 12 MP, f/2.4",
+        
+        "camaraVideo": "2160p@24/30/60fps, 1080p@30/60/120/240fps, HDR, stereo",
+        
+        "camaraFrontal": "7 MP, f/2.2, flash Retina, 1080p, HDR",
+        
+        "wi-fi": "Wi-Fi 802.11 a/b/g/n/ac; Wi-Fi Direct; banda dual",
+        
+        "bluetooth": "v5.0 LE, A2DP",
+        
+        "gps": "GPS con soporte A-GPS, GLONASS, GALILEO, QZSS",
+        
+        "usb": "Puerto Lightning",
+        
+        "nfc": "Si",
+        
+        "infrarrojo": "No",
+        
+        "bateriaCapacidad": "3174 mAh",
+        
+        "bateriaTipo": "Li-Ion",
+        
+        "extraible": "No",
+        
+        "cargaRapida": "Si, 50% en 30 min",
+        
+        "cargaInalambrica": "Si, Qi",
+        
+        "imagenCompleta": "iphone-xs-ambos.webp",
+        
+        "imagenFrente": "iphone-xs-frente.webp",
+        
+        "imagenDorso": "iphone-xs-dorso.webp"
+        
+        },
+        {
+        
+        "id": 20,
+        
+        "nombreCorto": "iPhone 12 mini",
+        
+        "nombreLargo": "iPhone 12 mini 64 GB - White",
+        
+        "marca": "iPhone",
+        
+        "precio": 209000,
+        
+        "categoria": "",
+        
+        "pantallaP": "5.4, 1080 x 2340 pixels",
+                             
+        "procesadorP": "Apple A14 Bionic",
+                                     
+        "memoriaP": "3GB",
+                                      
+        "almacenamientoP": "64/128/256GB almacenamiento interno",
+                                     
+        "expansionP": "sin microSD",
+                                       
+        "camaraP": "12MP+12MP",
+                                      
+        "bateriaP": "Li-Ion Carga Rápida 20W",
+                                      
+        "osP": "iOS 14",
+                                      
+        "perfilP": "7.4 mm",
+                                     
+        "pesoP": "135 g",
+        
+        "color": "blanco",
+        
+        "2g": "GSM 850 / 900 / 1800 / 1900",
+                      
+        "3g": "HSDPA 850 / 900 / 1700 (AWS) / 1900 / 2100",
+                            
+        "4g": "LTE B1 / B2 / B3 / B4 / B5 / B7 / B8 / B12 / B13 / B14 / B17 / B18 / B19 / B20 / B25 / B26 / B28 / B29 / B30 / B32 / B34 / B38 / B39 / B40 / B41 / B42 / B46 / B48 / B66 / B71",
+                        
+        "5g": "SA/NSA/Sub6/mmWave",
+                         
+        "gprs": "Si",
+                            
+        "edge":"Si",
+                        
+        "sim": "nano-SIM/eSIM / nano-SIM/eSIM dual",
+                       
+        "dimensiones": "131.5 x 64.2 x 7.4 mm",
+                            
+        "peso": "135 g",
+                        
+        "displayTipo": "Super Retina XDR OLED, touchscreen capacitivo, 16M colores",
+        
+        "displayTamanio": "5.4 pulgadas, 19.5:9",
+        
+        "displayResolucion": "1080 x 2340 pixels",
+        
+        "densidad": "476 ppi",
+        
+        "proteccion": "Gorilla Ceramic Shield, oleofóbica, HDR10",
+        
+        "os": "iOS 14",
+        
+        "procesador": "Apple A14 Bionic hexa-core",
+        
+        "memoriaInterna": "64/128/256GB almacenamiento interno",
+        
+        "slot": "No",
+        
+        "camaraPrincipal": "Dual, 12 MP (f1/.6, PDAF, OIS, wide) + 12 MP (f/2.4, ultrawide)",
+        
+        "camaraVideo": "2160p@24/30/60fps, 1080p@30/60fps, smart HDR, stereo, Dolby Vision",
+        
+        "camaraFrontal": "12 MP, f/2.2, flash Retina, 2160p@30/60fps, 1080p@30/60fps, smart HDR",
+        
+        "wi-fi": "Wi-Fi 802.11 a/b/g/n/ac/ax; Wi-Fi Direct; banda dual",
+        
+        "bluetooth": "v5.0 LE, A2DP",
+        
+        "gps": "GPS con soporte A-GPS, GLONASS, GALILEO, QZSS",
+        
+        "usb": "Puerto Lightning",
+        
+        "nfc": "Si",
+        
+        "infrarrojo": "No",
+        
+        "bateriaCapacidad": "3174 mAh",
+        
+        "bateriaTipo": "Li-Ion",
+        
+        "extraible": "No",
+        
+        "cargaRapida": "Si, 20W",
+        
+        "cargaInalambrica": "Si, 15W MagSafe / 7.5W Qi",
+        
+        "imagenCompleta": "iphone12mini_ambos.webp",
+        
+        "imagenFrente": "iphone12mini_frente.webp",
+        
+        "imagenDorso": "iphone12mini_dorso.webp"
+        
+        }
 
 ]
