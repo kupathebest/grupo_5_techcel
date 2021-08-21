@@ -273,27 +273,27 @@
         </div>
         <h4>tambien te pueden interesar</h4>
         <div class="carrousel">
-            <a href="/products"><i class="fas fa-chevron-left"></i></a>
-            <div class="card-interes1">
-                <img src="/images/detail/Prueba_dorso.webp" alt="">
-                <h2>Nombre del Producto</h2>
-            </div>
-            <div class="card-interes2">
-                <img src="/images/detail/Prueba_dorso.webp" alt="">
-                <h2>Nombre del Producto</h2>
-            </div>
-            <div class="card-interes3">
-                <img src="/images/detail/Prueba_dorso.webp" alt="">
-                <h2>Nombre del Producto</h2>
-            </div>
-            <div class="card-interes4">
-                <img src="/images/detail/Prueba_dorso.webp" alt="">
-                <h2>Nombre del Producto</h2>
-            </div>
-            <a href="/products"><i class="fas fa-chevron-right"></i></a>
+            <div class="glider-contain">
+                <div class="glider">
+                    <% celulares.forEach(celular => { %>
+                        <article class="card-carrousel">
+                            <a href="/productos/detail/<%= celular.id %>">
+                                <img src="/images/equipos/<%= celular.imagenFrente %>" alt="">
+                                <p class=""><%= celular.nombreCorto %> </p>
+                            </a>
+                        </article>
+                    <% }) %>
+                </div>
+              
+                <button aria-label="Previous" class="glider-prev">«</button>
+                <button aria-label="Next" class="glider-next">»</button>
+                <div role="tablist" class="dots"></div>
+              </div>
         </div>
     </main>
     <%- include('../partials/footer')  %>
+    <%- include('../partials/scripts')  %>
+    <script src="/javascripts/carrousel.js"></script>
     
 </body>
 

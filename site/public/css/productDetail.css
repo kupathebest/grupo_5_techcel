@@ -161,40 +161,12 @@
     padding-left: 15px;
 }
 
-
-
-.detail .carrousel{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
+.detail .carrousel .card-carrousel{
+    text-align: center;
 }
 
-.detail .carrousel a {
-    align-self: center;
-    font-size: 3rem;
-    color: var(--Fucsia)
-}
-
-.detail .carrousel .card-interes1{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    font-size: .9rem;
-}
-
-.detail .carrousel .card-interes2,
-.detail .carrousel .card-interes3,
-.detail .carrousel .card-interes4{
-    display: none;
-}
-
-
-.detail .carrousel img{
-    width: 55%;
-}
-
-.detail .carrousel h2{
-    font-size: 16px;
+.detail .carrousel .card-carrousel img{
+    width: 40%;
 }
 
 @media (min-width: 425px) {
@@ -271,42 +243,13 @@
     .detail h4{
         font-size: 1.3rem;
     }
-    
-    .detail .carrousel .card-interes{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-        font-size: 1.2rem;
-    }
-
-    .detail .carrousel .card-interes1,
-    .detail .carrousel .card-interes2{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        font-size: .9rem;
-    }
-       
-    
-    .detail .carrousel img{
-        align-self: center;
-        width: 60%;
-        padding: 15px;
-    }
-
-
-
-    .detail .carrousel i{
-        font-size: 2.5rem;
-    }
 }
 
 @media (min-width: 768px){
 
-.detail main{
+    .detail main{
     padding: 40px;
-}
+    }
 
     .detail main .contenedor{
         width: 60%;
@@ -356,27 +299,4 @@
     .detail main .main-caracteristicas-desktop .caracteristicas div p {
         text-transform: capitalize;
     }
-    
-
-    .detail .carrousel h2{
-        font-size: 14px;
-    }
-
-.detail .carrousel .card-interes1,
-.detail .carrousel .card-interes2,
-.detail .carrousel .card-interes3,
-.detail .carrousel .card-interes4{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    font-size: .9rem;
-}
-
-.detail .carrousel img{
-        align-self: center;
-        width: 60%;
-        padding: 15px;
-}
-
-    
 }
