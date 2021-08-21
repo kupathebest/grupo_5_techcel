@@ -193,96 +193,16 @@
         </section>
         <section class="articulos">
             <div class="productos-listado">
-                <article class="">
-                    <a href="/productos/detail">
-                        <img src="/images/MOTOG8PLUS.jpg" alt="">
-                        <p class="">MOTO G8 PLUS</p>
-                    </a>
-                </article>
-                <article class="">
-                    <a href="/productos/detail">
-                        <img src="/images/MOTOG8PLUS.jpg" alt="">
-                        <p class="">MOTO G8 PLUS</p>
-                    </a>
-                </article>
-                <article class="">
-                    <a href="/productos/detail">
-                        <img src="/images/MOTOG8PLUS.jpg" alt="">
-                        <p class="">MOTO G8 PLUS</p>
-                    </a>
-                </article>
-                <article class="">
-                    <a href="/productos/detail">
-                        <img src="/images/MOTOG8PLUS.jpg" alt="">
-                        <p class="">MOTO G8 PLUS</p>
-                    </a>
-                </article>
-                <article class="">
-                    <a href="/productos/detail">
-                        <img src="/images/MOTOG8PLUS.jpg" alt="">
-                        <p class="">MOTO G8 PLUS</p>
-                    </a>
-                </article>
-                <article class="">
-                    <a href="/productos/detail">
-                        <img src="/images/MOTOG8PLUS.jpg" alt="">
-                        <p class="">MOTO G8 PLUS</p>
-                    </a>
-                </article>
-                <article class="">
-                    <a href="/productos/detail">
-                        <img src="/images/MOTOG8PLUS.jpg" alt="">
-                        <p class="">MOTO G8 PLUS</p>
-                    </a>
-                </article>
-                <article class="">
-                    <a href="/productos/detail">
-                        <img src="/images/MOTOG8PLUS.jpg" alt="">
-                        <p class="">MOTO G8 PLUS</p>
-                    </a>
-                </article>
-                <article class="">
-                    <a href="/productos/detail">
-                        <img src="/images/MOTOG8PLUS.jpg" alt="">
-                        <p class="">MOTO G8 PLUS</p>
-                    </a>
-                </article>
-                <article class="">
-                    <a href="/productos/detail">
-                        <img src="/images/MOTOG8PLUS.jpg" alt="">
-                        <p class="">MOTO G8 PLUS</p>
-                    </a>
-                </article>
-                <article class="">
-                    <a href="/productos/detail">
-                        <img src="/images/MOTOG8PLUS.jpg" alt="">
-                        <p class="">MOTO G8 PLUS</p>
-                    </a>
-                </article>
-                <article class="">
-                    <a href="/productos/detail">
-                        <img src="/images/MOTOG8PLUS.jpg" alt="">
-                        <p class="">MOTO G8 PLUS</p>
-                    </a>
-                </article>
-                <article class="">
-                    <a href="/productos/detail">
-                        <img src="/images/MOTOG8PLUS.jpg" alt="">
-                        <p class="">MOTO G8 PLUS</p>
-                    </a>
-                </article>
-                <article class="">
-                    <a href="/productos/detail">
-                        <img src="/images/MOTOG8PLUS.jpg" alt="">
-                        <p class="">MOTO G8 PLUS</p>
-                    </a>
-                </article>
-                <article class="">
-                    <a href="/productos/detail">
-                        <img src="/images/MOTOG8PLUS.jpg" alt="">
-                        <p class="">MOTO G8 PLUS</p>
-                    </a>
-                </article>
+                <% celulares.forEach(celular => { %>
+                    <article class="">
+                        <a href="/productos/detail/<%= celular.id %>">
+                            <img src="/images/equipos/<%= celular.imagenFrente %>" alt="">
+                            <p class=""><%= celular.nombreCorto %> </p>
+                        </a>
+                    </article>
+                <% }) %>
+                
+                
             </div>
             <div class="boton-ver-mas">
                 <a href=""><button type="button">VER MÁS</button></a>

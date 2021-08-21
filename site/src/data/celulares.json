@@ -17,10 +17,10 @@
         "perfilP": "6.8 mm",
         "pesoP": "157 g",
         "color": "negro",
-        "2g": "GSM 850 / 900 / 1800 / 1900 (SIM 1 & SIM 2)",
-        "3g": "HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100",
-        "4g": "LTE B1 / B2 / B3 / B4 / B5 / B7 / B8 / B12 / B17 / B18 / B19 / B20 / B28 / B32 / B38 / B39 / B40 / B41 / B66",
-        "5g": "No",
+        "dosg": "GSM 850 / 900 / 1800 / 1900 (SIM 1 & SIM 2)",
+        "tresg": "HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100",
+        "cuatrog": "LTE B1 / B2 / B3 / B4 / B5 / B7 / B8 / B12 / B17 / B18 / B19 / B20 / B28 / B32 / B38 / B39 / B40 / B41 / B66",
+        "cincog": "No",
         "gprs": "Si",
         "edge": "Si",
         "sim": "nano-SIM dual",
@@ -38,14 +38,14 @@
         "camaraPrincipal": "Triple, 64 MP (f/1.79, PDAF, wide) + 8 MP (f/2.2, ultrawide) + 5 MP (f/2.4, macro)",
         "camaraVideo": "4K@30fps, 1080p@30/60/120fps, EIS",
         "camaraFrontal": "16 MP, f/2.5, wide, 1080p@30fps, 720p@120fps, HDR",
-        "wi-fi": "Wi-Fi 802.11 a/b/g/n/ac; Wi-Fi Direct; banda dual",
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac; Wi-Fi Direct; banda dual",
         "bluetooth": "v5.1 LE, A2DP",
         "gps": "GPS con soporte A-GPS de banda dual, GLONASS, GALILEO",
         "usb": "USB Type-C 2.0, OTG",
         "nfc": "Si (según región)",
         "infrarrojo": "Si",
         "bateriaCapacidad": "4250 mAh",
-        "BateriaTipo": "Li-Po",
+        "bateriaTipo": "Li-Po",
         "extraible": "No",
         "cargaRapida": "Si, 33W",
         "cargaInalambrica": "No",
@@ -71,10 +71,10 @@
         "perfilP": "9.6 mm",
         "pesoP": "198 g",
         "color": "azul",
-        "2g": "GSM 850 / 900 / 1800 / 1900 (SIM 1 & SIM 2)",
-        "3g": "HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100",
-        "4g": "LTE B1 / B2 / B3 / B4 / B5 / B7 / B8 / B20 / B28 / B38 / B40 / B41",
-        "5g": "No",
+        "dosg": "GSM 850 / 900 / 1800 / 1900 (SIM 1 & SIM 2)",
+        "tresg": "HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100",
+        "cuatrog": "LTE B1 / B2 / B3 / B4 / B5 / B7 / B8 / B20 / B28 / B38 / B40 / B41",
+        "cincog": "No",
         "gprs": "Si",
         "edge": "Si",
         "sim": "nano-SIM dual",
@@ -92,14 +92,14 @@
         "camaraPrincipal": "Triple, 48 MP (f/1.8, PDAF, wide) + 2 MP (f/2.4, macro) + 2 MP (f/2.4, profundidad)",
         "camaraVideo": "1080@30fps",
         "camaraFrontal": "8 MP, f/2.1, wide, 1080p@30fps, HDR",
-        "wi-fi": "Wi-Fi 802.11 a/b/g/n/ac; Wi-Fi Direct; banda dual",
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac; Wi-Fi Direct; banda dual",
         "bluetooth": "v5.0 LE, A2DP",
         "gps": "GPS con soporte A-GPS, GLONASS, BDS",
         "usb": "USB Type-C, 2.0, OTG",
         "nfc": "No",
         "infrarrojo": "Si",
         "bateriaCapacidad": "6000 mAh",
-        "BateriaTipo": "Li-Po",
+        "bateriaTipo": "Li-Po",
         "extraible": "No",
         "cargaRapida": "Si, 18W",
         "cargaInalambrica": "No",
@@ -125,10 +125,10 @@
         "perfilP": "9.1 mm",
         "pesoP": "199 g",
         "color": "verde",
-        "2g": "GSM 850 / 900 / 1800 / 1900 (SIM 1 & SIM 2)",
-        "3g": "HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100",
-        "4g": "LTE B1 / B2 / B3 / B4 / B5 / B7 / B8 / B12 / B17 / B18 / B19 / B20 / B26 / B28 / B32 / B38 / B40 / B41 / B42",
-        "5g": "SA/NSA/Sub6 B1 / B3 / B5 / B7 / B8 / B20 / B28 / B38 / B41 / B77 / B78 / B79",
+        "dosg": "GSM 850 / 900 / 1800 / 1900 (SIM 1 & SIM 2)",
+        "tresg": "HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100",
+        "cuatrog": "LTE B1 / B2 / B3 / B4 / B5 / B7 / B8 / B12 / B17 / B18 / B19 / B20 / B26 / B28 / B32 / B38 / B40 / B41 / B42",
+        "cincog": "SA/NSA/Sub6 B1 / B3 / B5 / B7 / B8 / B20 / B28 / B38 / B41 / B77 / B78 / B79",
         "gprs": "Si",
         "edge": "Si",
         "sim": "nano-SIM dual",
@@ -146,14 +146,14 @@
         "camaraPrincipal": "Triple, 48 MP (f/1.8, PDAF, wide) + 2 MP (f/2.4, macro) + 2 MP (f/2.4, profundidad)",
         "camaraVideo": "4K@30fps, 1080p@30/60fps",
         "camaraFrontal": "13 MP, f/2.3, 1080p, HDR",
-        "wi-fi": "Wi-Fi 802.11 a/b/g/n/ac; Wi-Fi Direct; banda dual",
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac; Wi-Fi Direct; banda dual",
         "bluetooth": "v5.0 LE, A2DP",
         "gps": "GPS con soporte A-GPS, GLONASS, GALILEO, BDS, QZSS",
         "usb": "USB Type-C 2.0, OTG",
         "nfc": "Si (según región)",
         "infrarrojo": "Si",
         "bateriaCapacidad": "5000 mAh",
-        "BateriaTipo": "Li-Po",
+        "bateriaTipo": "Li-Po",
         "extraible": "No",
         "cargaRapida": "Si, 18W",
         "cargaInalambrica": "No",
@@ -179,10 +179,10 @@
         "perfilP": "8.3 mm",
         "pesoP": "179 g",
         "color": "Gris",
-        "2g": "GSM 850 / 900 / 1800 / 1900 (SIM 1 & SIM 2)",
-        "3g": "HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100",
-        "4g": "LTE B1 / B2 / B3 / B4 / B5 / B7 / B8 / B20 / B28 / B38 / B40 / B41",
-        "5g": "No",
+        "dosg": "GSM 850 / 900 / 1800 / 1900 (SIM 1 & SIM 2)",
+        "tresg": "HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100",
+        "cuatrog": "LTE B1 / B2 / B3 / B4 / B5 / B7 / B8 / B20 / B28 / B38 / B40 / B41",
+        "cincog": "No",
         "gprs": "Si",
         "edge": "Si",
         "sim": "nano-SIM dual",
@@ -200,14 +200,14 @@
         "CamaraPrincipal": "Cuádruple, 48 MP (f/1.8, PDAF, wide) + 8 MP (f/2.2, ultrawide) + 2 MP (f/2.4, macro) + 2 MP (f/2.4, profundidad)",
         "CamaraVideo": "4K@30fps, 1080p@30/60fps",
         "CamaraFrontal": "13 MP, f/2.5, wide, 1080p, HDR",
-        "wi-fi": "Wi-Fi 802.11 a/b/g/n/ac; Wi-Fi Direct; banda dual",
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac; Wi-Fi Direct; banda dual",
         "bluetooth": "v5.0 LE, A2DP",
         "gps": "GPS con soporte A-GPS, GLONASS, GALILEO, BDS",
         "usb": "USB Type-C 2.0, OTG",
         "nfc": "No",
         "infrarrojo": "Si",
         "bateriaCapacidad": "5000 mAh",
-        "BateriaTipo": "Li-Po",
+        "bateriaTipo": "Li-Po",
         "extraible": "No",
         "cargaRapida": "Si, 33W",
         "cargaInalambrica": "No",
@@ -233,10 +233,10 @@
         "perfilP": "9.4 mm",
         "pesoP": "204 g",
         "color": "azul",
-        "2g": "gsm 850 / 900 / 1800 / 1900",
-        "3g": "gsm 850 / 900 / 1800 / 1900",
-        "4g": "lte b1 / b2 / b3 / b4 / b5 / b7 / b8 / b12 / b13 / b17 / b25 / b26 / b38 / b41 / b66 / b71 lte b2 / b4 / b5 / b12 / b14 / b30 / b66",
-        "5g": "no",
+        "dosg": "gsm 850 / 900 / 1800 / 1900",
+        "tresg": "gsm 850 / 900 / 1800 / 1900",
+        "cuatrog": "lte b1 / b2 / b3 / b4 / b5 / b7 / b8 / b12 / b13 / b17 / b25 / b26 / b38 / b41 / b66 / b71 lte b2 / b4 / b5 / b12 / b14 / b30 / b66",
+        "cincog": "no",
         "gprs": "si",
         "edge": "si",
         "sim": "nano-sim",
@@ -254,7 +254,7 @@
         "camaraPrincipal": "dual, 13 mp (f/2.0, pdaf, wide) + 2 mp (f/2.4, profundidad)",
         "camaraVideo": "1080p@30/60fps",
         "camarafrontal": "5 mp, f/2.2, wide, 1080p@30fps, eis, hdr",
-        "wi-fi": "wi-fi 802.11 a/b/g/n/ac; wi-fi direct; banda dual",
+        "wifi": "wi-fi 802.11 a/b/g/n/ac; wi-fi direct; banda dual",
         "bluetooth": "v5.0 le, a2dp",
         "gps": "gps con soporte a-gps, glonass, galileo, lteep, supl",
         "usb": "usb type-c 2.0",
@@ -265,8 +265,8 @@
         "extraible": "no",
         "cargaRapida": "si, 10w",
         "cargaInalambrica": "no",
-        "imagenCompleta":"motorola-moto-g-play.webp",
-        "imagenFrente":"motorola-moto-g-play-frente.webp",
+        "imagenCompleta": "motorola-moto-g-play.webp",
+        "imagenFrente": "motorola-moto-g-play-frente.webp",
         "imagenDorso": "motorola-moto-g-play-dorso.webp"
     },
     {
@@ -286,10 +286,10 @@
         "osP": "android 11",
         "perfilP": "9.7 mm",
         "pesoP": "215 g",
-        "2g": "gsm 850 / 900 / 1800 / 1900 (sim 1 & sim 2)",
-        "3g": "hsdpa 850 / 900 / 1700(aws) / 1900 / 2100",
-        "4g": "lte b1 / b2 / b3 / b4 / b5 / b7 / b8 / b12 / b13 / b17 / b20 / b26 / b28 / b29 / b32 / b34 / b38 / b39 / b40 / b41 / b42 / b43 / b66",
-        "5g": "sa/nsa b1 / b3 / b5 / b7 / b8 / b28 / b38 / b41 / b66 / b77 / b78",
+        "dosg": "gsm 850 / 900 / 1800 / 1900 (sim 1 & sim 2)",
+        "tresg": "hsdpa 850 / 900 / 1700(aws) / 1900 / 2100",
+        "cuatrog": "lte b1 / b2 / b3 / b4 / b5 / b7 / b8 / b12 / b13 / b17 / b20 / b26 / b28 / b29 / b32 / b34 / b38 / b39 / b40 / b41 / b42 / b43 / b66",
+        "cincog": "sa/nsa b1 / b3 / b5 / b7 / b8 / b28 / b38 / b41 / b66 / b77 / b78",
         "gprs": "si",
         "edge": "si",
         "sim": "nano-sim",
@@ -307,7 +307,7 @@
         "camaraPrincipal": "cuádruple, 64 mp ",
         "camaraVideo": "6k@30fps, 4k@30/60fps, 1080p@30/60fps, eis",
         "camaraFrontal": "dual, 16 mp (wide) + 8 mp (ultrawide), 1080p@30fps, hdr",
-        "wi-fi": "wi-fi 802.11 a/b/g/n/ac/ax; wi-fi direct; banda dual",
+        "wifi": "wi-fi 802.11 a/b/g/n/ac/ax; wi-fi direct; banda dual",
         "bluetooth": "v5.1 le, a2dp",
         "gps": "gps con soporte a-gps banda dual, glonass, galileo, bds",
         "usb": "usb type-c 2.0, otg",
@@ -318,9 +318,9 @@
         "extraible": "no",
         "cargarapida": "si, 20w",
         "cargaInalambrica": "no",
-        "imagenCompleta":"motorola-edge-s.webp",
-        "imagenFrente":"motorola-edge-s-frente.webp",
-        "imagenDorso":"motorola-edge-s-dorso.webp" 
+        "imagenCompleta": "motorola-edge-s.webp",
+        "imagenFrente": "motorola-edge-s-frente.webp",
+        "imagenDorso": "motorola-edge-s-dorso.webp"
     },
     {
         "id": 7,
@@ -339,10 +339,10 @@
         "perfilP": "9.1 mm",
         "pesoP": "200 g",
         "color": "",
-        "2g": "gsm 850 / 900 / 1800 / 1900 (sim 1 & sim 2)",
-        "3g": "hsdpa 850 / 900 / 1900 / 2100",
-        "4g": "lte b1 / b2 / b3 / b5 / b7 / b8 / b18 / b19 / b20 / b26 / b28 / b38 / b40 / b41",
-        "5g": "no",
+        "dosg": "gsm 850 / 900 / 1800 / 1900 (sim 1 & sim 2)",
+        "tresg": "hsdpa 850 / 900 / 1900 / 2100",
+        "cuatrog": "lte b1 / b2 / b3 / b5 / b7 / b8 / b18 / b19 / b20 / b26 / b28 / b38 / b40 / b41",
+        "cincog": "no",
         "gprs": "si",
         "edge": "si",
         "sim": "nano-sim / nano-sim dual híbrido",
@@ -360,7 +360,7 @@
         "camaraPrincipal": "cuádruple, 48 mp",
         "camaraVideo": "1080p@30fps",
         "canaraFrontal": "13 mp, f/2.2, wide, 1080p@30fps, hdr",
-        "wi-fi": "wi-fi 802.11 a/b/g/n/ac; wi-fi direct; banda dual",
+        "wifi": "wi-fi 802.11 a/b/g/n/ac; wi-fi direct; banda dual",
         "bluetooth": "v5.0 le, a2dp",
         "gps": "gps con soporte a-gps, glonass, galileo",
         "usb": "usb type-c 2.0",
@@ -371,9 +371,9 @@
         "extraible": "no",
         "cargaRapida": "si, 10w",
         "cargaInalambrica": "no",
-        "imagenCompleta":"motorola-moto-g20.webp",
-        "imagenFrente":"motorola-moto-g20-frente.webp",
-        "imagenDorso":"motorola-moto-g20-dorso.webp" 
+        "imagenCompleta": "motorola-moto-g20.webp",
+        "imagenFrente": "motorola-moto-g20-frente.webp",
+        "imagenDorso": "motorola-moto-g20-dorso.webp"
     },
     {
         "id": 8,
@@ -391,10 +391,10 @@
         "osP": "android 9.0",
         "perfilP": "8.8 mm",
         "pesoP": "181 g",
-        "2g": "gsm 850 / 900 / 1800 / 1900 (sim 1 & sim 2)",
-        "3g": "hsdpa 850 / 900 / 1700 (aws) / 1900 / 2100",
-        "4g": "lte 1(2100), 2(1900), 3(1800), 4(1700/2100), 5(850), 7(2600), 8(900), 12(700), 17(700), 20(800), 28(700), 38(2600), 40(2300), 41(2500), 66(1700/2100)",
-        "5g": "no",
+        "dosg": "gsm 850 / 900 / 1800 / 1900 (sim 1 & sim 2)",
+        "tresg": "hsdpa 850 / 900 / 1700 (aws) / 1900 / 2100",
+        "cuatrog": "lte 1(2100), 2(1900), 3(1800), 4(1700/2100), 5(850), 7(2600), 8(900), 12(700), 17(700), 20(800), 28(700), 38(2600), 40(2300), 41(2500), 66(1700/2100)",
+        "cincog": "no",
         "gprs": "si",
         "edge": "si",
         "sim": "nano-sim / nano-sim dual híbrido",
@@ -412,7 +412,7 @@
         "camaraPrincipal": "cuádruple, 48 mp",
         "camaraVideo": "2160p@30fps, 1080p@30/60fps",
         "camaraFrontal": "25 mp, f/2.0, 1080p, hdr",
-        "wi-fi": "wi-fi 802.11 a/b/g/n/ac; wi-fi direct; banda dual",
+        "wifi": "wi-fi 802.11 a/b/g/n/ac; wi-fi direct; banda dual",
         "bluetooth": "v5.0 le, a2dp, edr",
         "gps": "gps con soporte a-gps, glonass, bds, galileo",
         "usb": "usb type-c, 3.1, otg",
@@ -423,12 +423,12 @@
         "extraible": "no",
         "cargaRapida": "si, 15w, turbopower",
         "cargaInalambrica": "no",
-        "imagenCompleta":"motorola-one-zoom.webp",
-        "imagenFrente":"motorola-one-zoom-frente.webp",
-        "imagenDorso":"motorola-one-zoom-dorso.webp" 
+        "imagenCompleta": "motorola-one-zoom.webp",
+        "imagenFrente": "motorola-one-zoom-frente.webp",
+        "imagenDorso": "motorola-one-zoom-dorso.webp"
     },
     {
-        "id" : 9,
+        "id": 9,
         "nombreCorto": "Samsung Galaxy",
         "nombreLargo": "Samsung Galaxy A52s 5G",
         "marca": "samsung",
@@ -436,7 +436,7 @@
         "categoria": "",
         "pantallaP": "6.5, 1080 x2400 pixels",
         "procesadorP": "Snapdragon 778G 2.4Ghz",
-        "memoriaP":"6GB/8GB",
+        "memoriaP": "6GB/8GB",
         "almacenamientoP": "128GB/256GB",
         "expansionP": "MicroSD",
         "camaraP": "64mp+12mp",
@@ -445,10 +445,10 @@
         "perfilP": "8.4 mm",
         "pesoP": "189 g",
         "color": "black",
-        "2g": "GSM 850 / 900 / 1800 / 1900 (SIM 1 & SIM 2)",
-        "3g": "HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100",
-        "4g": "LTE B2 / B4 / B5 / B12 / B17 / B26 / B40 / B41 / B66",
-        "5g": "SA/NSA/Sub6 B1 / B3 / B5 / B7 / B8 / B20 / B28 / B38 / B40 / B41 / B66 / B78",
+        "dosg": "GSM 850 / 900 / 1800 / 1900 (SIM 1 & SIM 2)",
+        "tresg": "HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100",
+        "cuatrog": "LTE B2 / B4 / B5 / B12 / B17 / B26 / B40 / B41 / B66",
+        "cincog": "SA/NSA/Sub6 B1 / B3 / B5 / B7 / B8 / B20 / B28 / B38 / B40 / B41 / B66 / B78",
         "gprs": "Si",
         "edge": "Si",
         "sim": "nano-SIM / nano-SIM dual híbrido",
@@ -466,22 +466,22 @@
         "camaraPrincipal": "Cuádruple, 64 MP (f/1.8, PDAF, OIS, wide) + 12 MP (f/2.2, ultrawide) + 5 MP (f/2.4, macro) + 5 MP (f/2.4, profundidad)",
         "camaraVideo": "4K@30fps, 1080p@30/120fps, EIS",
         "camaraFrontal": "32 MP, f/2.2, wide, 4K@30fps, 1080p@30fps, HDR",
-        "wi-fi": "Wi-Fi 802.11 a/b/g/n/ac; Wi-Fi Direct; banda dual",
-        "bluetooth":"v5.2 LE, A2DP",
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac; Wi-Fi Direct; banda dual",
+        "bluetooth": "v5.2 LE, A2DP",
         "gps": "GPS con soporte A-GPS, GLONASS, GALILEO, BDS",
         "usb": "USB Type-C 2.0, OTG",
         "nfc": "Si (según mercado)",
         "infrarrojo": "No",
-        "bateriaCapacidad":"4500 mAh",
+        "bateriaCapacidad": "4500 mAh",
         "bateriaTipo": "Li-Po",
         "extraible": "No",
         "cargaRapida": "Si, 25W",
         "cargaInalambrica": "No",
         "imagenCompleta": "A52-COMPLETO.webp",
-        "imagenFrente":"A52-frente.webp",
-        "imagenDorso":"A52-dorso.webp"
-        },
-        {
+        "imagenFrente": "A52-frente.webp",
+        "imagenDorso": "A52-dorso.webp"
+    },
+    {
         "id": 10,
         "nombreCorto": "Samsung Galaxy S21",
         "nombreLargo": "Samsung Galaxy S21 Ultra",
@@ -499,10 +499,10 @@
         "perfilP": "8.9 mm",
         "pesoP": "229 g",
         "color": "Phantom silver",
-        "2G": "GSM 850 / 900 / 1800 / 1900 (SIM 1 & SIM 2)",
-        "3G": "HSDPA 850 / 900 / 1700 (AWS) / 1900 / 2100",	
-        "4G": "LTE",
-        "5G": "SA/NSA/Sub6/mmWave",
+        "dosg": "GSM 850 / 900 / 1800 / 1900 (SIM 1 & SIM 2)",
+        "tresg": "HSDPA 850 / 900 / 1700 (AWS) / 1900 / 2100",
+        "cuatrog": "LTE",
+        "cincog": "SA/NSA/Sub6/mmWave",
         "gprs": "SI",
         "edge": "SI",
         "sim": "nano-SIM - eSIM / nano-SIM dual - eSIM",
@@ -520,7 +520,7 @@
         "camaraPrincipal": "Cuádruple, 108 MP (f/1.8, PDAF Dual Pixel y láser, OIS, wide) + 10 MP (f/4.9, telefoto periscópico, PDAF Dual Pixel, OIS) + 10 MP (f/2.4, OIS, PDAF, telefoto) + 12 MP (f/2.2, PDAF Dual Pixel, ultrawide)",
         "camaraVideo": "8K@30fps, 4K@30/60fps, 1080p@30/60/120fps, 720p@960fps, HDR10+, OIS, EIS, HDR",
         "camaraFrontal": "40 MP, f/2.2, PDAF Dual Pixel, wide, auto-HDR, 4K@30/60fps, 1080p@30fps",
-        "wi-fi": "Wi-Fi 802.11 a/b/g/n/ac/ax; Wi-Fi Direct; banda dual",
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/ax; Wi-Fi Direct; banda dual",
         "bluetooth": "v5.0 LE, A2DP, aptX",
         "gps": "GPS con soporte A-GPS , BDS, GALILEO",
         "usb": "USB Type-C 3.2, OTG",
@@ -531,11 +531,11 @@
         "extraible": "No",
         "cargaRapida": "Si, 25W",
         "cargaInalambrica": "Si, 15W, Qi/PMA",
-        "imagenCompleta":"S21-completo.webp",
+        "imagenCompleta": "S21-completo.webp",
         "imagenFrente": "S21-frente.webp",
-        "imagenDorso":"S21-perfil.webp"
-        },
-        {
+        "imagenDorso": "S21-perfil.webp"
+    },
+    {
         "id": 11,
         "nombreCorto": "Samsung Galaxy A72",
         "nombreLargo": "Samsung Galaxy A72 128 GB awesome blue",
@@ -553,12 +553,12 @@
         "perfilP": "8.4 mm",
         "pesoP": "203 g",
         "color": "Awesome blue",
-        "2G": "GSM 850 / 900 / 1800 / 1900 (SIM 1 & SIM 2)",
-        "3G": "HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100",
-        "4G": "LTE",
-        "5G": "NO",
+        "dosg": "GSM 850 / 900 / 1800 / 1900 (SIM 1 & SIM 2)",
+        "tresg": "HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100",
+        "cuatrog": "LTE",
+        "cincog": "NO",
         "gprs": "SI",
-        "edge":"SI",
+        "edge": "SI",
         "sim": "nano-SIM / nano-SIM dual híbrido",
         "dimensiones": "165 x 77.4 x 8.4 mm",
         "peso": "203 g",
@@ -574,7 +574,7 @@
         "camaraPrincipal": "Cuádruple, 64 MP (f/1.8, PDAF, OIS, wide) + 12 MP (f/2.2, ultrawide) + 8 MP (f/2.4, PDAF, OIS, telefoto) + 5 MP (f/2.4, macro)",
         "camaraVideo": "4K@30fps, 1080p@30/120fps, EIS",
         "camaraFrontal": "32 MP, f/2.2, 4K@30fps, 1080p@30fps, HDR",
-        "wi-fi": "Wi-Fi 802.11 a/b/g/n/ac; Wi-Fi Direct; banda dual",
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac; Wi-Fi Direct; banda dual",
         "bluetooth": "v5.0 LE, A2DP",
         "gps": "GPS con soporte A-GPS, GLONASS, GALILEO, BDS",
         "usb": "USB Type-C 2.0, OTG",
@@ -587,9 +587,9 @@
         "cargaInalambrica": "No",
         "imagenCompleta": "BLUE-PERFIL.webp",
         "imagenFrente": "BLUE-FRENTE.webp",
-        "imagenDorso":"BLUE-DORSO.webp"
-        },
-        {
+        "imagenDorso": "BLUE-DORSO.webp"
+    },
+    {
         "id": 12,
         "nombreCorto": "Samsung Galaxy Z Flip",
         "nombreLargo": "Samsung Galaxy Z Flip 3 5G",
@@ -607,10 +607,10 @@
         "perfilP": "6.9 mm (abierto)",
         "pesoP": "183 g",
         "color": "black",
-        "2G": "GSM 850 / 900 / 1800 / 1900 (SIM 1 & SIM 2)",
-        "3G": "HSDPA 850 / 900 / 1700(AWS) / 1900 / 21002",
-        "4G": "LTE B1 / B2 / B3 / B4 / B5 / B7 / B8 / B12 / B13 / B14 / B18 / B19 / B20 / B25 / B26 / B28 / B30 / B38 / B39 / B40 / B41 / B46 / B48 / B66 / B71",
-        "5G": "SA/NSA/Sub6/mmWave B2 / B5 / B25 / B41 / B66 / B71 / B260 / B261",
+        "dosg": "GSM 850 / 900 / 1800 / 1900 (SIM 1 & SIM 2)",
+        "tresg": "HSDPA 850 / 900 / 1700(AWS) / 1900 / 21002",
+        "cuatrog": "LTE B1 / B2 / B3 / B4 / B5 / B7 / B8 / B12 / B13 / B14 / B18 / B19 / B20 / B25 / B26 / B28 / B30 / B38 / B39 / B40 / B41 / B46 / B48 / B66 / B71",
+        "cincog": "SA/NSA/Sub6/mmWave B2 / B5 / B25 / B41 / B66 / B71 / B260 / B261",
         "gprs": "Si",
         "edge": "Si",
         "sim": "nano-SIM, eSIM",
@@ -628,7 +628,7 @@
         "camaraPrincipal": "Dual, 12 MP (f/1.8, PDAF Dual Pixel, OIS, wide) + 12 MP (f/2.2, ultrawide)",
         "camaraVideo": "4K@30/60fps, 1080p@60/240fps, 720p@960fps, HDR10+",
         "camaraFrontal": "10 MP, f/2.4, PDAF, wide, 4K@30fps, HDR",
-        "wi-fi": "Wi-Fi 802.11 a/b/g/n/ac/ax; Wi-Fi Direct; banda dual",
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/ax; Wi-Fi Direct; banda dual",
         "bluetooth": "v5.1 LE, A2DP, aptX HD",
         "gps": "GPS con soporte A-GPS, GLONASS, GALILEO, BDS",
         "usb": "USB Type-C 3.1, OTG",
@@ -640,9 +640,8 @@
         "cargaRapida": "Si, 15W",
         "cargaInalambrica": "Si, 10W",
         "imagenCompleta": "Flip-Perfil1.webp",
-        "imagenFrente":"flip-frente1.webp",
+        "imagenFrente": "flip-frente1.webp",
         "imagenDorso": "flip-dorso1.webp"
-        
     },
     {
         "id": 13,
@@ -662,10 +661,10 @@
         "perfilP": "7.9mm",
         "pesoP": "184g",
         "color": "azul",
-        "2g": "GSM 850 / 900 / 1800 / 1900 (SIM 1 & SIM 2)",
-        "3g": "HSDPA 800 / 850 / 900 / 1700(AWS) / 1900 / 2100",
-        "4g": "LTE B1 / B2 / B3 / B4 / B5 /B6 / B8 / B9 / B18 / B19 / B26 / B34 / B38 / B39 / B40 / B41",
-        "5g": "SA/NSA B1 / B3 / B28 / B38 / B41 / B77 / B78 / B80 / B83 / B84",
+        "dosg": "GSM 850 / 900 / 1800 / 1900 (SIM 1 & SIM 2)",
+        "tresg": "HSDPA 800 / 850 / 900 / 1700(AWS) / 1900 / 2100",
+        "cuatrog": "LTE B1 / B2 / B3 / B4 / B5 /B6 / B8 / B9 / B18 / B19 / B26 / B34 / B38 / B39 / B40 / B41",
+        "cincog": "SA/NSA B1 / B3 / B28 / B38 / B41 / B77 / B78 / B80 / B83 / B84",
         "gprs": "Si",
         "edge": "Si",
         "sim": "nano-SIM dual",
@@ -683,7 +682,7 @@
         "camaraPrincipal": "Cuádruple,64 MP (f/1.8, PDAF, wide) + 8 MP (f/2.4, ultrawide) + 2 MP (f/2.4, macro) + 2 MP (f/2.4, profundidad)",
         "camaraVideo": "4K@30fps, 1080p@30fps, 720p@960fps, EIS",
         "camaraFrontal": "Dual, 16 MP ((f/2.0, wide) + 32 MP (f/2.4, ultrawide), 4K, HDR",
-        "wi-fi": "Wi-Fi 802.11 a/b/g/n/ac; Wi-Fi Direct; banda dual",
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac; Wi-Fi Direct; banda dual",
         "bluetooth": "v5.1 A2DP, LE",
         "gps": "GPS con soporte A-GPS, GLONASS, GALILEO, BDS, QZSS",
         "usb": "USB Type-C 2.0, OTG",
@@ -716,10 +715,10 @@
         "perfilP": "8.5mm",
         "pesoP": "125g",
         "color": "rosa",
-        "2g": "GSM 850 / 900 / 1800 / 1900 (SIM 1 & SIM 2)",
-        "3g": "HSDPA 850 / 900 / 1900 / 2100",
-        "4g": "LTE ",
-        "5g": "No",
+        "dosg": "GSM 850 / 900 / 1800 / 1900 (SIM 1 & SIM 2)",
+        "tresg": "HSDPA 850 / 900 / 1900 / 2100",
+        "cuatrog": "LTE ",
+        "cincog": "No",
         "gprs": "SI",
         "edge": "Si",
         "sim": "Nano-SIM dual",
@@ -737,7 +736,7 @@
         "camaraPrincipal": "13 MP, f/1.8",
         "camaraVideo": "1080p@30fps",
         "camaraFrontal": "8 MP  f/2.0, flash LED 1080p",
-        "wi-fi": "Wi-Fi 802.11 b/g/n; Wi-Fi Direct",
+        "wifi": "Wi-Fi 802.11 b/g/n; Wi-Fi Direct",
         "bluetooth": "v4.2 LE, A2DP",
         "gps": "gps con soporte A-GPS, GLONASS, BDS",
         "usb": "microUSB 2.0",
@@ -770,10 +769,10 @@
         "perfilP": "9.3mm",
         "pesoP": "206g",
         "color": "blanco",
-        "2g": "GSM 850 / 900 / 1800 / 1900 (SIM 1 & SIM 2)",
-        "3g": "HSDPA 850 / 900 / 1700 (AWS) / 1900 / 2100",
-        "4g": "LTE B1 / B3 / B5 / B7 / B8 / B20 / B28 / B38 / B40 / B41",
-        "5g": "No",
+        "dosg": "GSM 850 / 900 / 1800 / 1900 (SIM 1 & SIM 2)",
+        "tresg": "HSDPA 850 / 900 / 1700 (AWS) / 1900 / 2100",
+        "cuatrog": "LTE B1 / B3 / B5 / B7 / B8 / B20 / B28 / B38 / B40 / B41",
+        "cincog": "No",
         "gprs": "Si",
         "edge": "Si",
         "sim": "Nano-SIM dual",
@@ -791,7 +790,7 @@
         "camaraPrincipal": "Cuádruple 48 MP (f/1.8, PDAF, wide) + 8 MP (F/2.4, ultrawide) + 2 MP (f/2.4, macro) + 2 MP (f/2.4, profundidad)",
         "camaraVideo": "4K@30fps 1080p@30fps",
         "camaraFrontal": "8 MP, f/2.0 1080p, HDR",
-        "wi-fi": "Wi-Fi 802.11 b/g/n; Wi-Fi Direct",
+        "wifi": "Wi-Fi 802.11 b/g/n; Wi-Fi Direct",
         "bluetooth": "v5.1 LE, A2DP",
         "gps": "GPS con soporte A-GPS, GLONASS, BDS",
         "usb": "USB Type-C 2.0, OTG",
@@ -809,31 +808,31 @@
     {
         "id": 16,
         "nombreCorto": "Huawei GW METAL",
-        "nombreLargo": "HUWEI GW METAL",
+        "nombreLargo": "HUAWEI GW METAL",
         "marca": "Huawei",
         "precio": 22690,
         "categoria": "",
-        "PantallaP": "5.5 pulgadas",
+        "pantallaP": "5.5 pulgadas",
         "procesadorP": "Octa-core 1.4GHz",
         "memoriaP": "2gb",
         "almacenamientoP": "16gb",
-        "expansiónP": "128gb",
+        "expansionP": "128gb",
         "camaraP": "12mpx",
         "bateriaP": "4000mAh",
-        "osp": "Android 7.0",
+        "osP": "Android 7.0",
         "perfilP": "8.4 mm",
         "pesoP": "165g",
         "color": "negro",
-        "2g ": "GSM 850 / 900 / 1800 / 1900 - HSDPA 850 / 900 / 1900 / 2100 - LTE",
-        "3g ": "HSDPA / HSUPA",
-        "4g": "LTE ",
-        "5g": "No",
+        "dosg": "GSM 850 / 900 / 1800 / 1900 - HSDPA 850 / 900 / 1900 / 2100 - LTE",
+        "tresg": "HSDPA / HSUPA",
+        "cuatrog": "LTE ",
+        "cincog": "No",
         "gprs": "Si",
         "edge": "Si ",
         "sim": "Nano-SIM ",
         "dimensiones": "153.6 x 76.4 x 8.45 mm",
         "peso": "165 g",
-        "displayTipo ": "TFT touchscreen capacitivo, 16M colores",
+        "displayTipo": "TFT touchscreen capacitivo, 16M colores",
         "displayTamanio": "720 x 1280 pixels, 5.5 pulgadas",
         "displayResolucion": "1080 x 2400 pixels",
         "densidad": "395 ppi",
@@ -842,10 +841,10 @@
         "procesador": "octa-core 1.4GHz",
         "memoriaInterna": "2GB RAM 16GB ",
         "slot": "microSD hasta 128GB",
-        "camaraPrincipa": "12 MP",
+        "camaraPrincipal": "12 MP",
         "camaraVideo": "MP f/2.0",
-        "CamaraFrontal": "8 MP f/2.0",
-        "wi-fi": "802.11 b/g/n",
+        "camaraFrontal": "8 MP f/2.0",
+        "wifi": "802.11 b/g/n",
         "bluetooth": "v4.1 A2DP, LE",
         "gps": "GPS con soporte A-GPS y GLONASS",
         "usb": "microUSB 2.0",
@@ -861,432 +860,219 @@
         "imagenDorso": "huawei-gw-metal3-dorso.jpg"
     },
     {
-
         "id": 17,
-        
         "nombreCorto": "iPhone 7 Plus",
-        
         "nombreLargo": "iPhone 7 Plus 256 Gb Negro",
-        
         "marca": "iPhone",
-        
         "precio": 495000,
-        
         "categoria": "",
-        
         "pantallaP": "5.5, 1080 x 1920 pixels",
-                             
         "procesadorP": "Apple A10 Fusion",
-                                     
         "memoriaP": "3GB",
-                                      
         "almacenamientoP": "32GB/128GB/256GB memoria interna",
-                                     
         "expansionP": "Sin microSD",
-                                       
         "camaraP": "12 MP, Dual",
-                                      
         "bateriaP": "2900 mAh",
-                                      
         "osP": "iOS 10",
-                                      
         "perfilP": "7.3 mm",
-                                     
         "pesoP": "188 g",
-        
         "color": "negro",
-        
-        "2g": "GSM 850 / 900 / 1800 / 1900",
-        
-        "3g": "HSDPA 850 / 900 / 1700 / 1900 / 2100",
-        
-        "4g": "LTE (1, 2, 3, 4, 5, 7, 8, 12, 13, 17, 18, 19, 20, 25, 26, 27, 28, 29, 30)",              
-                   
-        "5g": "No",
-                         
+        "dosg": "GSM 850 / 900 / 1800 / 1900",
+        "tresg": "HSDPA 850 / 900 / 1700 / 1900 / 2100",
+        "cuatrog": "LTE (1, 2, 3, 4, 5, 7, 8, 12, 13, 17, 18, 19, 20, 25, 26, 27, 28, 29, 30)",
+        "cincog": "No",
         "gprs": "Si",
-                            
         "edge": "Si",
-                        
         "sim": "Nano-SIM y eSIM dual",
-                       
         "dimensiones": "158.2 x 77.9 x 7.3 mm",
-                            
         "peso": "188 g",
-                        
         "displayTipo": "LCD IPS con luz LED de fondo, touchscreen capacitivo, 16M colores",
-        
         "displayTamanio": "1080 x 1920 pixels, 5.5 pulgadas",
-        
         "displayResolucion": "1125 x 2436 pixels",
-        
         "densidad": "458 ppi",
-        
         "proteccion": "Pantalla oleofóbica HDR10 3D Touch",
-        
         "os": "iOS 10",
-        
         "procesador": "Procesador Apple A10 Fusion quad-core 64 bits",
-        
         "memoriaInterna": "32/128/256GB memoria interna",
-        
         "slot": "No",
-        
         "camaraPrincipal": "Dual 12 MP, apertura ƒ/1.8 + ƒ/2.8",
-        
         "camaraVideo": "Video 2160p@30fps, 1080p@30fps, 720p@240fps slo-mo, luz de video",
-        
         "camaraFrontal": "Cámara frontal 7 MP 1080p@30fps, ƒ/2.2, HDR",
-        
-        "wi-fi": "802.11 a/b/g/n/ac; banda dual; MIMO",
-        
+        "wifi": "802.11 a/b/g/n/ac; banda dual; MIMO",
         "bluetooth": "v4.2 A2DP, LE",
-        
         "gps": "Soporte A-GPS, GLONASS",
-        
         "usb": "Puerto Lightning",
-        
         "nfc": "Si",
-        
         "infrarrojo": "No",
-        
         "bateriaCapacidad": "2900 mAh",
-        
         "bateriaTipo": "Standard, Li-Ion",
-        
         "extraible": "No",
-        
         "cargaRapida": "Si",
-        
         "cargaInalambrica": "Si",
-        
         "imagenCompleta": "iphone7plus_ambos.webp",
-        
         "imagenFrente": "iphone7plus_frente.webp",
-        
         "imagenDorso": "iphone7plus_dorso.webp"
-        
-        },
-        {
-        
+    },
+    {
         "id": 18,
-        
         "nombreCorto": "iPhone 8 Plus",
-        
         "nombreLargo": "iPhone 8 Plus 64 Gb Plata",
-        
         "marca": "iPhone",
-        
         "precio": 457000,
-        
         "categoria": "",
-        
         "pantallaP": "5.5, 1080 x 1920 pixels",
-                             
         "procesadorP": "Apple A11 Bionic",
-                                     
         "memoriaP": "3GB",
-                                      
         "almacenamientoP": "64GB/256GB",
-                                     
         "expansionP": "sin microSD",
-                                       
         "camaraP": "12 MP, Dual",
-                                      
         "bateriaP": "2700 mAh",
-                                      
         "osP": "iOS 11",
-                                      
         "perfilP": "7.5 mm",
-                                     
         "pesoP": "202 g",
-        
         "color": "plata",
-        
-        "2g": "GSM 850 / 900 / 1800 / 1900",
-                      
-        "3g": "HSDPA 850 / 900 / 1700 / 1900 / 2100",
-                            
-        "4g": "HSDPA 850 / 900 / 1700 / 1900 / 2100",
-                        
-        "5g": "No",
-                         
+        "dosg": "GSM 850 / 900 / 1800 / 1900",
+        "tresg": "HSDPA 850 / 900 / 1700 / 1900 / 2100",
+        "cuatrog": "HSDPA 850 / 900 / 1700 / 1900 / 2100",
+        "cincog": "No",
         "gprs": "Si",
-                            
         "edge": "Si",
-                        
         "sim": "nano-SIM y eSIM dual",
-                       
         "dimensiones": "158.4 x 78.1 x 7.5 mm",
-                            
         "peso": "202 g",
-                        
         "displayTipo": "LCD IPS, touchscreen capacitivo, 16M colores",
-        
         "displayTamanio": "5.5 pulgadas",
-        
         "displayResolucion": "1080 x 1920 pixels",
-        
         "densidad": "458 ppi",
-        
         "proteccion": "Pantalla ion-x a prueba de golpes, oleofóbica resistente a rayones, certificación IP67 resistente al agua y polvo",
-        
         "os": "iOS 11",
-        
         "procesador": "Apple A11 Bionic hexa-core 64 bits",
-        
         "memoriaInterna": "64/256GB",
-        
         "slot": "No",
-        
         "camaraPrincipal": "Dual, 12 MP, f/1.8 + f/2.8, autofocus por detección de fase",
-        
         "camaraVideo": "2160p@30fps, 1080p@30fps, 1080p@240fps slo-mo, luz de video",
-        
         "camaraFrontal": "7 MP 1080p@30fps, ƒ/2.2, HDR",
-        
-        "wi-fi": "802.11 a/b/g/n/ac; Wi-Fi Direct; banda dual",
-        
+        "wifi": "802.11 a/b/g/n/ac; Wi-Fi Direct; banda dual",
         "bluetooth": "v5.0 A2DP, LE",
-        
         "gps": "con soporte A-GPS, GLONASS",
-        
         "usb": "Puerto Lightning",
-        
         "nfc": "Si",
-        
         "infrarrojo": "No",
-        
         "bateriaCapacidad": "2700 mAh",
-        
         "bateriaTipo": "Standard, Li-Ion",
-        
         "extraible": "No",
-        
         "cargaRapida": "Si",
-        
         "cargaInalambrica": "Si",
-        
         "imagenCompleta": "iphone8_ambos.webp",
-        
         "imagenFrente": "iPhone8_frente.webp",
-        
         "imagenDorso": "iPhone8_dorso.webp"
-        
-        },
-        {
-        
+    },
+    {
         "id": 19,
-        
         "nombreCorto": "iPhone XS Max",
-        
         "nombreLargo": "iPhone XS Max 64 Gb Gold",
-        
         "marca": "iPhone",
-        
         "precio": 213000,
-        
         "categoria": "",
-        
         "pantallaP": "6.5, 1242 x 2688 pixels",
-                           
         "procesadorP": "Apple A12 Bionic",
-                                     
         "memoriaP": "4GB",
-                                      
         "almacenamientoP": "64GB/256GB/512GB",
-                                     
         "expansionP": "Sin microSD",
-                                       
         "camaraP": "Dual, 12MP+12MP",
-                                      
         "bateriaP": "3174 mAh",
-                                      
         "osP": "iOS 12",
-                                      
         "perfilP": "7.7 mm",
-                                     
         "pesoP": "208 g",
-        
         "color": "dorado",
-        
-        "2g": "GSM 850 / 900 / 1800 / 1900 (SIM 1 & SIM 2)",
-                      
-        "3g": "HSDPA 850 / 900 / 1700 (AWS) / 1900 / 2100",
-                            
-        "4g": "LTE 1(2100), 2(1900), 3(1800), 4(1700/2100), 5(850), 7(2600), 8(900), 12(700), 13(700), 17(700), 18(800), 19(800), 20(800), 25(1900), 26(850), 28(700), 29(700), 30(2300), 34(2000), 38(2600), 39(1900), 40(2300), 41(2500), 66(1700/2100)",
-                         
-        "5g": "No",
-                         
+        "dosg": "GSM 850 / 900 / 1800 / 1900 (SIM 1 & SIM 2)",
+        "tresg": "HSDPA 850 / 900 / 1700 (AWS) / 1900 / 2100",
+        "cuatrog": "LTE 1(2100), 2(1900), 3(1800), 4(1700/2100), 5(850), 7(2600), 8(900), 12(700), 13(700), 17(700), 18(800), 19(800), 20(800), 25(1900), 26(850), 28(700), 29(700), 30(2300), 34(2000), 38(2600), 39(1900), 40(2300), 41(2500), 66(1700/2100)",
+        "cincog": "No",
         "gprs": "Si",
-                            
         "edge": "Si",
-                        
-        "sim": 	"Nano-SIM y eSIM dual",
-                       
+        "sim": "Nano-SIM y eSIM dual",
         "dimensiones": "157.5 x 77.4 x 7.7 mm",
-                            
         "peso": "208 g",
-                        
         "displayTipo": "Super AMOLED touchscreen capacitivo, 16M colores",
-        
         "displayTamanio": "6.5 pulgadas, 19.5:9",
-        
-        "displayResolucion": "1242 x 2688 pixels", 
-        
-        "densidad":"458 ppi",
-        
+        "displayResolucion": "1242 x 2688 pixels",
+        "densidad": "458 ppi",
         "proteccion": "Resistente a rayones, pantalla oleofóbica",
-        
         "os": "iOS 12",
-        
         "procesador": "Apple A12 Bionic hexa-core",
-        
         "memoriaInterna": "4GB RAM, 64/256/512GB",
-        
         "slot": "No",
-        
         "camaraPrincipal": "Dual, 12 MP, f1/.8 + 12 MP, f/2.4",
-        
         "camaraVideo": "2160p@24/30/60fps, 1080p@30/60/120/240fps, HDR, stereo",
-        
         "camaraFrontal": "7 MP, f/2.2, flash Retina, 1080p, HDR",
-        
-        "wi-fi": "Wi-Fi 802.11 a/b/g/n/ac; Wi-Fi Direct; banda dual",
-        
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac; Wi-Fi Direct; banda dual",
         "bluetooth": "v5.0 LE, A2DP",
-        
         "gps": "GPS con soporte A-GPS, GLONASS, GALILEO, QZSS",
-        
         "usb": "Puerto Lightning",
-        
         "nfc": "Si",
-        
         "infrarrojo": "No",
-        
         "bateriaCapacidad": "3174 mAh",
-        
         "bateriaTipo": "Li-Ion",
-        
         "extraible": "No",
-        
         "cargaRapida": "Si, 50% en 30 min",
-        
         "cargaInalambrica": "Si, Qi",
-        
         "imagenCompleta": "iphone-xs-ambos.webp",
-        
         "imagenFrente": "iphone-xs-frente.webp",
-        
         "imagenDorso": "iphone-xs-dorso.webp"
-        
-        },
-        {
-        
+    },
+    {
         "id": 20,
-        
         "nombreCorto": "iPhone 12 mini",
-        
         "nombreLargo": "iPhone 12 mini 64 GB - White",
-        
         "marca": "iPhone",
-        
         "precio": 209000,
-        
         "categoria": "",
-        
         "pantallaP": "5.4, 1080 x 2340 pixels",
-                             
         "procesadorP": "Apple A14 Bionic",
-                                     
         "memoriaP": "3GB",
-                                      
         "almacenamientoP": "64/128/256GB almacenamiento interno",
-                                     
         "expansionP": "sin microSD",
-                                       
         "camaraP": "12MP+12MP",
-                                      
         "bateriaP": "Li-Ion Carga Rápida 20W",
-                                      
         "osP": "iOS 14",
-                                      
         "perfilP": "7.4 mm",
-                                     
         "pesoP": "135 g",
-        
         "color": "blanco",
-        
-        "2g": "GSM 850 / 900 / 1800 / 1900",
-                      
-        "3g": "HSDPA 850 / 900 / 1700 (AWS) / 1900 / 2100",
-                            
-        "4g": "LTE B1 / B2 / B3 / B4 / B5 / B7 / B8 / B12 / B13 / B14 / B17 / B18 / B19 / B20 / B25 / B26 / B28 / B29 / B30 / B32 / B34 / B38 / B39 / B40 / B41 / B42 / B46 / B48 / B66 / B71",
-                        
-        "5g": "SA/NSA/Sub6/mmWave",
-                         
+        "dosg": "GSM 850 / 900 / 1800 / 1900",
+        "tresg": "HSDPA 850 / 900 / 1700 (AWS) / 1900 / 2100",
+        "cuatrog": "LTE B1 / B2 / B3 / B4 / B5 / B7 / B8 / B12 / B13 / B14 / B17 / B18 / B19 / B20 / B25 / B26 / B28 / B29 / B30 / B32 / B34 / B38 / B39 / B40 / B41 / B42 / B46 / B48 / B66 / B71",
+        "cincog": "SA/NSA/Sub6/mmWave",
         "gprs": "Si",
-                            
-        "edge":"Si",
-                        
+        "edge": "Si",
         "sim": "nano-SIM/eSIM / nano-SIM/eSIM dual",
-                       
         "dimensiones": "131.5 x 64.2 x 7.4 mm",
-                            
         "peso": "135 g",
-                        
         "displayTipo": "Super Retina XDR OLED, touchscreen capacitivo, 16M colores",
-        
         "displayTamanio": "5.4 pulgadas, 19.5:9",
-        
         "displayResolucion": "1080 x 2340 pixels",
-        
         "densidad": "476 ppi",
-        
         "proteccion": "Gorilla Ceramic Shield, oleofóbica, HDR10",
-        
         "os": "iOS 14",
-        
         "procesador": "Apple A14 Bionic hexa-core",
-        
         "memoriaInterna": "64/128/256GB almacenamiento interno",
-        
         "slot": "No",
-        
         "camaraPrincipal": "Dual, 12 MP (f1/.6, PDAF, OIS, wide) + 12 MP (f/2.4, ultrawide)",
-        
         "camaraVideo": "2160p@24/30/60fps, 1080p@30/60fps, smart HDR, stereo, Dolby Vision",
-        
         "camaraFrontal": "12 MP, f/2.2, flash Retina, 2160p@30/60fps, 1080p@30/60fps, smart HDR",
-        
-        "wi-fi": "Wi-Fi 802.11 a/b/g/n/ac/ax; Wi-Fi Direct; banda dual",
-        
+        "wifi": "Wi-Fi 802.11 a/b/g/n/ac/ax; Wi-Fi Direct; banda dual",
         "bluetooth": "v5.0 LE, A2DP",
-        
         "gps": "GPS con soporte A-GPS, GLONASS, GALILEO, QZSS",
-        
         "usb": "Puerto Lightning",
-        
         "nfc": "Si",
-        
         "infrarrojo": "No",
-        
         "bateriaCapacidad": "3174 mAh",
-        
         "bateriaTipo": "Li-Ion",
-        
         "extraible": "No",
-        
         "cargaRapida": "Si, 20W",
-        
         "cargaInalambrica": "Si, 15W MagSafe / 7.5W Qi",
-        
         "imagenCompleta": "iphone12mini_ambos.webp",
-        
         "imagenFrente": "iphone12mini_frente.webp",
-        
         "imagenDorso": "iphone12mini_dorso.webp"
-        
-        }
-
+    }
 ]

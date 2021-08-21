@@ -10,7 +10,11 @@ module.exports = {
         })
     },
     detail : (req,res) => {
-        return res.render('productos/productDetail')
+        let celular = celulares.find(celular => celular.id === +req.params.id)
+        return res.render('productos/productDetail', {
+            celular,
+            celulares
+        })
     }
 
 }
