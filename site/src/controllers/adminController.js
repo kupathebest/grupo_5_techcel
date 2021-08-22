@@ -1,12 +1,16 @@
 const fs = require('fs');
 const path = require('path');
 let celulares = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'celulares.json'), 'utf-8'));
-const guardar = dato => fs.writeFileSync(path.join(__dirname, '../data/celulares.json'), JSON.stringify(dato, null, 2), "utf-8")
+const guardar = dato => fs.writeFileSync(path.join(__dirname, '../data/celulares.json'), JSON.stringify(dato, null, 2), "utf-8");
+const toThousand = require('../utils/toThousand')
  
 
 module.exports = {
     index : (req,res) =>{
-        return res.render('admin/index');
+        return res.render('admin/index',{
+            celulares,
+            toThousand
+        });
     },
     add : (req,res) =>{
         return res.render('admin/productAdd');

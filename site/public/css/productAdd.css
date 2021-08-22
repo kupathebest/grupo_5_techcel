@@ -1,5 +1,5 @@
 
-.product-add .admin-container .container form .centrar{
+.productAdd .admin-container .container form .centrar{
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -8,11 +8,11 @@
     padding: 10px;
 }
 
-.product-add .admin-container .centrar-titulos{
+.productAdd .admin-container .centrar-titulos{
     text-align: center;
 }
 
-.product-add .admin-container .boton-enviar{
+.productAdd .admin-container .boton-enviar{
     margin: 0 auto;
     width: 150px;
     border-style: none;

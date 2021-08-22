@@ -1,0 +1,119 @@
+.adminIndex{
+    background-color: #ebebeb;
+}
+
+.adminIndex main{
+    width: 100%;
+    max-width: 1124px;
+    padding: auto;
+    margin: 0 auto;
+}
+
+.adminIndex main .agregar a button{
+    color: var(--Negro);
+    background-color: #00c4cc;
+    border-radius: 15px;
+    display: block;
+    padding: 8px 20px;
+    border: none;
+    margin: 40px auto 0;
+    width: 40%;
+    text-align:center;
+    font-size: 18px;
+}
+
+.adminIndex main .agregar a button:hover{
+    background-color: var(--Gris);
+}
+
+.adminIndex main section.articulos{
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+
+.adminIndex main section.articulos div.productos-listado article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.adminIndex main section.articulos div.productos-listado article img{
+    width: 100%;
+}
+
+.adminIndex main section.articulos div.productos-listado article span{
+    color: var(--Fucsia);
+    
+}
+
+.adminIndex main section.articulos div.productos-listado{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.adminIndex main section.articulos div.productos-listado article{
+    background-color: var(--Blanco);
+    border-radius: 8px;
+    border: solid 1px var(--Gris-Fondo);
+    padding: 15px 45px;
+    margin: 18px;
+    width: 85%;
+}
+
+.adminIndex main section.articulos div.productos-listado article p{
+    text-align: center;
+    padding-top: 5px;
+}
+
+.adminIndex main section.articulos div.productos-listado article .buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+/** TABLET **/
+@media (min-width:425px){
+      
+    .adminIndex main section.articulos div.productos-listado article{
+        width: 40%;
+        padding: 18px 30px;
+        margin: 15px;
+    }
+    .adminIndex main section.articulos div.productos-listado article img{
+        width: 80%;
+    }
+    
+    }
+    @media (min-width:768px){
+
+    .adminIndex main{
+        width: 90%;
+        flex-direction: row;
+    }
+
+    .adminIndex main .agregar a button{
+        width: 20%;
+    }
+    
+    .adminIndex main section.articulos{
+        width: 100%;
+    }
+    
+    .adminIndex main section.articulos div.productos-listado article{
+        width: 25%;
+    }
+    
+    .adminIndex main section.articulos div.productos-listado article img{
+        width: 80%;
+    }
+    
+}
