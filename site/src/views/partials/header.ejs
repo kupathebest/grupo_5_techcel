@@ -28,7 +28,10 @@
         </div>
 
         <div class="buscador">
-            <input type="text" class="searc-button" placeholder="Buscar" href=""><i class="fas fa-search"></i>
+            <form action="/search" method="GET">
+                <input type="text" class="searc-button" placeholder="Buscar" name="keywords" href="">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
         </div>
         <div class="iconos">
             <div>
