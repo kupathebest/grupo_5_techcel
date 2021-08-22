@@ -21,7 +21,7 @@
                 <div class="glider-contain">
                     <div class="glider">
                         <% celulares.forEach(celular => { %>
-                            <% if (celular.marca === "motorola") { %>
+                            <% if (celular.categoria === "novedades") { %>
                                 <article class="card-carrousel">
                                     <a href="/productos/detail/<%= celular.id %>">
                                         <img src="/images/equipos/<%= celular.imagenFrente %>" alt="">
@@ -46,7 +46,7 @@
                 <div class="glider-contain">
                     <div class="glider1">
                         <% celulares.forEach(celular => { %>
-                            <% if (celular.marca === "samsung") { %>
+                            <% if (celular.categoria === "ofertas") { %>
                                 <article class="card-carrousel">
                                     <a href="/productos/detail/<%= celular.id %>">
                                         <img src="/images/equipos/<%= celular.imagenFrente %>" alt="">
@@ -71,7 +71,7 @@
                 <div class="glider-contain">
                     <div class="glider2">
                         <% celulares.forEach(celular => { %>
-                            <% if (celular.marca === "xiaomi") { %>
+                            <% if (celular.categoria === "los mas comprados") { %>
                                 <article class="card-carrousel">
                                     <a href="/productos/detail/<%= celular.id %>">
                                         <img src="/images/equipos/<%= celular.imagenFrente %>" alt="">

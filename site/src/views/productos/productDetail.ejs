@@ -275,14 +275,17 @@
         <div class="carrousel">
             <div class="glider-contain">
                 <div class="glider">
-                    <% celulares.forEach(celular => { %>
-                        <article class="card-carrousel">
-                            <a href="/productos/detail/<%= celular.id %>">
-                                <img src="/images/equipos/<%= celular.imagenFrente %>" alt="">
-                                <p class=""><%= celular.nombreCorto %> </p>
-                                <span>$ <%= toThousand(celular.precio) %> </span>
-                            </a>
-                        </article>
+                    <% celulares.forEach(item => { %>
+                        <% if (item.marca === celular.marca && item.nombreCorto != celular.nombreCorto) { %>
+                            <article class="card-carrousel">
+                                <a href="/productos/detail/<%= item.id %>">
+                                    <img src="/images/equipos/<%= item.imagenFrente %>" alt="">
+                                    <p class=""><%= item.nombreCorto %> </p>
+                                    <span>$ <%= toThousand(item.precio) %> </span>
+                                </a>
+                            </article>
+                        <% } %>
+                        
                     <% }) %>
                 </div>
               
