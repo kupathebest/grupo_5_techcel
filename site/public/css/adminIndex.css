@@ -80,6 +80,10 @@
     flex-direction: row;
 }
 
+.adminIndex main section.articulos div.productos-listado article .buttons{
+    background-color: tomato;
+}
+
 /** TABLET **/
 @media (min-width:425px){
       
