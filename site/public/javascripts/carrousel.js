@@ -11,7 +11,7 @@ new Glider(document.querySelector('.glider'), {
     responsive: [
       {
         // screens greater than >= 425px
-        breakpoint: 428,
+        breakpoint: 448,
         settings: {
           // Set to `auto` and provide item width to adjust to viewport
           slidesToShow: 2,
@@ -21,7 +21,7 @@ new Glider(document.querySelector('.glider'), {
         }
       },{
         // screens greater than >= 768px
-        breakpoint: 771,
+        breakpoint: 791,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,
@@ -36,7 +36,7 @@ new Glider(document.querySelector('.glider'), {
     slidesToShow: 1,
     slidesToScroll: 1,
     scrollLock: true,
-    dots: '.dots',
+    dots: '.dots1',
     arrows: {
       prev: '.glider-prev',
       next: '.glider-next'
@@ -44,7 +44,7 @@ new Glider(document.querySelector('.glider'), {
     responsive: [
       {
         // screens greater than >= 425px
-        breakpoint: 428,
+        breakpoint: 448,
         settings: {
           // Set to `auto` and provide item width to adjust to viewport
           slidesToShow: 2,
@@ -54,7 +54,7 @@ new Glider(document.querySelector('.glider'), {
         }
       },{
         // screens greater than >= 768px
-        breakpoint: 771,
+        breakpoint: 791,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,
@@ -69,7 +69,7 @@ new Glider(document.querySelector('.glider'), {
     slidesToShow: 1,
     slidesToScroll: 1,
     scrollLock: true,
-    dots: '.dots',
+    dots: '.dots2',
     arrows: {
       prev: '.glider-prev',
       next: '.glider-next'
@@ -77,7 +77,7 @@ new Glider(document.querySelector('.glider'), {
     responsive: [
       {
         // screens greater than >= 425px
-        breakpoint: 428,
+        breakpoint: 448,
         settings: {
           // Set to `auto` and provide item width to adjust to viewport
           slidesToShow: 2,
@@ -87,7 +87,7 @@ new Glider(document.querySelector('.glider'), {
         }
       },{
         // screens greater than >= 768px
-        breakpoint: 771,
+        breakpoint: 791,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,
