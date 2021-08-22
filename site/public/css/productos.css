@@ -103,6 +103,10 @@
     min-height: 270px;
 }
 
+.productos main section.articulos div.productos-listado article span{
+    color: var(--Fucsia);
+}
+
 .productos main section.articulos div.productos-listado{
     width: 100%;
     display: flex;

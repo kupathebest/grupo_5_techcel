@@ -18,111 +18,75 @@
         <section class="seccion-main">
             <h2>NOVEDADES</h2>
             <div class="caja-completa">
-                <div class="caja-angle">
-                    <a class="angle" href=""><i class="fas fa-angle-left"></i></a>
-                </div>
-                <div class="productos">
-                    <article class="primero">
-                        <a href="/productos/detail">
-                            <img src="/images/MOTOG8PLUS.jpg" alt="">
-                            <p class="detalle">MOTO G8 PLUS</p>
-                        </a>
-                    </article>
-                    <article class="segundo">
-                        <a href="/productos/detail">
-                            <img src="/images/MOTOG8PLUS.jpg" alt="">
-                            <p class="detalle">MOTO G8 PLUS</p>
-                        </a>
-                    </article>
-                    <article class="tercero">
-                        <a href="/productos/detail">
-                            <img src="/images/MOTOG8PLUS.jpg" alt="">
-                            <p class="detalle">MOTO G8 PLUS</p>
-                        </a>
-                    </article>
-                    <article class="cuarto">
-                        <a href="/productos/detail">
-                            <img src="/images/MOTOG8PLUS.jpg" alt="">
-                            <p class="detalle">MOTO G8 PLUS</p>
-                        </a>
-                    </article>
-                </div>
-                <div class="caja-angle">
-                    <a class="angle" href=""><i class="fas fa-angle-right"></i></a>
+                <div class="glider-contain">
+                    <div class="glider">
+                        <% celulares.forEach(celular => { %>
+                            <% if (celular.marca === "motorola") { %>
+                                <article class="card-carrousel">
+                                    <a href="/productos/detail/<%= celular.id %>">
+                                        <img src="/images/equipos/<%= celular.imagenFrente %>" alt="">
+                                        <p class=""><%= celular.nombreCorto %> </p>
+                                        <span>$ <%= toThousand(celular.precio) %> </span>
+                                    </a>
+                                </article>
+                            <% } %>
+                            
+                        <% }) %>
+                    </div>
+                  
+                    <button aria-label="Previous" class="glider-prev">«</button>
+                    <button aria-label="Next" class="glider-next">»</button>
+                    <div role="tablist" class="dots"></div>
                 </div>
             </div>
         </section>
         <section class="seccion-main">
             <h2>OFERTAS</h2>
             <div class="caja-completa">
-                <div class="caja-angle">
-                    <a class="angle" href=""><i class="fas fa-angle-left"></i></a>
-                </div>
-                <div class="productos">
-                    <article class="primero">
-                        <a href="/productos/detail">
-                            <img src="/images/MOTOG8PLUS.jpg" alt="">
-                            <p class="detalle">MOTO G8 PLUS</p>
-                        </a>
-                    </article>
-                    <article class="segundo">
-                        <a href="/productos/detail">
-                            <img src="/images/MOTOG8PLUS.jpg" alt="">
-                            <p class="detalle">MOTO G8 PLUS</p>
-                        </a>
-                    </article>
-                    <article class="tercero">
-                        <a href="/productos/detail">
-                            <img src="/images/MOTOG8PLUS.jpg" alt="">
-                            <p class="detalle">MOTO G8 PLUS</p>
-                        </a>
-                    </article>
-                    <article class="cuarto">
-                        <a href="/productos/detail">
-                            <img src="/images/MOTOG8PLUS.jpg" alt="">
-                            <p class="detalle">MOTO G8 PLUS</p>
-                        </a>
-                    </article>
-                </div>
-                <div class="caja-angle">
-                    <a class="angle" href=""><i class="fas fa-angle-right"></i></a>
+                <div class="glider-contain">
+                    <div class="glider1">
+                        <% celulares.forEach(celular => { %>
+                            <% if (celular.marca === "samsung") { %>
+                                <article class="card-carrousel">
+                                    <a href="/productos/detail/<%= celular.id %>">
+                                        <img src="/images/equipos/<%= celular.imagenFrente %>" alt="">
+                                        <p class=""><%= celular.nombreCorto %> </p>
+                                        <span>$ <%= toThousand(celular.precio) %> </span>
+                                    </a>
+                                </article>
+                            <% } %>
+                            
+                        <% }) %>
+                    </div>
+                  
+                    <button aria-label="Previous" class="glider-prev">«</button>
+                    <button aria-label="Next" class="glider-next">»</button>
+                    <div role="tablist" class="dots"></div>
                 </div>
             </div>
         </section>
         <section class="seccion-main">
             <h2>LOS MÁS COMPRADOS</h2>
             <div class="caja-completa">
-                <div class="caja-angle">
-                    <a class="angle" href=""><i class="fas fa-angle-left"></i></a>
-                </div>
-                <div class="productos">
-                    <article class="primero">
-                        <a href="/productos/detail">
-                            <img src="/images/MOTOG8PLUS.jpg" alt="">
-                            <p class="detalle">MOTO G8 PLUS</p>
-                        </a>
-                    </article>
-                    <article class="segundo">
-                        <a href="/productos/detail">
-                            <img src="/images/MOTOG8PLUS.jpg" alt="">
-                            <p class="detalle">MOTO G8 PLUS</p>
-                        </a>
-                    </article>
-                    <article class="tercero">
-                        <a href="/productos/detail">
-                            <img src="/images/MOTOG8PLUS.jpg" alt="">
-                            <p class="detalle">MOTO G8 PLUS</p>
-                        </a>
-                    </article>
-                    <article class="cuarto">
-                        <a href="/productos/detail">
-                            <img src="/images/MOTOG8PLUS.jpg" alt="">
-                            <p class="detalle">MOTO G8 PLUS</p>
-                        </a>
-                    </article>
-                </div>
-                <div class="caja-angle">
-                    <a class="angle" href=""><i class="fas fa-angle-right"></i></a>
+                <div class="glider-contain">
+                    <div class="glider2">
+                        <% celulares.forEach(celular => { %>
+                            <% if (celular.marca === "xiaomi") { %>
+                                <article class="card-carrousel">
+                                    <a href="/productos/detail/<%= celular.id %>">
+                                        <img src="/images/equipos/<%= celular.imagenFrente %>" alt="">
+                                        <p class=""><%= celular.nombreCorto %> </p>
+                                        <span>$ <%= toThousand(celular.precio) %> </span>
+                                    </a>
+                                </article>
+                            <% } %>
+                            
+                        <% }) %>
+                    </div>
+                  
+                    <button aria-label="Previous" class="glider-prev">«</button>
+                    <button aria-label="Next" class="glider-next">»</button>
+                    <div role="tablist" class="dots"></div>
                 </div>
             </div>
         </section>
@@ -131,7 +95,8 @@
         </div>
     </main>
     <%- include('./partials/footer')%> 
-
+    <%- include('./partials/scripts')%> 
+    <script src="/javascripts/carrousel.js"></script>
 
 </body>
 
