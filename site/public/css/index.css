@@ -59,6 +59,10 @@
     width: 40%;
 }
 
+.home .caja-completa .card-carrousel span{
+    color: var(--Fucsia);
+}
+
 .home main div a button{
     color: var(--Negro);
     background-color: #00c4cc;

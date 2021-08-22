@@ -25,7 +25,7 @@
                             <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i
                                 class="far fa-star"></i><i class="far fa-star"></i>
                         </div>
-                        <span>$ <%= celular.precio %> </span>
+                        <span>$ <%= toThousand(celular.precio) %> </span>
                         <div class="cart-button">
                             <div>
                                 <a href="/cart"><i class="fas fa-shopping-cart"></i>Agregar al carrito</a>
@@ -280,6 +280,7 @@
                             <a href="/productos/detail/<%= celular.id %>">
                                 <img src="/images/equipos/<%= celular.imagenFrente %>" alt="">
                                 <p class=""><%= celular.nombreCorto %> </p>
+                                <span>$ <%= toThousand(celular.precio) %> </span>
                             </a>
                         </article>
                     <% }) %>

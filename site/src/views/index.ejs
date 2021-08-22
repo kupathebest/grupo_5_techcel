@@ -26,6 +26,7 @@
                                     <a href="/productos/detail/<%= celular.id %>">
                                         <img src="/images/equipos/<%= celular.imagenFrente %>" alt="">
                                         <p class=""><%= celular.nombreCorto %> </p>
+                                        <span>$ <%= toThousand(celular.precio) %> </span>
                                     </a>
                                 </article>
                             <% } %>
@@ -50,6 +51,7 @@
                                     <a href="/productos/detail/<%= celular.id %>">
                                         <img src="/images/equipos/<%= celular.imagenFrente %>" alt="">
                                         <p class=""><%= celular.nombreCorto %> </p>
+                                        <span>$ <%= toThousand(celular.precio) %> </span>
                                     </a>
                                 </article>
                             <% } %>
@@ -74,6 +76,7 @@
                                     <a href="/productos/detail/<%= celular.id %>">
                                         <img src="/images/equipos/<%= celular.imagenFrente %>" alt="">
                                         <p class=""><%= celular.nombreCorto %> </p>
+                                        <span>$ <%= toThousand(celular.precio) %> </span>
                                     </a>
                                 </article>
                             <% } %>
