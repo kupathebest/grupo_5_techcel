@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const {add,agregar,index} = require('../controllers/adminController');
+const {add,agregar,index,edit,update} = require('../controllers/adminController');
 
 const multer = require('multer');
 
@@ -21,5 +21,8 @@ const upload = multer({
 router.get('/',index);
 router.get('/add', add );
 router.post('/add', agregar);
+router.get("/edit/:id",edit);
+router.put("/edit/:id",update);
+
 
 module.exports = router;
