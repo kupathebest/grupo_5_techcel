@@ -165,25 +165,35 @@ header .logo img{
    width: 60%;
 }
 
-  header  .buscador{
-        width: 60%;
+header .buscador {
+    display: flex;
+    width: 60%;
+    align-self: center;
+    margin-top: 50px;
+}
+
+  header .buscador form{
+        width: 80%;
         align-self: center;
         display: flex;
         margin-top: 50px;
     }
-   header .buscador input{
-        width: 80%;
+ 
+header .buscador form input{
+        width: 100%;
         padding-left: 15px;
         height: 25px;
         border: none;
         border-radius: 4px 0 0 4px;
     }
     
-    header .buscador i{
+    header .buscador form button{
             font-size: 15px;
+            height: 25px;
             background-color: white;
             padding: 4px;
             border-radius: 0 4px 4px 0;
+            border-style: none;
      }
    header .lista3{
         
