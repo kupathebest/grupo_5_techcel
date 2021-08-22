@@ -141,7 +141,14 @@ module.exports = {
         }); 
         guardar(celulares);
         return res.redirect('/admin'); 
+    },
+    destroy:(req,res) => {
+        let celularesModificados = celulares.filter(celular => celular.id !== +req.params.id)
+        guardar(celularesModificados)
+        res.redirect('/admin');
+
     }
+
 
 
 }
