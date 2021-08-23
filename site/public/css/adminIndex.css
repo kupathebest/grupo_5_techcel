@@ -50,7 +50,6 @@
 
 .adminIndex main section.articulos div.productos-listado article span{
     color: var(--Fucsia);
-    
 }
 
 .adminIndex main section.articulos div.productos-listado{
@@ -86,6 +85,18 @@
     margin: 0 4px;
     border: none;
     border-radius: 4.5px;
+}
+
+.adminIndex main section.articulos div.productos-listado article div.buttons button:hover{
+    background-color: var(--Gris);
+}
+
+.adminIndex main section.articulos div.productos-listado article div.buttons form button{
+    background-color: rgb(218, 57, 57);
+}
+
+.adminIndex main section.articulos div.productos-listado article div.buttons a button.editar{
+    background-color: rgb(66, 145, 66);
 }
 
 /** TABLET **/

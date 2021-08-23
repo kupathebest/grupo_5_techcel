@@ -15,9 +15,9 @@
                         <p><%= celular.nombreCorto %> </p>
                         <span>$ <%= toThousand(celular.precio) %> </span>
                         <div class="buttons">
-                            <a href="/productos/detail/<%= celular.id %>"><button class = "boton" type="button">Detalles</button></a>
-                            <a href="/admin/edit/<%= celular.id %> "><button type="button">Editar</button></a>
-                            <form action="/admin/delete/<%= celular.id %>?_method=DELETE" method="POST"><button type="submit">Eliminar</button>
+                            <a href="/productos/detail/<%= celular.id %>"><button class ="boton" type="button">Detalles</button></a>
+                            <a href="/admin/edit/<%= celular.id %> "><button class="editar" type="button">Editar</button></a>
+                            <form action="/admin/delete/<%= celular.id %>?_method=DELETE" method="POST"><button class="eliminar" type="submit">Eliminar</button>
                             </form>
                                                                               
                         </div>
