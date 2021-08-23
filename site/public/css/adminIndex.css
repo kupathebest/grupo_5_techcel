@@ -75,13 +75,17 @@
     padding-top: 5px;
 }
 
-.adminIndex main section.articulos div.productos-listado article .buttons{
+.adminIndex main section.articulos div.productos-listado article div.buttons{
     display: flex;
     flex-direction: row;
 }
 
-.adminIndex main section.articulos div.productos-listado article .buttons{
-    background-color: tomato;
+.adminIndex main section.articulos div.productos-listado article div.buttons button{
+    background-color: var(--Celeste);
+    padding: 4px 5px;
+    margin: 0 4px;
+    border: none;
+    border-radius: 4.5px;
 }
 
 /** TABLET **/

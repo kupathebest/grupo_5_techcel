@@ -74,12 +74,10 @@ footer p {
     display: none;
 }
 
+
+/*tablet*/
 @media (min-width :425px){
-    /* footer{
-    max-height: 420px;
-}*/
-
-
+  
     footer p.p-redes{
     display: block;
     color: var(--Blanco);
@@ -112,6 +110,8 @@ footer p {
 
    }
 
+
+   /*desktop*/
 @media (min-width :768px){
 
    footer{
@@ -169,7 +169,7 @@ footer div.contact1{
     }
 
 footer div.tarjetas{
-    width: 30%;
+    width: 60%;
     display: flex;
     justify-content: center;
     margin-left: 0;
@@ -177,12 +177,12 @@ footer div.tarjetas{
 
 
 footer .tarjetas img{
-    width: 40px;
+    width: 70px;
     margin:5px;
 }
 
 footer .tarjetas .master{
-    width: 60px;
+    width: 90px;
     margin: 5px 0;
 }
 

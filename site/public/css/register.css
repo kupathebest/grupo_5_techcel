@@ -65,7 +65,7 @@
    padding: 8px;
    text-align: center;
     
-    background-color:#00c4cc;
+    background-color:var(--Celeste);
     border: none;
     border-radius: 5px;
 }

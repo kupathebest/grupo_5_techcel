@@ -32,7 +32,7 @@
     border-radius: 5px;
     padding: 8px;
     width: 150px;
-    background-color:#00c4cc;
+    background-color:var(--Celeste);
     margin: 10px 20px;
     border:none;
     font-size: .9rem;

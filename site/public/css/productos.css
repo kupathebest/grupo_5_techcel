@@ -27,7 +27,7 @@
 .productos main section.seccion-boton-filtrar div.boton-filtrar a button{
     display: flex;
     color: var(--Negro);
-    background-color: #00c4cc;
+    background-color: var(--Celeste);
     border-radius: 15px;
     justify-content: center;
     padding: 8px 20px;
@@ -100,7 +100,6 @@
 
 .productos main section.articulos div.productos-listado article a img{
     width: 100%;
-    min-height: 270px;
 }
 
 .productos main section.articulos div.productos-listado article span{
@@ -140,10 +139,6 @@
     width: 40%;
     padding: 18px 30px;
     margin: 15px;
-}
-
-.productos main section.articulos div.productos-listado article a img{
-    height: 270px;
 }
 
 }
@@ -190,7 +185,7 @@
 /*BOTON VER MAS --OPCIONAL--*/
 .productos main section.articulos div.boton-ver-mas button{
     color: var(--Negro);
-    background-color: #00c4cc;
+    background-color: var(--Celeste);
     border-radius: 15px;
     display: none;
     justify-content: center;

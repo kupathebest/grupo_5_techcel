@@ -13,6 +13,14 @@
     margin: 0 auto;
 }
 
+.home main section.seccion-main article.card-carrousel{
+    background-color: white;
+    padding: 20px 0;
+    margin: 20px;
+    border-radius: 6px;
+    border: none;
+}
+
 .home main div.banner-home img{
     display: none;
 }
@@ -65,7 +73,7 @@
 
 .home main div a button{
     color: var(--Negro);
-    background-color: #00c4cc;
+    background-color: var(--Celeste);
     border-radius: 15px;
     display: block;
     padding: 8px 20px;

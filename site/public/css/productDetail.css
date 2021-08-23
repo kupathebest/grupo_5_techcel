@@ -29,6 +29,9 @@
 
 .detail main .card .imagenes img{
     width: 25%;
+    border-radius: 7px;
+    border: solid 1px white;
+    margin: 0 5px;
 }
 
 .detail main div.container div.card div.imagenes div.miniaturas{
@@ -63,7 +66,7 @@
 
 .detail main .card .contenedor .cart-button{
     color: var(--Negro);
-    background-color:#00c4cc;
+    background-color:var(--Celeste);
     height: 70px;
     display: flex;
     text-align: center;
@@ -168,6 +171,11 @@
 
 .detail .carrousel .card-carrousel{
     text-align: center;
+    background-color: white;
+    padding: 5px 0;
+    margin: 5px 15px;
+    border-radius: 7px;
+    border: solid 1px white;
 }
 
 .detail .carrousel .card-carrousel img{
