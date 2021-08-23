@@ -45,7 +45,7 @@
   opacity: 0;
   height: 0;
 }
-.glider-prev,.glider-next {
+.glider-prev,.glider-next,.glider-prev1,.glider-next1,.glider-prev2,.glider-next2 {
   user-select: none;
   position: absolute;
   outline: none;
@@ -67,15 +67,27 @@
 .glider-prev:hover,
 .glider-next:hover,
 .glider-prev:focus,
-.glider-next:focus {
+.glider-next:focus,
+.glider-prev1:hover,
+.glider-next1:hover,
+.glider-prev1:focus,
+.glider-next1:focus,
+.glider-prev2:hover,
+.glider-next2:hover,
+.glider-prev2:focus,
+.glider-next2:focus {
   color: #a89cc8;
 }
-.glider-next {
+.glider-next,.glider-next1,.glider-next2 {
   right: -23px;
   left: auto;
 }
 .glider-next.disabled,
-.glider-prev.disabled {
+.glider-prev.disabled,
+.glider-next1.disabled,
+.glider-prev1.disabled,
+.glider-next2.disabled,
+.glider-prev2.disabled {
   opacity: .25;
   color: #666;
   cursor: default;
@@ -86,7 +98,7 @@
 .glider-hide {
   opacity: 0;
 }
-.glider-dots {
+.glider-dots,.glider-dots1,.glider-dots2 {
   user-select: none;
   display: flex;
   flex-wrap: wrap;

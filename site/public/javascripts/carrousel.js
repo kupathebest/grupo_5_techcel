@@ -38,8 +38,8 @@ new Glider(document.querySelector('.glider'), {
     scrollLock: true,
     dots: '.dots1',
     arrows: {
-      prev: '.glider-prev',
-      next: '.glider-next'
+      prev: '.glider-prev1',
+      next: '.glider-next1'
     },
     responsive: [
       {
@@ -71,8 +71,8 @@ new Glider(document.querySelector('.glider'), {
     scrollLock: true,
     dots: '.dots2',
     arrows: {
-      prev: '.glider-prev',
-      next: '.glider-next'
+      prev: '.glider-prev2',
+      next: '.glider-next2'
     },
     responsive: [
       {
