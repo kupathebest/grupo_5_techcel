@@ -84,7 +84,7 @@ background-color: var(--Gris-Fondo);
     border-radius: 5px;
     padding: 8px;
     width: 100px;
-    background-color:#00c4cc;
+    background-color:var(--Celeste);
     margin: 10px 20px;
     border:none;
  }
@@ -99,7 +99,7 @@ background-color: var(--Gris-Fondo);
     border-radius: 5px;
     padding: 8px;
     width: 100px;
-    background-color:#00c4cc;
+    background-color:var(--Celeste);
     margin: 10px 20px;
     border:none;
     

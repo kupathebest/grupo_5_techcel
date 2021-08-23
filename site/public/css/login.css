@@ -9,7 +9,7 @@
     width:95%;
     max-width: 700px;
     margin: auto;
-    min-height: 360px;
+    min-height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +38,6 @@
 
 
 .login form div.box-form input#Email{
-    text-align: center;
     width: 236px;
     margin-top: 20px;
     margin-left: 20px;
@@ -49,8 +48,6 @@
   }
 
 .login form div.box-form input#password{
-    
-    text-align: center;
     width: 236px;
     margin-top: 10px;
     margin-left: 20px;
@@ -94,7 +91,7 @@
     border-radius: 5px;
     padding: 8px;
     width: 100px;
-    background-color:#00c4cc;
+    background-color:var(--Celeste);
     margin: 10px 20px;
     border:none;
 }

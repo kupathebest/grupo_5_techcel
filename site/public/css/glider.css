@@ -87,6 +87,7 @@
   opacity: 0;
 }
 .glider-dots {
+  /**/
   user-select: none;
   display: flex;
   flex-wrap: wrap;
@@ -95,6 +96,7 @@
   padding: 0;
 }
 .glider-dot {
+  /**/
   border: 0;
   padding: 0;
   user-select: none;

@@ -3,7 +3,7 @@
 
 }
 .contactanos main{
-    padding: 10px;
+    padding: 15px;
 }
 .contactanos main p{
     padding: 5px;
@@ -30,11 +30,11 @@
 .contactanos .datos form input{
     width: 80%;
     margin-bottom: 20px;
-    height: 20px;
+    height: 25px;
     display: flex;
     font-size: 15px;
     border-radius: 5px;
-    border: none;
+    border: solid var(--Gris) 0.5px;
 }
     
  .contactanos main .text{
@@ -42,7 +42,7 @@
  }
     
 .contactanos main button{
-    background-color:#00c4cc;
+    background-color: var(--Celeste);
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
@@ -111,7 +111,6 @@
         width: 100%;
         font-size: 15px;
         margin: 20px 0;
-        margin-left: 10px;
     }
     
     .contactanos main label{
@@ -133,12 +132,11 @@
     }
     .contactanos main .text{
         resize:none;
-        width: 100%;
+        width: 95%;
         height: 150px;
         font-size: 28px;
         padding-bottom: 20px;
-        border-radius: 10px;
-        border:none
+        border: solid var(--Gris) 0.5px;
         }
     .contactanos main button{
        margin: 10px;

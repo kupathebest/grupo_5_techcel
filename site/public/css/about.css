@@ -3,7 +3,8 @@
     
 }
 .about main{
-    padding: 15px; 
+    padding: 25px; 
+    margin: 0 auto; 
     max-width: 1124px;
 }
 .about main h2{

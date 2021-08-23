@@ -1,8 +1,13 @@
 
+.productAdd main{
+    max-width: 1124px;
+    margin: 0 auto;
+}
+
 .productAdd .admin-container .container form .centrar{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
     text-align: center;
     padding: 10px;
@@ -17,3 +22,36 @@
     width: 150px;
     border-style: none;
 }
+
+.productAdd main .subir-img label{
+    margin-bottom: 10px;
+}
+
+.productAdd main .subir-img{
+    align-items: center;
+    margin: 5px;
+}
+
+.productAdd main .bloque{
+    padding: 10px 5px;
+    margin: 25px auto;
+}
+
+.productAdd main .agregar-producto{
+    align-items: center;
+    margin: 20px auto;
+}
+
+.productAdd main .agregar-producto button{
+    color: var(--Negro);
+    background-color: var(--Celeste);
+    border-radius: 7px;
+    padding: 8px;
+    border: none;
+    font-size: 16px;
+    width: 160px;
+}
+
+.productAdd main input{
+    min-width: 200px;
+ }
