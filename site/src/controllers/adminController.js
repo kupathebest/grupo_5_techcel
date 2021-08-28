@@ -147,8 +147,15 @@ module.exports = {
         guardar(celularesModificados)
         res.redirect('/admin');
 
+    },
+    search : (req, res) => {
+        let busqueda = req.query.keywords.toLowerCase()
+        let result = celulares.filter(celular => celular.nombreLargo.toLowerCase().includes(busqueda.trim()) || celular.marca.toLowerCase().includes(busqueda.trim()))
+        return res.render('admin/resultsAdmin',{
+            celulares : result,
+            busqueda,
+            toThousand,
+        })
     }
-
-
 
 }

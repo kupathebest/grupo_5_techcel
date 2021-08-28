@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const {add,agregar,index,edit,update,destroy} = require('../controllers/adminController');
+const {add,agregar,index,edit,update,destroy,search} = require('../controllers/adminController');
 
 const multer = require('multer');
 
@@ -25,6 +25,6 @@ router.get("/edit/:id",edit);
 router.put("/edit/:id",update);
 router.delete('/delete/:id',destroy);
 
-
+router.get('/search', search)
 
 module.exports = router;
