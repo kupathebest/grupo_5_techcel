@@ -1,0 +1,23 @@
+.results h2 {
+    font-size: 1rem;
+}
+
+.results .mensaje {
+    text-align: center;
+}
+.results .mensaje img{
+    width: 60%;
+}
+@media (min-width :425px){
+    .results h2 {
+        font-size: 1.2rem;
+    }
+}
+@media (min-width :768px){
+    .results h2 {
+        font-size: 1.4rem;
+    }
+    .results .mensaje img{
+        width: 40%;
+    }
+}

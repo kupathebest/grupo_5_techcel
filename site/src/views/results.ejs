@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head',{title:"Resultado de la busqueda  "}) %> 
+
+<body class="adminIndex results">
+    
+    <%- include('./partials/header') %> 
+
+<main>
+    <section class ="articulos">
+        <div class="productos-listado">
+            <% if (celulares.length > 0) { %>
+                <% celulares.forEach(celular => { %>
+                    <article>
+                        <a href="">
+                            <img src="/images/equipos/<%= celular.imagenFrente %>" alt="">
+                        <p><%= celular.nombreCorto %> </p>
+                        <span>$ <%= toThousand(celular.precio) %> </span>
+                        <div class="buttons">
+                            <a href="/productos/detail/<%= celular.id %>"><button class ="boton" type="button">Detalles</button></a>                                          
+                        </div>
+                        </a>
+                    </article>
+                <% }) %>
+                <% } else { %>
+                    <div class = "mensaje">
+                        <h2 class=""> Oops ... No hay resultados para la busqueda de "<%= busqueda %>" </h2>
+                        <img src="images/celular_llorando.png" alt="">
+                    </div>
+                    <% } %>
+            
+            
+        </div>
+    </section>
+</main>
+
+<%- include('./partials/footer') %> 
+
+</body>
+</html>
