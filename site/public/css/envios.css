@@ -78,19 +78,15 @@ background-color: var(--Gris-Fondo);
     justify-content: center;
 }
 
-.metodo-envio select#Provincia{
+.metodo-envio .envio .box-form select{
      
     justify-content: center;
     border-radius: 5px;
     padding: 8px;
-    width: 100px;
-    background-color:var(--Celeste);
+    width: 180px;
     margin: 10px 20px;
-    border:none;
- }
-
-.metodo-envio select#Provinci:hover{
-    background-color: var(--Gris);
+    background-color: white;
+    border: 1px solid var(--Gris);
  }
 
 .metodo-envio input#text{
@@ -99,9 +95,9 @@ background-color: var(--Gris-Fondo);
     border-radius: 5px;
     padding: 8px;
     width: 100px;
-    background-color:var(--Celeste);
+    background-color: white;
+    border: 1px solid var(--Gris);
     margin: 10px 20px;
-    border:none;
     
  } 
 

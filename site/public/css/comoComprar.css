@@ -93,12 +93,14 @@
     }
 
     .comoComprar h3{
+        width: 17%;
         margin-top: 50px;
         margin-bottom: 50px;
+        transition: all .3s;
     }
 
     .comoComprar h3:hover{
-        font-size: 1.5rem;
+        transform: scale(1.3);
     }
 
 }

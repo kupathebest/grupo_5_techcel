@@ -99,6 +99,10 @@
     background-color: rgb(66, 145, 66);
 }
 
+.adminIndex main section.articulos div.productos-listado article div.buttons a button.editar:hover{
+    background-color: var(--Gris);
+}
+
 /** TABLET **/
 @media (min-width:425px){
       
@@ -136,3 +140,11 @@
     }
     
 }
+
+@media (min-width:1024px){
+    .adminIndex main section.articulos div.productos-listado article{
+        width: 20%;
+    }
+}
+
+

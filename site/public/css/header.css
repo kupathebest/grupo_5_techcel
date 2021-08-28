@@ -1,4 +1,3 @@
-
 header{    
     font-family: var(--Orbitron-letra-header);
     background-color:#6008a5 ;
@@ -6,7 +5,6 @@ header{
     margin:0 auto;
     padding: 0;
 }
-
 
 header li{
     display:none
@@ -17,7 +15,6 @@ header .burger{
     color: white;
     font-size: 40px;
     padding-left: 15px;
-
 }
 
 header .iconos{
@@ -57,100 +54,100 @@ header .contenedor{
     transition: all .5s;              
 }      
 
-
 /*tablet*/
 
 @media (min-width: 425px){
-header .burger{ 
+    header .burger{ 
     color: white;
     font-size: 40px;
     width: 10%;
-}   
+    }   
        
-header .iconos{       
+    header .iconos{       
     width: 40%;
     font-size: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-}
-header .logo{
+    }
+    header .logo{
     width: 50%;
        
     text-align: center;
-}
-header .buscador .searc-button{
+    }
+    header .buscador .searc-button{
         display: none;
-}
+    }
 
-header.contenedor{
+    header.contenedor{
     width: 100%;
     display: flex;
     justify-content:center;
     align-items:center;
-}           
+    }           
 }    
            
 /*desktop*/
 
 @media(min-width:768px){
-   header li{
+    header li{
         display: block;
     }
-   header .burger{
+    header .burger{
         display: none;
     }
-  header  .iconos{
+    header  .iconos{
         display: none;
 
     }
-header .listas a, header .listas i{
+    header .listas a, header .listas i{
     color: var(--Azul);
     margin: 5px;
     font-size: 20px;
-} 
+    transition: all .3s;
+    } 
     header .listas .contactanos{
         background-color: var(--Blanco);
     }
-   header .listas .lista2 a:hover > i,
-   header .listas .contactanos a:hover > i{
-        font-size: 25px;
-   }
+    header .listas .lista2 a:hover > i,
+    header .listas .contactanos a:hover > i{
+        transform: scale(1.2);
+    }
   
- header .lista1{
+    header .lista1{
         color: var(--Azul);
         font-size: 30px;
     }
 
-  header  .lista2{
+    header  .lista2{
         color: var(--Azul);
         font-size: 30px;
         display: flex;
     }
     
-   header ul .lista2{
+    header ul .lista2{
         padding: 5px;
         margin: 2px;
         display: flex;
       
     }
- header  .listas{
+    header  .listas{
        background-color: white;
        width: 100%;
        display: flex;
        flex-wrap: wrap;
         justify-content: space-between;
         padding: 0 5px;
-     }    
+    }    
 
-  header  .border{
+    header  .border{
         border-left: 1.5px solid var(--Azul);
         padding-left: 5px;
     }
 
-header .contenedor{
+    header .contenedor{
     margin-top: 10px;
-}
+    }
 
     header .buscador .searc-button{
         display: block;       
@@ -161,25 +158,25 @@ header .contenedor{
         
     }
 
-header .logo img{
+    header .logo img{
    width: 60%;
-}
+    }
 
-header .buscador {
+    header .buscador {
     display: flex;
     width: 60%;
     align-self: center;
     
-}
+    }
 
-  header .buscador form{
+    header .buscador form{
         width: 80%;
         align-self: center;
         display: flex;
         margin-top: 50px;
     }
  
-header .buscador form input{
+    header .buscador form input{
         width: 100%;
         padding-left: 15px;
         height: 25px;
@@ -194,8 +191,8 @@ header .buscador form input{
             padding: 4px;
             border-radius: 0 4px 4px 0;
             border-style: none;
-     }
-   header .lista3{
+    }
+    header .lista3{
         
         width: 65%;
         height: 40px;
@@ -205,12 +202,14 @@ header .buscador form input{
         justify-content: space-between;
         
     }
-header .lista3 a{
-        color: white;
+    header .lista3 li{
+        transition: all .3s;
     }
-header .lista3 a:hover{
-        border: none;
-        padding: 5px;
+    header .lista3 li:hover {
+        transform: scale(1.2);
     }
 
+    header .lista3 a{
+        color: white;
+    }
 }

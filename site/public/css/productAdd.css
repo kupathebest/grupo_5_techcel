@@ -52,6 +52,10 @@
     width: 160px;
 }
 
+.productAdd main .agregar-producto button:hover{
+    background-color: var(--Gris);
+}
+
 .productAdd main input{
     min-width: 200px;
  }
