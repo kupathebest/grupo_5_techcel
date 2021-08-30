@@ -5,6 +5,7 @@ const {add,agregar,index,edit,update,destroy} = require('../controllers/adminCon
 const multer = require('multer');
 
 
+
 const storage = multer.diskStorage({
     destination : (req,file,callback) => {
         callback(null,'public/images/equipos')
@@ -17,6 +18,8 @@ const storage = multer.diskStorage({
 const upload = multer({
     storage,
 })
+
+const productEditValidator = require ('../validations/productEdit')
 /* GET cart page. */
 router.get('/',index);
 router.get('/add', add );

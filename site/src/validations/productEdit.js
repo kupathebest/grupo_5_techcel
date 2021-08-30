@@ -1,6 +1,7 @@
 const{ check } = require('express-validator');
 
-module.exports = [
+const productEditValidator=[
+
     check('nombre corto')
     .notEmpty()
     .withMessage('Este campo es obligatorio'),
@@ -13,9 +14,9 @@ module.exports = [
     .notEmpty()
     .withMessage('Este campo es obligatorio'),
     
-    check(precio)
-    .notEmpty()
-    .withMessage('Este campo es obligatorio'),
+    check('precio')
+    .notEmpty().withMessage('Este campo es obligatorio')
+	.isInt().withMessage('Debe ser un número'),
 
     check('categoria') 
     .notEmpty()
@@ -60,6 +61,10 @@ module.exports = [
     check('pesoP') 
  	.notEmpty()
     .withMessage('Este campo es obligatorio'),
+	
+	check('peso')
+	.notEmpty()
+	.withMessage('Este campo es obligarorio'),
 
 	check('color')
  	.notEmpty()
@@ -192,18 +197,8 @@ module.exports = [
 	check('cargaInalambrica') 
 	.notEmpty()
     .withMessage('Este campo es obligatorio'),
-	
-    check('imagenCompleta') 
-	.notEmpty()
-    .withMessage('Este campo es obligatorio'),
 
-	check('imagenFrente')
-	.notEmpty()
-    .withMessage('Este campo es obligatorio'),
-
-	check('imagenDorso')
- 	.notEmpty()
-    .withMessage('Este campo es obligatorio')
-
-
+  
 ]
+
+module.exports = productEditValidator
