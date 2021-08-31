@@ -1,8 +1,9 @@
 var express = require('express');
 var router = express.Router();
-const {add,agregar,index,edit,update,destroy} = require('../controllers/adminController');
+const {add,agregar,index,edit,update,destroy,search} = require('../controllers/adminController');
 
 const multer = require('multer');
+
 
 
 const storage = multer.diskStorage({
@@ -17,14 +18,16 @@ const storage = multer.diskStorage({
 const upload = multer({
     storage,
 })
+
+const productValidator = require ('../validations/productValidator')
 /* GET cart page. */
 router.get('/',index);
 router.get('/add', add );
-router.post('/add', agregar);
+router.post('/add',productValidator,agregar);
 router.get("/edit/:id",edit);
-router.put("/edit/:id",update);
+router.put("/edit/:id",productValidator,update);
 router.delete('/delete/:id',destroy);
 
-
+router.get('/search', search)
 
 module.exports = router;

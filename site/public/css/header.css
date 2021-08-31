@@ -202,6 +202,10 @@ header .contenedor{
         justify-content: space-between;
         
     }
+
+    header .admin {
+        justify-content: space-evenly;
+    }
     header .lista3 li{
         transition: all .3s;
     }

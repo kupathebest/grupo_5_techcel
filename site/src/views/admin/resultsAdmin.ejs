@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head',{title:"Admin"}) %>
+<body class = "adminIndex">
+    <%- include('./partials/header') %>
+    <main>
+       
+        <section class ="articulos">
+            <div class="productos-listado">
+                <% if (celulares.length > 0) { %>
+                    <% celulares.forEach(celular => { %>
+                        <article>
+                            <img src="/images/equipos/<%= celular.imagenFrente %>" alt="">
+                            <p><%= celular.nombreCorto %> </p>
+                            <span>$ <%= toThousand(celular.precio) %> </span>
+                            <div class="buttons">
+                                <a href="/productos/detail/<%= celular.id %>"><button class ="boton" type="button">Detalles</button></a>
+                                <a href="/admin/edit/<%= celular.id %> "><button class="editar" type="button">Editar</button></a>
+                                <form action="/admin/delete/<%= celular.id %>?_method=DELETE" method="POST"><button class="eliminar" type="submit">Eliminar</button>
+                                </form>
+                                                                                  
+                            </div>
+                        </article>
+                    <% }) %>               
+                <% } else { %>
+                    <div class = "mensaje">
+                        <h2 class=""> Oops ... No hay resultados para la busqueda de "<%= busqueda %>" </h2>
+                    </div>
+                    <% } %>
+                
+            </div>
+        </section>
+        <div class="agregar">
+            <a href="/admin/add"><button type="button">AGREGAR PRODUCTO</button></a>
+        </div>
+    </main>
+    <%- include('../partials/footer') %>
+
+</body>
+</html>

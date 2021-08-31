@@ -22,6 +22,15 @@ module.exports = {
     },
     about : (req,res) => {
         return res.render('about')
+    },
+    search : (req, res) => {
+        let busqueda = req.query.keywords.toLowerCase()
+        let result = celulares.filter(celular => celular.nombreLargo.toLowerCase().includes(busqueda.trim()) || celular.marca.toLowerCase().includes(busqueda.trim()))
+        return res.render('results',{
+            celulares : result,
+            busqueda,
+            toThousand,
+        })
     }
 
 }

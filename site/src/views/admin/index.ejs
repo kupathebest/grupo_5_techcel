@@ -2,11 +2,9 @@
 <html lang="en">
     <%- include('../partials/head',{title:"Admin"}) %>
 <body class = "adminIndex">
-    <%- include('../partials/header') %>
+    <%- include('./partials/header') %>
     <main>
-        <div class="agregar">
-            <a href="/admin/add"><button type="button">AGREGAR PRODUCTO</button></a>
-        </div>
+        
         <section class ="articulos">
             <div class="productos-listado">
                 <% celulares.forEach(celular => { %>
@@ -26,6 +24,9 @@
                 
             </div>
         </section>
+        <div class="agregar">
+            <a href="/admin/add"><button type="button">AGREGAR PRODUCTO</button></a>
+        </div>
     </main>
     <%- include('../partials/footer') %>
 
