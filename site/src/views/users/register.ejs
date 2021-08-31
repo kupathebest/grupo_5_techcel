@@ -40,7 +40,7 @@
             <input class="check " type="checkbox" id="terms" value="terms" name="terms">
             <label class="text" for="terms"> Acepto términos y condiciones</label>
         </div>
-
+        <%= locals.errores && errores.email ? errores.email.msg : null %>
 
         <div class="boton">
             <button type="submit">Registrar</button>
