@@ -4,9 +4,7 @@
 <body class = "adminIndex">
     <%- include('./partials/header') %>
     <main>
-        <div class="agregar">
-            <a href="/admin/add"><button type="button">AGREGAR PRODUCTO</button></a>
-        </div>
+       
         <section class ="articulos">
             <div class="productos-listado">
                 <% if (celulares.length > 0) { %>
@@ -32,6 +30,9 @@
                 
             </div>
         </section>
+        <div class="agregar">
+            <a href="/admin/add"><button type="button">AGREGAR PRODUCTO</button></a>
+        </div>
     </main>
     <%- include('../partials/footer') %>
 
