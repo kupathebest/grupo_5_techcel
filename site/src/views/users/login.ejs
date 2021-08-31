@@ -6,7 +6,7 @@
     <%-include('../partials/header')  %> 
 
     <main class="">
-     <form action="/crearproducto" method="POST">
+     <form action="" method="POST">
 
     <div class="box-inicia">
         
@@ -24,16 +24,18 @@
     </div>
 
         <div class="box-form">
-        <label for="Email"></label>
-        <input type="Email" name= "email"id= "Email" placeholder= "Correo electronico">
+        <label for="email"></label>
+        <input class="email" type="email" name= "email"id= "email" placeholder= "Correo electronico">
     </div>
     
     <div class="box-form">
         <label for="password"></label>
-        <input type="password" name= "password" id= "password"placeholder= "Contraseña">
+        <input class="password" type="password" name= "password" id= "password"placeholder= "Contraseña">
        
     </div>
-
+    <div class="error">
+    <span class=""><%= locals.errores && errores.email ? errores.email.msg : null %> </span>
+</div>
     <div class= "recordarId">
         
 
@@ -42,10 +44,11 @@
         
         </label>
     </div>   
-     
+    
+
     <div class="inicio-sesion">
         
-         <a href="/"><button type="button">Iniciar sesion</button></a>
+         <button type="submit">Iniciar sesion</button>
    
          <a href="/users/register"><button type="button">Crear cuenta</button></a>
    

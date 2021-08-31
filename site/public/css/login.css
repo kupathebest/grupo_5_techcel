@@ -8,7 +8,7 @@
 .login main{
     width:95%;
     max-width: 700px;
-    margin: auto;
+    margin: 0 auto;
     min-height: 400px;
     display: flex;
     justify-content: center;
@@ -37,7 +37,7 @@
 }
 
 
-.login form div.box-form input#Email{
+.login form div.box-form  .email{
     width: 236px;
     margin-top: 20px;
     margin-left: 20px;
@@ -47,7 +47,7 @@
     border-radius: 10px;
   }
 
-.login form div.box-form input#password{
+.login form div.box-form  .password{
     width: 236px;
     margin-top: 10px;
     margin-left: 20px;
@@ -101,6 +101,13 @@
     
    
 }
+.login main form div.error{
+    color: red;
+  text-align: center;
+   margin: 15px;
+    
+    
+}
 
 @media (min-width :425px){
 
@@ -120,8 +127,8 @@
     display: none;
 }
 
-.login form div.box-form input#Email,
-.login form div.box-form input#password{
+.login form div.box-form  .email,
+.login form div.box-form  .password{
     width: 350px;
       
 }
@@ -130,8 +137,8 @@
 }
 
 @media (min-width :768px){
-.login form div.box-form input#Email,
-.login form div.box-form input#password{
+.login form div.box-form  .email,
+.login form div.box-form  .password{
     width: 420px;
 }
 

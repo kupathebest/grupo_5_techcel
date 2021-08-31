@@ -14,7 +14,7 @@ module.exports = {
     },
     processLogin : (req,res) => {
         let errors = validationResult(req);
-
+         
         if(errors.isEmpty()){
             const {email} = req.body;
             let usuario = usuarios.find(usuario => usuario.email === email);
@@ -25,10 +25,10 @@ module.exports = {
             }
             return res.redirect('/')
         }else{
-            return res.render('login',{
-                title : 'Login',
-                productos,
+            return res.render('users/login',{
+                celulares,
                 errores : errors.mapped()
+                
             })
         }
        
@@ -38,20 +38,31 @@ module.exports = {
     },
  
     processRegister: (req, res) => {
-        const { nombre, apellido, email, password } = req.body
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            const { nombre, apellido, email, password } = req.body
 
-        let usuario = {
-            id: usuarios[usuarios.length - 1] ? usuarios[usuarios.length - 1].id + 1 : 1,
-            nombre: nombre.trim(),
-            apellido: apellido.trim(),
-            email: email.trim(),
-            password: bcryptjs.hashSync(password, 10),
-            roll: "user"
+            let usuario = {
+                id: usuarios[usuarios.length - 1] ? usuarios[usuarios.length - 1].id + 1 : 1,
+                nombre: nombre.trim(),
+                apellido: apellido.trim(),
+                email: email.trim(),
+                password: bcryptjs.hashSync(password, 10),
+                roll: "user"
+            }
+            usuarios.push(usuario);
+    
+            fs.writeFileSync(path.join(__dirname, '../data/usuarios.json'), JSON.stringify(usuarios, null, 2), "utf-8");
+           return res.redirect('/users/login')
+
+        }else{
+            return res.render("users/register",{
+                errores:errors.mapped(),
+                usuarios,
+                old: req.body
+            })
         }
-        usuarios.push(usuario);
-
-        fs.writeFileSync(path.join(__dirname, '../data/usuarios.json'), JSON.stringify(usuarios, null, 2), "utf-8");
-
-        return res.redirect('/users/login')
+        
+        
     }
 }

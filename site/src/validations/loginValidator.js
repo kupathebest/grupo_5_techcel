@@ -1,5 +1,8 @@
 const {body} = require('express-validator');
 const bcryptjs = require('bcryptjs');
+const path = require('path');
+const fs = require('fs');
+const usuarios = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','usuarios.json'),'utf-8'));
 
 
 module.exports = [
@@ -12,15 +15,7 @@ module.exports = [
         }else{
             return false
         }
-    }).withMessage('Credenciales inválidas')
-    /*body('email')
-    .isEmail()
-    .withMessage('Debes ingresar un email válido'),
-
-    body('password')
-    .isLength({
-        min:8, max:12
-    })
-    .withMessage('Minimo de 8 caracteres y un maximo de 12'),*/
+    }).withMessage('email y/o contraseña incorrectas')
+    
 
 ]
