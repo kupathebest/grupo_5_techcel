@@ -59,3 +59,9 @@
 .productAdd main input{
     min-width: 200px;
  }
+
+ .productAdd span{
+
+    color: red;
+    text-align: left;
+ }

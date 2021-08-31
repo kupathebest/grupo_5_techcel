@@ -4,6 +4,7 @@ let celulares = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'c
 const guardar = dato => fs.writeFileSync(path.join(__dirname, '../data/celulares.json'), JSON.stringify(dato, null, 2), "utf-8");
 const toThousand = require('../utils/toThousand')
  
+const {validationResult} = require('express-validator');
 
 module.exports = {
     index : (req,res) =>{
@@ -77,13 +78,18 @@ module.exports = {
     },
     edit: (req,res)=>{
      let celular = celulares.find(celular => celular.id === +req.params.id)
-     
+        
      return res.render("admin/productEdit",{
-         celular,
-     })
+        celular,
+       
+    })
+    
     },
     update:(req,res)=>{
-        let {nombreCorto,nombreLargo,marca,precio,categoria,pantallaP,procesadorP,memoriaP,almacenamientoP,expansionP,camaraP,bateriaP,osP,perfilP,pesoP,color,dosg,tresg,cuatrog,cincog,gprs,edge,sim,dimensiones,peso,displayTipo,displayTamanio,displayResolucion,densidad,proteccion,os,procesador,memoriaInterna,slot,camaraPrincipal,camaraVideo,camaraFrontal,wifi,bluetooth,gps,usb,nfc,infrarrojo,bateriaCapacidad,bateriaTipo,extraible,cargaRapida,cargaInalambrica} = req.body;
+        let errors = validationResult(req);
+        let celular = celulares.find(celular => celular.id === +req.params.id)
+            if(errors.isEmpty()){
+            let {nombreCorto,nombreLargo,marca,precio,categoria,pantallaP,procesadorP,memoriaP,almacenamientoP,expansionP,camaraP,bateriaP,osP,perfilP,pesoP,color,dosg,tresg,cuatrog,cincog,gprs,edge,sim,dimensiones,peso,displayTipo,displayTamanio,displayResolucion,densidad,proteccion,os,procesador,memoriaInterna,slot,camaraPrincipal,camaraVideo,camaraFrontal,wifi,bluetooth,gps,usb,nfc,infrarrojo,bateriaCapacidad,bateriaTipo,extraible,cargaRapida,cargaInalambrica} = req.body;
         celulares.forEach(celular => {
             if(celular.id === +req.params.id){
                 
@@ -141,6 +147,14 @@ module.exports = {
         }); 
         guardar(celulares);
         return res.redirect('/admin'); 
+    }else{
+        return res.render("admin/productEdit",{
+            celular,
+            errores : errors.mapped(),
+        })
+
+        }
+        
     },
     destroy:(req,res) => {
         let celularesModificados = celulares.filter(celular => celular.id !== +req.params.id)
