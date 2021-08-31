@@ -2,7 +2,7 @@ const{ check } = require('express-validator');
 
 const productEditValidator=[
 
-    check('nombre corto')
+    check('nombreCorto')
     .notEmpty()
     .withMessage('Este campo es obligatorio'),
 

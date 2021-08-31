@@ -88,7 +88,7 @@ module.exports = {
     update:(req,res)=>{
         let errors = validationResult(req);
         let celular = celulares.find(celular => celular.id === +req.params.id)
-        if(errors.isEmpty()){
+            if(errors.isEmpty()){
             let {nombreCorto,nombreLargo,marca,precio,categoria,pantallaP,procesadorP,memoriaP,almacenamientoP,expansionP,camaraP,bateriaP,osP,perfilP,pesoP,color,dosg,tresg,cuatrog,cincog,gprs,edge,sim,dimensiones,peso,displayTipo,displayTamanio,displayResolucion,densidad,proteccion,os,procesador,memoriaInterna,slot,camaraPrincipal,camaraVideo,camaraFrontal,wifi,bluetooth,gps,usb,nfc,infrarrojo,bateriaCapacidad,bateriaTipo,extraible,cargaRapida,cargaInalambrica} = req.body;
         celulares.forEach(celular => {
             if(celular.id === +req.params.id){

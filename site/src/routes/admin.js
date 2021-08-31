@@ -19,13 +19,13 @@ const upload = multer({
     storage,
 })
 
-const productEditValidator = require ('../validations/productEdit')
+const productValidator = require ('../validations/productValidator')
 /* GET cart page. */
 router.get('/',index);
 router.get('/add', add );
-router.post('/add', agregar);
+router.post('/add',productValidator,agregar);
 router.get("/edit/:id",edit);
-router.put("/edit/:id",update);
+router.put("/edit/:id",productValidator,update);
 router.delete('/delete/:id',destroy);
 
 
