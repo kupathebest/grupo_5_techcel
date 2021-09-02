@@ -49,9 +49,7 @@
     "extraible": "No",
     "cargaRapida": "Si, 33W",
     "cargaInalambrica": "No",
-    "imagenCompleta": "xiaomi_mi_11_lite_completo.webp",
-    "imagenFrente": "xiaomi_mi_11_lite_frente.webp",
-    "imagenDorso": "xiaomi_mi_11_lite_dorso.webp"
+    "imagenes": []
   },
   {
     "id": 2,
@@ -427,9 +425,7 @@
     "extraible": "No",
     "cargaRapida": "Si, 15w, turbopower",
     "cargaInalambrica": "No",
-    "imagenCompleta": "motorola-one-zoom-completo.jpg",
-    "imagenFrente": "motorola-one-zoom-frente.webp",
-    "imagenDorso": "motorola-one-zoom-dorso.webp"
+    "imagenes": []
   },
   {
     "id": 9,

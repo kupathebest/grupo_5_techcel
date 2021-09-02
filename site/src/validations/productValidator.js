@@ -198,6 +198,9 @@ const productEditValidator=[
 	.notEmpty()
     .withMessage('Este campo es obligatorio'),
 
+	check('image') 
+	.notEmpty()
+    .withMessage('Debe seleccionar una imagen para continuar'),
   
 ]
 
