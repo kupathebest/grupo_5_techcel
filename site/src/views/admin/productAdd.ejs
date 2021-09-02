@@ -9,47 +9,56 @@
                     <form action="" method="POST" enctype="multipart/form-data">
                         <div class="general bloque">
                             <div>
-                                <h2 class="centrar-titulos"> General</h2>
+                                <h2 class="centrar-titulos">General</h2>
                             </div>
                             <div class="centrar">
                                 <label for="nombreCorto">Nombre Corto</label>
-                                <input type="text" required name="nombreCorto" id="nombreCorto">
+                                <input type="text"   name="nombreCorto" id="nombreCorto" value="<%= locals.old && old.nombreCorto ? old.nombreCorto : null %>">
+                                <span class=""><%= locals.errores && errores.nombreCorto ? errores.nombreCorto.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="nombreLargo">Nombre Largo</label>
-                                <input type="text" required name="nombreLargo" id="nombreLargo">
+                                <input type="text"   name="nombreLargo" id="nombreLargo" value="<%= locals.old && old.nombreLargo ? old.nombreLargo : null %>">
+                                <span class=""><%= locals.errores && errores.nombreLargo ? errores.nombreLargo.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="marca">Marca</label>
-                                <input type="text" required name="marca" id="marca">
+                                <input type="text"   name="marca" id="marca" value="<%= locals.old && old.marca ? old.marca : null %>">
+                                <span class=""><%= locals.errores && errores.marca ? errores.marca.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="precio">Precio</label>
-                                <input type="number" required name="precio" id="precio">
+                                <input type="text"   name="precio" id="precio" value="<%= locals.old && old.precio ? old.precio : null %>">
+                                <span class=""><%= locals.errores && errores.precio ? errores.precio.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="categoria">Categoria</label>
                                 <!--falta agregar categorias-->
-                                <input type="text" required name="categoria" id="categoria">
+                                <input type="text"   name="categoria" id="categoria" value="<%= locals.old && old.categoria ? old.categoria : null %>">
+                                <span class=""><%= locals.errores && errores.categoria ? errores.categoria.msg : null %> </span>
                             </div>
 
                             <div class="centrar">
                                 <label for="color">Color</label>
-                                <input type="text" required name="color" id="color">
+                                <input type="text"   name="color" id="color" value="<%= locals.old && old.color ? old.color : null %>">
+                                <span class=""><%= locals.errores && errores.color ? errores.color.msg : null %> </span>
                             </div>
 
                             <div class="centrar">
                                 <label for="edge">EDGE</label>
-                                <input type="text" required name="edge" id="edge">
+                                <input type="text"   name="edge" id="edge" value="<%= locals.old && old.edge ? old.edge : null %>">
+                                <span class=""><%= locals.errores && errores.edge ? errores.edge.msg : null %> </span>
                             </div>
 
                             <div class="centrar">
                                 <label for="dimensiones">Dimensiones</label>
-                                <input type="text" required name="dimensiones" id="dimensiones">
+                                <input type="text"   name="dimensiones" id="dimensiones" value="<%= locals.old && old.dimensiones ? old.dimensiones : null %>">
+                                <span class=""><%= locals.errores && errores.dimensiones ? errores.dimensiones.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="peso">Peso</label>
-                                <input type="text" required name="peso" id="peso">
+                                <input type="text"   name="peso" id="peso" value="<%= locals.old && old.peso ? old.peso : null %>">
+                                <span class=""><%= locals.errores && errores.peso ? errores.peso.msg : null %> </span>
                             </div>
                         </div>
                         <div class="principal bloque">
@@ -59,43 +68,53 @@
                             <div class="centrar">
 
                                 <label for="pantallaP">Pantalla Principal</label>
-                                <input type="text" required name="pantallaP" id="pantallaP">
+                                <input type="text"   name="pantallaP" id="pantallaP" value="<%= locals.old && old.pantallaP ? old.pantallaP : null %>">
+                                <span class=""><%= locals.errores && errores.pantallaP ? errores.pantallaP.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="procesadorP">Procesador Principal</label>
-                                <input type="text" required name="procesadorP" id="procesadorP">
+                                <input type="text"   name="procesadorP" id="procesadorP" value="<%= locals.old && old.procesadorP ? old.procesadorP : null %>">
+                                <span class=""><%= locals.errores && errores.procesadorP ? errores.procesadorP.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="memoriaP">Memoria Principal</label>
-                                <input type="text" required name="memoriaP" id="memoriaP">
+                                <input type="text"   name="memoriaP" id="memoriaP" value="<%= locals.old && old.memoriaP ? old.memoriaP : null %>">
+                                <span class=""><%= locals.errores && errores.memoriaP ? errores.memoriaP.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="almacenamientoP">Almacenamiento Principal</label>
-                                <input type="text" required name="almacenamientoP" id="almacenamientoP">
+                                <input type="text"   name="almacenamientoP" id="almacenamientoP" value="<%= locals.old && old.almacenamientoP ? old.almacenamientoP : null %>">
+                                <span class=""><%= locals.errores && errores.almacenamientoP ? errores.almacenamientoP.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="expansionP">Expansion Principal</label>
-                                <input type="text" required name="expansionP" id="expansionP">
+                                <input type="text"   name="expansionP" id="expansionP" value="<%= locals.old && old.expansionP ? old.expansionP : null %>">
+                                <span class=""><%= locals.errores && errores.expansionP ? errores.expansionP.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="camaraP">Cámara Principal</label>
-                                <input type="text" required name="camaraP" id="camaraP">
+                                <input type="text"   name="camaraP" id="camaraP" value="<%= locals.old && old.camaraP ? old.camaraP : null %>">
+                                <span class=""><%= locals.errores && errores.camaraP ? errores.camaraP.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="bateriaP">Batería Principal</label>
-                                <input type="text" name="bateriaP" id="bateriaP">
+                                <input type="text" name="bateriaP" id="bateriaP" value="<%= locals.old && old.bateriaP ? old.bateriaP : null %>">
+                                <span class=""><%= locals.errores && errores.bateriaP ? errores.bateriaP.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="osP">Sistema Operativo Principal</label>
-                                <input type="text" name="osP" id="osP">
+                                <input type="text" name="osP" id="osP" value="<%= locals.old && old.osP ? old.osP : null %>">
+                                <span class=""><%= locals.errores && errores.osP ? errores.osP.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="perfilP">Perfil Principal</label>
-                                <input type="text" required name="perfilP" id="perfilP">
+                                <input type="text"   name="perfilP" id="perfilP" value="<%= locals.old && old.perfilP ? old.perfilP : null %>">
+                                <span class=""><%= locals.errores && errores.perfilP ? errores.perfilP.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="pesoP">Peso Principal</label>
-                                <input type="text" required name="pesoP" id="pesoP">
+                                <input type="text"   name="pesoP" id="pesoP" value="<%= locals.old && old.pesoP ? old.pesoP : null %>">
+                                <span class=""><%= locals.errores && errores.pesoP ? errores.pesoP.msg : null %> </span>
                             </div>
                         </div>
                         <div class="redes bloque">
@@ -104,27 +123,33 @@
                             </div>
                             <div class="centrar">
                                 <label for="dosg">2G</label>
-                                <input type="text" required name="dosg" id="dosg">
+                                <input type="text"   name="dosg" id="dosg" value="<%= locals.old && old.dosg ? old.dosg : null %>">
+                                <span class=""><%= locals.errores && errores.dosg ? errores.dosg.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="tresg">3G</label>
-                                <input type="text" required name="tresg" id="tresg">
+                                <input type="text"   name="tresg" id="tresg" value="<%= locals.old && old.tresg ? old.tresg : null %>">
+                                <span class=""><%= locals.errores && errores.tresg ? errores.tresg.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="cuatrog">4G</label>
-                                <input type="text" required name="cuatrog" id="cuatrog">
+                                <input type="text"   name="cuatrog" id="cuatrog" value="<%= locals.old && old.cuatrog ? old.cuatrog : null %>">
+                                <span class=""><%= locals.errores && errores.cuatrog ? errores.cuatrog.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="cincog">5G</label>
-                                <input type="text" required name="cincog" id="cincog">
+                                <input type="text"   name="cincog" id="cincog" value="<%= locals.old && old.cincog ? old.cincog : null %>">
+                                <span class=""><%= locals.errores && errores.cincog ? errores.cincog.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="gprs">GPRS</label>
-                                <input type="text" required name="gprs" id="gprs">
+                                <input type="text"   name="gprs" id="gprs" value="<%= locals.old && old.gprs ? old.gprs : null %>">
+                                <span class=""><%= locals.errores && errores.gprs ? errores.gprs.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="sim">SIM</label>
-                                <input type="text" required name="sim" id="sim">
+                                <input type="text"   name="sim" id="sim" value="<%= locals.old && old.sim ? old.sim : null %>">
+                                <span class=""><%= locals.errores && errores.sim ? errores.sim.msg : null %> </span>
                             </div>
                         </div>
                         <div class="camara bloque">
@@ -133,15 +158,18 @@
                             </div>
                             <div class="centrar">
                                 <label for="camaraPrincipal">Cámara Principal</label>
-                                <input type="text" required name="camaraPrincipal" id="camaraPrincipal">
+                                <input type="text"   name="camaraPrincipal" id="camaraPrincipal" value="<%= locals.old && old.camaraPrincipal ? old.camaraPrincipal : null %>">
+                                <span class=""><%= locals.errores && errores.camaraPrincipal ? errores.camaraPrincipal.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="camaraVideo">Cámara Video</label>
-                                <input type="text" required name="camaraVideo" id="camaraVideo">
+                                <input type="text"   name="camaraVideo" id="camaraVideo" value="<%= locals.old && old.camaraVideo ? old.camaraVideo : null %>">
+                                <span class=""><%= locals.errores && errores.camaraVideo ? errores.camaraVideo.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="camaraFrontal">Cámara Frontal</label>
-                                <input type="text" required name="camaraFrontal" id="camaraFrontal">
+                                <input type="text"   name="camaraFrontal" id="camaraFrontal" value="<%= locals.old && old.camaraFrontal ? old.camaraFrontal : null %>">
+                                <span class=""><%= locals.errores && errores.camaraFrontal ? errores.camaraFrontal.msg : null %> </span>
                             </div>
                         </div>
 
@@ -151,23 +179,28 @@
                             </div>
                             <div class="centrar">
                                 <label for="bateriaCapacidad">Capacidad de Bateria</label>
-                                <input type="text" required name="bateriaCapacidad" id="bateriaCapacidad">
+                                <input type="text"   name="bateriaCapacidad" id="bateriaCapacidad" value="<%= locals.old && old.bateriaCapacidad ? old.bateriaCapacidad : null %>">
+                                <span class=""><%= locals.errores && errores.bateriaCapacidad ? errores.bateriaCapacidad.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="bateriaTipo">Tipo de Bateria</label>
-                                <input type="text" required name="bateriaTipo" id="bateriaTipo">
+                                <input type="text"   name="bateriaTipo" id="bateriaTipo" value="<%= locals.old && old.bateriaTipo ? old.bateriaTipo : null %>">
+                                <span class=""><%= locals.errores && errores.bateriaTipo ? errores.bateriaTipo.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="extraible">Extraible</label>
-                                <input type="text" required name="extraible" id="extraible">
+                                <input type="text"   name="extraible" id="extraible" value="<%= locals.old && old.extraible ? old.extraible : null %>">
+                                <span class=""><%= locals.errores && errores.extraible ? errores.extraible.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="cargaRapida">Carga Rápida</label>
-                                <input type="text" required name="cargaRapida" id="cargaRapida">
+                                <input type="text"   name="cargaRapida" id="cargaRapida" value="<%= locals.old && old.cargaRapida ? old.cargaRapida : null %>">
+                                <span class=""><%= locals.errores && errores.cargaRapida ? errores.cargaRapida.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="cargaInalambrica">Carga Inalambrica</label>
-                                <input type="text" required name="cargaInalambrica" id="cargaInalambrica">
+                                <input type="text"   name="cargaInalambrica" id="cargaInalambrica" value="<%= locals.old && old.cargaInalambrica ? old.cargaInalambrica : null %>">
+                                <span class=""><%= locals.errores && errores.cargaInalambrica ? errores.cargaInalambrica.msg : null %> </span>
                             </div>
 
                         </div>
@@ -178,11 +211,13 @@
                             </div>
                             <div class="centrar">
                                 <label for="memoriaInterna">Memoria Interna</label>
-                                <input type="text" required name="memoriaInterna" id="memoriaInterna">
+                                <input type="text"   name="memoriaInterna" id="memoriaInterna" value="<%= locals.old && old.memoriaInterna ? old.memoriaInterna : null %>">
+                                <span class=""><%= locals.errores && errores.memoriaInterna ? errores.memoriaInterna.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="slot">SLOT</label>
-                                <input type="text" name="slot" id="slot">
+                                <input type="text" name="slot" id="slot" value="<%= locals.old && old.slot ? old.slot : null %>">
+                                <span class=""><%= locals.errores && errores.slot ? errores.slot.msg : null %> </span>
                             </div>
                         </div>
                         <div class="conectividad bloque">
@@ -191,27 +226,33 @@
                             </div>
                             <div class="centrar">
                                 <label for="wifi">Wi-Fi</label>
-                                <input type="text" required name="wifi" id="wifi">
+                                <input type="text"   name="wifi" id="wifi" value="<%= locals.old && old.wifi ? old.wifi : null %>">
+                                <span class=""><%= locals.errores && errores.wifi ? errores.wifi.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="bluetooth">Bluetooth</label>
-                                <input type="text" required name="bluetooth" id="bluetooth">
+                                <input type="text"   name="bluetooth" id="bluetooth" value="<%= locals.old && old.bluetooth ? old.bluetooth : null %>">
+                                <span class=""><%= locals.errores && errores.bluetooth ? errores.bluetooth.msg : null %> </span>
                             </div>
                             <div class=" centrar">
                                 <label for="gps">GPS</label>
-                                <input type="text" required name="gps" id="gps">
+                                <input type="text"   name="gps" id="gps" value="<%= locals.old && old.gps ? old.gps : null %>">
+                                <span class=""><%= locals.errores && errores.gps ? errores.gps.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="usb">USB</label>
-                                <input type="text" required name="usb" id="usb">
+                                <input type="text"   name="usb" id="usb" value="<%= locals.old && old.usb ? old.usb : null %>">
+                                <span class=""><%= locals.errores && errores.usb ? errores.usb.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="nfc">NFC</label>
-                                <input type="text" required name="nfc" id="nfc">
+                                <input type="text"   name="nfc" id="nfc" value="<%= locals.old && old.nfc ? old.nfc : null %>">
+                                <span class=""><%= locals.errores && errores.nfc ? errores.nfc.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="infrarrojo">Infrarrojo</label>
-                                <input type="text" required name="infrarrojo" id="infrarrojo">
+                                <input type="text"   name="infrarrojo" id="infrarrojo" value="<%= locals.old && old.infrarrojo ? old.infrarrojo : null %>">
+                                <span class=""><%= locals.errores && errores.infrarrojo ? errores.infrarrojo.msg : null %> </span>
                             </div>
 
                         </div>
@@ -221,31 +262,38 @@
                             </div>
                             <div class="centrar">
                                 <label for="displayTipo">Display Tipo</label>
-                                <input type="text" required name="displayTipo" id="displayTipo">
+                                <input type="text" name="displayTipo" id="displayTipo" value="<%= locals.old && old.displayTipo ? old.displayTipo : null %>">
+                                <span class=""><%= locals.errores && errores.displayTipo ? errores.displayTipo.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="displayTamanio">Display Tamaño</label>
-                                <input type="text" required name="displayTamanio" id="displayTamanio">
+                                <input type="text" name="displayTamanio" id="displayTamanio" value="<%= locals.old && old.displayTamanio ? old.displayTamanio : null %>">
+                                <span class=""><%= locals.errores && errores.displayTamanio ? errores.displayTamanio.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="displayResolucion">Display Resolución</label>
-                                <input type="text" required name="displayResolucion" id="displayResolucion">
+                                <input type="text" name="displayResolucion" id="displayResolucion" value="<%= locals.old && old.displayResolucion ? old.displayResolucion : null %>">
+                                <span class=""><%= locals.errores && errores.displayResolucion ? errores.displayResolucion.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="densidad">Densidad</label>
-                                <input type="text" required name="densidad" id="densidad">
+                                <input type="text" name="densidad" id="densidad" value="<%= locals.old && old.densidad ? old.densidad : null %>">
+                                <span class=""><%= locals.errores && errores.densidad ? errores.densidad.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="proteccion">Protección</label>
-                                <input type="text" required name="proteccion" id="proteccion">
+                                <input type="text"   name="proteccion" id="proteccion" value="<%= locals.old && old.proteccion ? old.proteccion : null %>">
+                                <span class=""><%= locals.errores && errores.proteccion ? errores.proteccion.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="os">Sistema Operativo</label>
-                                <input type="text" required name="os" id="os">
+                                <input type="text"   name="os" id="os" value="<%= locals.old && old.os ? old.os : null %>">
+                                <span class=""><%= locals.errores && errores.os ? errores.os.msg : null %> </span>
                             </div>
                             <div class="centrar">
                                 <label for="procesador">Procesador</label>
-                                <input type="text" required name="procesador" id="procesador">
+                                <input type="text"   name="procesador" id="procesador" value="<%= locals.old && old.procesador ? old.procesador : null %>">
+                                <span class=""><%= locals.errores && errores.procesador ? errores.procesador.msg : null %> </span>
                             </div>
                         </div>
                         <div class="imagenes bloque">
