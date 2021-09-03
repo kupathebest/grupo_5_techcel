@@ -12,11 +12,11 @@
         <div class="container">
             <div class="card">
                 <div class="imagenes">
-                    <img class="principal" src="/images/equipos/<%= celular.photos[0] %> " alt="">
+                    <img class="principal" id="imgMain" src="/images/equipos/<%= celular.photos[0] %> " alt="">
                     <div class="miniaturas">
-                        <img src="/images/equipos/<%= celular.photos[0] %>" alt="">
-                        <img src="/images/equipos/<%= celular.photos[1] %>" alt="">
-                        <img src="/images/equipos/<%= celular.photos[2] %>" alt="">
+                        <% celular.photos.forEach(photo => { %>
+                            <img src="/images/equipos/<%= photo %>" alt="" onclick="document.getElementById('imgMain').setAttribute('src','/images/equipos/<%=photo%>')">
+                          <% }) %>
                     </div>
                 </div>
                 <div class="contenedor">

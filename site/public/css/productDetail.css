@@ -37,7 +37,7 @@
 .detail main div.container div.card div.imagenes div.miniaturas{
     display: flex;
    flex-direction: row;
-   justify-content: space-between;
+   justify-content: space-around;
 }
 
 .detail main .card .imagenes img.principal{
@@ -314,12 +314,11 @@
 
     .detail main .main-caracteristicas-desktop h3{
         margin-top: 50px;
+        transition: all .5s;
     }
 
     .detail .mas h3:hover{
-        font-size: 1.7rem;
-        border: .2px solid rgba(128, 128, 128, 0.5);
-
+        transform: scale(1.1);
     }
     
     .detail main .main-caracteristicas-desktop .caracteristicas div {
