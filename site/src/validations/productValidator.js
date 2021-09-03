@@ -199,6 +199,15 @@ const productEditValidator=[
 	.notEmpty()
     .withMessage('Este campo es obligatorio'),
 
+	body('image') 
+	.custom((value, {req}) => {
+		if (req.files.length != 0) {
+			return true
+	}else{
+		return false
+	}})
+    .withMessage('Este campo es obligatorio'),
+
 
 ]
 
