@@ -297,22 +297,20 @@
                             </div>
                         </div>
                         <div class="imagenes bloque">
+
                             <div>
                                 <h2 class="centrar-titulos"> Imagenes</h2>
                             </div>
-                            <div class="centrar subir-img">
-                                <label for="imagenCompleta">Imagen Completa</label>
-                                <input type="file" name="imagenCompleta" id="imagenCompleta">
-                            </div>
-                            <div class="centrar subir-img">
-                                <label for="imagenDorso">Imagen Dorso</label>
-                                <input type="file" name="imagenDorso" id="imagenDorso">
-                            </div>
-                            <div class="centrar subir-img">
-                                <label for="imagenFrente">Imagen Frente</label>
-                                <input type="file" name="imagenFrente" id="imagenFrente">
+                            <div class="subir-imagen">
+                                <label for="image" class=""></label>
+                                <input
+                                    class="centrar subir-img" type="file" id="image" name="image" multiple>
+                                <span class="errorImagen">
+                                    <%= locals.errores && errores.image ? errores.image.msg : null %>
+                                </span>
                             </div>
 
+                            
                         </div>
                         <div class="centrar agregar-producto"><button type="submit">Agregar producto</button></div>
                         <!--<div class="centrar"><button type="submit" class="boton-enviar">Agregar</button></div>-->

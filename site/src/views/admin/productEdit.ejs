@@ -422,8 +422,7 @@
                             <div class="subir-imagen">
                                 <label for="image" class=""></label>
                                 <input
-                                    class="centrar subir-img <%= locals.errores && errores.image ? 'is-invalid' : locals.old && old.image ? 'is-valid' : null %>"
-                                    type="file" id="image" name="image" multiple>
+                                    class="centrar subir-img" type="file" id="image" name="image" multiple>
                                 <span class="errorImagen">
                                     <%= locals.errores && errores.image ? errores.image.msg : null %>
                                 </span>

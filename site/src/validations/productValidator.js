@@ -1,4 +1,5 @@
-const{ check } = require('express-validator');
+const{ check, body } = require('express-validator');
+
 
 const productEditValidator=[
 
@@ -198,10 +199,7 @@ const productEditValidator=[
 	.notEmpty()
     .withMessage('Este campo es obligatorio'),
 
-	check('image') 
-	.notEmpty()
-    .withMessage('Debe seleccionar una imagen para continuar'),
-  
+
 ]
 
 module.exports = productEditValidator

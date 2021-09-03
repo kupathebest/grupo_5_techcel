@@ -19,8 +19,23 @@ module.exports = {
     },
     agregar : (req,res) =>{
         let errors = validationResult(req);
+
+        if (req.fileValidationError) {
+            let image = {
+                param: 'image',
+                msg: req.fileValidationError,
+            }
+            errors.errores.push(image)
+        }
+
         if(errors.isEmpty()){
             const {nombreCorto,nombreLargo,marca,precio,categoria,pantallaP,procesadorP,memoriaP,almacenamientoP,expansionP,camaraP,bateriaP,osP,perfilP,pesoP,color,dosg,tresg,cuatrog,cincog,gprs,edge,sim,dimensiones,peso,displayTipo,displayTamanio,displayResolucion,densidad,proteccion,os,procesador,memoriaInterna,slot,camaraPrincipal,camaraVideo,camaraFrontal,wifi,bluetooth,gps,usb,nfc,infrarrojo,bateriaCapacidad,bateriaTipo,extraible,cargaRapida,cargaInalambrica} = req.body;
+            let photos = [];
+
+            req.files.forEach(image => {
+                photos.push(image.filename)
+            })
+
             let celular = {
                 id: celulares[celulares.length -1].id + 1,
                 nombreCorto : nombreCorto.trim(),
@@ -71,9 +86,7 @@ module.exports = {
                 extraible : extraible.trim(),
                 cargaRapida : cargaRapida.trim(),
                 cargaInalambrica : cargaInalambrica.trim(),
-                imagenCompleta : "",
-                imagenFrente : "",
-                imagenDorso : "",
+                photos
             }
             celulares.push(celular);
             guardar(celulares);
@@ -97,7 +110,7 @@ module.exports = {
     },
     update: (req, res) => {
         let errors = validationResult(req);
-        let imagenes = [];
+        let photos = [];
         let celular = celulares.find(celular => celular.id === +req.params.id);
 
         if (req.fileValidationError) {
@@ -112,11 +125,11 @@ module.exports = {
 
             if (req.files.length != 0) {
                 req.files.forEach(image => {
-                    imagenes.push(image.filename)
+                    photos.push(image.filename)
                 });
-                celular.imagenes.forEach(image => {
-                    if (fs.existsSync(path.join(__dirname,'..','public','images','equipos', image))) {
-                        fs.unlinkSync(path.join(__dirname, '..','public','images','equipos', image))
+                celular.photos.forEach(photo => {
+                    if (fs.existsSync(path.join(__dirname,'..','public','images','equipos', photo))) {
+                        fs.unlinkSync(path.join(__dirname, '..','public','images','equipos', photo))
                     }
                 })
             }
@@ -171,17 +184,14 @@ module.exports = {
                 extraible : extraible.trim(),
                 cargaRapida : cargaRapida.trim(),
                 cargaInalambrica : cargaInalambrica.trim(),
-                imagenes : req.files.length != 0 ? imagenes : celular.imagenes
+                photos : req.files.length != 0 ? photos : celular.photos
             };
 
             let modificados = celulares.map(celular => celular.id === +req.params.id ? celularEdit : celular)
 
-            fs.writeFileSync(path.join(__dirname, '..', 'data', 'celulares.json'), JSON.stringify(modificados, null, 2), 'utf-8');
-
             guardar(modificados);
             return res.redirect('/admin');
             
-
         } else {
             return res.render("admin/productEdit", {
                 celular,
