@@ -32,6 +32,10 @@
     margin: 5px;
 }
 
+.productAdd main .imagenes{
+    width: 100%;
+}
+
 .productAdd main .bloque{
     padding: 10px 5px;
     margin: 25px auto;
@@ -64,4 +68,16 @@
 
     color: red;
     text-align: left;
+ }
+
+ @media (min-width: 425px){
+    .productAdd main .imagenes{
+        width: 80%;
+    }
+ }
+
+ @media (min-width: 768px){
+    .productAdd main .imagenes{
+        width: 60%;
+    }
  }

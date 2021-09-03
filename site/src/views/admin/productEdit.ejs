@@ -419,11 +419,9 @@
                             <div>
                                 <h2 class="centrar-titulos"> Imagenes</h2>
                             </div>
-                            <div class="subir-imagen">
-                                <label for="image" class=""></label>
-                                <input
-                                    class="centrar subir-img" type="file" id="image" name="image" multiple>
-                                <span class="errorImagen">
+                            <div class="subir-imagen centrar">
+                                <input class="centrar subir-img" type="file" id="image" name="image" multiple>
+                                <span class="errorImagen centrar">
                                     <%= locals.errores && errores.image ? errores.image.msg : null %>
                                 </span>
                             </div>
