@@ -208,7 +208,7 @@
                 <% celulares.forEach(celular => { %>
                     <article class="">
                         <a href="/productos/detail/<%= celular.id %>">
-                            <img src="/images/equipos/<%= celular.imagenFrente %>" alt="">
+                            <img src="/images/equipos/<%= celular.photos[0] %>" alt="">
                             <p class=""><%= celular.nombreCorto %> </p>
                             <span>$ <%= toThousand(celular.precio) %> </span>
                         </a>

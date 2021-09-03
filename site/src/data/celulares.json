@@ -49,9 +49,11 @@
     "extraible": "No",
     "cargaRapida": "Si, 33W",
     "cargaInalambrica": "No",
-    "imagenCompleta": "xiaomi_mi_11_lite_completo.webp",
-    "imagenFrente": "xiaomi_mi_11_lite_frente.webp",
-    "imagenDorso": "xiaomi_mi_11_lite_dorso.webp"
+    "photos": [
+      "img-1630629764689.webp",
+      "img-1630629764691.webp",
+      "img-1630629764693.webp"
+    ]
   },
   {
     "id": 2,
@@ -103,9 +105,11 @@
     "extraible": "No",
     "cargaRapida": "Si, 18W",
     "cargaInalambrica": "No",
-    "imagenCompleta": "xiaomi_poco_m3_completo.webp",
-    "imagenFrente": "xiaomi_poco_m3_frente.webp",
-    "imagenDorso": "xiaomi_poco_m3_dorso.webp"
+    "photos": [
+      "img-1630629864995.webp",
+      "img-1630629864997.webp",
+      "img-1630629864998.webp"
+    ]
   },
   {
     "id": 3,
@@ -157,9 +161,11 @@
     "extraible": "No",
     "cargaRapida": "Si, 18W",
     "cargaInalambrica": "No",
-    "imagenCompleta": "xiaomi_redmi_note_9t_completo.webp",
-    "imagenFrente": "xiaomi_redmi_note_9t_frente.webp",
-    "imagenDorso": "xiaomi_redmi_note_9t_dorso.webp"
+    "photos": [
+      "img-1630630001516.webp",
+      "img-1630630001518.webp",
+      "img-1630630001519.webp"
+    ]
   },
   {
     "id": 4,
@@ -211,9 +217,11 @@
     "extraible": "No",
     "cargaRapida": "Si, 33W",
     "cargaInalambrica": "No",
-    "imagenCompleta": "xiaomi_redmi_note_10_completo.webp",
-    "imagenFrente": "xiaomi_redmi_note_10_frente.webp",
-    "imagenDorso": "xiaomi_redmi_note_10_dorso.webp"
+    "photos": [
+      "img-1630630028868.webp",
+      "img-1630630028871.webp",
+      "img-1630630028872.webp"
+    ]
   },
   {
     "id": 5,
@@ -265,9 +273,11 @@
     "extraible": "No",
     "cargaRapida": "Si, 10w",
     "cargaInalambrica": "No",
-    "imagenCompleta": "motorola-moto-g-play.webp",
-    "imagenFrente": "motorola-moto-g-play-frente.webp",
-    "imagenDorso": "motorola-moto-g-play-dorso.webp"
+    "photos": [
+      "img-1630630252878.webp",
+      "img-1630630252880.webp",
+      "img-1630630252882.webp"
+    ]
   },
   {
     "id": 6,
@@ -305,7 +315,7 @@
     "procesador": "qualcomm sm8250-ac snapdragon 870 5g octa-core 3.2ghz",
     "memoriaInterna": "6/8GB RAM, 128GB almacenamiento interno, 8GB RAM, 256GB almacenamiento interno",
     "slot": "microsd, hasta 2tb",
-    "camaraPrincipal": "cuádruple, 64 mp ",
+    "camaraPrincipal": "cuádruple, 64 mp",
     "camaraVideo": "6k@30fps, 4k@30/60fps, 1080p@30/60fps, eis",
     "camaraFrontal": "dual, 16 mp (wide) + 8 mp (ultrawide), 1080p@30fps, hdr",
     "wifi": "wi-fi 802.11 a/b/g/n/ac/ax; wi-fi direct; banda dual",
@@ -319,17 +329,19 @@
     "extraible": "No",
     "cargaRapida": "si, 20w",
     "cargaInalambrica": "No",
-    "imagenCompleta": "motorola-edge-s.webp",
-    "imagenFrente": "motorola-edge-s-frente.webp",
-    "imagenDorso": "motorola-edge-s-dorso.webp"
+    "photos": [
+      "img-1630630539810.webp",
+      "img-1630630539812.webp",
+      "img-1630630539802.webp"
+    ]
   },
   {
     "id": 7,
+    "nombreCorto": "Moto G20",
+    "nombreLargo": "Moto G20 64GB 4GB RAM 6.5 Pulgadas",
     "marca": "motorola",
     "precio": 27999,
     "categoria": "novedades",
-    "nombreCorto": "Moto G20",
-    "nombreLargo": "Moto G20 64GB 4GB RAM 6.5 Pulgadas",
     "pantallaP": "6.5, 720 x 1600 pixels",
     "procesadorP": "unisoc t700 1.8ghz",
     "memoriaP": "4GB",
@@ -373,15 +385,17 @@
     "extraible": "No",
     "cargaRapida": "Si, 10w",
     "cargaInalambrica": "No",
-    "imagenCompleta": "motorola-moto-g20.webp",
-    "imagenFrente": "motorola-moto-g20-frente.webp",
-    "imagenDorso": "motorola-moto-g20-dorso.webp"
+    "photos": [
+      "img-1630630638119.webp",
+      "img-1630630638120.webp",
+      "img-1630630638117.webp"
+    ]
   },
   {
     "id": 8,
-    "marca": "motorola",
     "nombreCorto": "Motorola One Zoom",
     "nombreLargo": "Motorola One Zoom Dual SIM 128 GB Gris eléctrico 4 GB RAM",
+    "marca": "motorola",
     "precio": 99999,
     "categoria": "ofertas",
     "pantallaP": "6.4, 1080 x 2340 pixels",
@@ -427,9 +441,11 @@
     "extraible": "No",
     "cargaRapida": "Si, 15w, turbopower",
     "cargaInalambrica": "No",
-    "imagenCompleta": "motorola-one-zoom-completo.jpg",
-    "imagenFrente": "motorola-one-zoom-frente.webp",
-    "imagenDorso": "motorola-one-zoom-dorso.webp"
+    "photos": [
+      "img-1630630680270.webp",
+      "img-1630630680271.webp",
+      "img-1630630680273.jpg"
+    ]
   },
   {
     "id": 9,
@@ -481,9 +497,11 @@
     "extraible": "No",
     "cargaRapida": "Si, 25W",
     "cargaInalambrica": "No",
-    "imagenCompleta": "A52-COMPLETO.webp",
-    "imagenFrente": "A52-frente.webp",
-    "imagenDorso": "samsung-a52-dorso.webp"
+    "photos": [
+      "img-1630630714545.webp",
+      "img-1630630714543.webp",
+      "img-1630630714546.webp"
+    ]
   },
   {
     "id": 10,
@@ -535,9 +553,11 @@
     "extraible": "No",
     "cargaRapida": "Si, 25W",
     "cargaInalambrica": "Si, 15W, Qi/PMA",
-    "imagenCompleta": "S21-completo.webp",
-    "imagenFrente": "S21-frente.webp",
-    "imagenDorso": "S21-perfil.webp"
+    "photos": [
+      "img-1630630756920.webp",
+      "img-1630630756918.webp",
+      "img-1630630756927.webp"
+    ]
   },
   {
     "id": 11,
@@ -589,9 +609,11 @@
     "extraible": "No",
     "cargaRapida": "Si, 25W",
     "cargaInalambrica": "No",
-    "imagenCompleta": "BLUE-PERFIL.webp",
-    "imagenFrente": "BLUE-FRENTE.webp",
-    "imagenDorso": "BLUE-DORSO.webp"
+    "photos": [
+      "img-1630633097861.webp",
+      "img-1630633097863.webp",
+      "img-1630633097864.webp"
+    ]
   },
   {
     "id": 12,
@@ -643,9 +665,11 @@
     "extraible": "No",
     "cargaRapida": "Si, 15W",
     "cargaInalambrica": "Si, 10W",
-    "imagenCompleta": "Flip-Perfil1.webp",
-    "imagenFrente": "flip-frente1.webp",
-    "imagenDorso": "flip-dorso1.webp"
+    "photos": [
+      "img-1630632595102.webp",
+      "img-1630632595107.webp",
+      "img-1630632595108.webp"
+    ]
   },
   {
     "id": 13,
@@ -697,9 +721,11 @@
     "extraible": "No",
     "cargaRapida": "No",
     "cargaInalambrica": "No",
-    "imagenCompleta": "LG-Q60-COMPLETO.webp",
-    "imagenFrente": "LG-Q60-FRENTE.webp",
-    "imagenDorso": "LG-Q60-DORSO.webp"
+    "photos": [
+      "img-1630632689695.webp",
+      "img-1630632689699.webp",
+      "img-1630632689706.webp"
+    ]
   },
   {
     "id": 14,
@@ -708,7 +734,7 @@
     "marca": "lg",
     "precio": 31500,
     "categoria": "los mas comprados",
-    "pantallaP": " 6.53 pulgadas, 1080 x 2340 pixels",
+    "pantallaP": "6.53 pulgadas, 1080 x 2340 pixels",
     "procesadorP": "Mediatek Helio P35 2.3GHz",
     "memoriaP": "4GB",
     "almacenamientoP": "64GB/128GB",
@@ -751,9 +777,11 @@
     "extraible": "No",
     "cargaRapida": "No",
     "cargaInalambrica": "No",
-    "imagenCompleta": "lg-k61-costado.webp",
-    "imagenFrente": "lg-k61-frente.webp",
-    "imagenDorso": "lg-k61-dorso.webp"
+    "photos": [
+      "img-1630632782783.webp",
+      "img-1630632782785.webp",
+      "img-1630632782791.webp"
+    ]
   },
   {
     "id": 15,
@@ -762,7 +790,7 @@
     "marca": "lg",
     "precio": 24799,
     "categoria": "los mas comprados",
-    "pantallaP": " 6.6 pulgadas, 720 x 1600 pixels",
+    "pantallaP": "6.6 pulgadas, 720 x 1600 pixels",
     "procesadorP": "Mediatek Helio P22 2Ghz",
     "memoriaP": "3GB",
     "almacenamientoP": "64GB",
@@ -805,9 +833,11 @@
     "extraible": "No",
     "cargaRapida": "No",
     "cargaInalambrica": "No",
-    "imagenCompleta": "LG-K42-completa.jpg",
-    "imagenFrente": "LG-K42-frente.webp",
-    "imagenDorso": "LG-K42-dorso.webp"
+    "photos": [
+      "img-1630632890106.webp",
+      "img-1630632890109.jpg",
+      "img-1630632890125.webp"
+    ]
   },
   {
     "id": 16,
@@ -859,9 +889,11 @@
     "extraible": "No",
     "cargaRapida": "Si, Quick Charge 4.0+",
     "cargaInalambrica": "Si",
-    "imagenCompleta": "LG-V60-ThinQ-completa.jpg",
-    "imagenFrente": "LG-V60-ThinQ-frente.jpg",
-    "imagenDorso": "LG-V60-ThinQ-dorso.jpg"
+    "photos": [
+      "img-1630632948545.jpg",
+      "img-1630632948554.jpg",
+      "img-1630632948559.jpg"
+    ]
   },
   {
     "id": 17,
@@ -913,9 +945,11 @@
     "extraible": "No",
     "cargaRapida": "Si",
     "cargaInalambrica": "Si",
-    "imagenCompleta": "iphone7plus-ambos.webp",
-    "imagenFrente": "iphone7plus_frente.webp",
-    "imagenDorso": "iphone7plus_dorso.webp"
+    "photos": [
+      "img-1630633027304.webp",
+      "img-1630633027306.webp",
+      "img-1630633027309.webp"
+    ]
   },
   {
     "id": 18,
@@ -967,9 +1001,11 @@
     "extraible": "No",
     "cargaRapida": "Si",
     "cargaInalambrica": "Si",
-    "imagenCompleta": "iphone8_ambos.webp",
-    "imagenFrente": "iPhone8_frente.webp",
-    "imagenDorso": "iPhone8_dorso.webp"
+    "photos": [
+      "img-1630633159187.webp",
+      "img-1630633159190.webp",
+      "img-1630633159191.webp"
+    ]
   },
   {
     "id": 19,
@@ -1021,9 +1057,11 @@
     "extraible": "No",
     "cargaRapida": "Si, 50% en 30 min",
     "cargaInalambrica": "Si, Qi",
-    "imagenCompleta": "iphone-xs-ambos.webp",
-    "imagenFrente": "iphone-xs-frente.webp",
-    "imagenDorso": "iphone-xs-dorso.webp"
+    "photos": [
+      "img-1630633236500.webp",
+      "img-1630633236507.webp",
+      "img-1630633236508.webp"
+    ]
   },
   {
     "id": 20,
@@ -1075,9 +1113,11 @@
     "extraible": "No",
     "cargaRapida": "Si, 20W",
     "cargaInalambrica": "Si, 15W MagSafe / 7.5W Qi",
-    "imagenCompleta": "iphone12mini_ambos.webp",
-    "imagenFrente": "iphone12mini_frente.webp",
-    "imagenDorso": "iphone12mini_dorso.webp"
+    "photos": [
+      "img-1630633329695.webp",
+      "img-1630633329697.webp",
+      "img-1630633329698.webp"
+    ]
   },
   {
     "id": 21,
@@ -1093,7 +1133,7 @@
     "expansionP": "sin microSD",
     "camaraP": "Dual, 12MP+5MP",
     "bateriaP": "3350 mAh",
-    "osP": " Android 8.1",
+    "osP": "Android 8.1",
     "perfilP": "7.5 mm",
     "pesoP": "169 g",
     "color": "negro",
@@ -1129,9 +1169,11 @@
     "extraible": "No",
     "cargaRapida": "Si, Quick Charge 3.0",
     "cargaInalambrica": "No",
-    "imagenCompleta": "xiaomi-mi8-lite-completo.webp",
-    "imagenFrente": "xiaomi-mi8-lite-frente.webp",
-    "imagenDorso": "xiaomi-mi8-lite-dorso.webp"
+    "photos": [
+      "img-1630633399909.webp",
+      "img-1630633399928.webp",
+      "img-1630633399929.webp"
+    ]
   },
   {
     "id": 22,
@@ -1183,9 +1225,11 @@
     "extraible": "No",
     "cargaRapida": "Si, 30W",
     "cargaInalambrica": "No",
-    "imagenCompleta": "moto-g9-plus-completo.webp",
-    "imagenFrente": "moto-g9-plus-frente.webp",
-    "imagenDorso": "moto-g9-plus-dorso.webp"
+    "photos": [
+      "img-1630633471241.webp",
+      "img-1630633471245.webp",
+      "img-1630633471251.webp"
+    ]
   },
   {
     "id": 23,
@@ -1237,9 +1281,11 @@
     "extraible": "No",
     "cargaRapida": "Si, 15W",
     "cargaInalambrica": "No",
-    "imagenCompleta": "samsung-galaxy-m12-completo.jpg",
-    "imagenFrente": "samsung-galaxy-m12-frente.webp",
-    "imagenDorso": "samsung-galaxy-m12-dorso.webp"
+    "photos": [
+      "img-1630633542070.webp",
+      "img-1630633542072.jpg",
+      "img-1630633542081.webp"
+    ]
   },
   {
     "id": 24,
@@ -1291,9 +1337,11 @@
     "extraible": "No",
     "cargaRapida": "Si, 50% en 30 min",
     "cargaInalambrica": "Si, Qi",
-    "imagenCompleta": "iphone-xr-completo.webp",
-    "imagenFrente": "iphone-xr-frente.webp",
-    "imagenDorso": "iphone-xr-dorso.webp"
+    "photos": [
+      "img-1630633640789.webp",
+      "img-1630633640792.webp",
+      "img-1630633640793.webp"
+    ]
   },
   {
     "id": 25,
@@ -1345,8 +1393,10 @@
     "extraible": "No",
     "cargaRapida": "No",
     "cargaInalambrica": "No",
-    "imagenCompleta": "lg-w30-pro-completa.jpg",
-    "imagenFrente": "lg-w30-pro-frente.jpg",
-    "imagenDorso": "lg-w30-pro-dorso.jpg"
+    "photos": [
+      "img-1630633721114.jpg",
+      "img-1630633721116.jpg",
+      "img-1630633721125.jpg"
+    ]
   }
 ]

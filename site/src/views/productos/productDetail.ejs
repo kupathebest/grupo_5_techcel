@@ -12,11 +12,11 @@
         <div class="container">
             <div class="card">
                 <div class="imagenes">
-                    <img class="principal" src="/images/equipos/<%= celular.imagenCompleta %> " alt="">
+                    <img class="principal" src="/images/equipos/<%= celular.photos[0] %> " alt="">
                     <div class="miniaturas">
-                        <img src="/images/equipos/<%= celular.imagenCompleta %>" alt="">
-                        <img src="/images/equipos/<%= celular.imagenFrente %>" alt="">
-                        <img src="/images/equipos/<%= celular.imagenDorso %>" alt="">
+                        <img src="/images/equipos/<%= celular.photos[0] %>" alt="">
+                        <img src="/images/equipos/<%= celular.photos[1] %>" alt="">
+                        <img src="/images/equipos/<%= celular.photos[2] %>" alt="">
                     </div>
                 </div>
                 <div class="contenedor">
@@ -279,7 +279,7 @@
                         <% if (item.marca === celular.marca && item.nombreCorto != celular.nombreCorto) { %>
                             <article class="card-carrousel">
                                 <a href="/productos/detail/<%= item.id %>">
-                                    <img src="/images/equipos/<%= item.imagenFrente %>" alt="">
+                                    <img src="/images/equipos/<%= item.photos[0] %>" alt="">
                                     <p class=""><%= item.nombreCorto %> </p>
                                     <span>$ <%= toThousand(item.precio) %> </span>
                                 </a>
