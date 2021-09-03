@@ -609,7 +609,11 @@
     "extraible": "No",
     "cargaRapida": "Si, 25W",
     "cargaInalambrica": "No",
-    "photos": []
+    "photos": [
+      "img-1630633097861.webp",
+      "img-1630633097863.webp",
+      "img-1630633097864.webp"
+    ]
   },
   {
     "id": 12,
@@ -661,7 +665,11 @@
     "extraible": "No",
     "cargaRapida": "Si, 15W",
     "cargaInalambrica": "Si, 10W",
-    "photos": []
+    "photos": [
+      "img-1630632595102.webp",
+      "img-1630632595107.webp",
+      "img-1630632595108.webp"
+    ]
   },
   {
     "id": 13,
@@ -713,7 +721,11 @@
     "extraible": "No",
     "cargaRapida": "No",
     "cargaInalambrica": "No",
-    "photos": []
+    "photos": [
+      "img-1630632689695.webp",
+      "img-1630632689699.webp",
+      "img-1630632689706.webp"
+    ]
   },
   {
     "id": 14,
@@ -722,7 +734,7 @@
     "marca": "lg",
     "precio": 31500,
     "categoria": "los mas comprados",
-    "pantallaP": " 6.53 pulgadas, 1080 x 2340 pixels",
+    "pantallaP": "6.53 pulgadas, 1080 x 2340 pixels",
     "procesadorP": "Mediatek Helio P35 2.3GHz",
     "memoriaP": "4GB",
     "almacenamientoP": "64GB/128GB",
@@ -765,7 +777,11 @@
     "extraible": "No",
     "cargaRapida": "No",
     "cargaInalambrica": "No",
-    "photos": []
+    "photos": [
+      "img-1630632782783.webp",
+      "img-1630632782785.webp",
+      "img-1630632782791.webp"
+    ]
   },
   {
     "id": 15,
@@ -774,7 +790,7 @@
     "marca": "lg",
     "precio": 24799,
     "categoria": "los mas comprados",
-    "pantallaP": " 6.6 pulgadas, 720 x 1600 pixels",
+    "pantallaP": "6.6 pulgadas, 720 x 1600 pixels",
     "procesadorP": "Mediatek Helio P22 2Ghz",
     "memoriaP": "3GB",
     "almacenamientoP": "64GB",
@@ -817,7 +833,11 @@
     "extraible": "No",
     "cargaRapida": "No",
     "cargaInalambrica": "No",
-    "photos": []
+    "photos": [
+      "img-1630632890106.webp",
+      "img-1630632890109.jpg",
+      "img-1630632890125.webp"
+    ]
   },
   {
     "id": 16,
@@ -869,7 +889,11 @@
     "extraible": "No",
     "cargaRapida": "Si, Quick Charge 4.0+",
     "cargaInalambrica": "Si",
-    "photos": []
+    "photos": [
+      "img-1630632948545.jpg",
+      "img-1630632948554.jpg",
+      "img-1630632948559.jpg"
+    ]
   },
   {
     "id": 17,
@@ -921,7 +945,11 @@
     "extraible": "No",
     "cargaRapida": "Si",
     "cargaInalambrica": "Si",
-    "photos": []
+    "photos": [
+      "img-1630633027304.webp",
+      "img-1630633027306.webp",
+      "img-1630633027309.webp"
+    ]
   },
   {
     "id": 18,
@@ -973,7 +1001,11 @@
     "extraible": "No",
     "cargaRapida": "Si",
     "cargaInalambrica": "Si",
-    "photos": []
+    "photos": [
+      "img-1630633159187.webp",
+      "img-1630633159190.webp",
+      "img-1630633159191.webp"
+    ]
   },
   {
     "id": 19,
@@ -1025,7 +1057,11 @@
     "extraible": "No",
     "cargaRapida": "Si, 50% en 30 min",
     "cargaInalambrica": "Si, Qi",
-    "photos": []
+    "photos": [
+      "img-1630633236500.webp",
+      "img-1630633236507.webp",
+      "img-1630633236508.webp"
+    ]
   },
   {
     "id": 20,
@@ -1077,7 +1113,11 @@
     "extraible": "No",
     "cargaRapida": "Si, 20W",
     "cargaInalambrica": "Si, 15W MagSafe / 7.5W Qi",
-    "photos": []
+    "photos": [
+      "img-1630633329695.webp",
+      "img-1630633329697.webp",
+      "img-1630633329698.webp"
+    ]
   },
   {
     "id": 21,
@@ -1093,7 +1133,7 @@
     "expansionP": "sin microSD",
     "camaraP": "Dual, 12MP+5MP",
     "bateriaP": "3350 mAh",
-    "osP": " Android 8.1",
+    "osP": "Android 8.1",
     "perfilP": "7.5 mm",
     "pesoP": "169 g",
     "color": "negro",
@@ -1129,7 +1169,11 @@
     "extraible": "No",
     "cargaRapida": "Si, Quick Charge 3.0",
     "cargaInalambrica": "No",
-    "photos": []
+    "photos": [
+      "img-1630633399909.webp",
+      "img-1630633399928.webp",
+      "img-1630633399929.webp"
+    ]
   },
   {
     "id": 22,
@@ -1181,7 +1225,11 @@
     "extraible": "No",
     "cargaRapida": "Si, 30W",
     "cargaInalambrica": "No",
-    "photos": []
+    "photos": [
+      "img-1630633471241.webp",
+      "img-1630633471245.webp",
+      "img-1630633471251.webp"
+    ]
   },
   {
     "id": 23,
@@ -1233,7 +1281,11 @@
     "extraible": "No",
     "cargaRapida": "Si, 15W",
     "cargaInalambrica": "No",
-    "photos": []
+    "photos": [
+      "img-1630633542070.webp",
+      "img-1630633542072.jpg",
+      "img-1630633542081.webp"
+    ]
   },
   {
     "id": 24,
@@ -1285,7 +1337,11 @@
     "extraible": "No",
     "cargaRapida": "Si, 50% en 30 min",
     "cargaInalambrica": "Si, Qi",
-    "photos": []
+    "photos": [
+      "img-1630633640789.webp",
+      "img-1630633640792.webp",
+      "img-1630633640793.webp"
+    ]
   },
   {
     "id": 25,
@@ -1337,62 +1393,10 @@
     "extraible": "No",
     "cargaRapida": "No",
     "cargaInalambrica": "No",
-    "photos": []
-  },
-  {
-    "id": 26,
-    "nombreCorto": "sfsfsf",
-    "nombreLargo": "sfsfsf",
-    "marca": "sfsf",
-    "precio": 555,
-    "categoria": "sfsf",
-    "pantallaP": "sfsff",
-    "procesadorP": "sfsf",
-    "memoriaP": "sfs",
-    "almacenamientoP": "sfsf",
-    "expansionP": "sfsf",
-    "camaraP": "sff",
-    "bateriaP": "sfsfsf",
-    "osP": "sfsfsf",
-    "perfilP": "sfsfsf",
-    "pesoP": "sfsfsf",
-    "color": "sfsf",
-    "dosg": "sfsfsf",
-    "tresg": "sffssf",
-    "cuatrog": "sfsff",
-    "cincog": "sfsff",
-    "gprs": "sfsf",
-    "edge": "sfsf",
-    "sim": "sfsff",
-    "dimensiones": "sfsf",
-    "peso": "sfsf",
-    "displayTipo": "s",
-    "displayTamanio": "s",
-    "displayResolucion": "s",
-    "densidad": "s",
-    "proteccion": "s",
-    "os": "s",
-    "procesador": "s",
-    "memoriaInterna": "s",
-    "slot": "s",
-    "camaraPrincipal": "sfsffs",
-    "camaraVideo": "sfs",
-    "camaraFrontal": "sfsf",
-    "wifi": "s",
-    "bluetooth": "s",
-    "gps": "s",
-    "usb": "s",
-    "nfc": "s",
-    "infrarrojo": "s",
-    "bateriaCapacidad": "sfsf",
-    "bateriaTipo": "sff",
-    "extraible": "sf",
-    "cargaRapida": "sf",
-    "cargaInalambrica": "sf",
     "photos": [
-      "img-1630629490528.webp",
-      "img-1630629490529.webp",
-      "img-1630629490531.webp"
+      "img-1630633721114.jpg",
+      "img-1630633721116.jpg",
+      "img-1630633721125.jpg"
     ]
   }
 ]
