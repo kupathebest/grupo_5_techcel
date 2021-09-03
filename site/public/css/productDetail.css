@@ -1,7 +1,7 @@
 
 
  .detail{
-    background-color: #EBEBEB;
+    background-color: var(--Gris-Fondo);
  }
 
  .detail main{
@@ -37,6 +37,7 @@
 .detail main div.container div.card div.imagenes div.miniaturas{
     display: flex;
    flex-direction: row;
+   justify-content: space-between;
 }
 
 .detail main .card .imagenes img.principal{
@@ -284,6 +285,18 @@
         width: 35%;
     }
 
+    .detail main .card .imagenes img.principal{
+        min-width: 200px;
+        padding: 0 30px;
+        max-width: 260px;
+        max-height: 400px;
+        background-color: white;
+    }
+
+    .detail main div.container div.card div.imagenes div.miniaturas{
+        min-width: 220px;
+        max-width: 260px;
+    }
 
     .detail main .card .contenido .cart-button{
         height: 60px;
