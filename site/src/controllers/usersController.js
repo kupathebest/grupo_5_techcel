@@ -48,12 +48,20 @@ module.exports = {
                 apellido: apellido.trim(),
                 email: email.trim(),
                 password: bcryptjs.hashSync(password, 10),
-                roll: "user"
+                roll: "user",
+                avatar : "avatar_default.png"
             }
             usuarios.push(usuario);
     
             fs.writeFileSync(path.join(__dirname, '../data/usuarios.json'), JSON.stringify(usuarios, null, 2), "utf-8");
-           return res.redirect('/users/login')
+            
+            req.session.userLogin = {
+                id : usuario.id,
+                name : usuario.nombre,
+                avatar : usuario.avatar,
+                rol : usuario.rol
+            }
+            return res.redirect('/')
 
         }else{
             return res.render("users/register",{
