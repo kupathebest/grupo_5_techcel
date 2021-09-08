@@ -24,9 +24,7 @@
                                 <label for="nombreLargo">Nombre Largo</label>
                                 <input type="text" name="nombreLargo" id="nombreLargo"
                                     value="<%= celular.nombreLargo %> ">
-                                <span class="">
-                                    <%= locals.errores && errores.nombreLargo ? errores.nombreLargo.msg : null %>
-                                </span>
+                                
                             </div>
                             <div class="centrar">
                                 <label for="marca">Marca</label>
@@ -54,34 +52,17 @@
                             <div class="centrar">
                                 <label for="color">Color</label>
                                 <input type="text" name="color" id="color" value="<%= celular.color %> ">
-                                <span class="">
-                                    <%= locals.errores && errores.color ? errores.color.msg : null %>
-                                </span>
+                               
                             </div>
 
                             <div class="centrar">
                                 <label for="edge">EDGE</label>
                                 <input type="text" name="edge" id="edge" value="<%= celular.edge %> ">
-                                <span class="">
-                                    <%= locals.errores && errores.edge ? errores.edge.msg : null %>
-                                </span>
+                                
                             </div>
 
-                            <div class="centrar">
-                                <label for="dimensiones">Dimensiones</label>
-                                <input type="text" name="dimensiones" id="dimensiones"
-                                    value="<%= celular.dimensiones %> ">
-                                <span class="">
-                                    <%= locals.errores && errores.dimensiones ? errores.dimensiones.msg : null %>
-                                </span>
-                            </div>
-                            <div class="centrar">
-                                <label for="peso">Peso</label>
-                                <input type="text" name="peso" id="peso" value="<%= celular.peso %> ">
-                                <span class="">
-                                    <%= locals.errores && errores.peso ? errores.peso.msg : null %>
-                                </span>
-                            </div>
+                            
+                            
                         </div>
                         <div class="principal bloque">
                             <div>
@@ -197,16 +178,12 @@
                             <div class="centrar">
                                 <label for="gprs">GPRS</label>
                                 <input type="text" name="gprs" id="gprs" value="<%= celular.gprs %> ">
-                                <span class="">
-                                    <%= locals.errores && errores.gprs ? errores.gprs.msg : null %>
-                                </span>
+                                
                             </div>
                             <div class="centrar">
                                 <label for="sim">SIM</label>
                                 <input type="text" name="sim" id="sim" value="<%= celular.sim %> ">
-                                <span class="">
-                                    <%= locals.errores && errores.sim ? errores.sim.msg : null %>
-                                </span>
+                                
                             </div>
                         </div>
                         <div class="camara bloque">
@@ -217,26 +194,19 @@
                                 <label for="camaraPrincipal">Cámara Principal</label>
                                 <input type="text" name="camaraPrincipal" id="camaraPrincipal"
                                     value="<%= celular.camaraPrincipal %> ">
-                                <span class="">
-                                    <%= locals.errores && errores.camaraPrincipal ? errores.camaraPrincipal.msg : null
-                                        %>
-                                </span>
+                                
                             </div>
                             <div class="centrar">
                                 <label for="camaraVideo">Cámara Video</label>
                                 <input type="text" name="camaraVideo" id="camaraVideo"
                                     value="<%= celular.camaraVideo %> ">
-                                <span class="">
-                                    <%= locals.errores && errores.camaraVideo? errores.camaraVideo.msg : null %>
-                                </span>
+                                
                             </div>
                             <div class="centrar">
                                 <label for="camaraFrontal">Cámara Frontal</label>
                                 <input type="text" name="camaraFrontal" id="camaraFrontal"
                                     value="<%= celular.camaraFrontal %> ">
-                                <span class="">
-                                    <%= locals.errores && errores.camaraFrontal ? errores.camaraFrontal.msg : null %>
-                                </span>
+                                
                             </div>
                         </div>
 
@@ -244,70 +214,24 @@
                             <div>
                                 <h2 class="centrar-titulos"> Bateria</h2>
                             </div>
-                            <div class="centrar">
-                                <label for="bateriaCapacidad">Capacidad de Bateria</label>
-                                <input type="text" name="bateriaCapacidad" id="bateriaCapacidad"
-                                    value="<%= celular.bateriaCapacidad %> ">
-                                <span class="">
-                                    <%= locals.errores && errores.bateriaCapacidad? errores.bateriaCapacidad.msg : null
-                                        %>
-                                </span>
-                            </div>
-                            <div class="centrar">
-                                <label for="bateriaTipo">Tipo de Bateria</label>
-                                <input type="text" name="bateriaTipo" id="bateriaTipo"
-                                    value="<%= celular.bateriaTipo%> ">
-                                <span class="">
-                                    <%= locals.errores && errores.bateriaTipo ? errores.bateriaTipo.msg : null %>
-                                </span>
-                            </div>
-                            <div class="centrar">
-                                <label for="extraible">Extraible</label>
-                                <input type="text" name="extraible" id="extraible" value="<%= celular.extraible %> ">
-                                <span class="">
-                                    <%= locals.errores && errores.extraible? errores.extraible.msg : null %>
-                                </span>
-                            </div>
+                           
+                            
                             <div class="centrar">
                                 <label for="cargaRapida">Carga Rápida</label>
                                 <input type="text" name="cargaRapida" id="cargaRapida"
                                     value="<%= celular.cargaRapida %> ">
-                                <span class="">
-                                    <%= locals.errores && errores.cargaRapida ? errores.cargaRapida.msg : null %>
-                                </span>
+                                
                             </div>
                             <div class="centrar">
                                 <label for="cargaInalambrica">Carga Inalambrica</label>
                                 <input type="text" name="cargaInalambrica" id="cargaInalambrica"
                                     value="<%= celular.cargaInalambrica %> ">
-                                <span class="">
-                                    <%= locals.errores && errores.cargaInalambrica ? errores.cargaInalambrica.msg : null
-                                        %>
-                                </span>
+                                
                             </div>
 
                         </div>
 
-                        <div class="memoria  bloque">
-                            <div>
-                                <h2 class="centrar-titulos"> Memoria</h2>
-                            </div>
-                            <div class="centrar">
-                                <label for="memoriaInterna">Memoria Interna</label>
-                                <input type="text" name="memoriaInterna" id="memoriaInterna"
-                                    value="<%= celular.memoriaInterna %> ">
-                                <span class="">
-                                    <%= locals.errores && errores.memoriaInterna ? errores.memoriaInterna.msg : null %>
-                                </span>
-                            </div>
-                            <div class="centrar">
-                                <label for="slot">SLOT</label>
-                                <input type="text" name="slot" id="slot" value="<%= celular.slot %> ">
-                                <span class="">
-                                    <%= locals.errores && errores.slot ? errores.slot.msg : null %>
-                                </span>
-                            </div>
-                        </div>
+                       
                         <div class="conectividad  bloque">
                             <div>
                                 <h2 class="centrar-titulos"> Conectividad</h2>
@@ -315,9 +239,7 @@
                             <div class="centrar">
                                 <label for="wifi">Wi-Fi</label>
                                 <input type="text" name="wifi" id="wifi" value="<%= celular.wifi %> ">
-                                <span class="">
-                                    <%= locals.errores && errores.wifi ? errores.wifi.msg : null %>
-                                </span>
+                                
                             </div>
                             <div class="centrar">
                                 <label for="bluetooth">Bluetooth</label>
@@ -329,9 +251,7 @@
                             <div class=" centrar">
                                 <label for="gps">GPS</label>
                                 <input type="text" name="gps" id="gps" value="<%= celular.gps %> ">
-                                <span class="">
-                                    <%= locals.errores && errores.gps ? errores.gps.msg : null %>
-                                </span>
+                                
                             </div>
                             <div class="centrar">
                                 <label for="usb">USB</label>
@@ -343,16 +263,12 @@
                             <div class="centrar">
                                 <label for="nfc">NFC</label>
                                 <input type="text" name="nfc" id="nfc" value="<%= celular.nfc %> ">
-                                <span class="">
-                                    <%= locals.errores && errores.nfc ? errores.nfc.msg : null %>
-                                </span>
+                                
                             </div>
                             <div class="centrar">
                                 <label for="infrarrojo">Infrarrojo</label>
                                 <input type="text" name="infrarrojo" id="infrarrojo" value="<%= celular.infrarrojo %> ">
-                                <span class="">
-                                    <%= locals.errores && errores.infrarrojo ? errores.infrarrojo.msg : null %>
-                                </span>
+                                
                             </div>
 
                         </div>
@@ -364,55 +280,32 @@
                                 <label for="displayTipo">Display Tipo</label>
                                 <input type="text" name="displayTipo" id="displayTipo"
                                     value="<%= celular.displayTipo %> ">
-                                <span class="">
-                                    <%= locals.errores && errores.displayTipo ? errores.displayTipo.msg : null %>
-                                </span>
+                                
                             </div>
                             <div class="centrar">
                                 <label for="displayTamanio">Display Tamaño</label>
                                 <input type="text" name="displayTamanio" id="displayTamanio"
                                     value="<%= celular.displayTamanio %> ">
-                                <span class="">
-                                    <%= locals.errores && errores.displayTamanio ? errores.displayTamanio.msg : null %>
-                                </span>
+                                
                             </div>
                             <div class="centrar">
                                 <label for="displayResolucion">Display Resolución</label>
                                 <input type="text" name="displayResolucion" id="displayResolucion"
                                     value="<%= celular.displayResolucion %> ">
-                                <span class="">
-                                    <%= locals.errores && errores.displayResolucion ? errores.displayResolucion.msg :
-                                        null %>
-                                </span>
+                                
                             </div>
                             <div class="centrar">
                                 <label for="densidad">Densidad</label>
                                 <input type="text" name="densidad" id="densidad" value="<%= celular.densidad %> ">
-                                <span class="">
-                                    <%= locals.errores && errores.densidad ? errores.densidad.msg : null %>
-                                </span>
+                                
                             </div>
                             <div class="centrar">
                                 <label for="proteccion">Protección</label>
                                 <input type="text" name="proteccion" id="proteccion" value="<%= celular.proteccion %> ">
-                                <span class="">
-                                    <%= locals.errores && errores.proteccion ? errores.proteccion.msg : null %>
-                                </span>
+                                
                             </div>
-                            <div class="centrar">
-                                <label for="os">Sistema Operativo</label>
-                                <input type="text" name="os" id="os" value="<%= celular.os %> ">
-                                <span class="">
-                                    <%= locals.errores && errores.os ? errores.os.msg : null %>
-                                </span>
-                            </div>
-                            <div class="centrar">
-                                <label for="procesador">Procesador</label>
-                                <input type="text" name="procesador" id="procesador" value="<%= celular.procesador %> ">
-                                <span class="">
-                                    <%= locals.errores && errores.procesador ? errores.procesador.msg : null %>
-                                </span>
-                            </div>
+                           
+                           
                         </div>
                         <div class="imagenes bloque">
 
