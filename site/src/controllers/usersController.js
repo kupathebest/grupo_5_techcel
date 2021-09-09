@@ -16,7 +16,7 @@ module.exports = {
         let errors = validationResult(req);
          
         if(errors.isEmpty()){
-            const {email} = req.body;
+            const {email, recordar} = req.body;
             let usuario = usuarios.find(usuario => usuario.email === email);
             req.session.userLogin = {
                 id : usuario.id,
@@ -66,3 +66,9 @@ module.exports = {
         
     }
 }
+     logout : (req,res) => {
+         req.session.destroy();
+         return res.redirect('/')
+     }       
+
+

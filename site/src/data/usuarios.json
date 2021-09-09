@@ -38,5 +38,13 @@
     "email": "kupa.thebest@gmail.com",
     "password": "$2a$10$hljYHbSQ99txGMslDu.ukuSC3BdT1q85Wsxf.tFTFPaZSJ0NRtdbq",
     "roll": "user"
+  },
+  {
+    "id": 6,
+    "nombre": "Eric",
+    "apellido": "Mena",
+    "email": "Eric@gmail.com",
+    "password": "$2a$10$ICe9bswJNpJoG4Gget6fCeLYpjfqGMqHxCR38qqgLMGxxcuMg/R6C",
+    "roll": "admin"
   }
 ]
