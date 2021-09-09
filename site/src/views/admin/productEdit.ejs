@@ -52,7 +52,8 @@
                             <div class="centrar">
                                 <label for="color">Color</label>
                                 <input type="text" name="color" id="color" value="<%= celular.color %> ">
-                               
+                                <span class=""><%= locals.errores && errores.color ? errores.color.msg : null %> </span>
+
                             </div>
 
                             <div class="centrar">
@@ -314,9 +315,7 @@
                             </div>
                             <div class="subir-imagen centrar">
                                 <input class="centrar subir-img" type="file" id="image" name="image" multiple>
-                                <span class="errorImagen centrar">
-                                    <%= locals.errores && errores.image ? errores.image.msg : null %>
-                                </span>
+                                
                             </div>
 
                         </div>

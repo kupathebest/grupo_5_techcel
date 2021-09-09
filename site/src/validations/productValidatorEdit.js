@@ -1,9 +1,9 @@
 const { check, body } = require('express-validator');
 
 
-const productEditValidator = [
+const productValidatorEdit = [
 
-	check('nombreCorto') 
+	check('nombreCorto')
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
@@ -83,17 +83,12 @@ const productEditValidator = [
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
-	body('image')
-		.custom((value, { req }) => {
-			if (req.files.length != 0) {
-				return true
-			} else {
-				return false
-			}
-		})
+	check('color')
+		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
+	
 
 ]
 
-module.exports = productEditValidator
+module.exports = productValidatorEdit;

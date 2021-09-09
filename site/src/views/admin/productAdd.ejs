@@ -41,7 +41,7 @@
                             <div class="centrar">
                                 <label for="color">Color</label>
                                 <input type="text"   name="color" id="color" value="<%= locals.old && old.color ? old.color : null %>">
-                               
+                                <span class=""><%= locals.errores && errores.color ? errores.color.msg : null %> </span>
                             </div>
 
                             <div class="centrar">
