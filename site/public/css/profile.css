@@ -1,0 +1,64 @@
+.profile {
+    background-color: #EBEBEB;
+}
+.profile main{
+    max-width: 1124px;
+    background-color: #EBEBEB;
+    font-family: var(--Roboto-letra-main);
+    padding: 20px 10px;
+    margin: 0 auto;
+}
+
+.profile h2{
+    text-align: center;
+    padding-top: 10px;
+    color: var(--Azul);
+    font-size: 24px;
+}
+.profile .form{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px ;
+}
+.profile label{
+    color: var(--Azul);
+    font-size: 15px;
+}
+.profile input{
+    padding: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 236px;
+    
+}
+
+.profile button{
+    padding: 8px;
+    text-align: center;
+    background-color:var(--Celeste);
+    border: none;
+    border-radius: 5px;
+}
+.profile button:hover{
+    
+    background-color: var(--Gris);
+    
+}
+@media (min-width :425px){
+    .profile main input{
+        width: 350px;
+    }
+    
+    }
+    
+    @media (min-width :768px){
+        .profile main input{
+            width: 420px;
+        }
+        
+        }

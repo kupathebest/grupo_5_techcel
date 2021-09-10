@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link href="/images/logoMovil2.png" type="image/x-icon" rel="shortcut icon" />
+    <script src="https://kit.fontawesome.com/a36f27fccb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="listas">
+            <div class="lista1">
+                <nav>
+                    <ul class="contactanos">
+                        <li><a href="/contactanos"><i class="far fa-envelope"></i>Contactanos</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <nav>
+                    <ul class="lista2">
+                        <li><a href=""><i class="far fa-user"></i>Mi Perfil</a></li>
+                        <li><a class="border" href="/site/src/views/index">Cerrar Sesion</i></a></li>
+                        <li><a href="/cart"><i class="fas fa-shopping-cart"></i>Carrito de compras</a></li>
+                        <li><a href="/envios"><i class="far fa-paper-plane"></i>Envios</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="contenedor">
+            <div class="burger">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <div class="logo">
+                <a href="/"><img src="/images/logo-techcel-blanco.png" alt=""></a>
+            </div>
+
+            <div class="buscador">
+                <form action="/search" method="GET">
+                    <input type="text" class="searc-button" placeholder="Buscar" name="keywords" href="">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div class="iconos">
+                <div>
+                    <a href="/"><i class="fas fa-search"></i></a>
+                </div>
+                <div>
+                    <a href="/login"><i class="far fa-user"></i></a>
+                </div>
+                <div>
+                    <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <nav class="titulo">
+
+                <ul class="lista3">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/comocomprar">¿Como comprar?</a></li>
+                    <li><a href="/productos">Productos</a></li>
+                    <li><a href="/about">Acerca de nosotros</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+
+    <main class="profile">
+
+        <div class="per">
+            <h2>  Perfil de usuario</h2>
+        </div>
+        <div class="form">
+            <form action="" method="POST">
+                <div class="name">
+                    <label for="nombre"></label>
+                    <input type="text" placeholder="Ingresa tu nombre" name="nombre" id="nombre" value="<%= user.nombre  %>">
+                    <span><%= locals.errors && errors.nombre ? errors.nombre.msg : null %> </span>
+
+                </div>
+
+                <div class="email">
+                    <label for="email"></label>
+                    <input type="email" placeholder="Ingresa tu Email" name="email" id="email" value="<%= user.email  %>">
+                    <span><%= locals.errors && errors.email ? errors.email.msg : null %> </span>
+                </div>
+                <div class="pass0">
+                    <label for="password0"></label>
+                    <input type="password" placeholder="Ingresa tu contraseña" name="password0" id="password0">
+                    <span><%= locals.errors && errors.password0 ? errors.password0.msg : null %> </span>
+                </div>
+                <div class="pass1">
+                    <label for="password1"></label>
+                    <input type="password" placeholder="Nueva contraseña " name="password1" id="password1">
+                    <span><%= locals.errors && errors.password1 ? errors.password1.msg : null %> </span>
+                </div>
+                <div class="pass2">
+                    <label for="password2"></label>
+                    <input type="password" placeholder="Confirmar contraseña" name="password2" id="password2">
+                    <span><%= locals.errors && errors.password2 ? errors.password2.msg : null %> </span>
+                </div>
+                <div class="avatar">
+                    <label for="avatar">Subir imagen de perfil</label> 
+                    <input type="file" id="Avatar" name="avatar">
+                    <span><%= locals.errors && errors.avatar ? errors.avatar.msg : null %> </span>
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar cambios</button>
+            </form>
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <div class="redes">
+            <div>
+                <p class="p-redes">Seguinos en nuestras redes sociales</p>
+
+            </div>
+            <div class="iconos-redes">
+
+                <a href="/" class="facebook"><i class="fab fa-facebook-square"></i></a>
+                <a href="/" class="twitter"><i class="fab fa-twitter-square"></i></a>
+                <a href="/" class="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="/" class="Google"><i class="fab fa-google-plus-square"></i></a>
+            </div>
+
+        </div>
+        <div class="contact1">
+
+            <a href="/" class="icono-contacto"><i class="fas fa-map-marker-alt"></i>
+                <p>Buenos Aires</p>
+            </a>
+            <a href="/" class="icono-contacto"><i class="fas fa-phone-square-alt"></i>
+                <p>0800-333-1235</p>
+            </a>
+            <a href="/" class="icono-contacto"><i class="fas fa-envelope-square"></i>
+                <p>info@techcel.com</p>
+            </a>
+
+        </div>
+
+
+        <div class="logo">
+            <a href="/"><img src="/images/logo-techcel-blanco.png" alt="logo"></a>
+
+        </div>
+
+
+        <div class="tarjetas">
+
+            <a href=""><img src="/images/visa.png" alt=""></a>
+
+            <a href=""><img class="master" src="/images/master.png" alt=""></a>
+            <a href=""><img src="/images/american.png" alt=""></a>
+            <a href=""><img src="/images/dinners.png" alt=""></a>
+
+        </div>
+
+
+        </section>
+
+    </footer>
+</body>
+
+</html>

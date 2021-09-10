@@ -64,8 +64,7 @@
 .register main button{
    padding: 8px;
    text-align: center;
-    
-    background-color:var(--Celeste);
+   background-color:var(--Celeste);
     border: none;
     border-radius: 5px;
 }

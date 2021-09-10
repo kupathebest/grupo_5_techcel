@@ -7,6 +7,7 @@ let usuarios = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'us
 
 
 module.exports = {
+   
     login: (req, res) => {
         return res.render('users/login')
        
@@ -64,5 +65,18 @@ module.exports = {
         }
         
         
+    },
+    profile : (req,res) => {
+        res.render('profile',{
+            usuario: usuarios.find(usuarios => usuarios.id === +req.session.userLogin.id)
+        })
+    },
+    update : (req,res) => {
+        let errors = validationResult(req)
+        return res.send(errors)
+    },
+    logout : (req,res) => {
+        req.session.destroy();
+        return res.redirect('/')
     }
 }

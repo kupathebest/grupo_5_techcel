@@ -28,6 +28,8 @@ app.use(methodOverride('_method'));
 
 app.use(session({
   secret : 'Mensaje',
+  saveUninitialized : true,
+  resave : false,
 }));
 
 
