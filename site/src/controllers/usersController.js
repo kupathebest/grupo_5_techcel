@@ -75,22 +75,49 @@ module.exports = {
         
     },
     profile : (req,res) => {
-        res.render('profile',{
+        res.render('users/profile',{
             usuario: usuarios.find(usuarios => usuarios.id === +req.session.userLogin.id)
         })
     },
     update : (req,res) => {
-        let errors = validationResult(req)
-        return res.send(errors)
+        let errors = validationResult(req);
+        
+        let usuario = usuarios.find(usuario => usuario.id === +req.session.userLogin.id)
+
+        if(errors.isEmpty()){
+            
+            const {nombre,password0,password1,apellido} = req.body;
+
+            usuarios.forEach(usuario => {
+                if(usuario.id === +req.session.userLogin.id){
+                    usuario.nombre = nombre.trim();
+                    usuario.apellido = apellido.trim();
+                    usuario.password = password1 ? bcryptjs.hashSync(password1, 10): usuario.password;
+                    usuario.avatar = req.files ? req.files : usuario.avatar
+                    
+                }
+            });
+    
+            fs.writeFileSync(path.join(__dirname,'..','data','usuarios.json'),JSON.stringify(usuarios,null,2),'utf-8');
+            return res.redirect('/')
+        }else{
+            return res.render('users/profile',{
+                
+                usuario,
+                errores : errors.mapped(),
+            })
+        }
+
+        
+           
+       
     },
     logout : (req,res) => {
         req.session.destroy();
         return res.redirect('/')
     }
 }
-     logout : (req,res) => {
-         req.session.destroy();
-         return res.redirect('/')
-     }       
+    
+           
 
 

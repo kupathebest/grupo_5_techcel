@@ -5,15 +5,17 @@ const {add,agregar,index,edit,update,destroy,search} = require('../controllers/a
 
 
 const productImageStore = require('../middlewares/productImageStore');
-const productValidator = require ('../validations/productValidator')
+const productValidatorEdit = require ('../validations/productValidatorEdit');
+const productValidatorAdd = require ('../validations/productValidatorAdd');
 const adminUserCheck = require('../middlewares/adminUserCheck');
+
 
 /* GET cart page. */
 router.get('/',adminUserCheck,index);
 router.get('/add', adminUserCheck, add );
-router.post('/add',productImageStore.array('image'), productValidator,agregar);
+router.post('/add',productImageStore.array('image'), productValidatorAdd,agregar);
 router.get('/edit/:id',adminUserCheck, edit);
-router.put('/edit/:id',productImageStore.array('image'),productValidator,update);
+router.put('/edit/:id',productImageStore.array('image'),productValidatorEdit,update);
 
 router.delete('/delete/:id',destroy);
 

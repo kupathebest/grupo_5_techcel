@@ -1,16 +1,19 @@
 const {check, body} = require('express-validator');
-const users = require('../data/usuarios.json');
+const usuarios = require('../data/usuarios.json');
 const bcrypt = require('bcryptjs'); 
 
 module.exports = [
     check('nombre')
     .notEmpty().withMessage('El nombre es obligatorio'),
 
+    check('apellido')
+    .notEmpty().withMessage('El apellido es obligatorio'),
+
     body('password0')
     .custom((value,{req}) => {
         if(value != ""){
-            let user = users.find(user => user.email === req.body.email && bcrypt.compareSync(value, user.pass))
-            if(user){
+            let usuario = usuarios.find(usuario => usuario.email === req.body.email && bcrypt.compareSync(value, usuario.password))
+            if(usuario){
                 return true
             }else{
                 return false
@@ -23,18 +26,18 @@ module.exports = [
     .custom((value,{req}) => {
         if(value != ""){
             
-            if(value.length >= 6 && value.length <= 12){
+            if(value.length >= 8 ){
                 return true
             }else{
                 return false
             }
         }
         return true
-    }).withMessage('La contraseña debe tener un mínimo de 6 y un máximo de 12 caracteres'),
+    }).withMessage('La contraseña debe tener un mínimo de 8 caracteres'),
 
     body('password2')
     .custom((value,{req}) => {
-        if(value !== req.body.pass && value.length != 0){
+        if(value !== req.body.password1 && value.length != 0){
             return false
         }
         return true
