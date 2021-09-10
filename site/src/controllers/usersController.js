@@ -48,7 +48,7 @@ module.exports = {
                 apellido: apellido.trim(),
                 email: email.trim(),
                 password: bcryptjs.hashSync(password, 10),
-                roll: "user",
+                rol: "user",
                 avatar : "avatar_default.png"
             }
             usuarios.push(usuario);
@@ -57,7 +57,7 @@ module.exports = {
             
             req.session.userLogin = {
                 id : usuario.id,
-                name : usuario.nombre,
+                nombre : usuario.nombre,
                 avatar : usuario.avatar,
                 rol : usuario.rol
             }

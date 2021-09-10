@@ -13,14 +13,11 @@
                 <ul class="lista2">
                     <% if (locals.userLogin) { %>
 
-                    
-
                         <li><a href="/users/profile"><%= locals.userLogin.nombre %></a></li>
-                        <li><a href="/users/logout">Cerrar sesin</a></li>
+                        <li><a href="/users/logout" class="border">Cerrar sesión</a></li>
     
                         <% }else{ %> 
     
-                        
                         <li><a href="/users/login"><i class="far fa-user"></i>Ingresar</a></li>
                         <li><a class="border" href="/users/register">Crear Cuenta</i></a></li>
                         

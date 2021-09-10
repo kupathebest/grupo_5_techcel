@@ -33,6 +33,8 @@ app.use(session({
   secret : 'Mensaje',
 }));
 
+app.use(localsUserCheck);
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
