@@ -52,7 +52,28 @@ header .contenedor{
     justify-content: center;
     align-items: center; 
     transition: all .5s;              
-}      
+}  
+header .menu-desplegable {
+    display: flex;
+    
+    text-align: right;
+  
+
+}   
+/*
+header .div.login{
+    display:flex;
+    justify-content: right;
+    background-color: white;
+    
+}*/
+
+header .div.registro a{
+ 
+    text-align: right;
+}
+
+
 
 /*tablet*/
 

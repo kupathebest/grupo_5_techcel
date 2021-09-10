@@ -25,7 +25,7 @@
                 </div>
                 <div>
                     <label for="email"></label>
-                    <input type="email" placeholder="Ingresa tu Email" name="email" id="email"value= "<%= locals.old && old.email ? old.email : null %>">
+                    <input type="text" placeholder="Ingresa tu Email" name="email" id="email"value= "<%= locals.old && old.email ? old.email : null %>">
                     <small class="rojo"><%= locals.errores && errores.email ? errores.email.msg : null %> </small>
                 </div>
                 <div>
@@ -33,12 +33,20 @@
                     <input type="password" placeholder="Ingresa tu contraseña" name="password" id="password">
                     <small class="rojo"><%= locals.errores && errores.password ? errores.password.msg : null %> </small>
                 </div>
+                <div>
+                    <label for="password2"></label>
+                    <input type="password" placeholder="Confirma tu contraseña" name="password2" id="password2">
+                    <small class="rojo"><%= locals.errores && errores.password2 ? errores.password2.msg : null %> </small>
+                </div>
         </div>
 
 
         <div class="terms">
-            <input class="check " type="checkbox" id="terms" value="terms" name="terms">
-            <label class="text" for="terms"> Acepto términos y condiciones</label>
+            <div class="msj">
+                <input class="check" type="checkbox" id="terms" value="terms" name="terms">
+                <label class="text" for="terms"> Acepto términos y condiciones</label>
+            </div>
+            <small class="rojo"><%= locals.errores && errores.terms ? errores.terms.msg : null %> </small>
         </div>
        
 

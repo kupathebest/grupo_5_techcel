@@ -92,7 +92,12 @@
         </section>
         <div>
             <a href="/productos"><button type="button">VER MÁS</button></a>
-            <a href="/admin"><button type="button">Administrador</button></a>
+            <% if (locals.userLogin) { %>
+                <% if (userLogin.rol === "admin") { %>
+                    <a href="/admin"><button type="button">Administrador</button></a>
+                <% } %>
+            <% } %>
+ 
         </div>
     </main>
     <%- include('./partials/footer')%> 

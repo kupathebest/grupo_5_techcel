@@ -6,11 +6,13 @@ const {add,agregar,index,edit,update,destroy,search} = require('../controllers/a
 
 const productImageStore = require('../middlewares/productImageStore');
 const productValidator = require ('../validations/productValidator')
+const adminUserCheck = require('../middlewares/adminUserCheck');
+
 /* GET cart page. */
-router.get('/',index);
-router.get('/add', add );
+router.get('/',adminUserCheck,index);
+router.get('/add', adminUserCheck, add );
 router.post('/add',productImageStore.array('image'), productValidator,agregar);
-router.get('/edit/:id',edit);
+router.get('/edit/:id',adminUserCheck, edit);
 router.put('/edit/:id',productImageStore.array('image'),productValidator,update);
 
 router.delete('/delete/:id',destroy);
