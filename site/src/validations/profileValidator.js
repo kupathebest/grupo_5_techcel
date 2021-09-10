@@ -1,6 +1,6 @@
 const {check, body} = require('express-validator');
 const usuarios = require('../data/usuarios.json');
-const bcrypt = require('bcryptjs'); 
+const bcryptjs = require('bcryptjs'); 
 
 module.exports = [
     check('nombre')
@@ -9,10 +9,13 @@ module.exports = [
     check('apellido')
     .notEmpty().withMessage('El apellido es obligatorio'),
 
+    check('password0')
+    .notEmpty().withMessage('Debes ingresar tu contraseña'),
+
     body('password0')
     .custom((value,{req}) => {
         if(value != ""){
-            let usuario = usuarios.find(usuario => usuario.email === req.body.email && bcrypt.compareSync(value, usuario.password))
+            let usuario = usuarios.find(usuario => usuario.email === req.body.email && bcryptjs.compareSync(value, usuario.password))
             if(usuario){
                 return true
             }else{
@@ -22,7 +25,7 @@ module.exports = [
         return true
     }).withMessage('Contraseña incorrecta'),
 
-    check('password1')
+    body('password1')
     .custom((value,{req}) => {
         if(value != ""){
             

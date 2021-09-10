@@ -83,6 +83,7 @@ module.exports = {
         let errors = validationResult(req);
         
         let usuario = usuarios.find(usuario => usuario.id === +req.session.userLogin.id)
+        return res.send(req.file)
 
         if(errors.isEmpty()){
             
@@ -93,7 +94,7 @@ module.exports = {
                     usuario.nombre = nombre.trim();
                     usuario.apellido = apellido.trim();
                     usuario.password = password1 ? bcryptjs.hashSync(password1, 10): usuario.password;
-                    usuario.avatar = req.files ? req.files : usuario.avatar
+                    usuario.avatar = req.file ? req.file.filename : usuario.avatar
                     
                 }
             });

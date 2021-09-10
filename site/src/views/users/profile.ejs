@@ -11,6 +11,9 @@
         <div class="per">
             <h2>  Perfil de usuario</h2>
         </div>
+        <div class="img">
+            <img src="/images/usuarios/<%= usuario.avatar %>" alt="">
+        </div>
         <div class="form">
             <form action="/users/profile?_method=PUT" method="POST"enctype="multipart/form-data">
                 <div class="name">
@@ -48,7 +51,7 @@
                 </div>
                 <div class="avatar">
                     <label for="avatar">Subir imagen de perfil</label> 
-                    <input type="file" id="Avatar" name="avatar">
+                    <input type="file" id="avatar" name="avatar">
                     <span><%= locals.errores && errores.avatar ? errores.avatar.msg : null %> </span>
                 </div>
                 <button type="submit">Guardar cambios</button>
