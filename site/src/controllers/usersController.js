@@ -16,7 +16,7 @@ module.exports = {
         let errors = validationResult(req);
          
         if(errors.isEmpty()){
-            const {email} = req.body;
+            const {email, recordar} = req.body;
             let usuario = usuarios.find(usuario => usuario.email === email);
             req.session.userLogin = {
                 id : usuario.id,
@@ -48,12 +48,20 @@ module.exports = {
                 apellido: apellido.trim(),
                 email: email.trim(),
                 password: bcryptjs.hashSync(password, 10),
-                roll: "user"
+                rol: "user",
+                avatar : "avatar_default.png"
             }
             usuarios.push(usuario);
     
             fs.writeFileSync(path.join(__dirname, '../data/usuarios.json'), JSON.stringify(usuarios, null, 2), "utf-8");
-           return res.redirect('/users/login')
+            
+            req.session.userLogin = {
+                id : usuario.id,
+                nombre : usuario.nombre,
+                avatar : usuario.avatar,
+                rol : usuario.rol
+            }
+            return res.redirect('/')
 
         }else{
             return res.render("users/register",{
@@ -66,3 +74,9 @@ module.exports = {
         
     }
 }
+     logout : (req,res) => {
+         req.session.destroy();
+         return res.redirect('/')
+     }       
+
+

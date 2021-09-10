@@ -5,7 +5,8 @@
     "apellido": "Diaz",
     "email": "melisaadiaz.mad@gmail.com",
     "password": "$2a$10$GfIYMyrFL1W3xHoZQkmvq.5OhDt81s74w78QLzLstDYXcxhcfitUa",
-    "roll": "user"
+    "rol": "admin",
+    "avatar": "avatar_default.png"
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "apellido": "Lafuente",
     "email": "lafuente.gf@gmail.com",
     "password": "$2a$10$unfAHUnm1FDPzdVcuJUXg.3h7S4gxQeZ2t7T3mCRmEVaWb0fzlviK",
-    "roll": "user"
+    "rol": "admin",
+    "avatar": "avatar_default.png"
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "apellido": "Rolon",
     "email": "anarolon.ar@gmail.com",
     "password": "$2a$10$s6lov66Q8raFnPnCUG5QpORu0PU5K8bNW69XuSv.uQlod/jnhaeTa",
-    "roll": "user"
+    "rol": "admin",
+    "avatar": "avatar_default.png"
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "apellido": "Diaz",
     "email": "kornangel.ad@gmail.com",
     "password": "$2a$10$WBXKWAnn3eZk.SsulqTMouJD2enZgzwBPhrofR1HmCKnZw61p5EE6",
-    "roll": "user"
+    "rol": "admin",
+    "avatar": "avatar_default.png"
   },
   {
     "id": 5,
@@ -37,6 +41,7 @@
     "apellido": "Silva",
     "email": "kupa.thebest@gmail.com",
     "password": "$2a$10$hljYHbSQ99txGMslDu.ukuSC3BdT1q85Wsxf.tFTFPaZSJ0NRtdbq",
-    "roll": "user"
+    "rol": "admin",
+    "avatar": "avatar_default.png"
   }
 ]
