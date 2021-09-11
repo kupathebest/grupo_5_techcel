@@ -3,7 +3,7 @@ const path = require('path');
 
 const storage = multer.diskStorage({
     destination: (req,file,callback) => {
-        callback(null,'../site/public/images/usuarios') 
+        callback(null,'../site/public/images/usuarios')
     },
     filename: (req,file,callback) => {
         callback(null,'img-' + Date.now() + path.extname(file.originalname))
@@ -23,4 +23,4 @@ const upload = multer({
     fileFilter
 })
 
-module.exports = upload;
+module.exports = upload

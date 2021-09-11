@@ -83,7 +83,6 @@ module.exports = {
         let errors = validationResult(req);
         
         let usuario = usuarios.find(usuario => usuario.id === +req.session.userLogin.id)
-        return res.send(req.file)
 
         if(errors.isEmpty()){
             
@@ -95,15 +94,13 @@ module.exports = {
                     usuario.apellido = apellido.trim();
                     usuario.password = password1 ? bcryptjs.hashSync(password1, 10): usuario.password;
                     usuario.avatar = req.file ? req.file.filename : usuario.avatar
-                    
                 }
             });
     
-            fs.writeFileSync(path.join(__dirname,'..','data','usuarios.json'),JSON.stringify(usuarios,null,2),'utf-8');
+            fs.writeFileSync(path.join(__dirname, '../data/usuarios.json'), JSON.stringify(usuarios, null, 2), "utf-8");
             return res.redirect('/')
         }else{
             return res.render('users/profile',{
-                
                 usuario,
                 errores : errors.mapped(),
             })
