@@ -4,16 +4,18 @@ const { login, register, processLogin,processRegister,profile, logout,update} = 
 const loginValidator = require('../validations/loginValidator');
 const registerValidator = require("../validations/registerValidator");
 const profileValidator = require('../validations/profileValidator');
-const avatarImageStore = require("../middlewares/avatarImageStore")
+const avatarImageStore = require("../middlewares/avatarImageStore");
+const userCheck = require("../middlewares/userCheck");
+const sessionCheck = require("../middlewares/sessionCheck");
 
 /* GET users listing. */
-router.get('/login', login);
+router.get('/login',sessionCheck, login);
 router.post('/login',loginValidator,processLogin);
-router.get('/register', register);
+router.get('/register',sessionCheck, register);
 router.post('/register',registerValidator,processRegister);
-router.get("/profile",profile);
+router.get("/profile",userCheck,profile);
 router.put('/profile',avatarImageStore.single("avatar"),profileValidator, update);
-router.get('/logout',logout);
+router.get('/logout',userCheck,logout);
 
 
 
