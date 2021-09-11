@@ -24,6 +24,11 @@ module.exports = {
                 nombre : usuario.nombre,
                 rol : usuario.rol
             }
+            if(req.body.recordar){
+                res.cookie("techcelLogin", req.session.userLogin, {maxAge:1000 * 60})
+            }
+            
+
             return res.redirect('/')
         }else{
             return res.render('users/login',{
@@ -112,6 +117,7 @@ module.exports = {
     },
     logout : (req,res) => {
         req.session.destroy();
+        res.clearCookie("techcelLogin");
         return res.redirect('/')
     }
 }
