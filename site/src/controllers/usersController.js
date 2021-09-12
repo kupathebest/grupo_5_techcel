@@ -22,7 +22,8 @@ module.exports = {
             req.session.userLogin = {
                 id : usuario.id,
                 nombre : usuario.nombre,
-                rol : usuario.rol
+                rol : usuario.rol,
+                avatar : usuario.avatar
             }
             if(req.body.recordar){
                 res.cookie("techcelLogin", req.session.userLogin, {maxAge:1000 * 60 * 60 * 24})

@@ -146,6 +146,15 @@ header .div.registro a{
         display: flex;
       
     }
+
+    header .listas div nav ul.lista2 li a img.mini-avatar{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        position: relative;
+        top: 5px;
+    }
+
     header  .listas{
        background-color: white;
        width: 100%;
