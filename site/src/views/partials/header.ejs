@@ -4,20 +4,15 @@
             <nav>
                 <ul class="contactanos">
                     <li><a href="/contactanos"><i class="far fa-envelope"></i>Contactanos</a></li>
-                  
                             <% if (locals.userLogin) { %>
                                 <% if (userLogin.rol === "admin") { %>
                                     <li><a href="/admin"><i class="fas fa-briefcase"></i>Administrador</a></li>
-
                                 <% } %>
                             <% } %>
-
-
                 </ul>
             </nav>
         </div>
         <div>
-
             <nav>
                 <ul class="lista2">
                     <% if (locals.userLogin) { %>
@@ -42,11 +37,9 @@
         <div class="burger">
             <i class="fas fa-bars"></i>
         </div>
-
         <div class="logo">
             <a href="/"><img src="/images/logo-techcel-blanco.png" alt=""></a>
         </div>
-
         <div class="buscador">
             <form action="/search" method="GET">
                 <input type="text" class="searc-button" placeholder="Buscar" name="keywords" href="">
@@ -58,25 +51,21 @@
                 <a href="/"><i class="fas fa-search"></i></a>
             </div>
             <div>
-                <a href="/login"><i class="far fa-user"></i></a>
-
+                <a href="/users/login"><i class="far fa-user"></i></a>
             </div>
             <div>
-                <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+                <a href="/cart"><i class="fas fa-shopping-cart"></i></a>
             </div>
         </div>
     </div>
     <div>
         <nav class="titulo">
-
             <ul class="lista3">
                 <li><a href="/">Home</a></li>
                 <li><a href="/comocomprar">¿Como comprar?</a></li>
                 <li><a href="/productos">Productos</a></li>
                 <li><a href="/about">Acerca de nosotros</a></li>
-
             </ul>
         </nav>
     </div>
-
 </header>

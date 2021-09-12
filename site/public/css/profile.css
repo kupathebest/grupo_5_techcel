@@ -67,6 +67,21 @@
     background-color: var(--Gris);
 }
 
+.profile main .form .check input.change{
+    display: none;
+}
+
+.profile main .newPass{
+    display: none;
+}
+.profile main .form .check input.change:checked ~ label {
+    color: red;
+}
+
+.profile main .form .check input.change:checked ~ .newPass {
+    display: block;
+}
+
 .profile main div.form form div.avatar{
     margin: 25px auto;
     max-width: 325px;

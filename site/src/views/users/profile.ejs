@@ -39,16 +39,24 @@
                     <input type="password" placeholder="Ingresa tu contraseña" name="password0" id="password0">
                     <span><%= locals.errores && errores.password0 ? errores.password0.msg : null %> </span>
                 </div>
-                <div class="pass1">
-                    <label for="password1"></label>
-                    <input type="password" placeholder="Nueva contraseña " name="password1" id="password1">
-                    <span><%= locals.errores && errores.password1 ? errores.password1.msg : null %> </span>
+                <div class = "check">
+                    <input class = "change" type="checkbox" name="change" id="change">
+                    <label for="change">¿Deseas cambiar tu contraseña? CLICK AQUI</label>
+                    <div class="newPass">
+                        <div class="pass1">
+                            <label for="password1"></label>
+                            <input  type="password" placeholder="Nueva contraseña " name="password1" id="password1">
+                            <span><%= locals.errores && errores.password1 ? errores.password1.msg : null %> </span>
+                        </div>
+                        <div class="pass2">
+                            <label for="password2"></label>
+                            <input type="password" placeholder="Confirmar contraseña" name="password2" id="password2">
+                            <span><%= locals.errores && errores.password2 ? errores.password2.msg : null %> </span>
+                        </div>
+                    </div>
                 </div>
-                <div class="pass2">
-                    <label for="password2"></label>
-                    <input type="password" placeholder="Confirmar contraseña" name="password2" id="password2">
-                    <span><%= locals.errores && errores.password2 ? errores.password2.msg : null %> </span>
-                </div>
+                
+                
                 <div class="avatar">
                     <label for="avatar">Subir imagen de perfil</label> 
                     <input type="file" id="avatar" name="avatar">
