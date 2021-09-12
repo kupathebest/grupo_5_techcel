@@ -1,9 +1,21 @@
 <header>
     <div class="listas">
+        <div class="lista1">
+            <nav>
+                <ul class="contactanos">
+                    <li><a href="/admin"><i class="fas fa-briefcase"></i>Administrador</a></li>
+                </ul>
+            </nav>
+        </div>
         <div>
+
             <nav>
                 <ul class="lista2">
-                    <li><a href="/admin">Administrador</i></a></li>
+                    
+                        <li><a href="/users/profile"><img class="mini-avatar" src="/images/usuarios/<%= locals.userLogin.avatar %>" alt=""></a></li>
+                        <li><a href="/users/profile"><%=locals.userLogin.nombre %></a></li>
+                        <li><a href="/users/logout" class="border">Cerrar sesión</a></li>
+
                 </ul>
             </nav>
         </div>

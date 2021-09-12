@@ -4,6 +4,15 @@
             <nav>
                 <ul class="contactanos">
                     <li><a href="/contactanos"><i class="far fa-envelope"></i>Contactanos</a></li>
+                  
+                            <% if (locals.userLogin) { %>
+                                <% if (userLogin.rol === "admin") { %>
+                                    <li><a href="/admin"><i class="fas fa-briefcase"></i>Administrador</a></li>
+
+                                <% } %>
+                            <% } %>
+
+
                 </ul>
             </nav>
         </div>

@@ -123,6 +123,8 @@ header .div.registro a{
     } 
     header .listas .contactanos{
         background-color: var(--Blanco);
+        display: flex;
+        flex-direction: row;
     }
     header .listas .lista2 a:hover > i,
     header .listas .contactanos a:hover > i{
@@ -132,6 +134,7 @@ header .div.registro a{
     header .lista1{
         color: var(--Azul);
         font-size: 30px;
+        
     }
 
     header  .lista2{
