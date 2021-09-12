@@ -25,7 +25,7 @@ module.exports = {
                 rol : usuario.rol
             }
             if(req.body.recordar){
-                res.cookie("techcelLogin", req.session.userLogin, {maxAge:1000 * 60})
+                res.cookie("techcelLogin", req.session.userLogin, {maxAge:1000 * 60 * 60 * 24})
             }
             
 
@@ -53,7 +53,7 @@ module.exports = {
                 nombre: nombre.trim(),
                 apellido: apellido.trim(),
                 email: email.trim(),
-                password: bcryptjs.hashSync(password, 10),
+                password: bcryptjs.hashSync(password.trim(), 10),
                 rol: "user",
                 avatar : "avatar_default.png"
             }
@@ -97,7 +97,7 @@ module.exports = {
                 if(usuario.id === +req.session.userLogin.id){
                     usuario.nombre = nombre.trim();
                     usuario.apellido = apellido.trim();
-                    usuario.password = password1 ? bcryptjs.hashSync(password1, 10): usuario.password;
+                    usuario.password = password1 ? bcryptjs.hashSync(password1.trim(), 10): usuario.password;
                     usuario.avatar = req.file ? req.file.filename : usuario.avatar
                 }
             });

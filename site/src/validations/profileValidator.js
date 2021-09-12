@@ -4,13 +4,13 @@ const bcryptjs = require('bcryptjs');
 
 module.exports = [
     check('nombre')
-    .notEmpty().withMessage('El nombre es obligatorio'),
+    .notEmpty().withMessage('*El nombre es obligatorio'),
 
     check('apellido')
-    .notEmpty().withMessage('El apellido es obligatorio'),
+    .notEmpty().withMessage('*El apellido es obligatorio'),
 
     check('password0')
-    .notEmpty().withMessage('Debes ingresar tu contraseña'),
+    .notEmpty().withMessage('*Debes ingresar tu contraseña'),
 
     body('password0')
     .custom((value,{req}) => {
@@ -23,7 +23,7 @@ module.exports = [
             }
         }
         return true
-    }).withMessage('Contraseña incorrecta'),
+    }).withMessage('*Contraseña incorrecta'),
 
     body('password1')
     .custom((value,{req}) => {
@@ -36,7 +36,7 @@ module.exports = [
             }
         }
         return true
-    }).withMessage('La contraseña debe tener un mínimo de 8 caracteres'),
+    }).withMessage('*La contraseña debe tener un mínimo de 8 caracteres'),
 
     body('password2')
     .custom((value,{req}) => {
@@ -44,7 +44,7 @@ module.exports = [
             return false
         }
         return true
-    }).withMessage('La verificación de la contraseña no coincide'),
+    }).withMessage('*La verificación de la contraseña no coincide'),
 
 
 ]

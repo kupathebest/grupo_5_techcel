@@ -8,7 +8,7 @@ const usuarios = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','usu
 module.exports = [
     body('email')
     .custom((value,{req}) => {
-        let usuario = usuarios.find(usuario => usuario.email === value && bcryptjs.compareSync(req.body.password,usuario.password));
+        let usuario = usuarios.find(usuario => usuario.email === value && bcryptjs.compareSync(req.body.password.trim(),usuario.password));
 
         if(usuario){
             return true

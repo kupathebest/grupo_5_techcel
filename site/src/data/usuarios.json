@@ -4,36 +4,36 @@
     "nombre": "Melisa",
     "apellido": "Diaz",
     "email": "melisaadiaz.mad@gmail.com",
-    "password": "$2a$10$GfIYMyrFL1W3xHoZQkmvq.5OhDt81s74w78QLzLstDYXcxhcfitUa",
+    "password": "$2a$10$LZjitt78iv9ovqALSz0Tte5hJWPH9lX.U7N86wxW59r7g7kZOJXYW",
     "rol": "admin",
-    "avatar": "avatar_default.png"
+    "avatar": "img-1631406262238.jpeg"
   },
   {
     "id": 2,
     "nombre": "Gaston",
     "apellido": "Lafuente",
     "email": "lafuente.gf@gmail.com",
-    "password": "$2a$10$unfAHUnm1FDPzdVcuJUXg.3h7S4gxQeZ2t7T3mCRmEVaWb0fzlviK",
+    "password": "$2a$10$mAsRSrIBKwzkKkcrdUpTTu00ywEclCD.9rl5oRrMKQzxkUIoZZwiG",
     "rol": "admin",
-    "avatar": "avatar_default.png"
+    "avatar": "img-1631406337364.jpg"
   },
   {
     "id": 3,
     "nombre": "Ana",
     "apellido": "Rolon",
     "email": "anarolon.ar@gmail.com",
-    "password": "$2a$10$s6lov66Q8raFnPnCUG5QpORu0PU5K8bNW69XuSv.uQlod/jnhaeTa",
+    "password": "$2a$10$EnhXsYFqgqKPAO/52vpOCuzrvnwKsqfDe3t9gFUp39eZXV2rlwxoC",
     "rol": "admin",
-    "avatar": "avatar_default.png"
+    "avatar": "img-1631406412550.jpeg"
   },
   {
     "id": 4,
     "nombre": "Angel",
     "apellido": "Diaz",
     "email": "kornangel.ad@gmail.com",
-    "password": "$2a$10$WBXKWAnn3eZk.SsulqTMouJD2enZgzwBPhrofR1HmCKnZw61p5EE6",
+    "password": "$2a$10$NuCf4I8J9PEeodwugqQfee8qcctQhoFjqpwDRmNberLwqJpozAPCy",
     "rol": "admin",
-    "avatar": "avatar_default.png"
+    "avatar": "img-1631406886253.png"
   },
   {
     "id": 5,

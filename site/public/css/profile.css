@@ -1,12 +1,27 @@
-.profile {
-    background-color: #EBEBEB;
+.profile{
+    background-color: var(--Gris-Fondo);
 }
+
 .profile main{
     max-width: 1124px;
-    background-color: #EBEBEB;
     font-family: var(--Roboto-letra-main);
-    padding: 20px 10px;
+    padding: 25px;
     margin: 0 auto;
+}
+
+.profile div.img{
+    margin: 10px auto;
+    width: 260px;
+    height: 260px;
+    
+}
+
+.profile div.img img{
+    width:100%;
+    height: 100%;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
 }
 
 .profile h2{
@@ -25,16 +40,20 @@
 }
 .profile label{
     color: var(--Azul);
-    font-size: 15px;
+    font-size: 18px;
 }
 .profile input{
-    padding: 10px;
-    margin-top: 10px;
+    padding: 5px 10px;
+    margin: 10px auto;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
     width: 236px;
-    
+}
+
+.profile span{
+    color: red;
+    font-size: 14px;
 }
 
 .profile button{
@@ -45,19 +64,28 @@
     border-radius: 5px;
 }
 .profile button:hover{
-    
     background-color: var(--Gris);
-    
 }
+
+.profile main div.form form div.avatar{
+    margin: 25px auto;
+    max-width: 325px;
+}
+
+
 @media (min-width :425px){
-    .profile main input{
+    .profile input{
         width: 350px;
     }
     
+    .profile h2{
+        font-size: 28px;
+    }
+
     }
     
     @media (min-width :768px){
-        .profile main input{
+        .profile input{
             width: 420px;
         }
         
