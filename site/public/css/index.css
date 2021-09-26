@@ -82,6 +82,7 @@
     width: 100%;
     text-align:center;
     font-size: 18px;
+    cursor: pointer;
 }
 
 .home main div a button:hover{

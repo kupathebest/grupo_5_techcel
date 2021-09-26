@@ -94,6 +94,7 @@
     background-color:var(--Celeste);
     margin: 10px 20px;
     border:none;
+    cursor: pointer;
 }
   
 .login form div.inicio-sesion button:hover{

@@ -69,6 +69,7 @@
     background-color:var(--Celeste);
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 .register button:hover{
     
