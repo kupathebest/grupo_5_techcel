@@ -93,7 +93,7 @@ module.exports = {
         };
     },
     edit: (req, res) => {
-        let mobile = cellPhones.find(mobile => mobile.id === +req.params.id)
+        let mobile = mobiles.find(mobile => mobile.id === +req.params.id)
 
         return res.render("admin/productEdit", {
             mobile
@@ -103,7 +103,7 @@ module.exports = {
     update: (req, res) => {
         let errors = validationResult(req);
         let photos = [];
-        let mobile = cellPhones.find(mobile => mobile.id === +req.params.id);
+        let mobile = mobiles.find(mobile => mobile.id === +req.params.id);
 
         if (req.fileValidationError) {
             let image = {
@@ -170,7 +170,7 @@ module.exports = {
                 photos: req.files.length != 0 ? photos : mobile.photos
             };
 
-            let modificados = cellPhones.map(mobile => mobile.id === +req.params.id ? mobileEdit : mobile);
+            let modificados = mobiles.map(mobile => mobile.id === +req.params.id ? mobileEdit : mobile);
 
             guardar(modificados);
             return res.redirect('/admin');
