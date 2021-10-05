@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-let celulares = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'celulares.json'), 'utf-8'));
+let celulales = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'celulares.json'), 'utf-8'));
 const guardar = dato => fs.writeFileSync(path.join(__dirname, '../data/celulares.json'), JSON.stringify(dato, null, 2), "utf-8");
 const capitalize = require('../utils/capitalize');
 const toThousand = require('../utils/toThousand')
@@ -113,7 +113,7 @@ module.exports = {
             errors.errores.push(image)
         }
         if (errors.isEmpty()) {
-            let { shortName, longName, brand, price, category, displayP, processorP, memoryP, storageP, expansionP, cameraP, batteryP, osP, profileP, weightP, colour, twog, threeg, fourg, fiveg, gprs, edge, sim, displayType, displaySize, displayResolution, density, protection, mainCamera, videocamera, frontCamera, wifi, bluetooth, gps, usb, nfc, infrared, fastCharging, wirelessCharging } = req.body;
+            let { shortName, longName, brand, price, category, displayP, processorP, memoryP, storageP, expansionP, cameraP, batteryP, osP, profileP, weightP, colour, twog, threeg, fourg, fiveg, gprs, edge, sim, displayType, displaySize, displayResolution, density, protection, mainCamera, videocamera, frontCamera, wifi, bluetooth, gps, usb, nfc, infrared, fastCharge, wirelessCharge } = req.body;
 
             if (req.files.length != 0) {
                 req.files.forEach(image => {
@@ -165,8 +165,8 @@ module.exports = {
                 usb: usb.trim(),
                 nfc: nfc.trim(),
                 infrared: infrared.trim(),
-                fastCharging: fastCharging.trim(),
-                wirelessCharging: wirelessCharging.trim(),
+                fastCharge: fastCharge.trim(),
+                wirelessCharge: wirelessCharge.trim(),
                 photos: req.files.length != 0 ? photos : mobile.photos
             };
 
