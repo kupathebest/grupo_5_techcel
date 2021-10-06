@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-let celulales = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'celulares.json'), 'utf-8'));
+let celulares = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'celulares.json'), 'utf-8'));
 const guardar = dato => fs.writeFileSync(path.join(__dirname, '../data/celulares.json'), JSON.stringify(dato, null, 2), "utf-8");
 const capitalize = require('../utils/capitalize');
 const toThousand = require('../utils/toThousand')
@@ -29,59 +29,59 @@ module.exports = {
         }
 
         if (errors.isEmpty()) {
-            const { nombreCorto, nombreLargo, marca, precio, categoria, pantallaP, procesadorP, memoriaP, almacenamientoP, expansionP, camaraP, bateriaP, osP, perfilP, pesoP, color, dosg, tresg, cuatrog, cincog, gprs, edge, sim, displayTipo, displayTamanio, displayResolucion, densidad, proteccion, camaraPrincipal, camaraVideo, camaraFrontal, wifi, bluetooth, gps, usb, nfc, infrarrojo, cargaRapida, cargaInalambrica } = req.body;
+            const { shortName, longName, brand, price, category, displayP, processorP, memoryP, storageP, expansionP, cameraP, batteryP, osP, profileP, weightP, colour, twog, threeg, fourg, fiveg, gprs, edge, sim, displayType, displaySize, displayResolution, density, protection, mainCamera, videoCamera, frontCamera, wifi, bluetooth, gps, usb, nfc, infrared, fastCharge, wirelessCharge } = req.body;
             let photos = [];
 
             req.files.forEach(image => {
                 photos.push(image.filename)
             })
 
-            let celular = {
-                id: celulares[celulares.length - 1].id + 1,
-                nombreCorto: nombreCorto.trim(),
-                nombreLargo: nombreLargo.trim(),
-                marca: marca.trim(),
-                precio: +precio,
-                categoria: categoria.trim(),
-                pantallaP: pantallaP.trim(),
-                procesadorP: procesadorP.trim(),
-                memoriaP: memoriaP.trim(),
-                almacenamientoP: almacenamientoP.trim(),
+            let mobile = {
+                id: mobiles[mobiles.length - 1].id + 1,
+                shortName: shortName.trim(),
+                longName: longName.trim(),
+                brand: brand.trim(),
+                price: +price,
+                category: category.trim(),
+                displayP: displayP.trim(),
+                processorP: processorP.trim(),
+                memoryP: memoryP.trim(),
+                storageP: storageP.trim(),
                 expansionP: expansionP.trim(),
-                camaraP: camaraP.trim(),
-                bateriaP: bateriaP.trim(),
+                cameraP: cameraP.trim(),
+                batteryP:batteryP.trim(),
                 osP: osP.trim(),
-                perfilP: perfilP.trim(),
-                pesoP: pesoP.trim(),
-                color: color.trim(),
-                dosg: dosg.trim(),
-                tresg: tresg.trim(),
-                cuatrog: cuatrog.trim(),
-                cincog: cincog.trim(),
+                profileP: profileP.trim(),
+                weightP: weightP.trim(),
+                colour: colour.trim(),
+                twog: twog.trim(),
+                threeg: threeg.trim(),
+                fourg: fourg.trim(),
+                fiveg: fiveg.trim(),
                 gprs: gprs.trim(),
                 edge: edge.trim(),
                 sim: sim.trim(),
-                displayTipo: displayTipo.trim(),
-                displayTamanio: displayTamanio.trim(),
-                displayResolucion: displayResolucion.trim(),
-                densidad: densidad.trim(),
-                proteccion: proteccion.trim(),
-                camaraPrincipal: camaraPrincipal.trim(),
-                camaraVideo: camaraVideo.trim(),
-                camaraFrontal: camaraFrontal.trim(),
+                displayType: displayType.trim(),
+                displaySize: displaySize.trim(),
+                displayResolution: displayResolution.trim(),
+                density: density.trim(),
+                protection: protection.trim(),                
+                mainCamera: mainCamera.trim(),
+                videoCamera: videocamera.trim(),
+                frontCamera: frontCamera.trim(),
                 wifi: wifi.trim(),
                 bluetooth: bluetooth.trim(),
                 gps: gps.trim(),
                 usb: usb.trim(),
                 nfc: nfc.trim(),
-                infrarrojo: infrarrojo.trim(),
-                cargaRapida: cargaRapida.trim(),
-                cargaInalambrica: cargaInalambrica.trim(),
+                infrared: infrared.trim(),
+                fastCharge: fastCharge.trim(),
+                wirelessCharge: wirelessCharge.trim(),
                 photos
             }
-            celulares.push(celular);
+            mobiles.push(mobile);
 
-            guardar(celulares);
+            guardar(mobiles);
             return res.redirect('/admin');
         }
         else {
@@ -113,7 +113,7 @@ module.exports = {
             errors.errores.push(image)
         }
         if (errors.isEmpty()) {
-            let { shortName, longName, brand, price, category, displayP, processorP, memoryP, storageP, expansionP, cameraP, batteryP, osP, profileP, weightP, colour, twog, threeg, fourg, fiveg, gprs, edge, sim, displayType, displaySize, displayResolution, density, protection, mainCamera, videocamera, frontCamera, wifi, bluetooth, gps, usb, nfc, infrared, fastCharge, wirelessCharge } = req.body;
+            let { shortName, longName, brand, price, category, displayP, processorP, memoryP, storageP, expansionP, cameraP, batteryP, osP, profileP, weightP, colour, twog, threeg, fourg, fiveg, gprs, edge, sim, displayType, displaySize, displayResolution, density, protection, mainCamera, videocamera, frontCamera, wifi, bluetooth, gps, usb, nfc, infrared, fastCharging, wirelessCharging } = req.body;
 
             if (req.files.length != 0) {
                 req.files.forEach(image => {
@@ -165,8 +165,8 @@ module.exports = {
                 usb: usb.trim(),
                 nfc: nfc.trim(),
                 infrared: infrared.trim(),
-                fastCharge: fastCharge.trim(),
-                wirelessCharge: wirelessCharge.trim(),
+                fastCharging: fastCharging.trim(),
+                wirelessCharging: wirelessCharging.trim(),
                 photos: req.files.length != 0 ? photos : mobile.photos
             };
 
