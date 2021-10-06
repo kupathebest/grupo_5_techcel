@@ -67,7 +67,7 @@ module.exports = {
                 density: density.trim(),
                 protection: protection.trim(),                
                 mainCamera: mainCamera.trim(),
-                videoCamera: videocamera.trim(),
+                videoCamera: videoCamera.trim(),
                 frontCamera: frontCamera.trim(),
                 wifi: wifi.trim(),
                 bluetooth: bluetooth.trim(),
@@ -165,8 +165,8 @@ module.exports = {
                 usb: usb.trim(),
                 nfc: nfc.trim(),
                 infrared: infrared.trim(),
-                fastCharging: fastCharging.trim(),
-                wirelessCharging: wirelessCharging.trim(),
+                fastCharge: fastCharge.trim(),
+                wirelessCharge: wirelessCharge.trim(),
                 photos: req.files.length != 0 ? photos : mobile.photos
             };
 
