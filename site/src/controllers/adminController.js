@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 let celulares = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'celulares.json'), 'utf-8'));
-const categorias = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','categorias.json'),'utf-8'));
+
 const colores = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','colores.json'),'utf-8'));
 const guardar = dato => fs.writeFileSync(path.join(__dirname, '../data/celulares.json'), JSON.stringify(dato, null, 2), "utf-8");
 const capitalize = require('../utils/capitalize');
