@@ -1,10 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-let celulares = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'celulares.json'), 'utf-8'));
 
-const colores = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'colores.json'), 'utf-8'));
-const guardar = dato => fs.writeFileSync(path.join(__dirname, '../data/celulares.json'), JSON.stringify(dato, null, 2), "utf-8");
-const capitalize = require('../utils/capitalize');
 const toThousand = require('../utils/toThousand');
 
 const db = require('../database/models');
@@ -20,16 +16,11 @@ module.exports = {
         })
             .then(celulares => {
                 return res.render('admin/index', {
-                    celulares
+                    celulares,
+                    toThousand
                 })
             })
             .catch(error => console.log(error))
-
-
-        /*return res.render('admin/index', {
-            celulares: JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'celulares.json'), 'utf-8')),
-            toThousand
-        });*/
     },
     add: (req, res) => {
         return res.render('admin/productAdd');
@@ -203,29 +194,25 @@ module.exports = {
     },
     destroy: (req, res) => {
 
-        db.Product.findByPk(req.params.id,{
-            include : ['category', 'images', 'colour', 'mainFeature', 'display', 'camera', 'net', 'connectivity', 'battery']
+        db.Product.findByPk(req.params.id, {
+            include: ['category', 'images', 'colour', 'mainFeature', 'display', 'camera', 'net', 'connectivity', 'battery']
         })
             .then(celulares => {
-                celulares.photos.forEach(photo => {
-                    if(fs.existsSync(path.join(__dirname,'../public/images',photo.file))){
-                        fs.unlinkSync(path.join(__dirname,'../public/images',photo.file))
+                celulares.images.forEach(image => {
+                    if (fs.existsSync(path.join(__dirname, '../public/images', image.file))) {
+                        fs.unlinkSync(path.join(__dirname, '../public/images', image.file))
                     }
                 });
                 db.Product.destroy({
-                    where : {
-                        id : req.params.id
+                    where: {
+                        id: req.params.id
                     }
                 })
-                .then( () => {
-                    return res.redirect('/admin')
-                })
+                    .then(() => {
+                        return res.redirect('/admin')
+                    })
             })
             .catch(error => console.log(error))
-        
-       /* let celularesModificados = celulares.filter(celular => celular.id !== +req.params.id)
-        guardar(celularesModificados)
-        res.redirect('/admin');*/
 
     },
     search: (req, res) => {
@@ -233,7 +220,12 @@ module.exports = {
         db.Product.findAll({
             include: ['category', 'images', 'colour', 'mainFeature', 'display', 'camera', 'net', 'connectivity', 'battery'],
             where: {
-                [Op]: [
+                [Op.or]: [
+                    {
+                        shortName: {
+                            [Op.substring]: busqueda
+                        }
+                    },
                     {
                         longName: {
                             [Op.substring]: busqueda
@@ -251,13 +243,6 @@ module.exports = {
             })
             .catch(error => console.log(error))
 
-        /*let busqueda = req.query.keywords.toLowerCase()
-        let result = celulares.filter(celular => celular.nombreLargo.toLowerCase().includes(busqueda.trim()) || celular.marca.toLowerCase().includes(busqueda.trim()))
-        return res.render('admin/resultsAdmin', {
-            celulares: result,
-            busqueda,
-            toThousand,
-        })*/
     }
 
 }

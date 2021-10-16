@@ -7,7 +7,7 @@
        
         <section class ="articulos">
             <div class="productos-listado">
-                <% if (celulares.length > 0) { %>
+                <% if (celulares.length > 0 && busqueda) { %>
                     <% celulares.forEach(celular => { %>
                         <article>
                             <img src="/images/equipos/<%= celular.images[0].file %>" alt="">
@@ -25,6 +25,7 @@
                 <% } else { %>
                     <div class = "mensaje">
                         <h2 class=""> Oops ... No hay resultados para la busqueda de "<%= busqueda %>" </h2>
+                        <img src="/images/celular_llorando.png" alt="">
                     </div>
                     <% } %>
                 
