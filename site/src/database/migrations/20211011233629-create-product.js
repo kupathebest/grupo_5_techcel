@@ -30,7 +30,8 @@ module.exports = {
             tableName : "Colours",
           },
           key : "id"
-        }
+        },
+        onDelete  : "cascade"
       },
       categoryId: {
         type: Sequelize.INTEGER,
@@ -39,7 +40,8 @@ module.exports = {
             tableName : "Categories",
           },
           key : "id"
-        }
+        },
+        onDelete  : "cascade"
            
       },
       mainFeatureId: {
@@ -49,7 +51,8 @@ module.exports = {
             tableName : "MainFeatures",
           },
           key : "id"
-        }
+        },
+        onDelete  : "cascade"
       },
       displayId: {
         type: Sequelize.INTEGER,
@@ -58,7 +61,8 @@ module.exports = {
             tableName : "Displays",
           },
           key : "id"
-        }
+        },
+        onDelete  : "cascade"
       },
       cameraId: {
         type: Sequelize.INTEGER,
@@ -67,7 +71,8 @@ module.exports = {
             tableName : "Cameras",
           },
           key : "id"
-        }
+        },
+        onDelete  : "cascade"
       },
       netId: {
         type: Sequelize.INTEGER,
@@ -76,7 +81,8 @@ module.exports = {
             tableName : "Nets",
           },
           key : "id"
-        }
+        },
+        onDelete  : "cascade"
       },
       connectivityId: {
         type: Sequelize.INTEGER,
@@ -85,7 +91,8 @@ module.exports = {
             tableName : "Connectivities",
           },
           key : "id"
-        }
+        },
+        onDelete  : "cascade"
       },
       batteryId: {
         type: Sequelize.INTEGER,
@@ -94,7 +101,8 @@ module.exports = {
             tableName : "Batteries",
           },
           key : "id"
-        }
+        },
+        onDelete  : "cascade"
       },
       createdAt: {
         allowNull: false,

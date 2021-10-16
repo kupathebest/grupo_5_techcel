@@ -23,14 +23,22 @@ module.exports = {
             .catch(error => console.log(error))
     },
     add: (req, res) => {
-        db.Product.findAll()
-        .then(products =>{
-            return res.render('admin/productAdd')
+       let categories = db.Category.findAll()
+       let colours = db.Colour.findAll() 
+       Promise.all([categories,colours])
+        .then((
+            [
+                categories,colours
+            ]
+        ) => {
+            return res.render('admin/productAdd',{categories,colours})
         })
-    },
+
+
+        }
+    ,
     agregar: (req, res) => {
         let errors = validationResult(req);
-   
 
         if (req.fileValidationError) {
             let image = {
@@ -41,8 +49,12 @@ module.exports = {
         }
 
         if (errors.isEmpty()) {
-            const { shortName, longName, brand, price, category, pantallaP, processorP, memoryP, storageP, expansionP, cameraP, batteryP, osP, profileP, pesweightPoP, color, twog, threeg, fourg, fiveg, gprs, edge, sim, displayType, displaySize, displayResolution, density, protection, mainCamera, videoCamera, frontCamera, wifi, bluetooth, gps, usb, nfc, infrared, fastCharge, wirelessCharge } = req.body;
-            
+            const { shortName, longName, brand, price, category, displayP, processorP, memoryP, storageP, expansionP, cameraP, batteryP, osP, profileP, weightP, colour, twog, threeg, fourg, fiveg, gprs, edge, sim, displayType, displaySize, displayResolution, density, protection, mainCamera, videoCamera, frontCamera, wifi, bluetooth, gps, usb, nfc, infrared, fastCharge, wirelessCharge } = req.body;
+            db.MainFeature.create(
+                {
+                    
+                }
+            )
             db.Product.create(
                 {
                     shortName : shortName.trim(),
@@ -50,7 +62,7 @@ module.exports = {
                     brand : brand.trim(),
                     price : +price,
                     category : category.trim(),
-                    color : color.trim(),
+                    colour : colour.trim(),
                     edge : edge.trim(),
                     displayP : displayP.trim(),
                     processorP : processorP.trim(),
@@ -86,14 +98,45 @@ module.exports = {
                     protection : protection.trim()
                 }
             )
+            .then(product => {
+                console.log(product);
+                if(req.files.length != 0){
+                    let images = req.files.map(image => {
+                        let item = {
+                            file : image.filename,
+                            productId : product.id
+                        }
+                        return item
+                    }) 
 
-            return res.redirect('/admin');
+                    db.Image.bulkCreate(images)
+                        .then( () => console.log('imagenes guardadas satisfactoriamente'))
+                }
+
+                return res.redirect('/admin')
+            })
+            .catch(error => console.log(error))
+
+
         }
         else {
-            return res.render('admin/productAdd', {
+            let categories = db.Category.findAll()
+            let colours = db.Colour.findAll() 
+            Promise.all([categories,colours])
+             .then((
+                 [
+                     categories,colours
+                 ]
+             ) => {
+                 return res.render('admin/productAdd',
+                 {
+                categories,
+                colours,
                 errores: errors.mapped(),
                 old: req.body
-            })
+                })
+
+             })
 
         };
     },

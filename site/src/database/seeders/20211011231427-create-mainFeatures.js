@@ -5,7 +5,7 @@ const mainFeatures = []
 
 products.forEach(celular => {
   let item = {
-    displayP: celular.displayP,
+    displayP: celular.pantallaP,
     processorP: celular.procesadorP,
     memoryP: celular.memoriaP,
     storageP: celular.almacenamientoP,

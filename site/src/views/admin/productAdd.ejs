@@ -46,8 +46,8 @@
                                 <select name="category" id="category">
                                     <option value="" selected hidden>Seleccione la categoría</option>
                                     <% categories.forEach(category=> { %>
-                                        <option value="<%= category %>" <%=locals.old && old.category===category
-                                            ? 'selected' : null %> ><%= category %>
+                                        <option value="<%= category.name %>" <%=locals.old && old.category.name===category.name
+                                            ? 'selected' : null %> ><%= category.name %>
                                         </option>
                                         <% }) %>
                                 </select>
@@ -61,8 +61,8 @@
                                 <select name="colour" id="colour">
                                     <option value="" selected hidden>Seleccione el color</option>
                                     <% colours.forEach(colour=> { %>
-                                        <option value="<%= colour %>" <%=locals.old && old.colour===colour ? 'selected'
-                                            : null %> ><%= colour %>
+                                        <option value="<%= colour.name %>" <%=locals.old && old.colour.name===colour.name ? 'selected'
+                                            : null %> ><%= colour.name %>
                                         </option>
                                         <% }) %>
                                 </select>

@@ -39,7 +39,7 @@ const productValidatorAdd = [
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
-	check('camaraP')
+	check('cameraP')
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
@@ -83,7 +83,7 @@ const productValidatorAdd = [
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
-	check('color')
+	check('colour')
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
