@@ -107,6 +107,13 @@
     background-color: var(--Gris);
 }
 
+.adminIndex .mensaje {
+    text-align: center;
+}
+.adminIndex .mensaje img{
+    width: 60%;
+}
+
 /** TABLET **/
 @media (min-width:425px){
       

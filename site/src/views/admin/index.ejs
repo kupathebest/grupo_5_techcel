@@ -9,9 +9,9 @@
             <div class="productos-listado">
                 <% celulares.forEach(celular => { %>
                     <article>
-                        <img src="/images/equipos/<%= celular.photos[0] %>" alt="">
-                        <p><%= celular.nombreCorto %> </p>
-                        <span>$ <%= toThousand(celular.precio) %> </span>
+                        <img src="/images/equipos/<%= celular.images[0].file %>" alt="">
+                        <p><%= celular.shortName %> </p>
+                        <span>$ <%= toThousand(celular.price)%> </span>
                         <div class="buttons">
                             <a href="/productos/detail/<%= celular.id %>"><button class ="boton" type="button">Detalles</button></a>
                             <a href="/admin/edit/<%= celular.id %> "><button class="editar" type="button">Editar</button></a>
