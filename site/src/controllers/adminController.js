@@ -2,26 +2,41 @@ const fs = require('fs');
 const path = require('path');
 let celulares = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'celulares.json'), 'utf-8'));
 
-const colores = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','colores.json'),'utf-8'));
+const colores = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'colores.json'), 'utf-8'));
 const guardar = dato => fs.writeFileSync(path.join(__dirname, '../data/celulares.json'), JSON.stringify(dato, null, 2), "utf-8");
 const capitalize = require('../utils/capitalize');
-const toThousand = require('../utils/toThousand')
+const toThousand = require('../utils/toThousand');
+
+const db = require('../database/models');
+const { Op } = require('sequelize');
 
 const { validationResult } = require('express-validator');
 
 module.exports = {
     index: (req, res) => {
-        return res.render('admin/index', {
+
+        db.Product.findAll({
+            include: ['category', 'images', 'colour', 'mainFeature', 'display', 'camera', 'net', 'connectivity', 'battery']
+        })
+            .then(celulares => {
+                return res.render('admin/index', {
+                    celulares
+                })
+            })
+            .catch(error => console.log(error))
+
+
+        /*return res.render('admin/index', {
             celulares: JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'celulares.json'), 'utf-8')),
             toThousand
-        });
+        });*/
     },
     add: (req, res) => {
         return res.render('admin/productAdd');
     },
     agregar: (req, res) => {
         let errors = validationResult(req);
-   
+
         if (req.fileValidationError) {
             let image = {
                 param: 'image',
@@ -141,7 +156,7 @@ module.exports = {
                 storageP: storageP.trim(),
                 expansionP: expansionP.trim(),
                 cameraP: cameraP.trim(),
-                batteryP:batteryP.trim(),
+                batteryP: batteryP.trim(),
                 osP: osP.trim(),
                 profileP: profileP.trim(),
                 weightP: weightP.trim(),
@@ -157,7 +172,7 @@ module.exports = {
                 displaySize: displaySize.trim(),
                 displayResolution: displayResolution.trim(),
                 density: density.trim(),
-                protection: protection.trim(),                
+                protection: protection.trim(),
                 mainCamera: mainCamera.trim(),
                 videoCamera: videocamera.trim(),
                 frontCamera: frontCamera.trim(),
@@ -187,19 +202,62 @@ module.exports = {
 
     },
     destroy: (req, res) => {
-        let celularesModificados = celulares.filter(celular => celular.id !== +req.params.id)
+
+        db.Product.findByPk(req.params.id,{
+            include : ['category', 'images', 'colour', 'mainFeature', 'display', 'camera', 'net', 'connectivity', 'battery']
+        })
+            .then(celulares => {
+                celulares.photos.forEach(photo => {
+                    if(fs.existsSync(path.join(__dirname,'../public/images',photo.file))){
+                        fs.unlinkSync(path.join(__dirname,'../public/images',photo.file))
+                    }
+                });
+                db.Product.destroy({
+                    where : {
+                        id : req.params.id
+                    }
+                })
+                .then( () => {
+                    return res.redirect('/admin')
+                })
+            })
+            .catch(error => console.log(error))
+        
+       /* let celularesModificados = celulares.filter(celular => celular.id !== +req.params.id)
         guardar(celularesModificados)
-        res.redirect('/admin');
+        res.redirect('/admin');*/
 
     },
     search: (req, res) => {
         let busqueda = req.query.keywords.toLowerCase()
+        db.Product.findAll({
+            include: ['category', 'images', 'colour', 'mainFeature', 'display', 'camera', 'net', 'connectivity', 'battery'],
+            where: {
+                [Op]: [
+                    {
+                        longName: {
+                            [Op.substring]: busqueda
+                        }
+                    }
+                ]
+            }
+        })
+            .then(celulares => {
+                return res.render('admin/resultsAdmin', {
+                    celulares,
+                    busqueda,
+                    toThousand
+                })
+            })
+            .catch(error => console.log(error))
+
+        /*let busqueda = req.query.keywords.toLowerCase()
         let result = celulares.filter(celular => celular.nombreLargo.toLowerCase().includes(busqueda.trim()) || celular.marca.toLowerCase().includes(busqueda.trim()))
         return res.render('admin/resultsAdmin', {
             celulares: result,
             busqueda,
             toThousand,
-        })
+        })*/
     }
 
 }
