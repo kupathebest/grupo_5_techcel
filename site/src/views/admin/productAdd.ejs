@@ -32,16 +32,33 @@
                                 <span class=""><%= locals.errores && errores.precio ? errores.precio.msg : null %> </span>
                             </div>
                             <div class="centrar">
-                                <label for="categoria">Categoria</label>
-                                <!--falta agregar categorias-->
-                                <input type="text"   name="categoria" id="categoria" value="<%= locals.old && old.categoria ? old.categoria : null %>">
-                                <span class=""><%= locals.errores && errores.categoria ? errores.categoria.msg : null %> </span>
+                                <h4>Categoría</h4>
+                                <select name="category" id="category">
+                                    <option value="" selected hidden>Seleccione la categoría</option>
+                                    <% categories.forEach(category=> { %>
+                                        <option value="<%= category.name %>" <%=locals.old && old.category.name===category.name
+                                            ? 'selected' : null %> ><%= category.name %>
+                                        </option>
+                                        <% }) %>
+                                </select>
+                                <span class="">
+                                    <%= locals.errores && errores.category ? errores.category.msg : null %>
+                                </span>
                             </div>
 
                             <div class="centrar">
-                                <label for="color">Color</label>
-                                <input type="text"   name="color" id="color" value="<%= locals.old && old.color ? old.color : null %>">
-                                <span class=""><%= locals.errores && errores.color ? errores.color.msg : null %> </span>
+                                <h4>Color</h4>
+                                <select name="colour" id="colour">
+                                    <option value="" selected hidden>Seleccione el color</option>
+                                    <% colours.forEach(colour=> { %>
+                                        <option value="<%= colour.name %>" <%=locals.old && old.colour.name===colour.name ? 'selected'
+                                            : null %> ><%= colour.name %>
+                                        </option>
+                                        <% }) %>
+                                </select>
+                                <span class="">
+                                    <%= locals.errores && errores.colour ? errores.colour.msg : null %>
+                                </span>
                             </div>
 
                             <div class="centrar">

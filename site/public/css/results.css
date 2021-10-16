@@ -1,5 +1,9 @@
 .results h2 {
     font-size: 1rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .results .mensaje {

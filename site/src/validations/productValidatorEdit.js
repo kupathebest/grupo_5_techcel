@@ -3,35 +3,35 @@ const { check, body } = require('express-validator');
 
 const productValidatorEdit = [
 
-	check('nombreCorto')
+	check('shortName')
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
-	check('marca')
+	check('brand')
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
-	check('precio')
+	check('price')
 		.notEmpty().withMessage('Este campo es obligatorio')
 		.isInt().withMessage('Debe ser un número'),
 
-	check('categoria')
+	check('category')
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
-	check('pantallaP')
+	check('displayP')
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
-	check('procesadorP')
+	check('processorP')
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
-	check('memoriaP')
+	check('memoryP')
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
-	check('almacenamientoP')
+	check('storageP')
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
@@ -39,11 +39,11 @@ const productValidatorEdit = [
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
-	check('camaraP')
+	check('cameraP')
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
-	check('bateriaP')
+	check('batteryP')
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
@@ -51,27 +51,27 @@ const productValidatorEdit = [
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
-	check('perfilP')
+	check('profile')
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
-	check('pesoP')
+	check('weightP')
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
-	check('dosg')
+	check('twog')
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
-	check('tresg')
+	check('threeg')
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
-	check('cuatrog')
+	check('fourg')
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
-	check('cincog')
+	check('fiveg')
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
