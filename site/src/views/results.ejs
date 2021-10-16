@@ -10,13 +10,14 @@
 <main>
     <section class ="articulos">
         <div class="productos-listado">
-            <% if (celulares.length > 0) { %>
+            <% if (celulares.length > 0 && busqueda) { %>
+                <h2>Se muestran todos los productos que coinciden con "<%= busqueda %>" </h2>
                 <% celulares.forEach(celular => { %>
                     <article>
                         <a href="/productos/detail/<%= celular.id %>">
-                            <img src="/images/equipos/<%= celular.photos[0] %>" alt="">
-                        <p><%= celular.nombreCorto %> </p>
-                        <span>$ <%= toThousand(celular.precio) %> </span>
+                            <img src="/images/equipos/<%= celular.images[0].file %>" alt="">
+                        <p><%= celular.shortName %> </p>
+                        <span>$ <%= toThousand(celular.price) %> </span>
                         <div class="buttons">
                             <a href="/productos/detail/<%= celular.id %>"><button class ="boton" type="button">Detalles</button></a>                                          
                         </div>
