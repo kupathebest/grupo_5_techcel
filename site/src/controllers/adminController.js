@@ -50,20 +50,8 @@ module.exports = {
 
         if (errors.isEmpty()) {
             const { shortName, longName, brand, price, category, displayP, processorP, memoryP, storageP, expansionP, cameraP, batteryP, osP, profileP, weightP, colour, twog, threeg, fourg, fiveg, gprs, edge, sim, displayType, displaySize, displayResolution, density, protection, mainCamera, videoCamera, frontCamera, wifi, bluetooth, gps, usb, nfc, infrared, fastCharge, wirelessCharge } = req.body;
-            db.MainFeature.create(
+            let mainFeaturesId = db.MainFeature.create(
                 {
-
-                }
-            )
-            db.Product.create(
-                {
-                    shortName: shortName.trim(),
-                    longName: longName.trim(),
-                    brand: brand.trim(),
-                    price: +price,
-                    category: category.trim(),
-                    colour: colour.trim(),
-                    edge: edge.trim(),
                     displayP: displayP.trim(),
                     processorP: processorP.trim(),
                     memoryP: memoryP.trim(),
@@ -71,72 +59,120 @@ module.exports = {
                     expansionP: expansionP.trim(),
                     cameraP: cameraP.trim(),
                     batteryP: batteryP.trim(),
-                    osP: osP.trim(),
                     profileP: profileP.trim(),
-                    weightP: weightP.trim(),
-                    twog: twog.trim(),
-                    threeg: threeg.trim(),
-                    fourg: fourg.trim(),
-                    fiveg: fiveg.trim(),
-                    gprs: gprs.trim(),
-                    sim: sim.trim(),
-                    mainCamera: mainCamera.trim(),
-                    videoCamera: videoCamera.trim(),
-                    frontCamera: frontCamera.trim(),
-                    fastCharge: fastCharge.trim(),
-                    wirelessCharge: wirelessCharge.trim(),
-                    wifi: wifi.trim(),
-                    bluetooth: bluetooth.trim(),
-                    gps: gps.trim(),
-                    usb: usb.trim(),
-                    nfc: nfc.trim(),
-                    infrared: infrared.trim(),
-                    displayType: displayType.trim(),
-                    displaySize: displaySize.trim(),
-                    displayResolution: displayResolution.trim(),
-                    density: density.trim(),
-                    protection: protection.trim()
+                    osP: osP.trim(),
+                    weightP: weightP.trim()
                 }
             )
+            let netId = db.Net.create(
+                {
+                    twog : twog.trim(),
+                    threeg : threeg.trim(),
+                    fourg : fourg.trim(),
+                    fiveg : fiveg.trim(),
+                    gprs : gprs.trim(),
+                    sim: sim.trim()
+                }
+            )
+            let cameraId = db.Camera.create(
+                {
+                    rearCamera : mainCamera.trim(),
+                    videoCamera : videoCamera.trim(),
+                    frontCamera : frontCamera.trim(),
+                    fastCharge : fastCharge.trim()
+                }
+            )
+            let batteryId = db.Battery.create(
+            {
+                    fastCharge : fastCharge.trim(),
+                    wirelessCharge : wirelessCharge.trim()
+            }
+            )
+            let connectivityId = db.Connectivity.create(
+                {
+                    wifi : wifi.trim(),
+                    bluetooth : bluetooth.trim(),
+                    gps : gps.trim(),
+                    usb : usb.trim(),
+                    nfc : nfc.trim(),
+                    infrared : infrared.trim()
+                }
+            )
+            let displayId = db.Display.create(
+                 {
+                    displayType : displayType.trim(),
+                    displaySize : displaySize.trim(),
+                    displayResolution : displayResolution.trim(),
+                    density : density.trim(),
+                    protection : protection.trim()
+                 }
+             )
+            Promise.all([mainFeaturesId,netId,cameraId,batteryId,connectivityId,displayId])
+            .then((
+                [mainFeaturesId,netId,cameraId,batteryId,connectivityId,displayId]
+                
+            ) =>
+                {
+               db.Product.create(
+                    {
+                        shortName : shortName.trim(),
+                        longName : longName.trim(),
+                        brand : brand.trim(),
+                        price : +price,
+                        category : category.trim(),
+                        colour : colour.trim(),
+                        edge : edge.trim(),
+                        colourId: colour,
+                        categoryId: category,
+                        mainFeatureId: mainFeaturesId.id,
+                        displayId: displayId.id,
+                        cameraId: cameraId.id,
+                        netId: netId.id,
+                        connectivityId: connectivityId.id,
+                        batteryId: batteryId.id
+                    }
+                )
                 .then(product => {
                     console.log(product);
-                    if (req.files.length != 0) {
+                    if(req.files.length != 0){
                         let images = req.files.map(image => {
                             let item = {
-                                file: image.filename,
-                                productId: product.id
+                                file : image.filename,
+                                productId : product.id
                             }
                             return item
-                        })
-
+                        }) 
+    
                         db.Image.bulkCreate(images)
-                            .then(() => console.log('imagenes guardadas satisfactoriamente'))
+                            .then( () => console.log('imagenes guardadas satisfactoriamente'))
                     }
-
+    
                     return res.redirect('/admin')
                 })
-                .catch(error => console.log(error))
+})
+
+            .catch(error => console.log(error))
 
 
         }
         else {
             let categories = db.Category.findAll()
-            let colours = db.Colour.findAll()
-            Promise.all([categories, colours])
-                .then((
-                    [
-                        categories, colours
-                    ]
-                ) => {
-                    return res.render('admin/productAdd',
-                        {
-                            categories,
-                            colours,
-                            errores: errors.mapped(),
-                            old: req.body
-                        })
-
+            let colours = db.Colour.findAll() 
+            Promise.all([categories,colours])
+             .then((
+                 [
+                     categories,colours
+                 ]
+             ) => {
+                 return res.render('admin/productAdd',
+                 {
+                categories,
+                colours,
+                errores: errors.mapped(),
+                old: req.body
                 })
+
+             })
 
         };
     },
