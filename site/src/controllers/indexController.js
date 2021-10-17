@@ -56,7 +56,7 @@ module.exports = {
                     toThousand
                 })
             })
-            .catch(error => console.log(error)) 
+            .catch(error => console.log(error))
     },
     envios : (req, res) => {
         return res.render('envios')

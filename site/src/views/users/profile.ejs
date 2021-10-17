@@ -12,20 +12,20 @@
             <h2>  Perfil de usuario</h2>
         </div>
         <div class="img">
-            <img src="/images/usuarios/<%= usuario.avatar %>" alt="">
+            <img src="images/usuarios/" alt="">
         </div>
         <div class="form">
             <form action="/users/profile?_method=PUT" method="POST"enctype="multipart/form-data">
                 <div class="name">
-                    <label for="nombre"></label>
-                    <input type="text" placeholder="Ingresa tu nombre" name="nombre" id="nombre" value="<%= usuario.nombre  %>">
-                    <span><%= locals.errores && errores.nombre ? errores.nombre.msg : null %> </span>
+                    <label for="name"></label>
+                    <input type="text" placeholder="Ingresa tu nombre" name="name" id="name" value="<%= usuario.name %>">
+                    <span><%= locals.errores && errores.name ? errores.name.msg : null %> </span>
 
                 </div>
                 <div class="name">
-                    <label for="apellido"></label>
-                    <input type="text" placeholder="Ingresa tu apellido" name="apellido" id="apellido" value="<%= usuario.apellido  %>">
-                    <span><%= locals.errores && errores.apellido ? errores.apellido.msg : null %> </span>
+                    <label for="lastName"></label>
+                    <input type="text" placeholder="Ingresa tu apellido" name="lastName" id="lastName" value="<%= usuario.lastName  %>">
+                    <span><%= locals.errores && errores.lastName ? errores.lastName.msg : null %> </span>
 
                 </div>
 
