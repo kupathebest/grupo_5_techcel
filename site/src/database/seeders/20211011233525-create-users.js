@@ -10,7 +10,7 @@ users.forEach(user => {
     email: user.email,
     password: user.password,
     rolId: 1,
-    avatarId: user.id,
+    avatarId: user.id + 1,
     createdAt: new Date,
     updatedAt: new Date
   }

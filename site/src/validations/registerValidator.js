@@ -1,12 +1,13 @@
-const {check, body} = require('express-validator');
+const {body,check} = require('express-validator');
 const bcryptjs = require('bcryptjs');
+const db = require('../database/models')
 
 module.exports=[ 
-    check("nombre")
+    check("name")
     .notEmpty()
     .withMessage("*Debes ingresar un nombre"),
 
-    check("apellido")
+    check("lastName")
      .notEmpty()
     .withMessage("*Debes ingresar un apellido"),
 
@@ -29,6 +30,23 @@ module.exports=[
     }).withMessage('La verificación de la contraseña no coincide'),
 
     check('terms')
-    .isString('on').withMessage('Debes aceptar los términos y condiciones')
+    .isString('on').withMessage('Debes aceptar los términos y condiciones'),
+
+    
+
+    body('email')
+    .custom( value => {
+       
+        return db.User.findOne({
+            where : {
+                email : value
+            }
+        })
+            .then(user => {
+                if(user){
+                    return Promise.reject('El email ya se encuentra registrado')
+                }
+            })
+    })
         
 ]

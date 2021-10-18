@@ -14,14 +14,14 @@
         <div>
             <form action="" method="POST">
                 <div>
-                    <label for="nombre"></label>
-                    <input type="text" placeholder="Ingresa tu nombre" name="nombre" id="nombre"value= "<%= locals.old && old.nombre ? old.nombre : null %>">
-                    <small class="rojo"><%= locals.errores && errores.nombre ? errores.nombre.msg : null %>  </small>
+                    <label for="name"></label>
+                    <input type="text" placeholder="Ingresa tu nombre" name="name" id="name"value= "<%= locals.old && old.name ? old.name : null %>">
+                    <small class="rojo"><%= locals.errores && errores.name ? errores.name.msg : null %>  </small>
                 </div>
                 <div>
-                    <label for="apellido"></label>
-                    <input type="text" placeholder="Ingresa tu apellido" name="apellido" id="apellido"value= "<%= locals.old && old.apellido ? old.apellido : null %>">
-                    <small class="rojo"><%= locals.errores && errores.apellido ? errores.apellido.msg : null %> </small>
+                    <label for="lastName"></label>
+                    <input type="text" placeholder="Ingresa tu apellido" name="lastName" id="lastName"value= "<%= locals.old && old.lastName ? old.lastName : null %>">
+                    <small class="rojo"><%= locals.errores && errores.lastName ? errores.lastName.msg : null %> </small>
                 </div>
                 <div>
                     <label for="email"></label>

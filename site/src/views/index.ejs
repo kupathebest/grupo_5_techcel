@@ -89,7 +89,7 @@
         <div>
             <a href="/productos"><button type="button">VER MÁS</button></a>
             <% if (locals.userLogin) { %>
-                <% if (userLogin.rol === "admin") { %>
+                <% if (userLogin.rolId === 1) { %>
                     <a href="/admin"><button type="button">Administrador</button></a>
                 <% } %>
             <% } %>
