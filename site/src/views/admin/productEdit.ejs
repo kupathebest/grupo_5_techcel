@@ -47,9 +47,9 @@
                                 <h4>Categoría</h4>
                                 <select name="category" id="category">
                                     <% categories.forEach(category=> { %>
-                                        <option value="<%= category %>"
-                                            <%=mobile.category.toLowerCase()===category.toLowerCase() ? 'selected' :
-                                            null %> ><%= category %>
+                                        <option value=<%= category.id %>
+                                            <%=mobile.category===category.name ? 'selected' :
+                                            null %> ><%= category.name %>
                                         </option>
                                         <% }) %>
                                 </select>
@@ -65,9 +65,9 @@
                                 <h4>Color</h4>
                                 <select name="colour" id="colour">
                                     <% colours.forEach(colour=> { %>
-                                        <option value="<%= colour %>"
-                                            <%=mobile.colour.toLowerCase()===colour.toLowerCase() ? 'selected' :
-                                            null %> ><%= colour %>
+                                        <option value=<%= colour.id %>
+                                            <%=mobile.colour===colour.name ? 'selected' :
+                                            null %> ><%= colour.name %>
                                         </option>
                                         <% }) %>
                                 </select>
@@ -93,7 +93,7 @@
                             <div class="centrar">
 
                                 <label for="displayP">Pantalla Principal</label>
-                                <input type="text" name="displayP" id="displayP" value="<%= mobile.displayP %> ">
+                                <input type="text" name="displayP" id="displayP" value="<%= mobile.mainFeature.displayP %> ">
                                 <span class="">
                                     <%= locals.errores && errores.displayP ? errores.displayP.msg : null %>
                                 </span>
@@ -101,14 +101,14 @@
                             <div class="centrar">
                                 <label for="processorP">Procesador Principal</label>
                                 <input type="text" name="processorP" id="processorP"
-                                    value="<%= mobile.processorP %> ">
+                                    value="<%= mobile.mainFeature.processorP %> ">
                                 <span class="">
                                     <%= locals.errores && errores.processorP ? errores.processorP.msg : null %>
                                 </span>
                             </div>
                             <div class="centrar">
                                 <label for="memoryP">Memoria Principal</label>
-                                <input type="text" name="memoryP" id="memoryP" value="<%= mobile.memoryP %> ">
+                                <input type="text" name="memoryP" id="memoryP" value="<%= mobile.mainFeature.memoryP %> ">
                                 <span class="">
                                     <%= locals.errores && errores.memoryP ? errores.memoryP.msg : null %>
                                 </span>
@@ -116,7 +116,7 @@
                             <div class="centrar">
                                 <label for="storageP">Almacenamiento Principal</label>
                                 <input type="text" name="storageP" id="storageP"
-                                    value="<%= mobile.storageP %> ">
+                                    value="<%= mobile.mainFeature.storageP %> ">
                                 <span class="">
                                     <%= locals.errores && errores.storageP ? errores.storageP.msg : null
                                         %>
@@ -124,42 +124,42 @@
                             </div>
                             <div class="centrar">
                                 <label for="expansionP">Expansion Principal</label>
-                                <input type="text" name="expansionP" id="expansionP" value="<%= mobile.expansionP %> ">
+                                <input type="text" name="expansionP" id="expansionP" value="<%= mobile.mainFeature.expansionP %> ">
                                 <span class="">
                                     <%= locals.errores && errores.expansionP? errores.expansionP.msg : null %>
                                 </span>
                             </div>
                             <div class="centrar">
                                 <label for="cameraP">Cámara Principal</label>
-                                <input type="text" name="cameraP" id="cameraP" value="<%= mobile.cameraP %> ">
+                                <input type="text" name="cameraP" id="cameraP" value="<%= mobile.mainFeature.cameraP %> ">
                                 <span class="">
                                     <%= locals.errores && errores.cameraP? errores.cameraP.msg : null %>
                                 </span>
                             </div>
                             <div class="centrar">
                                 <label for="batteryP">Batería Principal</label>
-                                <input type="text" name="batteryP" id="batteryP" value="<%= mobile.batteryP%> ">
+                                <input type="text" name="batteryP" id="batteryP" value="<%= mobile.mainFeature.batteryP%> ">
                                 <span class="">
                                     <%= locals.errores && errores.batteryP ? errores.batteryP.msg : null %>
                                 </span>
                             </div>
                             <div class="centrar">
                                 <label for="osP">Sistema Operativo Principal</label>
-                                <input type="text" name="osP" id="osP" value="<%= mobile.osP %> ">
+                                <input type="text" name="osP" id="osP" value="<%= mobile.mainFeature.osP %> ">
                                 <span class="">
                                     <%= locals.errores && errores.osP ? errores.osP.msg : null %>
                                 </span>
                             </div>
                             <div class="centrar">
                                 <label for="profileP">Perfil Principal</label>
-                                <input type="text" name="profileP" id="profileP" value="<%= mobile.profileP %> ">
+                                <input type="text" name="profileP" id="profileP" value="<%= mobile.mainFeature.profileP %> ">
                                 <span class="">
                                     <%= locals.errores && errores.profileP ? errores.profileP.msg : null %>
                                 </span>
                             </div>
                             <div class="centrar">
                                 <label for="weightP">Peso Principal</label>
-                                <input type="text" name="weightP" id="weightP" value="<%= mobile.weightP %> ">
+                                <input type="text" name="weightP" id="weightP" value="<%= mobile.mainFeature.weightP %> ">
                                 <span class="">
                                     <%= locals.errores && errores.weightP ? errores.weightP.msg : null %>
                                 </span>
@@ -170,41 +170,41 @@
                                 <h2 class="centrar-titulos"> Redes</h2>
                             </div>
                             <div class="centrar">
-                                <label for="twog">2G</label>
-                                <input type="text" name="twog" id="twog" value="<%= mobile.twog %> ">
+                                <label for="twoG">2G</label>
+                                <input type="text" name="twoG" id="twoG" value="<%= mobile.net.twoG %> ">
                                 <span class="">
-                                    <%= locals.errores && errores.twog ? errores.twog.msg : null %>
+                                    <%= locals.errores && errores.twoG ? errores.twoG.msg : null %>
                                 </span>
                             </div>
                             <div class="centrar">
-                                <label for="threeg">3G</label>
-                                <input type="text" name="threeg" id="threeg" value="<%= mobile.threeg%> ">
+                                <label for="threeG">3G</label>
+                                <input type="text" name="threeG" id="threeG" value="<%= mobile.net.threeG%> ">
                                 <span class="">
-                                    <%= locals.errores && errores.threeg ? errores.threeg.msg : null %>
+                                    <%= locals.errores && errores.threeG ? errores.threeG.msg : null %>
                                 </span>
                             </div>
                             <div class="centrar">
-                                <label for="fourg">4G</label>
-                                <input type="text" name="fourg" id="fourg" value="<%= mobile.fourg %> ">
+                                <label for="fourG">4G</label>
+                                <input type="text" name="fourG" id="fourG" value="<%= mobile.net.fourG %> ">
                                 <span class="">
-                                    <%= locals.errores && errores.fourg ? errores.fourg.msg : null %>
+                                    <%= locals.errores && errores.fourG ? errores.fourG.msg : null %>
                                 </span>
                             </div>
                             <div class="centrar">
-                                <label for="fiveg">5G</label>
-                                <input type="text" name="fiveg" id="fiveg" value="<%= mobile.fiveg %> ">
+                                <label for="fiveG">5G</label>
+                                <input type="text" name="fiveG" id="fiveG" value="<%= mobile.net.fiveG %> ">
                                 <span class="">
-                                    <%= locals.errores && errores.fiveg ? errores.fiveg.msg : null %>
+                                    <%= locals.errores && errores.fiveG ? errores.fiveG.msg : null %>
                                 </span>
                             </div>
                             <div class="centrar">
                                 <label for="gprs">GPRS</label>
-                                <input type="text" name="gprs" id="gprs" value="<%= mobile.gprs %> ">
+                                <input type="text" name="gprs" id="gprs" value="<%= mobile.net.gprs %> ">
 
                             </div>
                             <div class="centrar">
                                 <label for="sim">SIM</label>
-                                <input type="text" name="sim" id="sim" value="<%= mobile.sim %> ">
+                                <input type="text" name="sim" id="sim" value="<%= mobile.net.sim %> ">
 
                             </div>
                         </div>
@@ -213,21 +213,21 @@
                                 <h2 class="centrar-titulos"> Cámaras</h2>
                             </div>
                             <div class="centrar">
-                                <label for="mainCamera">Cámara Principal</label>
-                                <input type="text" name="mainCamera" id="mainCamera"
-                                    value="<%= mobile.mainCamera %> ">
+                                <label for="rearCamera">Cámara Principal</label>
+                                <input type="text" name="rearCamera" id="rearCamera"
+                                    value="<%= mobile.camera.rearCamera %> ">
 
                             </div>
                             <div class="centrar">
                                 <label for="videoCamera">Cámara Video</label>
                                 <input type="text" name="videoCamera" id="videoCamera"
-                                    value="<%= mobile.videoCamera %> ">
+                                    value="<%= mobile.camera.videoCamera %> ">
 
                             </div>
                             <div class="centrar">
-                                <label for="frontCamera">Cámara Frontal</label>
-                                <input type="text" name="frontCamera" id="frontCamera"
-                                    value="<%= mobile.frontCamera %> ">
+                                <label for="frontalCamera">Cámara Frontal</label>
+                                <input type="text" name="frontalCamera" id="frontalCamera"
+                                    value="<%= mobile.camera.frontalCamera %> ">
 
                             </div>
                         </div>
@@ -241,13 +241,13 @@
                             <div class="centrar">
                                 <label for="fastCharge">Carga Rápida</label>
                                 <input type="text" name="fastCharge" id="fastCharge"
-                                    value="<%= mobile.fastCharge %> ">
+                                    value="<%= mobile.battery.fastCharge %> ">
 
                             </div>
                             <div class="centrar">
                                 <label for="wirelessCharge">Carga Inalambrica</label>
                                 <input type="text" name="wirelessCharge" id="wirelessCharge"
-                                    value="<%= mobile.wirelessCharge %> ">
+                                    value="<%= mobile.battery.wirelessCharge %> ">
 
                             </div>
 
@@ -260,36 +260,36 @@
                             </div>
                             <div class="centrar">
                                 <label for="wifi">Wi-Fi</label>
-                                <input type="text" name="wifi" id="wifi" value="<%= mobile.wifi %> ">
+                                <input type="text" name="wifi" id="wifi" value="<%= mobile.connectivity.wifi %> ">
 
                             </div>
                             <div class="centrar">
-                                <label for="bluetooth">Bluetooth</label>
-                                <input type="text" name="bluetooth" id="bluetooth" value="<%= mobile.bluetooth %> ">
+                                <label for="bluethoot">bluethoot</label>
+                                <input type="text" name="bluethoot" id="bluethoot" value="<%= mobile.connectivity.bluethoot %> ">
                                 <span class="">
-                                    <%= locals.errores && errores.bluetooth ? errores.bluetooth.msg : null %>
+                                    <%= locals.errores && errores.bluethoot ? errores.bluethoot.msg : null %>
                                 </span>
                             </div>
                             <div class=" centrar">
                                 <label for="gps">GPS</label>
-                                <input type="text" name="gps" id="gps" value="<%= mobile.gps %> ">
+                                <input type="text" name="gps" id="gps" value="<%= mobile.connectivity.gps %> ">
 
                             </div>
                             <div class="centrar">
                                 <label for="usb">USB</label>
-                                <input type="text" name="usb" id="usb" value="<%= mobile.usb %> ">
+                                <input type="text" name="usb" id="usb" value="<%= mobile.connectivity.usb %> ">
                                 <span class="">
                                     <%= locals.errores && errores.usb ? errores.usb.msg : null %>
                                 </span>
                             </div>
                             <div class="centrar">
                                 <label for="nfc">NFC</label>
-                                <input type="text" name="nfc" id="nfc" value="<%= mobile.nfc %> ">
+                                <input type="text" name="nfc" id="nfc" value="<%= mobile.connectivity.nfc %> ">
 
                             </div>
                             <div class="centrar">
                                 <label for="infrared">Infrarrojo</label>
-                                <input type="text" name="infrared" id="infrared" value="<%= mobile.infrared %> ">
+                                <input type="text" name="infrared" id="infrared" value="<%= mobile.connectivity.infrared %> ">
 
                             </div>
 
@@ -301,29 +301,29 @@
                             <div class="centrar">
                                 <label for="displayType">Display Tipo</label>
                                 <input type="text" name="displayType" id="displayType"
-                                    value="<%= mobile.displayType %> ">
+                                    value="<%= mobile.display.displayType %> ">
 
                             </div>
                             <div class="centrar">
                                 <label for="displaySize">Display Tamaño</label>
                                 <input type="text" name="displaySize" id="displaySize"
-                                    value="<%= mobile.displaySize %> ">
+                                    value="<%= mobile.display.displaySize %> ">
 
                             </div>
                             <div class="centrar">
                                 <label for="displayResolution">Display Resolución</label>
                                 <input type="text" name="displayResolution" id="displayResolution"
-                                    value="<%= mobile.displayResolution %> ">
+                                    value="<%= mobile.display.displayResolution %> ">
 
                             </div>
                             <div class="centrar">
                                 <label for="density">Densidad</label>
-                                <input type="text" name="density" id="density" value="<%= mobile.density %> ">
+                                <input type="text" name="density" id="density" value="<%= mobile.display.density %> ">
 
                             </div>
                             <div class="centrar">
                                 <label for="protection">Protección</label>
-                                <input type="text" name="protection" id="protection" value="<%= mobile.protection %> ">
+                                <input type="text" name="protection" id="protection" value="<%= mobile.display.protection %> ">
 
                             </div>
 

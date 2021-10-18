@@ -14,7 +14,7 @@ router.post('/login',loginValidator,processLogin);
 router.get('/register',sessionCheck, register);
 router.post('/register',registerValidator,processRegister);
 router.get("/profile",userCheck,profile);
-router.put('/profile',avatarImageStore.single("avatar"),profileValidator, update);
+router.put('/profile',avatarImageStore.any("avatar"),profileValidator, update);
 router.get('/logout',userCheck,logout);
 
 
