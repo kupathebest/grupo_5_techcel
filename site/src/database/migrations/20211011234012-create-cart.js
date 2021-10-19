@@ -30,7 +30,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       total: {
-        type: Sequelize.DECIMAL(8,2)
+        type: Sequelize.DECIMAL(8,0)
       },
       createdAt: {
         allowNull: false,

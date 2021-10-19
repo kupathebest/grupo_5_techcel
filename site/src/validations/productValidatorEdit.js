@@ -87,7 +87,17 @@ const productValidatorEdit = [
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
-	
+	body('image')
+		.custom((value, { req }) => {
+			if(req.files.length === 3 || req.files.length === 0 ){
+				return true
+			}else{
+				return false
+			}
+		})
+		.withMessage('Debes agregar 3 imagenes'),
+
+
 
 ]
 

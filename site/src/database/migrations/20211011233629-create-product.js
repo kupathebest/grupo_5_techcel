@@ -18,7 +18,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       price: {
-        type: Sequelize.DECIMAL(8,2),
+        type: Sequelize.DECIMAL(8,0),
       },
       edge: {
         type: Sequelize.STRING

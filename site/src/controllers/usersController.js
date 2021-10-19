@@ -136,7 +136,12 @@ module.exports = {
                             id: req.session.userLogin.avatarId
                         }
                     })
-                    .then(() => console.log('Imagen actualizada con exito'))
+                    .then(() => {
+                        if (fs.existsSync(path.join(__dirname, '../../public/images/usuarios', req.session.userLogin.avatar))) {
+                            fs.unlinkSync(path.join(__dirname, '../../public/images/usuarios', req.session.userLogin.avatar))
+                        }
+                        console.log('Imagen actualizada con exito')
+                    })
             }
                
 

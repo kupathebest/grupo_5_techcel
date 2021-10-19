@@ -195,7 +195,6 @@ module.exports = {
     },
     update: (req, res) => {
         let errors = validationResult(req);
-
         if (errors.isEmpty()) {
             let { shortName, longName, brand, price, category, displayP, processorP, memoryP, storageP, expansionP, cameraP, batteryP, osP, profileP, weightP, colour, twoG, threeG, fourG, fiveG, gprs, edge, sim, displayType, displaySize, displayResolution, density, protection, rearCamera, videoCamera, frontalCamera, wifi, bluethoot, gps, usb, nfc, infrared, fastCharge, wirelessCharge } = req.body;
 
@@ -301,6 +300,39 @@ module.exports = {
                                 })
                         })
                         .then(response => {
+                            if(req.files.length != 0){
+                                let imagen1 = db.Image.update({
+                                    file : req.files[0].filename
+                                },{
+                                    where : {
+                                        id : celular.images[0].id
+                                    }
+                                })
+                                let imagen2 = db.Image.update({
+                                    file : req.files[1].filename
+                                },{
+                                    where : {
+                                        id : celular.images[1].id
+                                    }
+                                })
+                                let imagen3 = db.Image.update({
+                                    file : req.files[2].filename
+                                },{
+                                    where : {
+                                        id : celular.images[2].id
+                                    }
+                                })
+                                Promise.all(([imagen1, imagen2, imagen3]))
+                                .then(([imagen1, imagen2, imagen3]) => {
+                                    celular.images.forEach(item => {
+                                        if (fs.existsSync(path.join(__dirname, '../../public/images/equipos', item.file))) {
+                                            fs.unlinkSync(path.join(__dirname, '../../public/images/equipos', item.file))
+                                        }
+                                    });
+                                    console.log("imagenes actualizadas con exito")
+                                    return res.redirect('/admin');
+                                })
+                            }
                             console.log(response)
                             return res.redirect('/admin');
                         })
@@ -333,10 +365,11 @@ module.exports = {
         db.Product.findByPk(req.params.id, {
             include: ['category', 'images', 'colour', 'mainFeature', 'display', 'camera', 'net', 'connectivity', 'battery']
         })
-            .then(celulares => {
-                celulares.images.forEach(image => {
-                    if (fs.existsSync(path.join(__dirname, '../public/images', image.file))) {
-                        fs.unlinkSync(path.join(__dirname, '../public/images', image.file))
+            .then(celular => {
+                
+                celular.images.forEach(item => {
+                    if (fs.existsSync(path.join(__dirname, '../../public/images/equipos', item.file))) {
+                        fs.unlinkSync(path.join(__dirname, '../../public/images/equipos', item.file))
                     }
                 });
                 db.Product.destroy({
