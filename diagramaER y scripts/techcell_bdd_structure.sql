@@ -28,7 +28,7 @@ CREATE TABLE `avatars` (
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -45,7 +45,7 @@ CREATE TABLE `batteries` (
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -63,7 +63,7 @@ CREATE TABLE `cameras` (
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -78,7 +78,7 @@ CREATE TABLE `carts` (
   `userId` int DEFAULT NULL,
   `productId` int DEFAULT NULL,
   `quantity` int DEFAULT NULL,
-  `total` decimal(8,2) DEFAULT NULL,
+  `total` decimal(8,0) DEFAULT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`),
@@ -139,7 +139,7 @@ CREATE TABLE `connectivities` (
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -159,7 +159,7 @@ CREATE TABLE `displays` (
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -178,7 +178,7 @@ CREATE TABLE `images` (
   PRIMARY KEY (`id`),
   KEY `productId` (`productId`),
   CONSTRAINT `images_ibfk_1` FOREIGN KEY (`productId`) REFERENCES `products` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=94 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -203,7 +203,7 @@ CREATE TABLE `mainfeatures` (
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -224,7 +224,7 @@ CREATE TABLE `nets` (
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -239,7 +239,7 @@ CREATE TABLE `products` (
   `shortName` varchar(255) DEFAULT NULL,
   `longName` varchar(255) DEFAULT NULL,
   `brand` varchar(255) DEFAULT NULL,
-  `price` decimal(8,2) DEFAULT NULL,
+  `price` decimal(8,0) DEFAULT NULL,
   `edge` varchar(255) DEFAULT NULL,
   `colourId` int DEFAULT NULL,
   `categoryId` int DEFAULT NULL,
@@ -260,15 +260,15 @@ CREATE TABLE `products` (
   KEY `netId` (`netId`),
   KEY `connectivityId` (`connectivityId`),
   KEY `batteryId` (`batteryId`),
-  CONSTRAINT `products_ibfk_1` FOREIGN KEY (`colourId`) REFERENCES `colours` (`id`),
-  CONSTRAINT `products_ibfk_2` FOREIGN KEY (`categoryId`) REFERENCES `categories` (`id`),
-  CONSTRAINT `products_ibfk_3` FOREIGN KEY (`mainFeatureId`) REFERENCES `mainfeatures` (`id`),
-  CONSTRAINT `products_ibfk_4` FOREIGN KEY (`displayId`) REFERENCES `displays` (`id`),
-  CONSTRAINT `products_ibfk_5` FOREIGN KEY (`cameraId`) REFERENCES `cameras` (`id`),
-  CONSTRAINT `products_ibfk_6` FOREIGN KEY (`netId`) REFERENCES `nets` (`id`),
-  CONSTRAINT `products_ibfk_7` FOREIGN KEY (`connectivityId`) REFERENCES `connectivities` (`id`),
-  CONSTRAINT `products_ibfk_8` FOREIGN KEY (`batteryId`) REFERENCES `batteries` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  CONSTRAINT `products_ibfk_1` FOREIGN KEY (`colourId`) REFERENCES `colours` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `products_ibfk_2` FOREIGN KEY (`categoryId`) REFERENCES `categories` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `products_ibfk_3` FOREIGN KEY (`mainFeatureId`) REFERENCES `mainfeatures` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `products_ibfk_4` FOREIGN KEY (`displayId`) REFERENCES `displays` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `products_ibfk_5` FOREIGN KEY (`cameraId`) REFERENCES `cameras` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `products_ibfk_6` FOREIGN KEY (`netId`) REFERENCES `nets` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `products_ibfk_7` FOREIGN KEY (`connectivityId`) REFERENCES `connectivities` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `products_ibfk_8` FOREIGN KEY (`batteryId`) REFERENCES `batteries` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -321,4 +321,4 @@ CREATE TABLE `users` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-14 16:27:15
+-- Dump completed on 2021-10-18 23:56:42
