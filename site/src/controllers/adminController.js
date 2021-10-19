@@ -330,12 +330,6 @@ module.exports = {
     },
     destroy: (req, res) => {
 
-        db.Product.destroy(
-            {
-                where: { id: req.params.id }
-            }
-        )
-        res.redirect('/admin');
         db.Product.findByPk(req.params.id, {
             include: ['category', 'images', 'colour', 'mainFeature', 'display', 'camera', 'net', 'connectivity', 'battery']
         })
