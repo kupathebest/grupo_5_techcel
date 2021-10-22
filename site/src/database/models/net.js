@@ -17,10 +17,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Net.init({
-    twoG: DataTypes.STRING,
-    threeG: DataTypes.STRING,
-    fourG: DataTypes.STRING,
-    fiveG: DataTypes.STRING,
+    twog: DataTypes.STRING,
+    threeg: DataTypes.STRING,
+    fourg: DataTypes.STRING,
+    fiveg: DataTypes.STRING,
     gprs: DataTypes.STRING,
     sim: DataTypes.STRING
   }, {

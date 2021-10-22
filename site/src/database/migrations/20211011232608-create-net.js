@@ -8,16 +8,16 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      twoG: {
+      twog: {
         type: Sequelize.STRING
       },
-      threeG: {
+      threeg: {
         type: Sequelize.STRING
       },
-      fourG: {
+      fourg: {
         type: Sequelize.STRING
       },
-      fiveG: {
+      fiveg: {
         type: Sequelize.STRING
       },
       gprs: {

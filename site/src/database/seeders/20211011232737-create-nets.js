@@ -5,10 +5,10 @@ const nets = []
 
 products.forEach(celular => {
   let item = {
-    twoG: celular.dosg,
-    threeG: celular.tresg,
-    fourG: celular.cuatrog,
-    fiveG: celular.cincog,
+    twog: celular.dosg,
+    threeg: celular.tresg,
+    fourg: celular.cuatrog,
+    fiveg: celular.cincog,
     gprs: celular.gprs,
     sim: celular.sim,
     createdAt: new Date,

@@ -5,8 +5,8 @@ const cameras = []
 
 products.forEach(celular => {
   let item = {
-    rearCamera: celular.camaraPrincipal,
-    frontalCamera: celular.camaraFrontal,
+    mainCamera: celular.camaraPrincipal,
+    frontCamera: celular.camaraFrontal,
     videoCamera: celular.camaraVideo,
     createdAt: new Date,
     updatedAt : new Date

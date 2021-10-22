@@ -11,7 +11,7 @@ module.exports = {
       wifi: {
         type: Sequelize.STRING,
       },
-      bluethoot: {
+      bluetooth: {
         type: Sequelize.STRING
       },
       gps: {

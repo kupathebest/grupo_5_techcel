@@ -76,7 +76,7 @@ module.exports = {
             )
             let cameraId = db.Camera.create(
                 {
-                    rearCamera : mainCamera.trim(),
+                    mainCamera : mainCamera.trim(),
                     videoCamera : videoCamera.trim(),
                     frontCamera : frontCamera.trim(),
                     fastCharge : fastCharge.trim()
@@ -196,7 +196,7 @@ module.exports = {
     update: (req, res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-            let { shortName, longName, brand, price, category, displayP, processorP, memoryP, storageP, expansionP, cameraP, batteryP, osP, profileP, weightP, colour, twoG, threeG, fourG, fiveG, gprs, edge, sim, displayType, displaySize, displayResolution, density, protection, rearCamera, videoCamera, frontalCamera, wifi, bluethoot, gps, usb, nfc, infrared, fastCharge, wirelessCharge } = req.body;
+            let { shortName, longName, brand, price, category, displayP, processorP, memoryP, storageP, expansionP, cameraP, batteryP, osP, profileP, weightP, colour, twog, threeg, fourg, fiveg, gprs, edge, sim, displayType, displaySize, displayResolution, density, protection, mainCamera, videoCamera, frontCamera, wifi, bluetooth, gps, usb, nfc, infrared, fastCharge, wirelessCharge } = req.body;
 
             db.Product.findByPk(req.params.id, {
                 include: ['category', 'images', 'colour', 'mainFeature', 'display', 'camera', 'net', 'connectivity', 'battery']
@@ -232,10 +232,10 @@ module.exports = {
                             }
                         })
                     let net = db.Net.update({
-                        twoG,
-                        threeG,
-                        fourG,
-                        fiveG,
+                        twog,
+                        threeg,
+                        fourg,
+                        fiveg,
                         gprs,
                         sim
                     },
@@ -245,8 +245,8 @@ module.exports = {
                             }
                         })
                     let camera = db.Camera.update({
-                        rearCamera,
-                        frontalCamera,
+                        mainCamera,
+                        frontCamera,
                         videoCamera
                     },
                         {
@@ -256,7 +256,7 @@ module.exports = {
                         })
                     let connectivity = db.Connectivity.update({
                         wifi,
-                        bluethoot,
+                        bluetooth,
                         gps,
                         usb,
                         nfc,

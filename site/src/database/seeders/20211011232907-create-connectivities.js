@@ -6,7 +6,7 @@ const connectivities = []
 products.forEach(celular => {
   let item = {
     wifi: celular.wifi,
-    bluethoot: celular.bluetooth,
+    bluetooth: celular.bluetooth,
     gps: celular.gps,
     usb: celular.usb,
     nfc: celular.nfc,

@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
   };
   Connectivity.init({
     wifi: DataTypes.STRING,
-    bluethoot: DataTypes.STRING,
+    bluetooth: DataTypes.STRING,
     gps: DataTypes.STRING,
     usb: DataTypes.STRING,
     nfc: DataTypes.STRING,

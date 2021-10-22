@@ -17,8 +17,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Camera.init({
-    rearCamera: DataTypes.STRING,
-    frontalCamera: DataTypes.STRING,
+    mainCamera: DataTypes.STRING,
+    frontCamera: DataTypes.STRING,
     videoCamera: DataTypes.STRING
   }, {
     sequelize,

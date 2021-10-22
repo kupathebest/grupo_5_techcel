@@ -59,23 +59,23 @@ const productValidatorEdit = [
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
-	check('twoG')
+	check('twog')
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
-	check('threeG')
+	check('threeg')
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
-	check('fourG')
+	check('fourg')
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
-	check('fiveG')
+	check('fiveg')
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
-	check('bluethoot')
+	check('bluetooth')
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 

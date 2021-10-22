@@ -8,10 +8,10 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      rearCamera: {
+      mainCamera: {
         type: Sequelize.STRING
       },
-      frontalCamera: {
+      frontCamera: {
         type: Sequelize.STRING
       },
       videoCamera: {
