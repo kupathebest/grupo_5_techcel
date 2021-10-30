@@ -6,7 +6,7 @@
     <%-include('../partials/header')  %> 
 
     <main class="">
-     <form action="" method="POST">
+     <form action="" method="POST" id= "form-login">
 
     <div class="box-inicia">
         
@@ -24,17 +24,30 @@
     </div>
 
         <div class="box-form">
-        <label for="email"></label>
-        <input class="email" type="email" name= "email"id= "email" placeholder= "Correo electronico">
+            <div class="container-input">
+                <input class="email" type="email" name="email" id="email" placeholder= "Correo electronico">
+                <span id="email-error"></span>
+                <div class="container-icons">
+                    <i class="fas fa-check success ocultar" id="icono-success-email"></i>
+                    <i class="fas fa-exclamation-circle error ocultar" id="icono-error-email"></i>
+                </div>
+            </div>
+            
     </div>
     
     <div class="box-form">
-        <label for="password"></label>
-        <input class="password" type="password" name= "password" id= "password"placeholder= "Contraseña">
-       
+        <div class="container-input">
+            <input class="password" type="password" name= "password" id= "password"placeholder= "Contraseña">
+            <span id="password-error"></span>
+            <div class="container-icons">
+                <i class="fas fa-check success ocultar" id="icono-success-email"></i>
+                <i class="fas fa-exclamation-circle error ocultar" id="icono-error-email"></i>
+            </div>
+        </div> 
     </div>
-    <div class="error">
+    <div class="mensaje">
     <span class=""><%= locals.errores && errores.email ? errores.email.msg : null %> </span>
+    <span id="span-error"></span>
 </div>
     <div class= "recordarId">
         
@@ -58,6 +71,7 @@
 </main>
 
 <%-include('../partials/footer')  %> 
+<script src="/javascripts/login.js"></script>
     
 </body>
 </html>
