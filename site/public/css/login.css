@@ -139,16 +139,20 @@
     font-size: 1.2rem;
 }
 
+.login .error2 {
+    position: relative;
+    right: -102px;
+    bottom: 38px;
+    color: red;
+    font-size: 1.2rem;
+}
+
 .login .success{
     position: relative;
     right: -102px;
     bottom: 38px;
     color: green;
     font-size: 1.2rem;
-}
-
-.login .mostrar{
-    display: block;
 }
 
 .login .ocultar{
@@ -179,7 +183,7 @@
       
 }
 
-.login .error {
+.login .error, .login .error2 {
     right: -152px;
 }
 
@@ -195,7 +199,7 @@
     width: 420px;
 }
 
-.login .error {
+.login .error, .login .error2{
     right: -190px;
 }
 
