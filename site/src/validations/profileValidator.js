@@ -10,11 +10,11 @@ module.exports = [
     check('lastName')
         .notEmpty().withMessage('*El apellido es obligatorio'),
 
-    check('password0')
+    check('password')
         .notEmpty().withMessage('*Debes ingresar tu contraseña'),
 
 
-    body('password0')
+    body('password')
         .custom((value, { req }) => {
             return db.User.findOne({
                 where: {
@@ -22,8 +22,6 @@ module.exports = [
                 }
             })
                 .then(usuario => {
-
-
                     if(!usuario || !bcryptjs.compareSync(value, usuario.password)){
                         return Promise.reject()
                     }

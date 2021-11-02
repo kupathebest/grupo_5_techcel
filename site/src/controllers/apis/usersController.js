@@ -31,7 +31,6 @@ module.exports = {
         }
     },
     verifyPassword: async (req, res) => {
-        console.log(req.body)
         try {
             let user = await db.User.findOne({
                 where: { email: req.body.email }

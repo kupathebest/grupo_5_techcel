@@ -54,10 +54,8 @@ window.addEventListener('load', () => {
                 $('password-error').innerText = "* Debes ingresar la contraseña"
                 $('password').classList.remove('input-success')
                 $('password').classList.add('input-error')
-                $('icono-error-password').classList.remove('ocultar')
-                $('icono-error-password').classList.remove('error2')
                 $('icono-error-password').classList.add('error')
-                $('icono-success-password').classList.add('ocultar')
+                $('icono-error-password').classList.remove('ocultar')
             }
     
         })
@@ -70,7 +68,7 @@ window.addEventListener('load', () => {
                 $('icono-error-password').classList.remove('ocultar')
                 $('icono-error-password').classList.remove('error2')
                 $('icono-error-password').classList.add('error')
-                $('icono-success-password').classList.add('ocultar')
+                
             }else{
                 $('password').classList.remove('input-error')
                     $('password-error').innerText = null
@@ -84,8 +82,6 @@ window.addEventListener('load', () => {
             $('password').classList.remove('input-error')
             $('password-error').innerText = null
             $('icono-error-password').classList.add('ocultar')
-            $('email').classList.remove('input-error')
-            $('icono-error-email').classList.add('ocultar')
         })
 
        
@@ -95,7 +91,7 @@ window.addEventListener('load', () => {
             let elementsForm = $('form-login').elements;
             let errores = false
 
-            for (let i = 0; i < elementsForm.length - 2; i++) {
+            for (let i = 0; i < elementsForm.length - 3; i++) {
             
                 if(!elementsForm[i].value){
                     elementsForm[i].classList.add('input-error')
@@ -103,7 +99,7 @@ window.addEventListener('load', () => {
                 }
             }
 
-            for (let i = 0; i < elementsForm.length - 2; i++) {
+            for (let i = 0; i < elementsForm.length - 3; i++) {
             
                 if(elementsForm[i].classList.contains('input-error')){
                     $('span-error').innerText = "* Credenciales incorrectas"

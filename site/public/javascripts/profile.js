@@ -1,23 +1,20 @@
-const $ = id => document.getElementById(id);
-const regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
 let regExLetter = /^[A-Z ]+$/i;
 let regExPass = /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/;
 
-
-const emailVerify = async (email) => {
-    try {
-        let response = await fetch(window.origin + '/apis/get-emails');
-        let result = await response.json()
-
-        return result.data.includes(email)
-
-
-    } catch (error) {
-        console.log(error)
-    }
-}
-
 window.addEventListener('load', () => {
+    const $ = id => document.getElementById(id);
+    let imgPreview = $('img-preview');
+    let inputAvatar = $('avatar');
+    let formProfile = $('form-profile');
+    
+    
+    inputAvatar.addEventListener('change', (e) => {
+    
+        let reader = new FileReader();
+        reader.readAsDataURL(e.target.files[0]);
+    
+        reader.onload = () => imgPreview.src = reader.result
+    })
 
     $('name').addEventListener('focus', () => {
         if ($('name').value.trim() === "") {
@@ -26,6 +23,7 @@ window.addEventListener('load', () => {
             $('name').classList.add('input-error')
             $('icono-error-name').classList.remove('ocultar')
             $('icono-success-name').classList.add('ocultar')
+            $('error-empty').innerText = null;
         }
     })
     $('name').addEventListener('blur', () => {
@@ -37,6 +35,7 @@ window.addEventListener('load', () => {
                 $('name').classList.add('input-error')
                 $('icono-error-name').classList.remove('ocultar')
                 $('icono-success-name').classList.add('ocultar')
+                $('error-empty').innerText = null;
 
                 break;
             case $('name').value.trim().length < 2:
@@ -45,6 +44,7 @@ window.addEventListener('load', () => {
                 $('name').classList.add('input-error')
                 $('icono-error-name').classList.remove('ocultar')
                 $('icono-success-name').classList.add('ocultar')
+                $('error-empty').innerText = null;
 
                 break;
             case !regExLetter.test($('name').value.trim()):
@@ -53,6 +53,7 @@ window.addEventListener('load', () => {
                 $('name').classList.add('input-error')
                 $('icono-error-name').classList.remove('ocultar')
                 $('icono-success-name').classList.add('ocultar')
+                $('error-empty').innerText = null;
 
                 break;
             default:
@@ -61,13 +62,17 @@ window.addEventListener('load', () => {
                 $('name-error').innerText = null
                 $('icono-error-name').classList.add('ocultar')
                 $('icono-success-name').classList.remove('ocultar')
+                $('error-empty').innerText = null;
                 break;
         }
     })
     $('name').addEventListener('keydown', () => {
         $('name').classList.remove('input-error')
+        $('name').classList.remove('input-success')
         $('name-error').innerText = null
         $('icono-error-name').classList.add('ocultar')
+        $('icono-error-success').classList.add('ocultar')
+        $('error-empty').innerText = null;
     })
 
     $('lastName').addEventListener('focus', () => {
@@ -77,6 +82,7 @@ window.addEventListener('load', () => {
             $('lastName').classList.add('input-error')
             $('icono-error-lastName').classList.remove('ocultar')
             $('icono-success-lastName').classList.add('ocultar')
+            $('error-empty').innerText = null;
         }
     })
     $('lastName').addEventListener('blur', () => {
@@ -88,6 +94,7 @@ window.addEventListener('load', () => {
                 $('lastName').classList.add('input-error')
                 $('icono-error-lastName').classList.remove('ocultar')
                 $('icono-success-lastName').classList.add('ocultar')
+                $('error-empty').innerText = null;
 
                 break;
             case $('lastName').value.trim().length < 2:
@@ -96,6 +103,7 @@ window.addEventListener('load', () => {
                 $('lastName').classList.add('input-error')
                 $('icono-error-lastName').classList.remove('ocultar')
                 $('icono-success-lastName').classList.add('ocultar')
+                $('error-empty').innerText = null;
 
                 break;
             case !regExLetter.test($('lastName').value.trim()):
@@ -104,6 +112,7 @@ window.addEventListener('load', () => {
                 $('lastName').classList.add('input-error')
                 $('icono-error-lastName').classList.remove('ocultar')
                 $('icono-success-lastName').classList.add('ocultar')
+                $('error-empty').innerText = null;
 
                 break;
             default:
@@ -112,6 +121,7 @@ window.addEventListener('load', () => {
                 $('lastName-error').innerText = null
                 $('icono-error-lastName').classList.add('ocultar')
                 $('icono-success-lastName').classList.remove('ocultar')
+                $('error-empty').innerText = null;
                 break;
         }
     })
@@ -119,54 +129,22 @@ window.addEventListener('load', () => {
         $('lastName').classList.remove('input-error')
         $('lastName-error').innerText = null
         $('icono-error-lastName').classList.add('ocultar')
-    })
-
-    $('email').addEventListener('blur', async () => {
-
-        switch (true) {
-            case !regExEmail.test($('email').value):
-                $('email-error').innerText = "* Tiene que ser un email válido"
-                $('email').classList.remove('input-success')
-                $('email').classList.add('input-error')
-                $('icono-error-email').classList.remove('ocultar')
-                $('icono-success-email').classList.add('ocultar')
-                break;
-            case await emailVerify($('email').value):
-                $('email-error').innerText = "* El email ya está registrado"
-                $('email').classList.remove('input-success')
-                $('email').classList.add('input-error')
-                $('icono-error-email').classList.remove('ocultar')
-                $('icono-success-email').classList.add('ocultar')
-                break;
-            default:
-                $('email').classList.remove('input-error')
-                $('email').classList.add('input-success')
-                $('email-error').innerText = null
-                $('icono-error-email').classList.add('ocultar')
-                $('icono-success-email').classList.remove('ocultar')
-                break;
-        }
-    })
-
-    $('email').addEventListener('keydown', () => {
-        $('email').classList.remove('input-error')
-        $('email-error').innerText = null
-        $('icono-error-email').classList.add('ocultar')
+        $('error-empty').innerText = null;
     })
 
     $('password').addEventListener('blur', () => {
-        if (!regExPass.test($('password').value)) {
-            $('password-error').innerText = "* Ingrese mayúscula, número y de 8 a 16 caracteres"
+        if ($('password').value === "") {
+            $('password-error').innerText = "* Debes ingresar tu contraseña para guardar los cambios"
             $('password').classList.remove('input-success')
             $('password').classList.add('input-error')
             $('icono-error-password').classList.remove('ocultar')
             $('icono-success-password').classList.add('ocultar')
+            $('error-empty').innerText = null;
         } else {
             $('password').classList.remove('input-error')
-            $('password').classList.add('input-success')
             $('password-error').innerText = null
             $('icono-error-password').classList.add('ocultar')
-            $('icono-success-password').classList.remove('ocultar')
+            $('error-empty').innerText = null;
         }
     })
 
@@ -174,102 +152,143 @@ window.addEventListener('load', () => {
         $('password').classList.remove('input-error')
         $('password-error').innerText = null
         $('icono-error-password').classList.add('ocultar')
+        $('error-empty').innerText = null;
+    })
+
+    $('password1').addEventListener('blur', () => {
+        if($('password1').value !== ""){
+            if (!regExPass.test($('password1').value)) {
+                $('password1-error').innerText = "* Ingrese mayúscula, número y de 8 a 16 caracteres"
+                $('password1').classList.remove('input-success')
+                $('password1').classList.add('input-error')
+                $('icono-error-password1').classList.remove('ocultar')
+                $('icono-success-password1').classList.add('ocultar')
+                $('error-empty').innerText = null;
+            } else {
+                $('password1').classList.remove('input-error')
+                $('password1-error').innerText = null
+                $('icono-error-password1').classList.add('ocultar')
+                $('icono-success-password1').classList.add('ocultar')
+                $('error-empty').innerText = null;
+            }
+        }else{
+            $('password1').classList.remove('input-error')
+                $('password1-error').innerText = null
+                $('icono-error-password1').classList.add('ocultar')
+                $('icono-success-password1').classList.add('ocultar')
+                $('error-empty').innerText = null;
+        }
+        
+    })
+
+    $('password1').addEventListener('focus', () => {
+        $('password1').classList.remove('input-error')
+        $('password1-error').innerText = null
+        $('icono-error-password1').classList.add('ocultar')
         $('password2').classList.remove('input-error')
         $('password2').classList.remove('input-success')
         $('password2-error').innerText = null
         $('icono-error-password2').classList.add('ocultar')
         $('icono-success-password2').classList.add('ocultar')
+        $('error-empty').innerText = null;
     })
 
     $('password2').addEventListener('blur',() => {
-        if($('password').value !== $('password2').value){
-            $('password2-error').innerText = "Las contraseñas no coinciden"
+        if($('password1').value !== $('password2').value){
+            $('password2-error').innerText = "* Las contraseñas no coinciden"
             $('password2').classList.remove('input-success')
             $('password2').classList.add('input-error')
             $('icono-error-password2').classList.remove('ocultar')
             $('icono-success-password2').classList.add('ocultar')
-        }else if($('password').value == ""){
-            $('password2-error').innerText = "Debes ingresar una contraseña"
-            $('password2').classList.remove('input-success')
-            $('password2').classList.add('input-error')
-            $('icono-error-password2').classList.remove('ocultar')
-            $('icono-success-password2').classList.add('ocultar')
+            $('error-empty').innerText = null;
         }else{
             $('password2').classList.remove('input-error')
-            $('password2').classList.add('input-success')
             $('password2-error').innerText = null
             $('icono-error-password2').classList.add('ocultar')
-            $('icono-success-password2').classList.remove('ocultar')
+            $('icono-success-password2').classList.add('ocultar')
+            $('error-empty').innerText = null;
         }
     })
     $('password2').addEventListener('focus',()=> {
         $('password2').classList.remove('input-error')
+        $('error-empty').innerText = null;
 
     })
 
-    $('terms').addEventListener('click', () => {
-        $('terms-label').classList.toggle('check-success');
-        $('terms-label').classList.remove('check-error');
-        $('terms-error').innerText = null
-
-    })
-
-    $('form-register').addEventListener('submit', event => {
+    formProfile.addEventListener('submit', async event => {
         event.preventDefault();
 
-        let elementsForm = $('form-register').elements;
+        let elementsForm = formProfile.elements;
         
         let error = false;
 
-        for (let i = 0; i < elementsForm.length - 1; i++) {
+        for (let i = 0; i < elementsForm.length - 6; i++) {
             
             if(!elementsForm[i].value){
                 elementsForm[i].classList.add('input-error')
                 $('error-empty').innerText = "Los campos señalados son obligatorios";
+                console.log(elementsForm)
                 error = true
             }
         }
 
-        if(!$('terms').checked) {
-            
-            $('terms').classList.add('check-error')
-            $('terms-error').innerText = "Debes aceptar los términos y condiciones";
-            error = true
-        }
-
-        for (let i = 0; i < elementsForm.length - 1; i++) {
+        for (let i = 0; i < elementsForm.length - 6; i++) {
             
             if(elementsForm[i].classList.contains('input-error')){
                 error = true
             }
         }
 
-        if(!elementsForm[0].value){
-            $('name-error').innerText = "* El nombre es obligatorio"
-            $('icono-error-name').classList.remove('ocultar')
+        if(elementsForm[0].classList.contains('input-error')){
+            error = true 
         }
-        if(!elementsForm[1].value){
-            $('lastName-error').innerText = "* El apellido es obligatorio"
-            $('icono-error-lastName').classList.remove('ocultar')
+        if(elementsForm[1].classList.contains('input-error')){
+            error = true
         }
-        if(!elementsForm[2].value){
-            $('email-error').innerText = "* El email es obligatorio"
-            $('icono-error-email').classList.remove('ocultar')
-        }
-        if(!elementsForm[3].value){
-            $('password-error').innerText = "* Ingrese mayúscula, número y de 8 a 16 caracteres"
-            $('icono-error-password').classList.remove('ocultar')
-        }
-        if(!elementsForm[4].value){
-            $('password2-error').innerText = "* Las contraseñas no coinciden"
-            $('icono-error-password2').classList.remove('ocultar')
+        
+        if(elementsForm[5].value){
+            if(elementsForm[5].value !== elementsForm[6].value){
+                $('password2-error').innerText = "* Las contraseñas no coinciden"
+                $('icono-error-password2').classList.remove('ocultar')
+                error = true
+            }
+        }else{
+            $('password1').classList.remove('input-error')
+            $('password1-error').innerText = null
         }
 
-       
+        try {
+            let response = await fetch('/apis/verify-password',{
+                method : 'POST',
+                headers : {
+                    'Content-Type': 'application/json'
+                },
+                body : JSON.stringify({
+                    email : event.target.email.value,
+                    password : event.target.password.value
+                })
+            })
+            let result = await response.json();
+
+            if(elementsForm[3].classList.contains('input-error')){
+                $('password-error').innerText = "* Debes ingresar tu contraseña para guardar los cambios"
+                $('icono-error-password').classList.remove('ocultar')
+                error = true
+            }else if(!result.response){
+                $('password-error').innerText = "* Contraseña incorrecta"
+                error = true
+            }
+
+        } catch (error) {
+            console.log(error)
+        }
 
         if(!error){
-            $('form-register').submit()
+            $('form-profile').submit()
         }
     })
 
+    
 })
+
+
