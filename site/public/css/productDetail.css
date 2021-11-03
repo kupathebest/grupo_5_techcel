@@ -247,6 +247,9 @@
         max-width: 600px;
         margin: 0 auto;
     }
+    .detail .ver-mas{
+        display: none;
+    }
 
     .detail .mas h4{
         font-size: 1.3rem;
