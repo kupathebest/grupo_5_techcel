@@ -1,18 +1,26 @@
 const { check, body } = require('express-validator');
-const usuarios = require('../data/usuarios.json');
 const bcryptjs = require('bcryptjs');
 const db = require('../database/models');
+let regExPass = /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/;
+let regExLetter = /^[A-Z ]+$/i;
 
 module.exports = [
     check('name')
-        .notEmpty().withMessage('*El nombre es obligatorio'),
+    .notEmpty().withMessage('El nombre es obligatorio').bail()
+    .isLength({
+        min : 2
+    }).withMessage('El nombre debe tener como mínimo 2 caracteres').bail()
+    .matches(regExLetter).withMessage('El nombre solo debe contener letras'),
 
     check('lastName')
-        .notEmpty().withMessage('*El apellido es obligatorio'),
+        .notEmpty().withMessage('El apellido es obligatorio').bail()
+        .isLength({
+            min : 2
+        }).withMessage('El apellido debe tener como mínimo 2 caracteres').bail()
+        .isAlpha().withMessage('El apellido solo debe contener letras'),
 
     check('password')
-        .notEmpty().withMessage('*Debes ingresar tu contraseña'),
-
+        .notEmpty().withMessage('*Debes ingresar tu contraseña').bail(),
 
     body('password')
         .custom((value, { req }) => {
@@ -29,18 +37,18 @@ module.exports = [
         
         }),
 
-    body('password1')
+   /*  body('password1')
         .custom((value, { req }) => {
             if (value != "") {
 
-                if (value.length >= 8) {
+                if (value.matches(regExPass)) {
                     return true
                 } else {
                     return false
                 }
             }
             return true
-        }).withMessage('*La contraseña debe tener un mínimo de 8 caracteres'),
+        }).withMessage('*Ingrese mayúscula, número, caracter especial y de 8 a 16 caracteres'), */
 
     body('password2')
         .custom((value, { req }) => {
