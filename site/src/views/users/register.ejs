@@ -12,31 +12,57 @@
             </h1>
         </div>
         <div>
-            <form action="" method="POST">
-                <div>
+            <form action="" method="POST" id="form-register">
+                <h4 class="rojo" id="error-empty"></h3>
+                <div class= "container-input">
                     <label for="name"></label>
                     <input type="text" placeholder="Ingresa tu nombre" name="name" id="name"value= "<%= locals.old && old.name ? old.name : null %>">
                     <small class="rojo"><%= locals.errores && errores.name ? errores.name.msg : null %>  </small>
+                    <span id="name-error"></span>
+                <div class="container-icons">
+                    <i class="fas fa-check success ocultar " id="icono-success-name"></i>
+                    <i class="fas fa-exclamation-circle error ocultar" id="icono-error-name"></i>
                 </div>
-                <div>
+                </div>
+                <div class= "container-input">
                     <label for="lastName"></label>
                     <input type="text" placeholder="Ingresa tu apellido" name="lastName" id="lastName"value= "<%= locals.old && old.lastName ? old.lastName : null %>">
                     <small class="rojo"><%= locals.errores && errores.lastName ? errores.lastName.msg : null %> </small>
+                    <span id="lastName-error"></span>
+                <div class="container-icons">
+                    <i class="fas fa-check success ocultar" id="icono-success-lastName"></i>
+                    <i class="fas fa-exclamation-circle error ocultar" id="icono-error-lastName"></i>
                 </div>
-                <div>
+                </div>
+                <div class= "container-input">
                     <label for="email"></label>
                     <input type="text" placeholder="Ingresa tu Email" name="email" id="email"value= "<%= locals.old && old.email ? old.email : null %>">
                     <small class="rojo"><%= locals.errores && errores.email ? errores.email.msg : null %> </small>
+                    <span id="email-error"></span>
+                <div class="container-icons">
+                    <i class="fas fa-check success ocultar " id="icono-success-email"></i>
+                    <i class="fas fa-exclamation-circle error ocultar" id="icono-error-email"></i>
                 </div>
-                <div>
+                </div>
+                <div class= "container-input">  
                     <label for="password"></label>
                     <input type="password" placeholder="Ingresa tu contraseña" name="password" id="password">
                     <small class="rojo"><%= locals.errores && errores.password ? errores.password.msg : null %> </small>
+                    <span id="password-error"></span>
+                <div class="container-icons">
+                    <i class="fas fa-check success ocultar " id="icono-success-password"></i>
+                    <i class="fas fa-exclamation-circle error ocultar" id="icono-error-password"></i>
                 </div>
-                <div>
+                </div>
+                <div class= "container-input">
                     <label for="password2"></label>
                     <input type="password" placeholder="Confirma tu contraseña" name="password2" id="password2">
                     <small class="rojo"><%= locals.errores && errores.password2 ? errores.password2.msg : null %> </small>
+                    <span id="password2-error"></span>
+                <div class="container-icons">
+                    <i class="fas fa-check success ocultar " id="icono-success-password2"></i>
+                    <i class="fas fa-exclamation-circle error ocultar" id="icono-error-password2"></i>
+                </div>
                 </div>
         </div>
 
@@ -44,9 +70,10 @@
         <div class="terms">
             <div class="msj">
                 <input class="check" type="checkbox" id="terms" value="terms" name="terms">
-                <label class="text" for="terms"> Acepto términos y condiciones</label>
+                <label class="text" for="terms" id="terms-label">Acepto términos y condiciones</label>
             </div>
             <small class="rojo"><%= locals.errores && errores.terms ? errores.terms.msg : null %> </small>
+            <span class ="rojo" id="terms-error"></span>
         </div>
        
 
@@ -60,6 +87,7 @@
     </main>
     
     <%-include('../partials/footer')  %> 
+    <script src="/javascripts/register.js"></script>
     
 </body>
 
