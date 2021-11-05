@@ -3,12 +3,20 @@
         <div class="lista1">
             <nav>
                 <ul class="contactanos">
-                    <li><a href="/contactanos"><i class="far fa-envelope"></i>Contactanos</a></li>
-                            <% if (locals.userLogin) { %>
-                                <% if (userLogin.rolId === 1) { %>
-                                    <li><a href="/admin"><i class="fas fa-briefcase"></i>Administrador</a></li>
-                                <% } %>
+
+                    <% if (locals.userLogin) { %>
+                        <% if (userLogin.rolId !==1) { %>
+                            <li><a href="/contactanos"><i class="far fa-envelope"></i>Contactanos</a></li>
+                            <% }%>
+                                <% } else { %>
+                                    <li><a href="/contactanos"><i class="far fa-envelope"></i>Contactanos</a></li>
+                                    <% } %>
+                    
+                    <% if (locals.userLogin) { %>
+                        <% if (userLogin.rolId===1) { %>
+                            <li><a href="/admin"><i class="fas fa-briefcase"></i>Administrador</a></li>
                             <% } %>
+                                <% } %>
                 </ul>
             </nav>
         </div>
@@ -16,8 +24,11 @@
             <nav>
                 <ul class="lista2">
                     <% if (locals.userLogin) { %>
-                        <li><a href="/users/profile"><img class="mini-avatar" src="/images/usuarios/<%= locals.userLogin.avatar %>" alt=""></a></li>
-                        <li><a href="/users/profile"><%=locals.userLogin.name %></a></li>
+                        <li><a href="/users/profile"><img class="mini-avatar"
+                                    src="/images/usuarios/<%= locals.userLogin.avatar %>" alt=""></a></li>
+                        <li><a href="/users/profile">
+                                <%=locals.userLogin.name %>
+                            </a></li>
                         <li><a href="/users/logout" class="border">Cerrar sesión</a></li>
 
                         <% }else{ %>
@@ -34,9 +45,13 @@
         </div>
     </div>
     <div class="contenedor">
-        <div class="burger">
+        <div class="toggle burger">
+
             <i class="fas fa-bars"></i>
+
         </div>
+
+        
         <div class="logo">
             <a href="/"><img src="/images/logo-techcel-blanco.png" alt=""></a>
         </div>
@@ -48,7 +63,7 @@
         </div>
         <div class="iconos">
             <div>
-                <a href="/"><i class="fas fa-search"></i></a>
+                <a href="/productos"><i class="fas fa-search"></i></a>
             </div>
             <div>
                 <a href="/users/login"><i class="far fa-user"></i></a>
@@ -57,15 +72,34 @@
                 <a href="/cart"><i class="fas fa-shopping-cart"></i></a>
             </div>
         </div>
+
+
+        
+    </div>
+    <div class="menu-desplegable menu-desplegable_visible">
+        <ul class="ul-drop-down">
+            <li><a href="/">Home</a></li>
+            <li><a href="/comocomprar">¿Cómo comprar?</a></li>
+            <li><a href="/productos">Productos</a></li>
+            <li><a href="/about">Acerca de nosotros</a></li>
+            <li><a href="/envios">Envíos</a></li>
+            <li><a href="/contactanos">Contactanos</a></li>
+            <% if (locals.userLogin) { %>
+                <% if (userLogin.rolId===1) { %>
+                    <li><a href="/admin">Administrador</a></li>
+                    <% } %>
+                        <% } %>
+        </ul>
     </div>
     <div>
         <nav class="titulo">
             <ul class="lista3">
                 <li><a href="/">Home</a></li>
-                <li><a href="/comocomprar">¿Como comprar?</a></li>
+                <li><a href="/comocomprar">¿Cómo comprar?</a></li>
                 <li><a href="/productos">Productos</a></li>
                 <li><a href="/about">Acerca de nosotros</a></li>
             </ul>
         </nav>
     </div>
+    <script src="/javascripts/dropDown.js"></script>
 </header>

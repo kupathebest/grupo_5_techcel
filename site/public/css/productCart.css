@@ -140,14 +140,14 @@
 }
 
 /*/*** fin BOTONES****/
-.cart .titulo{
+.cart .container-productos .titulo{
     color: var(--Fucsia);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.cart .titulo .titulo-carrito{
+.cart .container-productos .titulo .titulo-carrito{
     font-size: 12px;
 }
 
