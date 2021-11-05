@@ -168,3 +168,39 @@ ________________________________________________________________________________
 - Reuniones de acuerdo a las fechas pactadas con anterioridad.
 
 
+
+_______________________________________________________________________________________________________________________________
+
+
+
+<h1>Retrospectiva 6</h1>
+
+<h3>Seguir haciendo:</h3>
+
+- Informar al grupo de las tareas realizadas.
+
+- Priorizar el Sprint por sobre otras tareas.
+
+- Afianzar el contenido de la cursada.
+
+
+<h3>Hacer menos:</h3>
+
+- El trabajo mayormente en forma grupal.
+
+
+<h3>Dejar de hacer:</h3> 
+ 
+- Tratar de que los problemas externos no afecten al trabajo del grupo.
+
+
+<h3>Hacer mas:</h3>
+
+- Trabajo en forma individual.
+
+- Dividir el sprint en pequeñas tareas entre los integrantes del grupo con fechas limites proximas.
+
+
+<h3>Empezar a hacer:</h3>
+
+- Reuniones de acuerdo a las fechas pactadas con anterioridad.
