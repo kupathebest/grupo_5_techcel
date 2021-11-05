@@ -35,28 +35,6 @@ module.exports = [
                     }
                 }).catch( () => Promise.reject('Credenciales inválidas'))
         
-        }),
-
-   /*  body('password1')
-        .custom((value, { req }) => {
-            if (value != "") {
-
-                if (value.matches(regExPass)) {
-                    return true
-                } else {
-                    return false
-                }
-            }
-            return true
-        }).withMessage('*Ingrese mayúscula, número, caracter especial y de 8 a 16 caracteres'), */
-
-    body('password2')
-        .custom((value, { req }) => {
-            if (value !== req.body.password1 && value.length != 0) {
-                return false
-            }
-            return true
-        }).withMessage('*La verificación de la contraseña no coincide'),
-
-
+        })
 ]
+
