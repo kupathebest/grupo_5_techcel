@@ -91,11 +91,73 @@
 .register main a{
     color: var(--Azul);
 }
+
+.register .container-input{
+    display: flex;
+    flex-direction: column;
+}
+
+.register .container-input span{
+    text-align: left;
+    margin-left: 2px;
+    color: red;
+    padding: 2px;
+    font-size: 0.6rem;
+}
+
+.register .container-icon{
+    position: absolute;
+}
+   
+
+.register .input-error{
+    border-color: red;
+}
+
+.register .input-success{
+    border-color: green;
+}
+
+.register .error {
+    position: relative;
+    right: -208px;
+    bottom: 48px;
+    color: red;
+    font-size: 1.2rem;
+}
+
+.register .success{
+    position: relative;
+    right: -208px;
+    bottom: 30px;
+    color: green;
+    font-size: 1.2rem;
+}
+
+.register .ocultar{
+    display: none;
+}
+
+.register .check-success{
+    color: green;
+}
+
+.register .check-error{
+    color: red;
+}
+
   
 
 @media (min-width :425px){
 .register main input{
     width: 350px;
+}
+.register .error {
+    right: -322px;
+}
+
+.register .success {
+    right: -322px;
 }
 
 }
@@ -103,6 +165,13 @@
 @media (min-width :768px){
     .register main input{
         width: 420px;
+    }
+    .register .error {
+        right: -382px;
+    }
+    
+    .register .success {
+        right: -382px;
     }
     
     }

@@ -123,10 +123,9 @@ module.exports = {
 
     update: (req, res) => {
         let errors = validationResult(req);
-
         if (errors.isEmpty()) {
 
-            const { name, password0, password1, lastName } = req.body;
+            const { name, password, password1, lastName } = req.body;
             if (req.file){
                  db.Avatar.update({
                     file: req.file.filename
@@ -148,7 +147,7 @@ module.exports = {
             db.User.update({
                 name: name.trim(),
                 lastName: lastName.trim(),
-                password: password1 ? bcryptjs.hashSync(password1, 10) : bcryptjs.hashSync(password0, 10)
+                password: password1 ? bcryptjs.hashSync(password1, 10) : req.session.userLogin.password
             },
                 {
                     where: {
@@ -163,14 +162,13 @@ module.exports = {
                     })
                         .then(usuario => {
 
-                            req.session.userLogin2 = {
-                                id: usuario.id,
-                                name: usuario.name,
-                                lastName: usuario.lastName,
-                                avatarId: usuario.avatarId,
-                                avatar: usuario.avatar.file,
-                                rolId: usuario.rolId,
-                            }
+                            req.session.userLogin.id = usuario.id
+                            req.session.userLogin.name = usuario.name
+                            req.session.userLogin.lastName = usuario.lastName
+                            req.session.userLogin.avatarId = usuario.avatarId
+                            req.session.userLogin.avatar = usuario.avatar.file
+                            req.session.userLogin.rolId = usuario.rolId
+                        
                             return res.redirect('/')
                         })
 
