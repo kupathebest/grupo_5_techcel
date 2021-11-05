@@ -69,9 +69,8 @@
  }
 
  .productAdd span{
-
     color: red;
-    text-align: left;
+    text-align: center;
  }
 
  @media (min-width: 425px){
