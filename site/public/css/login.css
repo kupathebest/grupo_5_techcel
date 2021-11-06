@@ -112,10 +112,10 @@
 }
 
 .login .container-input span{
-    text-align: left;
-    margin-left: 5px;
+    text-align: center;
     color: red;
     padding: 5px;
+    font-size: 13px;
 }
 
 .login .container-icon{
@@ -134,7 +134,7 @@
 .login .error {
     position: relative;
     right: -102px;
-    bottom: 57px;
+    bottom: 53px;
     color: red;
     font-size: 1.2rem;
 }
@@ -142,7 +142,7 @@
 .login .error2 {
     position: relative;
     right: -102px;
-    bottom: 38px;
+    bottom: 53px;
     color: red;
     font-size: 1.2rem;
 }
@@ -150,7 +150,7 @@
 .login .success{
     position: relative;
     right: -102px;
-    bottom: 38px;
+    bottom: 53px;
     color: green;
     font-size: 1.2rem;
 }
@@ -185,10 +185,16 @@
 
 .login .error, .login .error2 {
     right: -152px;
+    bottom: 57px;
 }
 
 .login .success{
     right: -152px;
+    bottom: 57px;
+}
+
+.login .container-input span{
+    font-size: 15px;
 }
 
 }
@@ -197,15 +203,21 @@
 .login form div.box-form  .email,
 .login form div.box-form  .password{
     width: 420px;
+    font-size: medium;
 }
 
 .login .error, .login .error2{
     right: -190px;
+    bottom: 60px;
 }
 
 .login .success{
     right: -190px;
-
-
+    bottom: 60px;
 }
+
+.login .container-input span{
+    font-size: 17px;
+}
+
 }
