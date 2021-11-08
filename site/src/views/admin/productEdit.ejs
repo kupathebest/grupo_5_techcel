@@ -6,7 +6,7 @@
         <%- include('./partials/header') %>
             <main class="admin-container">
                 <div class="container">
-                    <form action="/admin/edit/<%= mobile.id %>?_method=PUT" method="POST"
+                    <form id="formulario-edit" action="/admin/edit/<%= mobile.id %>?_method=PUT" method="POST"
                         enctype="multipart/form-data">
                         <div class="general bloque">
                             <div>
@@ -336,10 +336,11 @@
                             </div>
                             <div class="subir-imagen centrar">
                                 <input class="centrar subir-img" type="file" id="image" name="image" multiple>
-
+                                <span id="error-imagen"></span>
                             </div>
 
                         </div>
+                        <p id="errores"></p>
                         <div class="centrar agregar-producto"><button type="submit">Editar producto</button></div>
                         <!--<div class="centrar"><button type="submit" class="boton-enviar">Agregar</button></div>-->
                     </form>
