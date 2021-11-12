@@ -4,29 +4,16 @@
 <body class = "adminIndex">
     <%- include('./partials/header') %>
     <main>
-        
-        <section class ="articulos">
-            <div class="productos-listado">
-                <% celulares.forEach(celular => { %>
-                    <article>
-                        <img src="/images/equipos/<%= celular.images[0].file %>" alt="">
-                        <p><%= celular.shortName %> </p>
-                        <span>$ <%= toThousand(celular.price)%> </span>
-                        <div class="buttons">
-                            <a href="/productos/detail/<%= celular.id %>"><button class ="boton" type="button">Detalles</button></a>
-                            <a href="/admin/edit/<%= celular.id %> "><button id="editar" class="editar" type="button">Editar</button></a>
-                            <form id="eliminar" action="/admin/delete/<%= celular.id %>?_method=DELETE" method="POST"><button id="boton-borrar" type="submit">Eliminar</button>
-                            </form>
-                                                                              
-                        </div>
-                    </article>
-                <% }) %>
-                
-            </div>
-        </section>
-        <div class="agregar">
-            <a href="/admin/add"><button type="button">AGREGAR PRODUCTO</button></a>
+        <h1>Administrador</h1>
+        <div class="images-container">
+            <a href="/admin/products"><img src="/images/admin/celulares.jpg" alt=""></a>
+            <a href="/admin/users"><img src="/images/admin/usuarios.png" alt=""></a>
+            <a href="/admin/colours"><img src="/images/admin/colores.png" alt=""></a>
+            <a href="/admin/categories"><img src="/images/admin/categorias.jpg" alt=""></a>
         </div>
+        
+       
+        
     </main>
     <%- include('../partials/footer') %>
     <script src="/javascripts/adminIndex.js"></script>
