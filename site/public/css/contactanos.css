@@ -2,6 +2,13 @@
     background-color: var(--Gris-Fondo);
 
 }
+
+.contactanos .rojo{
+    color: red;
+    font-size: 1rem;
+    text-align: center;
+}
+
 .contactanos main{
     padding: 15px;
 }
@@ -29,7 +36,7 @@
 }
 .contactanos .datos form input{
     width: 80%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     height: 25px;
     display: flex;
     font-size: 15px;

@@ -3,6 +3,7 @@ const path = require('path');
 const { validationResult } = require('express-validator');
 const bcryptjs = require('bcryptjs');
 const db = require('../database/models');
+const sendMail = require('../utils/enviarMail')
 
 
 
@@ -78,6 +79,18 @@ module.exports = {
                         }
                     })
                         .then(usuario => {
+                            const contentHtml = `<h2>Bienvenido ${name} a TECHCEL:</h2>
+                            <ul>
+                            <li>Tu nombre de usuario para iniciar sesión es: ${email}</li>
+                            <li>tu contraseña es: ${password}</li>
+                            </ul>
+                            <p>Esperamos disfrutes de nuestros productos</p>`
+
+                            let from = "techcel";
+                            let destiny = email;
+                            let subject = "Bienvenido a techcel";
+
+                            sendMail(from,destiny,subject,contentHtml)
 
                             req.session.userLogin = {
                                 id: usuario.id,
@@ -126,8 +139,8 @@ module.exports = {
         if (errors.isEmpty()) {
 
             const { name, password, password1, lastName } = req.body;
-            if (req.file){
-                 db.Avatar.update({
+            if (req.file) {
+                db.Avatar.update({
                     file: req.file.filename
                 },
                     {
@@ -142,7 +155,7 @@ module.exports = {
                         console.log('Imagen actualizada con exito')
                     })
             }
-               
+
 
             db.User.update({
                 name: name.trim(),
@@ -168,7 +181,7 @@ module.exports = {
                             req.session.userLogin.avatarId = usuario.avatarId
                             req.session.userLogin.avatar = usuario.avatar.file
                             req.session.userLogin.rolId = usuario.rolId
-                        
+
                             return res.redirect('/')
                         })
 
