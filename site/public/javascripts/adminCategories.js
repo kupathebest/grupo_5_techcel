@@ -29,7 +29,7 @@ window.addEventListener('load',() =>{
       Swal.fire({
         title : 'Categoria agregada con exito',
         icon : 'success',
-        
+        showConfirmButton: false
       })
       location.reload()
     }
