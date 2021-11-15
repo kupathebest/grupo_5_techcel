@@ -11,3 +11,7 @@
 .adminTable main table tbody a{
     margin-right: 15px;
 }
+
+.adminTable .ocultar{
+    display: none;
+}

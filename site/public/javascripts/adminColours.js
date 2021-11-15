@@ -1,5 +1,5 @@
-const addCategory = async (name) => {
-  let response = await fetch(window.origin + `/apis/add-category?name=${name}`);
+const addColour = async (name) => {
+  let response = await fetch(window.origin + `/apis/add-colour?name=${name}`);
   let result = await response.json()
 
   return console.log(result)
@@ -12,28 +12,28 @@ window.addEventListener('load',() =>{
     let formularioEditar = document.querySelectorAll('#form-edit');
     let botonEdit = document.querySelectorAll('#edit-button');
     let input = document.querySelectorAll('#input-edit');
-    let pName = document.querySelectorAll('#category-p');
+    let pName = document.querySelectorAll('#colour-p');
 
     let agregar = $('agregar');
 
   agregar.addEventListener('click', async e => {
-    const {value: category} = await Swal.fire({
-      title : 'Ingresa el nombre de la categoria que quieres agregar',
+    const {value: colour} = await Swal.fire({
+      title : 'Ingresa el nombre del color que quieres agregar',
       input: 'text',
       confirmButtonText: 'Agregar',
       showCancelButton: true,
       cancelButtonColor: '#FF0000'
     })
-    if(!category){
+    if(!colour){
       Swal.fire({
-        title : 'Debes ingresar una categoria',
+        title : 'Debes ingresar un color',
         icon : 'error',
         confirmButtonText : 'ok'
       })
     }else{
-      addCategory(category)
+      addColour(colour)
       Swal.fire({
-        title : 'Categoria agregada con exito',
+        title : 'color agregado con exito',
         icon : 'success',
         showConfirmButton: false
       })
@@ -44,8 +44,8 @@ window.addEventListener('load',() =>{
     for (let i = 0; i < eliminar.length; i++) {
           eliminar[i].addEventListener('submit', event => {
         Swal.fire({
-            title: 'Estas seguro que quieres eliminar la categoria?',
-            text: "No la vas a poder recuperar!",
+            title: 'Estas seguro que quieres eliminar el color?',
+            text: "No lo vas a poder recuperar!",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
@@ -55,7 +55,7 @@ window.addEventListener('load',() =>{
             if (result.isConfirmed) {
               Swal.fire({
                 title : 'Eliminado!',
-                text : 'La categoria ah sido eliminada.',
+                text : 'El color ah sido eliminada.',
                 icon : 'success',
                 showConfirmButton : false
               }
@@ -73,12 +73,12 @@ window.addEventListener('load',() =>{
         if(!input[i].value){
           Swal.fire({
             title: "Error !!!!",
-            text: "No puedes ingresar una categoria vacia",
+            text: "No puedes ingresar un color vacio",
             icon : "error"
           })
         }else{
           Swal.fire({
-            title: "Categoria editada con éxito",
+            title: "Color editado con éxito",
             icon : "success",
             showConfirmButton: false
           })

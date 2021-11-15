@@ -17,21 +17,23 @@
               </tr>
             </thead>
             <tbody id="table">
-
-
-              <button id="agregar" class="btn btn-sm btn-primary">Agregar Categoria nueva</button>
-
+              <button id="agregar" class="btn btn-primary">Agregar Categoria nueva</button>
               <% categories.forEach(category=> { %>
                 <tr>
                   <th scope="row">
                     <%= category.id %>
                   </th>
                   <td>
-                    <%= category.name %>
+                    <p id="category-p"><%= category.name %></p>
+                    <form class="ocultar" id="form-edit" action="/admin/categories/update/<%= category.id %>?_method=PUT" method="POST">
+                    <input type="text" name="name" id="input-edit" value= "<%= category.name %>">
+                    <button id="update" class="btn btn-sm mt-2 btn-primary" type="submit">Editar categoria</button>
+                    <p id="edit-error" class="text-danger small"><%= locals.errores && errores.name ? errores.name.msg : null %></p>
+                    </form>
                   </td>
 
                   <td class="d-flex">
-                    <a id="edit" class="btn btn-sm btn-success" href="/"><i class="fas fa-edit"></i></a>
+                    <a id="edit-button" class="btn btn-sm btn-success" href="/"><i class="fas fa-edit"></i></a>
                     <div>
                       <form action="/admin/categories/delete/<%= category.id %>?_method=DELETE" method="POST"
                         id="eliminar">
