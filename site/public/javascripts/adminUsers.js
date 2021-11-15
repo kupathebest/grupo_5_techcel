@@ -19,7 +19,7 @@ window.addEventListener('load',() =>{
             if (result.isConfirmed) {
               Swal.fire({
                 title : 'Eliminado!',
-                text : 'El usuario ah sido eliminada.',
+                text : 'El usuario ah sido eliminado.',
                 icon : 'success',
                 showConfirmButton : false
               }

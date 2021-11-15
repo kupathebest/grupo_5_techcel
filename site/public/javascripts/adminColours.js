@@ -55,7 +55,7 @@ window.addEventListener('load',() =>{
             if (result.isConfirmed) {
               Swal.fire({
                 title : 'Eliminado!',
-                text : 'El color ah sido eliminada.',
+                text : 'El color ah sido eliminado.',
                 icon : 'success',
                 showConfirmButton : false
               }
