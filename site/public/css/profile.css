@@ -64,7 +64,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 0 30px 10px 0;
+    margin: 0 30px 5px 30px;
 }
 .profile button:hover{
     background-color: var(--Gris);

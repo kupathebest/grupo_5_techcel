@@ -17,6 +17,7 @@
                             <li><a href="/admin"><i class="fas fa-briefcase"></i>Administrador</a></li>
                             <% } %>
                                 <% } %>
+
                 </ul>
             </nav>
         </div>
@@ -89,6 +90,12 @@
                     <li><a href="/admin">Administrador</a></li>
                     <% } %>
                         <% } %>
+
+
+                        <% if (locals.userLogin) { %>
+                            <li><a href="/users/logout" class="border">Cerrar sesión</a></li>
+                            <% } %>
+
         </ul>
     </div>
     <div>

@@ -121,38 +121,36 @@
 .login .container-icon{
     position: absolute;
 }
-   
 
+.login .eye{
+    position:relative;
+    right: -225px;
+    bottom: 34px;
+    font-size: 22px;
+    border-left: solid 1px black;
+    padding:5px;
+    height: 32px;
+    width: 32px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.login .eye:hover{
+    opacity:0.8
+}
+
+.login .errorPass{
+position: relative;
+right: 0px;
+bottom: 30px;
+}
+   
 .login .input-error{
     border-color: red;
 }
 
 .login .input-success{
     border-color: green;
-}
-
-.login .error {
-    position: relative;
-    right: -102px;
-    bottom: 53px;
-    color: red;
-    font-size: 1.2rem;
-}
-
-.login .error2 {
-    position: relative;
-    right: -102px;
-    bottom: 53px;
-    color: red;
-    font-size: 1.2rem;
-}
-
-.login .success{
-    position: relative;
-    right: -102px;
-    bottom: 53px;
-    color: green;
-    font-size: 1.2rem;
 }
 
 .login .ocultar{
@@ -183,14 +181,8 @@
       
 }
 
-.login .error, .login .error2 {
-    right: -152px;
-    bottom: 57px;
-}
-
-.login .success{
-    right: -152px;
-    bottom: 57px;
+.login .eye{
+    right: -310px;
 }
 
 .login .container-input span{
@@ -206,14 +198,11 @@
     font-size: medium;
 }
 
-.login .error, .login .error2{
-    right: -190px;
-    bottom: 60px;
-}
-
-.login .success{
-    right: -190px;
-    bottom: 60px;
+.login .eye{
+    right: -382px;
+    bottom: 36.27px;
+    padding:6px;
+    height: 34px;
 }
 
 .login .container-input span{

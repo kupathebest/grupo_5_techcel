@@ -2,18 +2,18 @@
 .metodo-envio div.shipping{
 display: flex;
 justify-content: center;
-margin: 12px;
+min-width: 320px;
 max-width: 1124px;
-background-color: var(--Gris-Fondo);
+background-color:var(--Gris-Fondo);
 
 }
 
 .metodo-envio main.envio{
     display: flex;
     justify-content: center;
-    background-color: var(--Gris-Fondo);
+    background-color:var(--Gris-Fondo);
     padding: 10px;
-   
+    margin: 0 auto;  
 }
 
 .metodo-envio h3{
@@ -24,16 +24,15 @@ background-color: var(--Gris-Fondo);
 }
 
 .metodo-envio div.icono i.fas.fa-shipping-fast{
-   
+    width: 80%;
     display: flex;
     justify-content: center;
     font-size: 5em;
-    margin:60px 0px;
+    margin:60px auto;
     border-radius: 15%;
     position: relative;
     border: solid 10px;
-    color: var(--Fucsia);
-         
+    color: var(--Fucsia);   
 }
 
 .metodo-envio div.palabra-envios{
@@ -51,101 +50,89 @@ background-color: var(--Gris-Fondo);
 
 
 .metodo-envio p{
-
-    
     font-size: 15px;
-    margin:30px 0px;
+    margin:30px auto;
+    text-align: center;
     justify-content: center;
-
+    width: 80%;
 }
 
+.metodo-envio div.box-Envios{
+    min-width: 320px;
+    max-width: 1124px;
+}
 
 .metodo-envio div.box-Envios section ul li{
-   
    display: flex;
    flex-wrap: wrap;
-   
    font-size: 11px;
-        
-
+   justify-content: center;
 }
-.metodo-envio div.box-detalle.envios p{
 
-   text-align: center;
-}
 .metodo-envio div.box-form{
     display: flex;
     justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 8px;
 }
 
+
 .metodo-envio .envio .box-form select{
-     
     justify-content: center;
     border-radius: 5px;
     padding: 8px;
     width: 180px;
-    margin: 10px 20px;
+    margin: 10px ;
     background-color: white;
     border: 1px solid var(--Gris);
  }
 
 .metodo-envio input#text{
-      
     justify-content: center;
     border-radius: 5px;
     padding: 8px;
     width: 100px;
     background-color: white;
     border: 1px solid var(--Gris);
-    margin: 10px 20px;
-    
+    margin: 10px;    
  } 
 
 .metodo-envio div.contactanos {
-    
     font-size: 20px;
     text-align: center;
     justify-content: center;
-    margin: 2px auto;
-
-
+    margin: 5px auto;
+    width: 80%;
  }
   
 
  @media (min-width: 425px){
 
 .metodo-envio div.icono i.fas.fa-shipping-fast{
-   
-        margin:50px 0px;
-
-
+    margin:50px auto;
+    width: 92%;
     }
 
     .metodo-envio div.palabra-envios{
-        
-        margin:30px 0px;
+       margin:30px 0px;
     }
      
     .metodo-envio label{
-        
         margin:30px 0px 45px 0px;
     }
 
     .metodo-envio p{
-
         font-size: 18px;
-        margin:40px 0px;
+        margin:40px auto;
         justify-content: center;
-    
     }
 
     .metodo-envio div.box-Envios section ul li {
         display: flex;
         justify-content: center;
         padding:15px;
-        flex-direction:row
-        
-        
+        flex-direction:center        
     }}
 
     @media (min-width: 768px){
