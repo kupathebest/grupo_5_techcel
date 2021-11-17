@@ -29,11 +29,12 @@
 
 .register main input{
     padding: 5px;
-    margin-top: 10px;
+    margin: 10px auto 0;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
     width: 236px;
+
 }
 
 .register main .terms{
@@ -98,11 +99,11 @@
 }
 
 .register .container-input span{
-    text-align: left;
-    margin-left: 2px;
+    text-align: center;
+    margin:0 auto;
     color: red;
     padding: 2px;
-    font-size: 0.6rem;
+    font-size: 13px;
 }
 
 .register .container-icon{
@@ -121,7 +122,7 @@
 .register .error {
     position: relative;
     right: -208px;
-    bottom: 48px;
+    bottom: 45px;
     color: red;
     font-size: 1.2rem;
 }
@@ -138,6 +139,14 @@
     display: none;
 }
 
+.register .errorPass{
+    position: relative;
+    right: -235px;
+    bottom: 60px;
+    color: red;
+    font-size: 1.2rem;
+}
+
 .register .check-success{
     color: green;
 }
@@ -146,7 +155,16 @@
     color: red;
 }
 
-  
+
+@media (min-width :331px){
+
+.register .errorPass{
+    right: -240px;
+    bottom: 45px;
+    }
+
+}
+
 
 @media (min-width :425px){
 .register main input{
@@ -154,10 +172,16 @@
 }
 .register .error {
     right: -322px;
+    bottom: 47px;
 }
 
 .register .success {
     right: -322px;
+
+}
+
+.register .container-input span{
+     font-size: 15px;
 }
 
 }
@@ -165,13 +189,19 @@
 @media (min-width :768px){
     .register main input{
         width: 420px;
+        font-size: 17px;
     }
     .register .error {
         right: -382px;
+        bottom: 50px;
     }
     
     .register .success {
         right: -382px;
     }
-    
+
+    .register .container-input span{
+        font-size: 17px;
     }
+    
+}

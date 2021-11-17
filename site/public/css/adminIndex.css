@@ -1,161 +1,149 @@
-.adminIndex{
-    background-color: #ebebeb;
-}
-
 .adminIndex main{
-    width: 100%;
     max-width: 1124px;
-    padding: auto;
     margin: 0 auto;
 }
 
-.adminIndex main .agregar a button{
-    color: var(--Negro);
-    background-color: #00c4cc;
-    border-radius: 15px;
-    display: block;
-    padding: 8px 20px;
-    border: none;
-    margin: 20px auto;
-    width: 40%;
-    text-align:center;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.adminIndex main .agregar a button:hover{
-    background-color: var(--Gris);
-}
-
-.adminIndex main section.articulos{
-    padding-top: 10px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-}
-
-
-.adminIndex main section.articulos div.productos-listado article{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.adminIndex h1{
     text-align: center;
-    
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
-.adminIndex main section.articulos div.productos-listado article img{
-    width: 100%;
-}
-
-.adminIndex main section.articulos div.productos-listado article span{
-    color: var(--Fucsia);
-}
-
-.adminIndex main section.articulos div.productos-listado{
-    width: 100%;
+.adminIndex .images-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: flex-start;
+    overflow: hidden;
 }
 
-.adminIndex main section.articulos div.productos-listado article{
-    background-color: var(--Blanco);
-    border-radius: 8px;
-    border: solid 1px var(--Gris-Fondo);
-    padding: 15px 45px;
-    margin: 18px;
-    width: 85%;
+.adminIndex .images-container .images {
+    width: 80%;
+    margin-left: 30px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
 }
 
-.adminIndex main section.articulos div.productos-listado article p{
-    text-align: center;
-    padding-top: 5px;
+.adminIndex .images-container .images a img{
+    width: 100%;
+    height: 100%;
+    transition: all 300ms;
 }
 
-.adminIndex main section.articulos div.productos-listado article div.buttons{
-    display: flex;
-    flex-direction: row;
+.adminIndex .content-1 {
+    width: 1000px;
+    height: 1000px;
+    top: 0;
+    position: absolute;
+    background: rgba(95, 6, 131, 0.4);
+    transform: rotate(-30deg);
+    margin-left: -750px;
+    transition: all 300ms;
+}
+.adminIndex .content-2 {
+    width: 1000px;
+    height: 1000px;
+    top: 0;
+    position: absolute;
+    background: rgba(95, 6, 131, 0.5);
+    transform: rotate(-30deg);
+    margin-left: -800px;
+    transition: all 500ms;
+    
+}
+.adminIndex .content-3 {
+    width: 1000px;
+    height: 1000px;
+    top: 0;
+    position: absolute;
+    background: rgba(95, 6, 131, 0.5);
+    transform: rotate(30deg);
+    margin-left: -800px;
+    margin-top: -650px;
+    transition: all 900ms;
+    box-shadow: 0px 1px 20px -5px black;
+}
+.adminIndex .content-4 {
+    width: 1000px;
+    height: 1000px;
+    top: 0;
+    position: absolute;
+    background: rgba(95, 6, 131, 0.5);
+    transform: rotate(30deg);
+    margin-left: -850px;
+    margin-top: -650px;
+    transition: all 700ms;
+    
 }
 
-.adminIndex main section.articulos div.productos-listado article div.buttons button{
-    background-color: var(--Celeste);
-    padding: 4px 5px;
-    margin: 0 4px;
-    border: none;
-    border-radius: 4.5px;
-    cursor: pointer;
+.adminIndex .images-container .images:hover .content-1{
+    width: 275%;
+    transition: all 900ms;
+}
+.adminIndex .images-container .images:hover .content-2{
+    width: 275%;
+    transition: all 300ms;
+}
+.adminIndex .images-container .images:hover .content-3{
+    width: 275%;
+    transition: all 500ms;
+}
+.adminIndex .images-container .images:hover .content-4{
+    width: 275%;
+    transition: all 700ms;
 }
 
-.adminIndex main section.articulos div.productos-listado article div.buttons button:hover{
-    background-color: var(--Gris);
+.adminIndex .images-container .images:hover img.fondo{
+    transform: scale(1.2);
+    opacity: 0.7;
+    transition: all 300ms;
 }
 
-.adminIndex main section.articulos div.productos-listado article div.buttons form button{
-    background-color: rgb(218, 57, 57);
-    cursor: pointer;
+.adminIndex .title{
+    position: absolute;
+    width: 50%;
+    top: 0;
+    margin-top:100px;
+    margin-left: 100px;
+    z-index: 5;
+    transition: all 300ms;
 }
 
-.adminIndex main section.articulos div.productos-listado article div.buttons a button.editar{
-    background-color: rgb(66, 145, 66);
-    cursor: pointer;
+.adminIndex .images-container .images:hover .title{
+    margin-top: 30px;
+    transition: all 300ms;
 }
 
-.adminIndex main section.articulos div.productos-listado article div.buttons a button.editar:hover{
-    background-color: var(--Gris);
+.adminIndex .text{
+    position: absolute;
+    width: 100%;
+    color: white;
+    font-size: 1.4rem;
+    top: 0;
+    margin-top:122px;
+    margin-left: -400px;
+    z-index: 5;
+    transition: all 600ms;
+}
+.adminIndex .images-container .images:hover .text{
+    margin-left: 23px;
+    transition: all 600ms;
 }
 
-.adminIndex .mensaje {
-    text-align: center;
-}
-.adminIndex .mensaje img{
-    width: 60%;
-}
-
-/** TABLET **/
 @media (min-width:425px){
-      
-    .adminIndex main section.articulos div.productos-listado article{
+    .adminIndex .images-container .images{
+        width: 70%;
+        
+}
+.adminIndex .images-container a img{
+    width: 100%;
+}
+}
+@media (min-width:768px){
+    .adminIndex .images-container .images{
         width: 40%;
-        padding: 18px 30px;
-        margin: 15px;
-    }
-    .adminIndex main section.articulos div.productos-listado article img{
-        width: 80%;
-    }
-    
-    }
-    @media (min-width:768px){
-
-    .adminIndex main{
-        width: 90%;
-        flex-direction: row;
-    }
-
-    .adminIndex main .agregar a button{
-        width: 20%;
-    }
-    
-    .adminIndex main section.articulos{
-        width: 100%;
-    }
-    
-    .adminIndex main section.articulos div.productos-listado article{
-        width: 25%;
-    }
-    
-    .adminIndex main section.articulos div.productos-listado article img{
-        width: 80%;
-    }
-    
 }
-
-@media (min-width:1024px){
-    .adminIndex main section.articulos div.productos-listado article{
-        width: 20%;
-    }
+.adminIndex .images-container .images a img{
+    width: 100%;
 }
-
-
+}

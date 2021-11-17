@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head',{title:"Admin productos"}) %>
+<body class = "adminProducts">
+    <%- include('./partials/header') %>
+    <main>
+        
+        <section class ="articulos">
+            <div class="productos-listado">
+                <% celulares.forEach(celular => { %>
+                    <article>
+                        <img src="/images/equipos/<%= celular.images[0].file %>" alt="">
+                        <p><%= celular.shortName %> </p>
+                        <span>$ <%= toThousand(celular.price)%> </span>
+                        <div class="buttons">
+                            <a href="/productos/detail/<%= celular.id %>"><button class ="boton" type="button">Detalles</button></a>
+                            <a href="/admin/products/edit/<%= celular.id %> "><button id="editar" class="editar" type="button">Editar</button></a>
+                            <form id="eliminar" action="/admin/products/delete/<%= celular.id %>?_method=DELETE" method="POST"><button id="boton-borrar" type="submit">Eliminar</button>
+                            </form>
+                                                                              
+                        </div>
+                    </article>
+                <% }) %>
+                
+            </div>
+        </section>
+        <div class="agregar">
+            <a href="/admin/products/add"><button type="button">AGREGAR PRODUCTO</button></a>
+        </div>
+    </main>
+    <%- include('../partials/footer') %>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/javascripts/productsAdmin.js"></script>
+</body>
+</html>

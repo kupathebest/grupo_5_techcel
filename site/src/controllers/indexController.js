@@ -1,6 +1,8 @@
 const db = require('../database/models');
 const {Op} = require('sequelize');
 const toThousand = require('../utils/toThousand')
+const { validationResult } = require('express-validator');
+const sendMail = require('../utils/enviarMail')
 
 module.exports = {
     index : (req,res) => {
@@ -97,6 +99,35 @@ module.exports = {
                 })
             })
             .catch(error => console.log(error)) 
+    },
+    sendEmail: (req, res) => {
+        let errors = validationResult(req)
+        if (errors.isEmpty()) {
+            const { name, phone, email, message } = req.body
+
+            const contentHtml = `<h2>Formulario de contacto de:</h2>
+            <ul>
+            <li>Nombre: ${name}</li>
+            <li>Telefono: ${phone}</li>
+            <li>Email de contacto: ${email}</li>
+            </ul>
+            <p>${message}</p>`
+    
+            let from = "techcel";
+            let destiny = "contacto.techcel@gmail.com";
+            let subject = "formulario de contacto";
+    
+            sendMail(from, destiny, subject, contentHtml)
+                .then(result => res.redirect("/"))
+                .catch(error => console.log(error))
+        }else {
+            return res.render('contactanos', {
+                errores: errors.mapped(),
+                old: req.body
+            })
+        }
+
+        
     }
 
 }

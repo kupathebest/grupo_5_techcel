@@ -138,7 +138,8 @@ header .div.registro a{
 
 @media(min-width:768px){
     header div.listas{
-        display:flex
+        display:flex;
+        padding: 0 17px;
     }
 
     header .menu-desplegable{
@@ -175,7 +176,6 @@ header .div.registro a{
     header .lista1{
         color: var(--Azul);
         font-size: 30px;
-        
     }
 
     header  .lista2{
@@ -218,8 +218,9 @@ header .div.registro a{
     }
 
     header .buscador .searc-button{
-        display: block;       
+        display: block;              
     }
+
    header .logo{
       width: 60%;
       text-align: center;
@@ -259,6 +260,7 @@ header .div.registro a{
             padding: 4px;
             border-radius: 0 4px 4px 0;
             border-style: none;
+            cursor: pointer
     }
     header .lista3{
         

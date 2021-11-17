@@ -139,6 +139,10 @@
     color: black;
 }
 
+.cart main.product-cart .point{
+    cursor: pointer;
+}
+
 /*/*** fin BOTONES****/
 .cart .container-productos .titulo{
     color: var(--Fucsia);

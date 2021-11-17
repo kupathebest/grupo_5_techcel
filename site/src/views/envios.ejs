@@ -1,121 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('./partials/head', {title : "ENVIOS"})%>
+<%- include('./partials/head', {title : "ENVIOS" })%>
 
-<body class="metodo-envio">
+    <body class="metodo-envio">
 
-    <%- include('./partials/header')%>
-     
-    <main class="envio">
-        <div class = shipping>
-                <a href="#" class="button">
-               <div class="box-Envios"> 
-               
-                     <div class="box-metodo">
-               
-                       <h3>METODOS DE ENTREGA</h3>
-           
-                       <div class="icono">
-                           <i class="fas fa-shipping-fast"></i>
-           
-                       </div>
-           
-                        <p>Tenemos distintas opciones de envío a  todo el pais, para que compres y recibas tu celular de la forma más conveniente para vos.
-                        Al momento de finalizar tu pedido podrás consultar el costo de envio según tu domicilio y recibirlo en tu casa o retirar en la sucursal.
-                       </p>
-                   </a>
-                   </div>
-                   <div class="palabra-envios">
-           
-                   ENVIOS
-           
-           <span>↓</span>
-           </div>
-           <label for="argentina">ARGENTINA</label>
-                       <div class= "box-detalle envios">
-                           <p>TECHCEL posee los siguientes costos de servicio de acuerdo al lugar donde recibas:</p>
-                        </div> 
-                        <div class="box-form">
-                            <select name="provincia"id="Provincia">
-                                <option value=""selected hidden>Seleccione su Provincia</option>
-                                <option value="1">Buenos Aires</option>
-                                <option value="2">Capital Federal</option>
-                                <option value="3">Catamarca</option>
-                                <option value="4">Chaco</option>
-                                <option value="5">Chubut</option>
-                                <option value="6">Cordoba</option>
-                                <option value="7">Corrientes</option>           
-                                <option value="8">Entre Rios</option>
-                                <option value="9">Formosa</option>
-                                <option value="10">Jujuy</option>
-                                <option value="11">La Pampa</option>
-                                <option value="12">Mendoza</option>
-                                <option value="13">Misiones</option>
-                                <option value="14">Neuquen</option>
-                                <option value="15">Rio Negro</option>
-                                <option value="16">Salta</option>
-                                <option value="17">San Juan</option>
-                                <option value="18">San Luis</option>
-                                <option value="19">Santa Cruz</option>
-                                <option value="20">Santa Fe</option>
-                                <option value="21">Santiago del Estero</option>
-                                <option value="22">Tierra del Fuego</option>
-                                <option value="23">Tucuman</option>  
-                        
-                                                  
-                                <div class="box-codigo">
-                                    <label for="codigo_postal"></label>
-                                    <input type="codigo" name= "codigo_postal" id= "text"placeholder= "Codigo Postal">
-                                    </div>
-                                    <br>
+        <%- include('./partials/header')%>
+
+            <main class="envio">
+                <div class=shipping>
+                    <a href="#" class="button">
+                        <div class="box-Envios">
+
+                            <div class="box-metodo">
+
+                                <h3>METODOS DE ENTREGA</h3>
+
+                                <div class="icono">
+                                    <i class="fas fa-shipping-fast"></i>
+
+                                </div>
+
+                                <p>Tenemos distintas opciones de envío a todo el pais, para que compres y recibas tu
+                                    celular de la forma más conveniente para vos.
+                                    Al momento de finalizar tu pedido podrás consultar el costo de envio según tu
+                                    domicilio y recibirlo en tu casa o retirar en la sucursal.
+                                </p>
+                    </a>
+                </div>
+                <div class="palabra-envios">
+
+                    ENVIOS
+
+                    <span>↓</span>
+                </div>
+                <label for="argentina">ARGENTINA</label>
+                <div class="box-detalle envios ">
+                    <p>TECHCEL posee los siguientes costos de servicio de acuerdo al lugar donde recibas:</p>
+                </div>
+                <div class="box-form">
+                    <select name="provincia" id="provincia">
+                        <option value="" selected hidden>Seleccione su Provincia</option>
+                        <option value="1">Buenos Aires</option>
+                        <option value="2">Capital Federal</option>
+                        <option value="3">Catamarca</option>
+                        <option value="4">Chaco</option>
+                        <option value="5">Chubut</option>
+                        <option value="6">Cordoba</option>
+                        <option value="7">Corrientes</option>
+                        <option value="8">Entre Rios</option>
+                        <option value="9">Formosa</option>
+                        <option value="10">Jujuy</option>
+                        <option value="11">La Pampa</option>
+                        <option value="12">Mendoza</option>
+                        <option value="13">Misiones</option>
+                        <option value="14">Neuquen</option>
+                        <option value="15">Rio Negro</option>
+                        <option value="16">Salta</option>
+                        <option value="17">San Juan</option>
+                        <option value="18">San Luis</option>
+                        <option value="19">Santa Cruz</option>
+                        <option value="20">Santa Fe</option>
+                        <option value="21">Santiago del Estero</option>
+                        <option value="22">Tierra del Fuego</option>
+                        <option value="23">Tucuman</option>
+                        <option value="24">Costa Atlántica</option>
+
+
+                        <div class="box-codigo">
+                            <label class="box-codigo" for="codigo_postal"></label>
+                            <input class="box-codigo" type="codigo" name="codigo_postal" id="text"
+                                placeholder="Codigo Postal">
+                        </div>
+
                         <section>
                             <ul>
-                                 
-                                 <li><i class="far fa-dot-circle"></i>&nbsp$350(Capital y Gran Buenos Aires)</li></br>
-                                 <li><i class="far fa-dot-circle"></i>&nbsp$600 (interior Provincia de Buenos Aires) </li></br>
-                                 <li><i class="far fa-dot-circle"></i>&nbsp$650 (Costa Atlántica)</li></br>                         
-                                 <li><i class="far fa-dot-circle"></i>&nbsp$700 (Santa Fe, Entre Rios, Corrientes y La Pampa)</li></br>
-                                 <li><i class="far fa-dot-circle"></i>&nbsp$750 (Mendoza, Cordoba y San Luis)</li></br>
-                                 <li><i class="far fa-dot-circle"></i>&nbsp$750 (Tucuman, Salta y San Juan)</li></br>
-                                 <li><i class="far fa-dot-circle"></i>&nbsp$800 (Catamarca, Jujuy, Formosa, Misiones y Chaco)</li></br>
-                                 <li><i class="far fa-dot-circle"></i>&nbsp$900 (Neuquen y Chubut)</li></br>
-                                 <li><i class="far fa-dot-circle"></i>&nbsp$1000 (Rio Negro, Santa cruz y Tierra del Fuego)</li></br>
-                              </ul>
-                          </section>   
-                          <div class= "contactanos">
-                             <a href="/contactanos">¿Tenes alguna otra consulta que no ves aquí? No dudes en contactarnos</a>
-                            </div>                                 
-                            </div>
-                       </div>  
+
+                                <li><i class="far fa-dot-circle ocultar" id="icono-buenos-aires">&nbsp$350(Capital y Gran Buenos Aires)</i>
+                                    <p id="texto-buenos-aires" class="ocultar">
+                                    </p>
+                                </li>
+                                <li><i class="far fa-dot-circle ocultar" id="icono-interior">&nbsp$600 (interior Provincia de Buenos Aires)</i>
+                                    <p id="texto-interior" class="ocultar">
+                                        </p>
+                                </li>
+                                <li><i class="far fa-dot-circle ocultar" id="icono-costa">&nbsp$650 (Costa Atlántica)</i>
+                                    <p id="texto-costa" class="ocultar"></i></p>
+                                </li>
+                                <li><i class="far fa-dot-circle ocultar" id="icono-santa-fe">&nbsp$700 (Santa Fe, Entre Rios, Corrientes y
+                                    La Pampa)</i>
+                                    <p id="texto-santa-fe" class="ocultar"></p>
+                                </li>
+                                <li><i class="far fa-dot-circle ocultar" id="icono-mendoza">&nbsp$750 (Mendoza, Cordoba y San Luis)</i>
+                                    <p id="texto-mendoza" class="ocultar"></p>
+                                </li>
+                                <li><i class="far fa-dot-circle ocultar" id="icono-tucuman">&nbsp$750 (Tucuman, Salta y San Juan)</i>
+                                    <p id="texto-tucuman" class="ocultar"></p>
+                                </li>
+                                <li><i class="far fa-dot-circle ocultar" id="icono-catamarca">&nbsp$800 (Catamarca, Jujuy, Formosa,
+                                    Misiones y Chaco)</i>
+                                    <p id="texto-catamarca" class="ocultar"></p>
+                                </li>
+                                <li><i class="far fa-dot-circle ocultar" id="icono-neuquen">&nbsp$900 (Neuquen, Chubut y Santiago del Estero)</i>
+                                    <p id="texto-neuquen" class="ocultar"></p>
+                                </li>
+                                <li><i class="far fa-dot-circle ocultar" id="icono-rio-negro">&nbsp$1000 (Rio Negro, Santa cruz y Tierra
+                                    del Fuego)</i>
+                                    <p id="texto-rio-negro" class="ocultar"></p>
+                                </li>
+                            </ul>
+                        </section>
+                        <div class="contactanos">
+                            <a href="/contactanos">¿Tenes alguna otra consulta que no ves aquí? No dudes en
+                                contactarnos</a>
+                        </div>
+                </div>
+                </div>
                 </form>
-                   </select> 
-                   </body>
-                </main>
-                <%- include('./partials/footer')%>
-                    
-                </body>
-                </html>
-     
-  </body>
+                </select>
+    </body>
+    </main>
+    <%- include('./partials/footer')%>
+        <script src="/javascripts/envios.js"></script>
+        </body>
 
 </html>
 
+</body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</html>

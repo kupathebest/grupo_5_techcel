@@ -64,7 +64,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 0 30px 10px 0;
+    margin: 0 30px 5px 30px;
 }
 .profile button:hover{
     background-color: var(--Gris);
@@ -129,6 +129,22 @@
     font-size: 1.2rem;
 }
 
+.profile .errorPass{
+    position: relative;
+    right: -100px;
+    bottom: 69px;
+    color: red;
+    font-size: 1.2rem;
+}
+
+.profile .errorPassUno{
+    position: relative;
+    right: -100px;
+    bottom: 69px;
+    color: red;
+    font-size: 1.2rem;
+}
+
 .profile .ocultar{
     display: none;
 }
@@ -140,6 +156,26 @@
 .profile .check-error{
     color: red;
 }
+
+
+@media (min-width :370px){
+
+    .profile .errorPassUno{
+        bottom: 52px;
+    }
+
+}
+
+
+
+@media (min-width :404px){
+
+    .profile .errorPass{
+        bottom: 52px;
+    }
+
+}
+
 
 
 @media (min-width :425px){
@@ -157,7 +193,7 @@
     .profile .success {
         right: -155px;
     }
-
+    
     }
     
 
@@ -171,5 +207,5 @@
         .profile .success {
             right: -186px;
         }
-        
+
         }

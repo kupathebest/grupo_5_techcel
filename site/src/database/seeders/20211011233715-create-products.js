@@ -30,13 +30,13 @@ products.forEach(celular => {
 module.exports = {
   up: async (queryInterface, Sequelize) => {
   
-      await queryInterface.bulkInsert('products', productos, {});
+      await queryInterface.bulkInsert('Products', productos, {});
     
   },
 
   down: async (queryInterface, Sequelize) => {
    
-      await queryInterface.bulkDelete('products', null, {});
+      await queryInterface.bulkDelete('Products', null, {});
      
   }
 };
