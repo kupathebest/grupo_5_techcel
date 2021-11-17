@@ -68,6 +68,21 @@
     min-width: 200px;
  }
 
+ 
+ .productAdd main .checkbox-flex{
+     display: flex;
+     justify-content: center;
+ }
+.productAdd main .inputs{
+    width: 5px;
+}
+.productAdd main .divs-input{
+    width: 204px;
+}
+.productAdd main .mini-imagen{
+    width: 20px;
+    height: 20px;
+}
  .productAdd span{
     color: red;
     text-align: center;
