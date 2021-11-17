@@ -1,8 +1,11 @@
 var express = require('express');
-const {getProductsFilter } = require('../controllers/apis/productsController');
+const {getFilterColour, getAllProducts, getFilterCategory, getFilterBrand } = require('../controllers/apis/productsController');
 var router = express.Router();
 
 /* GET apis page. */
-router.get('/get-products-filter', getProductsFilter);
+router.get('/get-colours-filter', getFilterColour);
+router.get('/get-all-products', getAllProducts );
+router.get('/get-categories-filter',getFilterCategory);
+router.get('/get-brand-filter', getFilterBrand);
 
 module.exports = router;

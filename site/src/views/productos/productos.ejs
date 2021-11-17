@@ -19,6 +19,8 @@
             <div class="boton-ordenar">
                 <select name="ordenar-por" id="ordenar-por">
                     <option value="" selected hidden>MÁS RELEVANTES</option>
+                    
+                   
                     <option value="1">MENOR PRECIO</option>
                     <option value="2">MAYOR PRECIO</option>
                     <option value="3">MÁS RELEVANTES</option>
@@ -28,193 +30,210 @@
             <div class="forms">
                 <p>CATEGORIA</p>
                 <div class="categoria filtros">
+                 
                     <div>
-                        <input type="checkbox" name="novedades" id="novedades">
-                        <label for="novedades">Novedades</label>
+                        <label id="novedades">
+                        <input type="radio" name="categoria" value="novedades"> Novedades 
+                    </label>
                     </div>
+                    
                     <div>
-                        <input type="checkbox" name="ofertas" id="ofertas">
-                        <label for="ofertas">Ofertas</label>
+                        <label id="ofertas">
+                        <input type="radio" name="categoria" value="ofertas"> Ofertas
+                        </label>
                     </div>
+                    
                     <div>
-                        <input type="checkbox" name="losMasComprados" id="losMasComprados">
-                        <label for="losMasComprados">Los más comprados</label>
+                        <label id="los mas comprados">  
+                             <input type="radio" name="categoria"value="los mas comprados"> Los Mas Comprados
+                        </label>
                     </div>
+               
                 </div>
                 <p>MARCA</p>
                 <div class="marca filtros">
                     <div>
-                        <input type="checkbox" name="motorola" id="motorola">
-                        <label for="motorola">Motorola</label>
+                        <label id="motorola">
+                        <input type="radio" name="marca"> Motorola
+                        </label>
                     </div>
                     <div>
-                        <input type="checkbox" name="samsung" id="samsung">
-                        <label for="samsung">Samsung</label>
+                        <label id="samsung">
+                        <input type="radio" name="marca"> Samsung
+                    </label>
                     </div>
                     <div>
-                        <input type="checkbox" name="xiaomi" id="xiaomi">
-                        <label for="xiaomi">Xiaomi</label>
+                        <label id="xiaomi">
+                        <input type="radio" name="marca"> Xiaomi
+                        </label>
                     </div>
                     <div>
-                        <input type="checkbox" name="iphone" id="iphone">
-                        <label for="iphone">iPhone</label>
+                        <label id="iphone">
+                        <input type="radio" name="marca"> Iphone
+                        </label>
                     </div>
                     <div>
-                        <input type="checkbox" name="lg" id="lg">
-                        <label for="lg">LG</label>
+                        <label id="lg">
+                        <input type="radio" name="marca"> Lg
+                        </label>
                     </div>
+               
                 </div>
                 <p>COLOR</p>
                 <div class="color filtros">
                     <div>
-                        <input type="checkbox" name="negro" id="negro">
-                        <label for="negro">Negro</label>
+                        <label id="negro">
+                        <input type="radio" name="color"> Negro
+                        </label>
                     </div>
                     <div>
-                        <input type="checkbox" name="plateado" id="plateado">
-                        <label for="plateado">Plateado</label>
+                        <label id="plateado">
+                        <input type="radio" name="color"> Plateado
+                        </label>
                     </div>
                     <div>
-                        <input type="checkbox" name="blanco" id="blanco">
-                        <label for="blanco">Blanco</label>
+                        <label id="blanco">
+                        <input type="radio" name="color"> Blanco
+                        </label>
                     </div>
                     <div>
-                        <input type="checkbox" name="azul" id="azul">
-                        <label for="azul">Azul</label>
+                        <label id="azul">
+                        <input type="radio" name="color"> Azul
+                        </label>
                     </div>
                     <div>
-                        <input type="checkbox" name="rosa" id="rosa">
-                        <label for="rosa">Rosa</label>
+                        <label id="rosa">
+                        <input type="radio" name="color"> Rosa
+                        </label>
                     </div>
                     <div>
-                        <input type="checkbox" name="celeste" id="celeste">
-                        <label for="celeste">Celeste</label>
+                        <label id="celeste">
+                        <input type="radio" name="color"> Celeste
+                        </label>
                     </div>
                     <div>
-                        <input type="checkbox" name="purpura" id="purpura">
-                        <label for="purpura">Purpura</label>
+                        <label id="purpura">
+                        <input type="radio" name="color"> Purpura
+                        </label>
                     </div>
                     <div>
-                        <input type="checkbox" name="rojo" id="rojo">
-                        <label for="rojo">Rojo</label>
+                        <label id="rojo">
+                        <input type="radio" name="color"> Rojo
+                        </label>
                     </div>
                     <div>
-                        <input type="checkbox" name="dorado" id="dorado">
-                        <label for="dorado">Dorado</label>
+                        <label id="dorado">
+                        <input type="radio" name="color"> Dorado
+                        </label>
                     </div>
                 </div>
                 <p>CAMARA</p>
                 <div class="camara filtros">
                     <div>
-                        <input type="checkbox" name="Hasta 2 MP" id="Hasta 2 MP">
+                        <input type="radio" name="Hasta 2 MP" id="Hasta 2 MP">
                         <label for="Hasta 2 MP">Hasta 2 MP</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="2 MP a 5 MP" id="2 MP a 5 MP">
+                        <input type="radio" name="2 MP a 5 MP" id="2 MP a 5 MP">
                         <label for="2 MP a 5 MP">2 MP a 5 MP</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="5 MP a 10 MP" id="5 MP a 10 MP">
+                        <input type="radio" name="5 MP a 10 MP" id="5 MP a 10 MP">
                         <label for="5 MP a 10 MP">5 MP a 10 MP</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="10 MP a 15 MP" id="10 MP a 15 MP">
+                        <input type="radio" name="10 MP a 15 MP" id="10 MP a 15 MP">
                         <label for="10 MP a 15 MP">10 MP a 15 MP</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="15 MP a 20 MP" id="15 MP a 20 MP">
+                        <input type="radio" name="15 MP a 20 MP" id="15 MP a 20 MP">
                         <label for="15 MP a 20 MP">15 MP a 20 MP</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="20 MP a 25 MP" id="20 MP a 25 MP">
+                        <input type="radio" name="20 MP a 25 MP" id="20 MP a 25 MP">
                         <label for="20 MP a 25 MP">20 MP a 25 MP</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="Más de 25 MP" id="Más de 25 MP">
+                        <input type="radio" name="Más de 25 MP" id="Más de 25 MP">
                         <label for="Más de 25 MP">Más de 25 MP</label>
                     </div>
                 </div>
                 <p>MEMORIA INTERNA</p>
                 <div class="memoria-interna filtros">
                     <div>
-                        <input type="checkbox" name="Menos de 32 GB" id="Menos de 32 GB">
+                        <input type="radio" name="Menos de 32 GB" id="Menos de 32 GB">
                         <label for="Menos de 32 GB">Menos de 32 GB</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="32 GB a 64 GB" id="32 GB a 64 GB">
+                        <input type="radio" name="32 GB a 64 GB" id="32 GB a 64 GB">
                         <label for="32 GB a 64 GB">32 GB a 64 GB</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="64 GB a 128 GB" id="64 GB a 128 GB">
+                        <input type="radio" name="64 GB a 128 GB" id="64 GB a 128 GB">
                         <label for="64 GB a 128 GB">64 GB a 128 GB</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="128 GB o más" id="128 GB o más">
+                        <input type="radio" name="128 GB o más" id="128 GB o más">
                         <label for="128 GB o más">128 GB o más</label>
                     </div>
                 </div>
                 <p>MEMORIA RAM</p>
                 <div class="memoria-ram filtros">
                     <div>
-                        <input type="checkbox" name="Menos de 2 GB" id="Menos de 2 GB">
+                        <input type="radio" name="Menos de 2 GB" id="Menos de 2 GB">
                         <label for="Menos de 2 GB">Menos de 2 GB</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="2 GB a 3 GB" id="2 GB a 3 GB">
+                        <input type="radio" name="2 GB a 3 GB" id="2 GB a 3 GB">
                         <label for="2 GB a 3 GB">2 GB a 3 GB</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="3 GB a 4 GB" id="3 GB a 4 GB">
+                        <input type="radio" name="3 GB a 4 GB" id="3 GB a 4 GB">
                         <label for="3 GB a 4 GB">3 GB a 4 GB</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="4 GB o más" id="4 GB o más">
+                        <input type="radio" name="4 GB o más" id="4 GB o más">
                         <label for="4 GB o más">4 GB o más</label>
                     </div>
                 </div>
                 <p>PANTALLA</p>
                 <div class="pantalla filtros">
                     <div>
-                        <input type="checkbox" name="5 o menos" id="5 o menos">
+                        <input type="radio" name="5 o menos" id="5 o menos">
                         <label for="5 o menos">5" o menos</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="5 a 6" id="5 a 6">
+                        <input type="radio" name="5 a 6" id="5 a 6">
                         <label for="5 a 6">5" a 6"</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="Más de 6" id="Más de 6">
+                        <input type="radio" name="Más de 6" id="Más de 6">
                         <label for="Más de 6">Más de 6"</label>
                     </div>
                 </div>
                 <p>PRECIO</p>
                 <div class="precio filtros">
                     <div>
-                        <input type="checkbox" name="Menos de $21999" id="Menos de $21999">
+                        <input type="radio" name="Menos de $21999" id="Menos de $21999">
                         <label for="Menos de $21999">Menos de $21999</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="$21999 a $40202" id="$21999 a $40202">
+                        <input type="radio" name="$21999 a $40202" id="$21999 a $40202">
                         <label for="$21999 a $40202">$21999 a $40202</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="$40202 o más" id="$40202 o más">
+                        <input type="radio" name="$40202 o más" id="$40202 o más">
                         <label for="$40202 o más">$40202 o más</label>
                     </div>
                 </div>
             </div>
         </section>
         <section class="articulos">
-            <div class="productos-listado">
-                <% celulares.forEach(celular => { %>
-                    <article class="">
-                        <a href="/productos/detail/<%= celular.id %>">
-                            <img src="/images/equipos/<%= celular.images[0].file %>" alt="">
-                            <p class=""><%= celular.shortName %> </p>
-                            <span>$ <%= toThousand(celular.price) %> </span>
-                        </a>
-                    </article>
-                <% }) %>
+            <div class="productos-listado" id = "contenido">
+                
+                    
+   
+                                 
                 
                 
             </div>
