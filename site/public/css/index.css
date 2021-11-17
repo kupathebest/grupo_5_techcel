@@ -3,6 +3,12 @@
 .home{
     background-color: #ebebeb;
 }
+/*body{
+    background-color: lightgrey;
+    font-family: sans-serif;
+  }*/
+  
+
 
 .home main{
     display: flex;
@@ -21,7 +27,7 @@
     border: none;
 }
 
-.home main div.banner-home img{
+.home main .container{
     display: none;
 }
 
@@ -93,17 +99,18 @@
 /** TABLET **/
 @media (min-width:425px){
    
-    .home main div.banner-home{
-        width: 100%;
+    .home main .container{
+       /* width: 100%;
         background-color: var(--Negro);
         display: flex;
-        justify-content: center;
+        justify-content: center;*/
+        display: none;
     }
 
-    .home main div.banner-home img{
+    /*.home main div.banner-home img{
         display: block;
         width: 50%;
-    }
+    }*/
 }
 
 
@@ -111,5 +118,118 @@
 
 /** DESKTOP **/
 @media (min-width:768px){
-    
+    .home main .container{
+         
+        display: block;
+    }
+   
+    .home main .container{
+    margin: 0 auto;
+    width: 100%;
+    padding: 5px;
+      }
+      
+      .home main ul, li {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+      }
+      
+     .home main ul.slider {
+        position: relative;
+        width: 100%;
+        height: 400px;
+         
+      }
+      
+      .home main  ul.slider li {
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          opacity: 0;
+          width: inherit;
+          height: inherit;
+          transition: opacity .5s;
+         
+      }
+      
+      /*.home main ul.slider li img{
+        width: 100%;
+        height: 400px;
+       
+      }
+      
+     .home main ul.slider li:first-child {
+          opacity: 1; /*Mostramos el primer <li>
+      }
+      
+      .home main ul.slider li:target {
+          opacity: 1; /*Mostramos el <li> del enlace que pulsemos
+      }
+      
+     .home main .menu{
+        text-align: center;
+        margin: 2px;
+    }
+      
+      .home main .menu li{
+        display: inline-block;
+        text-align: center;
+      }
+      
+       .home main .menu li a{
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        background-color: grey;
+        padding: 4px;
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        border-radius: 100%;
+      }
+    @keyframes cambio {
+        0% {margin-left:0;}
+        20% {margin-left:0;}
+
+        25%{margin-left:-100%;}
+        50%{margin-left:-200%;}
+
+        25%{margin-left:-200%;}
+        100%{margin-left:-200%;}
+
+       
+        
+    }*/
+    .home main .slider{
+        width: 95%;
+        margin:auto;
+        overflow: hidden;
+    }
+    .home .slider ul{
+        display: flex;
+        padding: 0;
+        width: 400%;
+        animation: cambio 20s infinite alternate linear;
+    }
+    .home .slider li{
+        width: 100%;
+        list-style: none;
+    }
+    .home .slider img{
+        width: 100%;
+    }
+    @keyframes cambio {
+        0% {margin-left:0;}
+        20%{margin-left: 0;}
+
+        25%{margin-left:-100%;}
+        45%{margin-left:-100%;}
+
+        50%{margin-left:-200%;}
+        70%{margin-left: -200%;}
+
+        75%{margin-left: -300%;}
+        100%{margin-left: -300%;}
+    }
 }
