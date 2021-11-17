@@ -57,13 +57,14 @@
     font-size: 14px;
 }
 
-.profile button{
+.profile .buttons{
     padding: 8px;
     text-align: center;
     background-color:var(--Celeste);
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin: 0 30px 10px 0;
 }
 .profile button:hover{
     background-color: var(--Gris);
@@ -89,6 +90,93 @@
     max-width: 325px;
 }
 
+.profile .container-input{
+    display: flex;
+    flex-direction: column;
+}
+
+.profile .container-input span{
+    text-align: center;
+    color: red;
+}
+
+.profile .container-icon{
+    position: absolute;
+}
+   
+
+.profile .input-error{
+    border-color: red;
+}
+
+.profile .input-success{
+    border-color: green;
+}
+
+.profile .error {
+    position: relative;
+    right: -100px;
+    bottom: 52px;
+    color: red;
+    font-size: 1.2rem;
+}
+
+.profile .success{
+    position: relative;
+    right: -100px;
+    bottom: 35px;
+    color: green;
+    font-size: 1.2rem;
+}
+
+.profile .errorPass{
+    position: relative;
+    right: -100px;
+    bottom: 69px;
+    color: red;
+    font-size: 1.2rem;
+}
+
+.profile .errorPassUno{
+    position: relative;
+    right: -100px;
+    bottom: 69px;
+    color: red;
+    font-size: 1.2rem;
+}
+
+.profile .ocultar{
+    display: none;
+}
+
+.profile .check-success{
+    color: green;
+}
+
+.profile .check-error{
+    color: red;
+}
+
+
+@media (min-width :370px){
+
+    .profile .errorPassUno{
+        bottom: 52px;
+    }
+
+}
+
+
+
+@media (min-width :404px){
+
+    .profile .errorPass{
+        bottom: 52px;
+    }
+
+}
+
+
 
 @media (min-width :425px){
     .profile main div.form form input{
@@ -98,12 +186,26 @@
     .profile h2{
         font-size: 28px;
     }
+    .profile .error {
+        right: -155px;
+    }
 
+    .profile .success {
+        right: -155px;
     }
     
+    }
+    
+
     @media (min-width :768px){
         .profile main div.form form input{
             width: 420px;
         }
-        
+        .profile .error {
+            right: -186px;
+        }
+        .profile .success {
+            right: -186px;
+        }
+
         }

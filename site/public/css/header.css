@@ -6,15 +6,51 @@ header{
     padding: 0;
 }
 
-header li{
+header div.listas{
     display:none
 }
 
 header .burger{
-    width: 20%;
+    width:15%;
+    background-color: var(--Fucsia);
+    height: 100%;
+    margin-left:16px;
+    cursor: pointer;
+}
+
+header div.menu-desplegable{
+    display: block;
+    background-color: var(--Fucsia);
+    width: 100%;
+    text-align: center;
+    opacity: 0.99;
+    transition: 0.5s top;
+    z-index: 20;
+}
+
+header  div.menu-desplegable_visible{
+    display: none;
+}
+
+header  div.menu-desplegable a{
     color: white;
-    font-size: 40px;
-    padding-left: 15px;
+}
+
+header  div.menu-desplegable li{
+    margin: 24px auto 0;
+}
+
+header  div.menu-desplegable ul.ul-drop-down{
+   padding-bottom: 18px;
+}
+
+header .burger i{
+    color: white;
+    font-size: 22px;
+}
+
+header .titulo{
+    display: none;
 }
 
 header .iconos{
@@ -33,7 +69,7 @@ header .iconos a{
 
 header .logo{
     width: 60%;
-    padding: 10px;
+    padding: 18px 10px;
     display: flex;
     justify-content: center;
 }
@@ -51,23 +87,13 @@ header .contenedor{
     display: flex;
     justify-content: center;
     align-items: center; 
-    transition: all .5s;              
-}  
-header .menu-desplegable {
-    display: flex;
-    
-    text-align: right;
-  
-
-}   
+    transition: all .5s;        
+} 
 
 
 header .div.registro a{
- 
     text-align: right;
 }
-
-
 
 /*tablet*/
 
@@ -76,8 +102,8 @@ header .div.registro a{
     color: white;
     font-size: 40px;
     width: 10%;
-    }   
-       
+    } 
+
     header .iconos{       
     width: 40%;
     font-size: 30px;
@@ -85,29 +111,45 @@ header .div.registro a{
     flex-direction: row;
     justify-content: space-evenly;
     }
+
     header .logo{
     width: 50%;
-       
     text-align: center;
     }
+
     header .buscador .searc-button{
         display: none;
     }
 
     header.contenedor{
-    width: 100%;
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    }           
-}    
-           
+        width: 100%;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+    }  
+
+    header .burger i{
+        font-size: 32px;
+    }
+}  
+
+
 /*desktop*/
 
 @media(min-width:768px){
-    header li{
+    header div.listas{
+        display:flex;
+        padding: 0 17px;
+    }
+
+    header .menu-desplegable{
+        display: none;
+    }
+
+    header .titulo{
         display: block;
     }
+    
     header .burger{
         display: none;
     }
@@ -134,7 +176,6 @@ header .div.registro a{
     header .lista1{
         color: var(--Azul);
         font-size: 30px;
-        
     }
 
     header  .lista2{
@@ -242,5 +283,9 @@ header .div.registro a{
 
     header .lista3 a{
         color: white;
+    }
+
+    header div.menu-desplegable{
+        display: none;
     }
 }

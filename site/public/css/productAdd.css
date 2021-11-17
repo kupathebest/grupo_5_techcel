@@ -12,7 +12,10 @@
     text-align: center;
     padding: 10px;
 }
-
+.productAdd form p{
+    text-align: center;
+    color: red;
+}
 .productAdd .admin-container .centrar-titulos{
     text-align: center;
 }
@@ -66,9 +69,8 @@
  }
 
  .productAdd span{
-
     color: red;
-    text-align: left;
+    text-align: center;
  }
 
  @media (min-width: 425px){

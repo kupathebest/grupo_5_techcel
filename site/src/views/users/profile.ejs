@@ -12,46 +12,68 @@
             <h2>  Perfil de usuario</h2>
         </div>
         <div class="img">
-            <img src="/images/usuarios/<%= usuario.avatar.file %>" alt="">
+            <img id= "img-preview" src="/images/usuarios/<%= usuario.avatar.file %>" alt="">
         </div>
         <div class="form">
-            <form action="/users/profile?_method=PUT" method="POST"enctype="multipart/form-data">
-                <div class="name">
+            <form action="/users/profile?_method=PUT" method="POST"enctype="multipart/form-data" id="form-profile">
+                <span class="rojo" id="error-empty"></span>
+                <div class="container-input">
                     <label for="name"></label>
                     <input type="text" placeholder="Ingresa tu nombre" name="name" id="name" value="<%= usuario.name %>">
                     <span><%= locals.errores && errores.name ? errores.name.msg : null %> </span>
-
+                    <span class ="rojo" id="name-error"></span>
                 </div>
-                <div class="name">
+                <div class="container-icons">
+                    <i class="fas fa-check success ocultar " id="icono-success-name"></i>
+                    <i class="fas fa-exclamation-circle error ocultar" id="icono-error-name"></i>
+                </div>
+                <div class="container-input">
                     <label for="lastName"></label>
                     <input type="text" placeholder="Ingresa tu apellido" name="lastName" id="lastName" value="<%= usuario.lastName  %>">
                     <span><%= locals.errores && errores.lastName ? errores.lastName.msg : null %> </span>
-
+                    <span class ="rojo" id="lastName-error"></span>
                 </div>
-
-                <div class="email">
+                <div class="container-icons">
+                    <i class="fas fa-check success ocultar" id="icono-success-lastName"></i>
+                    <i class="fas fa-exclamation-circle error ocultar " id="icono-error-lastName"></i>
+                </div>
+                <div class="container-input">
                     <label for="email"></label>
                     <input type="email" placeholder="Ingresa tu Email" name="email" readonly id="email" value="<%= usuario.email  %>">
-                    <span><%= locals.errores && errores.email ? errores.email.msg : null %> </span>
                 </div>
-                <div class="pass0">
-                    <label for="password0"></label>
-                    <input type="password" placeholder="Ingresa tu contraseña" name="password0" id="password0">
-                    <span><%= locals.errores && errores.password0 ? errores.password0.msg : null %> </span>
+                <div class="container-input">
+                    <label for="password"></label>
+                    <input type="password" placeholder="Ingresa tu contraseña" name="password" id="password">
+                    <span><%= locals.errores && errores.password ? errores.password.msg : null %> </span>
+                    <span class ="rojo" id="password-error"></span>
+                    <div class="container-icons">
+                        <i class="fas fa-check success ocultar" id="icono-success-password"></i>
+                        <i class="fas fa-exclamation-circle error errorPass ocultar" id="icono-error-password"></i>
+                    </div>
                 </div>
                 <div class = "check">
                     <input class = "change" type="checkbox" name="change" id="change">
                     <label for="change">¿Deseas cambiar tu contraseña? CLICK AQUI</label>
                     <div class="newPass">
-                        <div class="pass1">
+                        <div class="pass1 container-input">
                             <label for="password1"></label>
                             <input  type="password" placeholder="Nueva contraseña " name="password1" id="password1">
                             <span><%= locals.errores && errores.password1 ? errores.password1.msg : null %> </span>
+                            <span class ="rojo" id="password1-error"></span>
                         </div>
-                        <div class="pass2">
+                        <div class="container-icons">
+                            <i class="fas fa-check success ocultar" id="icono-success-password1"></i>
+                            <i class="fas fa-exclamation-circle error errorPassUno ocultar" id="icono-error-password1"></i>
+                        </div>
+                        <div class="pass2 container-input">
                             <label for="password2"></label>
                             <input type="password" placeholder="Confirmar contraseña" name="password2" id="password2">
                             <span><%= locals.errores && errores.password2 ? errores.password2.msg : null %> </span>
+                            <span class ="rojo" id="password2-error"></span>
+                        </div>
+                        <div class="container-icons">
+                            <i class="fas fa-check success ocultar" id="icono-success-password2"></i>
+                            <i class="fas fa-exclamation-circle error ocultar" id="icono-error-password2"></i>
                         </div>
                     </div>
                 </div>
@@ -59,16 +81,21 @@
                 
                 <div class="avatar">
                     <label for="avatar">Subir imagen de perfil</label> 
-                    <input type="file" id="avatar" name="avatar">
+                    <input type="file" id="avatar" name="avatar" style="display: none;">
                     <span><%= locals.errores && errores.avatar ? errores.avatar.msg : null %> </span>
                 </div>
-                <button type="submit">Guardar cambios</button>
+                <div >
+                    <button class="buttons" type="submit">Guardar cambios</button>
+                    <a href="/"><button class="buttons" type="button">Cancelar</button></a>
+                </div>
+                
             </form>
         </div>
 
     </main>
 
     <%-include('../partials/footer')  %> 
+    <script src="/javascripts/profile.js"></script>
     
 </body>
 

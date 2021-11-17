@@ -19,13 +19,13 @@ users.forEach(user => {
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     
-      await queryInterface.bulkInsert("users",usuario,{});
+      await queryInterface.bulkInsert("Users",usuario,{});
 
   },
 
   down: async (queryInterface, Sequelize) => {
     
-     await queryInterface.bulkInsert("users", null,{});
+     await queryInterface.bulkInsert("Users", null,{});
 
   }
 };

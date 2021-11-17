@@ -1,0 +1,17 @@
+.adminTable main{
+    max-width: 1124px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.adminTable td {
+    align-items: center;
+}
+
+.adminTable main table tbody a{
+    margin-right: 15px;
+}
+
+.adminTable .ocultar{
+    display: none;
+}

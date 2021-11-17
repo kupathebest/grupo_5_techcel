@@ -29,11 +29,12 @@
 
 .register main input{
     padding: 5px;
-    margin-top: 10px;
+    margin: 10px auto 0;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
     width: 236px;
+
 }
 
 .register main .terms{
@@ -91,11 +92,96 @@
 .register main a{
     color: var(--Azul);
 }
-  
+
+.register .container-input{
+    display: flex;
+    flex-direction: column;
+}
+
+.register .container-input span{
+    text-align: center;
+    margin:0 auto;
+    color: red;
+    padding: 2px;
+    font-size: 13px;
+}
+
+.register .container-icon{
+    position: absolute;
+}
+   
+
+.register .input-error{
+    border-color: red;
+}
+
+.register .input-success{
+    border-color: green;
+}
+
+.register .error {
+    position: relative;
+    right: -208px;
+    bottom: 45px;
+    color: red;
+    font-size: 1.2rem;
+}
+
+.register .success{
+    position: relative;
+    right: -208px;
+    bottom: 30px;
+    color: green;
+    font-size: 1.2rem;
+}
+
+.register .ocultar{
+    display: none;
+}
+
+.register .errorPass{
+    position: relative;
+    right: -235px;
+    bottom: 60px;
+    color: red;
+    font-size: 1.2rem;
+}
+
+.register .check-success{
+    color: green;
+}
+
+.register .check-error{
+    color: red;
+}
+
+
+@media (min-width :331px){
+
+.register .errorPass{
+    right: -240px;
+    bottom: 45px;
+    }
+
+}
+
 
 @media (min-width :425px){
 .register main input{
     width: 350px;
+}
+.register .error {
+    right: -322px;
+    bottom: 47px;
+}
+
+.register .success {
+    right: -322px;
+
+}
+
+.register .container-input span{
+     font-size: 15px;
 }
 
 }
@@ -103,6 +189,19 @@
 @media (min-width :768px){
     .register main input{
         width: 420px;
+        font-size: 17px;
+    }
+    .register .error {
+        right: -382px;
+        bottom: 50px;
     }
     
+    .register .success {
+        right: -382px;
     }
+
+    .register .container-input span{
+        font-size: 17px;
+    }
+    
+}

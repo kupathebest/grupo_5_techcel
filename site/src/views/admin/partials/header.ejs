@@ -21,8 +21,10 @@
         </div>
     </div>
     <div class="contenedor">
-        <div class="burger">
+        <div class="toggle burger">
+
             <i class="fas fa-bars"></i>
+
         </div>
 
         <div class="logo">
@@ -30,21 +32,39 @@
         </div>
 
         <div class="buscador">
-            <form action="/admin/search" method="GET" id= "search">
-                <input type="text" class="searc-button" placeholder="Buscar" name="keywords" href="" id="input-search">
-                <button type="submit"><i  class="fas fa-search"></i></button>
+            <form action="/admin/search" method="GET">
+                <input id="search" type="text" class="searc-button" placeholder="Buscar" name="keywords" href="">
+                <button type="submit"><i class="fas fa-search"></i></button>
             </form>
         </div>
+        
+    </div>
+    <div class="menu-desplegable menu-desplegable_visible">
+        <ul class="ul-drop-down">
+            <li><a href="/">Volver al home</a></li>
+            <li><a href="/admin">Volver a administrador</a></li>
+            <li><a href="/admin/products">Lista de productos</a></li>
+            <li><a href="/admin/products/add">Agregar producto</a></li>
+            <% if (locals.userLogin) { %>
+                
+                <li><a href="/users/profile">
+                        <%=locals.userLogin.name %>
+                    </a></li>
+                <li><a href="/users/logout" class="border">Cerrar sesión</a></li>
+
+                <% } %>
+        </ul>
     </div>
     <div>
         <nav class="titulo">
 
             <ul class="lista3 admin">
-                <li><a href="/">Volver al home</a></li>
-                <li><a href="/admin">Lista de productos</a></li>
-                <li><a href="/admin/add">Agregar producto</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/admin">Administrador</a></li>
+                <li><a href="/admin/products">Productos</a></li>
+                <li><a href="/admin/products/add">Agregar producto</a></li>
             </ul>
         </nav>
     </div>
-
+    <script src="/javascripts/dropDown.js"></script>
 </header>
