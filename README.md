@@ -18,7 +18,7 @@ Somos un grupo de estudiantes de Fundación Formar en Digital-House, actualmente
    Integrado por:
 - :man:**Juan Pablo Silva**: 31 años, estudiante de programación, admistrativo, como pasatiempo favorito le gusta tocar la guitarra.
 - :man:**Gaston Lafuente**: 25 años, estudiante de programación, empleado de comercio, como pasatiempo favorito le gusta ir al cine.
-- :woman:**Ana Rolon**: 50 años, estudiante de programación, admistrativa, instructora de yoga, como pasatiempo favorito le gusta hacer arreglos de jardineria.
+- :woman:**Ana Rolon**: 50 años, estudiante de programación, admistrativa, profesora de yoga, como pasatiempo favorito le gusta hacer arreglos de jardineria.
 - :man:**Angel Diaz**: 33 años, estudiante de programación, cocinero, como pasatiempo favorito le gusta jugar videojuegos.
 - :woman:**Melisa Diaz**: 28 años, estudiante de programación, admistrativa, como pasatiempo favorito le gusta tocar el teclado y hacer arreglos de jardineria.
 
