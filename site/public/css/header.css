@@ -218,8 +218,9 @@ header .div.registro a{
     }
 
     header .buscador .searc-button{
-        display: block;       
+        display: block;              
     }
+
    header .logo{
       width: 60%;
       text-align: center;
@@ -259,6 +260,7 @@ header .div.registro a{
             padding: 4px;
             border-radius: 0 4px 4px 0;
             border-style: none;
+            cursor: pointer
     }
     header .lista3{
         

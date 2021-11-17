@@ -1,9 +1,14 @@
+.results main{
+min-height: 500px;
+margin: 0 auto;
+}
+
 .results h2 {
     font-size: 1rem;
     display: block;
-    width: 100%;
+    width: 80%;
     text-align: center;
-    margin-top: 10px;
+    margin: 35px auto;
 }
 
 .results .mensaje {
@@ -11,6 +16,7 @@
 }
 .results .mensaje img{
     width: 60%;
+    margin: 35px auto;
 }
 @media (min-width :425px){
     .results h2 {

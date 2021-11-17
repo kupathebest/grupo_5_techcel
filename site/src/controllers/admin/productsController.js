@@ -1,21 +1,21 @@
 const fs = require('fs');
 const path = require('path');
 
-const toThousand = require('../utils/toThousand');
+const toThousand = require('../../utils/toThousand');
 
-const db = require('../database/models');
+const db = require('../../database/models');
 const { Op } = require('sequelize');
 
 const { validationResult } = require('express-validator');
 
 module.exports = {
-    index: (req, res) => {
+    products: (req, res) => {
 
         db.Product.findAll({
             include: ['category', 'images', 'colour', 'mainFeature', 'display', 'camera', 'net', 'connectivity', 'battery']
         })
             .then(celulares => {
-                return res.render('admin/index', {
+                return res.render('admin/products', {
                     celulares,
                     toThousand
                 })
@@ -380,35 +380,6 @@ module.exports = {
                     .then(() => {
                         return res.redirect('/admin')
                     })
-            })
-            .catch(error => console.log(error))
-
-    },
-    search: (req, res) => {
-        let busqueda = req.query.keywords.toLowerCase()
-        db.Product.findAll({
-            include: ['category', 'images', 'colour', 'mainFeature', 'display', 'camera', 'net', 'connectivity', 'battery'],
-            where: {
-                [Op.or]: [
-                    {
-                        shortName: {
-                            [Op.substring]: busqueda
-                        }
-                    },
-                    {
-                        longName: {
-                            [Op.substring]: busqueda
-                        }
-                    }
-                ]
-            }
-        })
-            .then(celulares => {
-                return res.render('admin/resultsAdmin', {
-                    celulares,
-                    busqueda,
-                    toThousand
-                })
             })
             .catch(error => console.log(error))
 

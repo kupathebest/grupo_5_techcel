@@ -13,9 +13,12 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
 var cartRouter = require('./routes/cart');
-var adminRouter = require('./routes/admin');
 var apisRouter = require('./routes/apis');
-
+var adminRouter = require('./routes/admin/admin');
+var productsAdminRouter = require('./routes/admin/products');
+var categoriesAdminRouter = require('./routes/admin/categories');
+var coloursAdminRouter = require('./routes/admin/colours');
+var usersAdminRouter = require('./routes/admin/users');
 
 var app = express();
 
@@ -23,7 +26,6 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-/*app.use(localsUserCheck); en kitchening lo usa, en crafty no*/
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -31,6 +33,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(methodOverride('_method'));
+
 
 app.use(session({
   secret : 'Mensaje',
@@ -47,6 +50,10 @@ app.use('/productos', productsRouter);
 app.use('/cart',cartRouter);
 app.use('/admin',adminRouter);
 app.use('/apis',apisRouter);
+app.use('/admin/products', productsAdminRouter)
+app.use('/admin/categories', categoriesAdminRouter)
+app.use('/admin/colours', coloursAdminRouter)
+app.use('/admin/users', usersAdminRouter)
 
 
 // catch 404 and forward to error handler

@@ -3,7 +3,7 @@
 
 <%- include('./partials/head',{title:"Resultado de la busqueda  "}) %> 
 
-<body class="adminIndex results">
+<body class="adminProducts results">
     
     <%- include('./partials/header') %> 
 
@@ -26,7 +26,7 @@
                 <% }) %>
                 <% } else { %>
                     <div class = "mensaje">
-                        <h2 class=""> Oops ... No hay resultados para la busqueda de "<%= busqueda %>" </h2>
+                        <h2 class=""> Oops!! ... No hay resultados para la busqueda de "<%= busqueda %>" </h2>
                         <img src="images/celular_llorando.png" alt="">
                     </div>
                     <% } %>

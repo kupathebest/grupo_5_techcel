@@ -62,7 +62,7 @@
 }
 
 .detail main .card .contenedor span{
-    font-size: 2rem;
+    font-size: 27px;
     margin-bottom: 10px;
 }
 
@@ -107,6 +107,10 @@
     margin-top: 10px;
     text-align: center;
     text-decoration: underline;
+}
+
+.detail .ver-mas{
+    display: none;
 }
 
 .detail .caracteristicas{
@@ -197,6 +201,7 @@
 
     .detail main .card .contenedor{
         width: 60%;
+        text-align: center;
     }
     
     .detail main .card .contenedor .fullname{
@@ -219,7 +224,7 @@
     }
 
     .detail main .card .contenedor span{
-        font-size: 2.5rem;
+        font-size: 30px;
     }
 
     .detail main .card .contenedor .cart-button{
@@ -271,15 +276,21 @@
 @media (min-width: 768px){
 
     .detail main{
-    padding: 40px;
+    padding: 25px;
     }
 
     .detail main .contenedor{
-        width: 60%;
+        width: 30%;
+    }
+
+    .detail main .contenedor h4{
+        width: 90%;
+        margin: 0 auto;
     }
 
     .detail main .card .contenedor .main-caracteristicas-desktop{
         display: block;
+        margin: 0 auto;
     }
 
     .detail main .card{
@@ -306,7 +317,7 @@
     .detail main .card .contenido .cart-button{
         height: 60px;
         width: 220px;
-        margin: 30px 0 0;
+        margin: 30px auto 0;
     }
 
     .detail main .card .contenido .cart-button a,.detail main .card .contenido .cart-button i {
@@ -326,6 +337,11 @@
         transform: scale(1.1);
     }
     
+    .detail main .main-caracteristicas-desktop .caracteristicas{
+        width: 100%;
+        margin: 0 auto;
+    }
+
     .detail main .main-caracteristicas-desktop .caracteristicas div {
         margin: 4px;
     }
@@ -334,7 +350,7 @@
         text-transform: capitalize;
     }
     .contenedor-img-principal{
-        width: 300px;
+        width: 280px;
         height: 400px;
         background: white;
         margin: 0 0 0 0;

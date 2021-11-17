@@ -35,15 +35,20 @@ module.exports = {
             let user = await db.User.findOne({
                 where: { email: req.body.email }
             })
-            if (bcryptjs.compareSync(req.body.password, user.password)) {
-                return res.status(200).json({ response: true })
-            } else {
+
+            if(user){
+                if (bcryptjs.compareSync(req.body.password, user.password)) {
+                    return res.status(200).json({ response: true })
+                } else {
+                    return res.status(200).json({ response: false })
+                }
+            }else{
                 return res.status(200).json({ response: false })
             }
+            
         } catch (error) {
             console.log()
             return res.status(500).json({ response: error })
-
         }
 
     }

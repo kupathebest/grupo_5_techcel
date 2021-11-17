@@ -54,9 +54,9 @@
   z-index: 2;
   font-size: 40px;
   text-decoration: none;
-  left: -23px;
+  left: -0.5px;
   border: 0;
-  top: 30%;
+  top: 38.5%;
   cursor: pointer;
   color: #666;
   opacity: 1;
@@ -79,7 +79,7 @@
   color: #a89cc8;
 }
 .glider-next,.glider-next1,.glider-next2 {
-  right: -23px;
+  right: -0.5px;
   left: auto;
 }
 .glider-next.disabled,
@@ -107,7 +107,6 @@
   padding: 0;
 }
 .glider-dot {
-  /**/
   border: 0;
   padding: 0;
   user-select: none;

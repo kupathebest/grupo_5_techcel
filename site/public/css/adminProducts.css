@@ -1,0 +1,161 @@
+.adminProducts{
+    background-color: #ebebeb;
+}
+
+.adminProducts main{
+    width: 100%;
+    max-width: 1124px;
+    padding: auto;
+    margin: 0 auto;
+}
+
+.adminProducts main .agregar a button{
+    color: var(--Negro);
+    background-color: #00c4cc;
+    border-radius: 15px;
+    display: block;
+    padding: 8px 20px;
+    border: none;
+    margin: 20px auto;
+    width: 40%;
+    text-align:center;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.adminProducts main .agregar a button:hover{
+    background-color: var(--Gris);
+}
+
+.adminProducts main section.articulos{
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+
+.adminProducts main section.articulos div.productos-listado article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.adminProducts main section.articulos div.productos-listado article img{
+    width: 100%;
+}
+
+.adminProducts main section.articulos div.productos-listado article span{
+    color: var(--Fucsia);
+}
+
+.adminProducts main section.articulos div.productos-listado{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.adminProducts main section.articulos div.productos-listado article{
+    background-color: var(--Blanco);
+    border-radius: 8px;
+    border: solid 1px var(--Gris-Fondo);
+    padding: 15px 45px;
+    margin: 18px;
+    width: 85%;
+}
+
+.adminProducts main section.articulos div.productos-listado article p{
+    text-align: center;
+    padding-top: 5px;
+}
+
+.adminProducts main section.articulos div.productos-listado article div.buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+.adminProducts main section.articulos div.productos-listado article div.buttons button{
+    background-color: var(--Celeste);
+    padding: 4px 5px;
+    margin: 0 4px;
+    border: none;
+    border-radius: 4.5px;
+    cursor: pointer;
+}
+
+.adminProducts main section.articulos div.productos-listado article div.buttons button:hover{
+    background-color: var(--Gris);
+}
+
+.adminProducts main section.articulos div.productos-listado article div.buttons form button{
+    background-color: rgb(218, 57, 57);
+    cursor: pointer;
+}
+
+.adminProducts main section.articulos div.productos-listado article div.buttons a button.editar{
+    background-color: rgb(66, 145, 66);
+    cursor: pointer;
+}
+
+.adminProducts main section.articulos div.productos-listado article div.buttons a button.editar:hover{
+    background-color: var(--Gris);
+}
+
+.adminProducts .mensaje {
+    text-align: center;
+}
+.adminProducts .mensaje img{
+    width: 60%;
+}
+
+/** TABLET **/
+@media (min-width:425px){
+      
+    .adminProducts main section.articulos div.productos-listado article{
+        width: 40%;
+        padding: 18px 30px;
+        margin: 15px;
+    }
+    .adminProducts main section.articulos div.productos-listado article img{
+        width: 80%;
+    }
+    
+    }
+    @media (min-width:768px){
+
+    .adminProducts main{
+        width: 90%;
+        flex-direction: row;
+    }
+
+    .adminProducts main .agregar a button{
+        width: 20%;
+    }
+    
+    .adminProducts main section.articulos{
+        width: 100%;
+    }
+    
+    .adminProducts main section.articulos div.productos-listado article{
+        width: 25%;
+    }
+    
+    .adminProducts main section.articulos div.productos-listado article img{
+        width: 80%;
+    }
+    
+}
+
+@media (min-width:1024px){
+    .adminProducts main section.articulos div.productos-listado article{
+        width: 20%;
+    }
+}
+
+

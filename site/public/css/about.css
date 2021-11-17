@@ -34,4 +34,8 @@
     .about main p{
         text-align: left;
     }
+
+    .about main div{
+        margin: 50px 30px;
+    }
 }

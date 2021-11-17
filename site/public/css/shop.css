@@ -17,6 +17,11 @@
     padding: 30px;
 }
 
+.shop select{
+    border-radius: 4px;
+    padding: 2px 5px;
+}
+
 .shop .form-container .titulos-form{
     text-align: center;
 }
@@ -41,7 +46,9 @@
 
 .shop .form-container .tarjeta-fechas{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    width: 40%;
+    margin: 0 auto;
 }
 
 .shop .form-container .centrar{
@@ -49,13 +56,23 @@
     margin-bottom: 10px;
 }
 
+.shop p{
+    padding: 5px;
+    margin: 5px;
+}
+
 @media (min-width: 425px){
     .shop .form-container .fondo-caja {
-        width: 80%;
+        width: 90%;
     }
 }
 
 @media (min-width: 768px) {
+
+    .shop .form-container .fondo-caja {
+        width: 85%;
+    }
+
     .shop input.form-caja {
         width: 600px;
     }

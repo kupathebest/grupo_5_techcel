@@ -33,7 +33,7 @@
 
         <div class="buscador">
             <form action="/admin/search" method="GET">
-                <input type="text" class="searc-button" placeholder="Buscar" name="keywords" href="">
+                <input id="search" type="text" class="searc-button" placeholder="Buscar" name="keywords" href="">
                 <button type="submit"><i class="fas fa-search"></i></button>
             </form>
         </div>
@@ -42,8 +42,9 @@
     <div class="menu-desplegable menu-desplegable_visible">
         <ul class="ul-drop-down">
             <li><a href="/">Volver al home</a></li>
-            <li><a href="/admin">Lista de productos</a></li>
-            <li><a href="/admin/add">Agregar producto</a></li>
+            <li><a href="/admin">Volver a administrador</a></li>
+            <li><a href="/admin/products">Lista de productos</a></li>
+            <li><a href="/admin/products/add">Agregar producto</a></li>
             <% if (locals.userLogin) { %>
                 
                 <li><a href="/users/profile">
@@ -58,9 +59,10 @@
         <nav class="titulo">
 
             <ul class="lista3 admin">
-                <li><a href="/">Volver al home</a></li>
-                <li><a href="/admin">Lista de productos</a></li>
-                <li><a href="/admin/add">Agregar producto</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/admin">Administrador</a></li>
+                <li><a href="/admin/products">Productos</a></li>
+                <li><a href="/admin/products/add">Agregar producto</a></li>
             </ul>
         </nav>
     </div>
