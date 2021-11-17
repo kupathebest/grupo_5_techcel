@@ -16,13 +16,13 @@ colores.forEach(color => {
 module.exports = {
   up: async (queryInterface, Sequelize) => {
   
-      await queryInterface.bulkInsert('colours', colours, {});
+      await queryInterface.bulkInsert('Colours', colours, {});
     
   },
 
   down: async (queryInterface, Sequelize) => {
    
-      await queryInterface.bulkDelete('colours', null, {});
+      await queryInterface.bulkDelete('Colours', null, {});
      
   }
 };
