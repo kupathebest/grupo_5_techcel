@@ -140,53 +140,52 @@ module.exports = {
 
             const { name, password, password1, lastName } = req.body;
             if (req.file) {
-                db.Avatar.update({
+                db.Avatar.create({
                     file: req.file.filename
-                },
-                    {
-                        where: {
-                            id: req.session.userLogin.avatarId
+                })
+                    .then(avatar => {
+                        if(req.session.userLogin.avatarId !== 1){
+                            if (fs.existsSync(path.join(__dirname, '../../public/images/usuarios', req.session.userLogin.avatar))) {
+                                fs.unlinkSync(path.join(__dirname, '../../public/images/usuarios', req.session.userLogin.avatar))
+                            }
+                            console.log('Imagen actualizada con exito')
                         }
-                    })
-                    .then(() => {
-                        if (fs.existsSync(path.join(__dirname, '../../public/images/usuarios', req.session.userLogin.avatar))) {
-                            fs.unlinkSync(path.join(__dirname, '../../public/images/usuarios', req.session.userLogin.avatar))
-                        }
-                        console.log('Imagen actualizada con exito')
+                        db.User.update({
+                            name: name.trim(),
+                            lastName: lastName.trim(),
+                            password: password1 ? bcryptjs.hashSync(password1, 10) : req.session.userLogin.password,
+                            avatarId: avatar.id
+                        },
+                            {
+                                where: {
+                                    id: req.session.userLogin.id
+                                }
+                            }
+                        )
+                            .then(user => {
+            
+                                db.User.findByPk(req.session.userLogin.id, {
+                                    include: ['avatar']
+                                })
+                                    .then(usuario => {
+            
+                                        req.session.userLogin.id = usuario.id
+                                        req.session.userLogin.name = usuario.name
+                                        req.session.userLogin.lastName = usuario.lastName
+                                        req.session.userLogin.avatarId = usuario.avatarId
+                                        req.session.userLogin.avatar = usuario.avatar.file
+                                        req.session.userLogin.rolId = usuario.rolId
+            
+                                        return res.redirect('/')
+                                    })
+            
+                            })
+                            .catch(error => console.log(error))
                     })
             }
 
 
-            db.User.update({
-                name: name.trim(),
-                lastName: lastName.trim(),
-                password: password1 ? bcryptjs.hashSync(password1, 10) : req.session.userLogin.password
-            },
-                {
-                    where: {
-                        id: req.session.userLogin.id
-                    }
-                }
-            )
-                .then(user => {
-
-                    db.User.findByPk(req.session.userLogin.id, {
-                        include: ['avatar']
-                    })
-                        .then(usuario => {
-
-                            req.session.userLogin.id = usuario.id
-                            req.session.userLogin.name = usuario.name
-                            req.session.userLogin.lastName = usuario.lastName
-                            req.session.userLogin.avatarId = usuario.avatarId
-                            req.session.userLogin.avatar = usuario.avatar.file
-                            req.session.userLogin.rolId = usuario.rolId
-
-                            return res.redirect('/')
-                        })
-
-                })
-                .catch(error => console.log(error))
+            
         } else {
             db.User.findByPk(req.session.userLogin.id, {
                 include: ['avatar']

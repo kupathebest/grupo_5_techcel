@@ -1,255 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <%- include('../partials/head', {title: 'PRODUCTOS'})  %>
+<%- include('../partials/head', {title: 'PRODUCTOS' }) %>
 
-<body class="productos">
-    
-    <%- include('../partials/header')  %>
+    <body class="productos">
 
-    <main>
-        <section class="seccion-boton-filtrar">
-            <div class="boton-filtrar">
-                <a href="/productos"><button type="button">FILTRAR <i class="fas fa-filter"></i></button></a>
-            </div>
-        </section>
-        <section class="filtrar">
-            
-            <p>ORDENAR POR:</p>
-            <div class="boton-ordenar">
-                <select name="ordenar-por" id="ordenar-por">
-                    <option value="" selected hidden>MÁS RELEVANTES</option>
-                    
-                   
-                    <option value="1">MENOR PRECIO</option>
-                    <option value="2">MAYOR PRECIO</option>
-                    <option value="3">MÁS RELEVANTES</option>
-                </select>
-            </div>
-            <p class="inicio-filtros">FILTRAR POR:</p>
-            <div class="forms">
-                <p>CATEGORIA</p>
-                <div class="categoria filtros">
-                 
-                    <div>
-                        <label id="novedades">
-                        <input type="radio" name="categoria" value="novedades"> Novedades 
-                    </label>
+        <%- include('../partials/header') %>
+
+            <main>
+                <section class="seccion-boton-filtrar">
+                    <div class="boton-filtrar">
+                        <a href="" id="filterButton"><button type="button">FILTRAR <i class="fas fa-filter"></i></button></a>
                     </div>
-                    
-                    <div>
-                        <label id="ofertas">
-                        <input type="radio" name="categoria" value="ofertas"> Ofertas
-                        </label>
+                </section>
+                <section class="filtrar ocultar" id="filterContent">
+
+                    <p>ORDENAR POR:</p>
+                    <div class="boton-ordenar">
+                        <select name="ordenar-por" id="ordenar-por">
+                            <option value="Id" selected hidden>Default</option>
+                            <option value="shortName">Producto</option>
+                            <option value="categoryId">Categoria</option>
+                            <option value="price">Precio</option>
+                        </select>
                     </div>
-                    
-                    <div>
-                        <label id="los mas comprados">  
-                             <input type="radio" name="categoria"value="los mas comprados"> Los Mas Comprados
-                        </label>
+                    <p class="inicio-filtros">FILTRAR POR:</p>
+                    <div class="forms">
+                        <p>CATEGORIA</p>
+                        <div class="categoria filtros">
+                            <select name="category" id="select-category">
+                                <option value="" selected>Todas las categorias</option>
+                                <% categories.forEach(category => { %>
+                                    <option value="<%= category.name %>" ><%= category.name %> </option>
+                                <% }) %>
+                            </select>
+
+                        </div>
+                        <p>MARCA</p>
+                        <div class="marca filtros">
+                            <select name="brand" id="select-brand">
+                            <option value="" selected>Todas las marcas</option>
+                                <option value="xiaomi" >xiaomi</option>
+                                <option value="samsung" >samsung</option>
+                                <option value="motorola" >motorola</option>
+                                <option value="iphone" >iphone</option>
+                                <option value="lg" >lg</option>
+                            </select>
+                            
+
+                        </div>
+                        <p>COLOR</p>
+                        <div class="color filtros">
+                            <select name="colour" id="select-colour">
+                                <option value="" selected>Todas los colores</option>
+                                <% colours.forEach(colour => { %>
+                                    <option value="<%= colour.name %>" ><%= colour.name %></option>
+                                <% }) %>
+                                </select>
+                        </div>
+                        <p>PRECIO</p>
+                        <select name="price" id="select-price">
+                            <option value="0" selected>Todas los precios</option>
+                                <option value="1">Menos de $50.000</option>
+                                <option value="2">Entre $50.000 y $100.000</option>
+                                <option value="3">Entre $100.000 y $200.000</option>
+                                <option value="4">Mas de $200.000</option>
+                            </select>
                     </div>
-               
-                </div>
-                <p>MARCA</p>
-                <div class="marca filtros">
-                    <div>
-                        <label id="motorola">
-                        <input type="radio" name="marca"> Motorola
-                        </label>
+                </section>
+                <section class="articulos">
+                    <div class="productos-listado" id="contenido">
+
                     </div>
-                    <div>
-                        <label id="samsung">
-                        <input type="radio" name="marca"> Samsung
-                    </label>
+                    <div class="boton-ver-mas">
+                        <a href=""><button type="button">VER MÁS</button></a>
                     </div>
-                    <div>
-                        <label id="xiaomi">
-                        <input type="radio" name="marca"> Xiaomi
-                        </label>
-                    </div>
-                    <div>
-                        <label id="iphone">
-                        <input type="radio" name="marca"> Iphone
-                        </label>
-                    </div>
-                    <div>
-                        <label id="lg">
-                        <input type="radio" name="marca"> Lg
-                        </label>
-                    </div>
-               
-                </div>
-                <p>COLOR</p>
-                <div class="color filtros">
-                    <div>
-                        <label id="negro">
-                        <input type="radio" name="color"> Negro
-                        </label>
-                    </div>
-                    <div>
-                        <label id="plateado">
-                        <input type="radio" name="color"> Plateado
-                        </label>
-                    </div>
-                    <div>
-                        <label id="blanco">
-                        <input type="radio" name="color"> Blanco
-                        </label>
-                    </div>
-                    <div>
-                        <label id="azul">
-                        <input type="radio" name="color"> Azul
-                        </label>
-                    </div>
-                    <div>
-                        <label id="rosa">
-                        <input type="radio" name="color"> Rosa
-                        </label>
-                    </div>
-                    <div>
-                        <label id="celeste">
-                        <input type="radio" name="color"> Celeste
-                        </label>
-                    </div>
-                    <div>
-                        <label id="purpura">
-                        <input type="radio" name="color"> Purpura
-                        </label>
-                    </div>
-                    <div>
-                        <label id="rojo">
-                        <input type="radio" name="color"> Rojo
-                        </label>
-                    </div>
-                    <div>
-                        <label id="dorado">
-                        <input type="radio" name="color"> Dorado
-                        </label>
-                    </div>
-                </div>
-                <p>CAMARA</p>
-                <div class="camara filtros">
-                    <div>
-                        <input type="radio" name="Hasta 2 MP" id="Hasta 2 MP">
-                        <label for="Hasta 2 MP">Hasta 2 MP</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="2 MP a 5 MP" id="2 MP a 5 MP">
-                        <label for="2 MP a 5 MP">2 MP a 5 MP</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="5 MP a 10 MP" id="5 MP a 10 MP">
-                        <label for="5 MP a 10 MP">5 MP a 10 MP</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="10 MP a 15 MP" id="10 MP a 15 MP">
-                        <label for="10 MP a 15 MP">10 MP a 15 MP</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="15 MP a 20 MP" id="15 MP a 20 MP">
-                        <label for="15 MP a 20 MP">15 MP a 20 MP</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="20 MP a 25 MP" id="20 MP a 25 MP">
-                        <label for="20 MP a 25 MP">20 MP a 25 MP</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="Más de 25 MP" id="Más de 25 MP">
-                        <label for="Más de 25 MP">Más de 25 MP</label>
-                    </div>
-                </div>
-                <p>MEMORIA INTERNA</p>
-                <div class="memoria-interna filtros">
-                    <div>
-                        <input type="radio" name="Menos de 32 GB" id="Menos de 32 GB">
-                        <label for="Menos de 32 GB">Menos de 32 GB</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="32 GB a 64 GB" id="32 GB a 64 GB">
-                        <label for="32 GB a 64 GB">32 GB a 64 GB</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="64 GB a 128 GB" id="64 GB a 128 GB">
-                        <label for="64 GB a 128 GB">64 GB a 128 GB</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="128 GB o más" id="128 GB o más">
-                        <label for="128 GB o más">128 GB o más</label>
-                    </div>
-                </div>
-                <p>MEMORIA RAM</p>
-                <div class="memoria-ram filtros">
-                    <div>
-                        <input type="radio" name="Menos de 2 GB" id="Menos de 2 GB">
-                        <label for="Menos de 2 GB">Menos de 2 GB</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="2 GB a 3 GB" id="2 GB a 3 GB">
-                        <label for="2 GB a 3 GB">2 GB a 3 GB</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="3 GB a 4 GB" id="3 GB a 4 GB">
-                        <label for="3 GB a 4 GB">3 GB a 4 GB</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="4 GB o más" id="4 GB o más">
-                        <label for="4 GB o más">4 GB o más</label>
-                    </div>
-                </div>
-                <p>PANTALLA</p>
-                <div class="pantalla filtros">
-                    <div>
-                        <input type="radio" name="5 o menos" id="5 o menos">
-                        <label for="5 o menos">5" o menos</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="5 a 6" id="5 a 6">
-                        <label for="5 a 6">5" a 6"</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="Más de 6" id="Más de 6">
-                        <label for="Más de 6">Más de 6"</label>
-                    </div>
-                </div>
-                <p>PRECIO</p>
-                <div class="precio filtros">
-                    <div>
-                        <input type="radio" name="Menos de $21999" id="Menos de $21999">
-                        <label for="Menos de $21999">Menos de $21999</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="$21999 a $40202" id="$21999 a $40202">
-                        <label for="$21999 a $40202">$21999 a $40202</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="$40202 o más" id="$40202 o más">
-                        <label for="$40202 o más">$40202 o más</label>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="articulos">
-            <div class="productos-listado" id = "contenido">
-                
-                    
-   
-                                 
-                
-                
-            </div>
-            <div class="boton-ver-mas">
-                <a href=""><button type="button">VER MÁS</button></a>
-            </div>
-        </section>
+                </section>
 
 
-    </main>
+            </main>
 
-    <%- include('../partials/footer')  %> 
+            <%- include('../partials/footer') %>
 
-    <script src="/javascripts/productos.js"></script>
+                <script src="/javascripts/productos.js"></script>
 
 
-</body>
+    </body>
 
 </html>

@@ -9,230 +9,999 @@ const throwError = (res, error) => {
 const getUrl = req => `${req.protocol}://${req.get('host')}${req.originalUrl}`
 
 module.exports = {
-    getFilterColour : async (req,res) => {
-        console.log(req.query)
-        let result;
+    getProducts: async (req, res) => {
+        let products;
         try {
-            if(+req.query.filter !==0){
-                result = await db.Product.findAll({
-
-                    include:[{
-
-                        association : "colour",
-                        where : {
-                            name: req.query.filter
-                        }
-                    },
-                    {
-                        association : "images",
-                    }
-
-                    ],
-
-                
-                    attributes : [
-    
-                        "id","shortName", "brand", "price"
-    
-                    ],
-    
-                   
-                })
-            }else{
-
-                result = await db.Product.findAll({
-                    
-                        attributes : [
-    
-                        "id","shortName", "brand", "price"
-    
-                    ],
-    
-                    include :["category", "colour","images"]
+            if (req.query.brand && req.query.category && req.query.colour && +req.query.price !==0) {
+                switch (+req.query.price) {
+                    case 1:
+                        products = await db.Product.findAll({
+                            where: {
+                                brand: req.query.brand,
+                                price: {
+                                    [Op.lt]: 50000
+                                },
+                            },
+                            
+                            include: [
+                                {
+                                association: "category",
+                                where: {
+                                    name: req.query.category
+                                }
+                            },
+                            {
+                                association: "colour",
+                                where: {
+                                    name: req.query.colour
+                                }
+                            },
+                            {
+                                association: "images"
+                            }],
+                            
+                        })
+                        break;
+                        case 2:
+                            products = await db.Product.findAll({
+                                where: {
+                                    brand: req.query.brand,
+                                    price: {
+                                        [Op.between]: [50000, 100000]
+                                    },
+                                },
+                                
+                                include: [
+                                    {
+                                    association: "category",
+                                    where: {
+                                        name: req.query.category
+                                    }
+                                },
+                                {
+                                    association: "colour",
+                                    where: {
+                                        name: req.query.colour
+                                    }
+                                },
+                                {
+                                    association: "images"
+                                }],
+                                order : req.query.order
+                            })
+                            break;
+                            case 3:
+                                products = await db.Product.findAll({
+                                    where: {
+                                        brand: req.query.brand,
+                                        price: {
+                                            [Op.between]: [100000, 200000]
+                                        },
+                                    },
+                                    
+                                    include: [
+                                        {
+                                        association: "category",
+                                        where: {
+                                            name: req.query.category
+                                        }
+                                    },
+                                    {
+                                        association: "colour",
+                                        where: {
+                                            name: req.query.colour
+                                        }
+                                    },
+                                    {
+                                        association: "images"
+                                    }],
+                                    
+                                })
+                                break;
+                            case 4:
+                                products = await db.Product.findAll({
+                                    where: {
+                                        brand: req.query.brand,
+                                        price: {
+                                            [Op.gt]: 200000
+                                        },
+                                    },
+                                    
+                                    include: [
+                                        {
+                                        association: "category",
+                                        where: {
+                                            name: req.query.category
+                                        }
+                                    },
+                                    {
+                                        association: "colour",
+                                        where: {
+                                            name: req.query.colour
+                                        }},
+                                    {
+                                        association: "images"
+                                    }],
+                                    
+                                })
+                                break;
+                    default:
+                        break;
                 }
-                )}
-
-                     
-            let products = result
-            return res.status(200).json({
-                meta: {
-                    link: getUrl(req),
-                    total: products.length
-                },
-                data: products
-            })
-
-        } catch (error) {
-            console.log(error)
-            throwError(res, error)
-
-        }
-    },
-
-        getAllProducts : async (req,res) => {
-            try {
-               products = await db.Product.findAll({
-                   include : ['images','category','colour']
-               }) 
-               return res.status(200).json({
-                meta: {
-                    link: getUrl(req),
-                    total: products.length
-                },
-                data: products
-            })
-
-
-            } catch (error) {
-                console.log(error)
-            throwError(res, error)
-                
-            }
-
-            
-        },
-        getFilterCategory : async (req,res) => {
-            console.log(req.query)
-            let result;
-            try {
-                if(+req.query.filter !==0){
-                    result = await db.Product.findAll({
-    
-                        include:[{
-    
-                            association : "category",
-                            where : {
-                                name: req.query.filter
+                      
+        }else if(req.query.brand && req.query.category && +req.query.price !==0){
+            switch (+req.query.price) {
+                case 1:
+                    products = await db.Product.findAll({
+                        where: {
+                            brand: req.query.brand,
+                            price: {
+                                [Op.lt]: 50000
+                            },
+                        },
+                        include: [
+                            {
+                            association: "category",
+                            where: {
+                                name: req.query.category
                             }
                         },
                         {
-                            association : "images",
-                        }
-    
-                        ],
-    
-                    
-                        attributes : [
-        
-                            "id","shortName", "brand", "price"
-        
-                        ],
-        
-                       
-                    })
-                }else{
-    
-                    result = await db.Product.findAll({
+                            association: "colour",
+                        },
+                        {
+                            association: "images"
+                        }],
                         
-                            attributes : [
-        
-                            "id","shortName", "brand", "price"
-        
-                        ],
-        
-                        include :["category", "colour","images"]
-                    }
-                    )}
-    
-                         
-                let products = result
-                return res.status(200).json({
-                    meta: {
-                        link: getUrl(req),
-                        total: products.length
-                    },
-                    data: products
-                })
-    
-            } catch (error) {
-                console.log(error)
-                throwError(res, error)
-    
-            }
-},
-getFilterBrand : async (req,res) => {
-    console.log(req.query)
-    let result;
-    try {
-        if(+req.query.filter !==0){
-            result = await db.Product.findAll({
-
-                             
-                    where : {
-                        brand: req.query.filter
-                    },
-                
-                
-                    include :["category", "colour","images"],
-                
-
-                
+                    })
+                    break;
+                    case 2:
+                        products = await db.Product.findAll({
+                            where: {
+                                brand: req.query.brand,
+                                price: {
+                                    [Op.between]: [50000, 100000]
+                                },
+                            },
+                            
+                            include: [
+                                {
+                                association: "category",
+                                where: {
+                                    name: req.query.category
+                                }
+                            },
+                            {
+                                association: "colour",
+                            },
+                            {
+                                association: "images"
+                            }],
+                            
+                        })
+                        break;
+                        case 3:
+                            products = await db.Product.findAll({
+                                where: {
+                                    brand: req.query.brand,
+                                    price: {
+                                        [Op.between]: [100000, 200000]
+                                    },
+                                },
+                                
+                                include: [
+                                    {
+                                    association: "category",
+                                    where: {
+                                        name: req.query.category
+                                    }
+                                },
+                                {
+                                    association: "colour",
+                                },
+                                {
+                                    association: "images"
+                                }],
+                                
+                            })
+                            break;
+                        case 4:
+                            products = await db.Product.findAll({
+                                where: {
+                                    brand: req.query.brand,
+                                    price: {
+                                        [Op.gt]: 200000
+                                    },
+                                },
+                               
+                                include: [
+                                    {
+                                    association: "category",
+                                    where: {
+                                        name: req.query.category
+                                    }
+                                },
+                                {
+                                    association: "colour",
+                                },
+                                {
+                                    association: "images"
+                                }],
+                                
             
-                attributes : [
-
-                    "id","shortName", "brand", "price"
-
-                ],
-
-               
-            })
-        }else{
-
-            result = await db.Product.findAll({
-                
-                    attributes : [
-
-                    "id","shortName", "brand", "price"
-
-                ],
-
-                include :["category", "colour","images"]
+                            })
+                            break;
+                default:
+                    break;
             }
-            )}
-
-                 
-        let products = result
-        return res.status(200).json({
-            meta: {
-                link: getUrl(req),
-                total: products.length
-            },
-            data: products
-        })
-
-    } catch (error) {
-        console.log(error)
-        throwError(res, error)
-
+        }else if(req.query.brand && req.query.colour && +req.query.price !==0){
+            switch (+req.query.price) {
+                case 1:
+                    products = await db.Product.findAll({
+                        where: {
+                            brand: req.query.brand,
+                            price: {
+                                [Op.lt]: 50000
+                            },
+                        },
+                        
+                        include: [
+                            {
+                            association: "category",
+                        },
+                        {
+                            association: "colour",
+                            where: {
+                                name: req.query.colour
+                            }
+                        },
+                        {
+                            association: "images"
+                        }],
+                        
+                    })
+                    break;
+                    case 2:
+                        products = await db.Product.findAll({
+                            where: {
+                                brand: req.query.brand,
+                                price: {
+                                    [Op.between]: [50000, 100000]
+                                },
+                            },
+                            
+                            include: [
+                                {
+                                association: "category",
+                            },
+                            {
+                                association: "colour",
+                                where: {
+                                    name: req.query.colour
+                                }
+                            },
+                            {
+                                association: "images"
+                            }],
+                            
+                        })
+                        break;
+                        case 3:
+                            products = await db.Product.findAll({
+                                where: {
+                                    brand: req.query.brand,
+                                    price: {
+                                        [Op.between]: [100000, 200000]
+                                    },
+                                },
+                               
+                                include: [
+                                    {
+                                    association: "category",
+                                },
+                                {
+                                    association: "colour",
+                                    where: {
+                                        name: req.query.colour
+                                    }
+                                },
+                                {
+                                    association: "images"
+                                }],
+                                
+                            })
+                            break;
+                        case 4:
+                            products = await db.Product.findAll({
+                                where: {
+                                    brand: req.query.brand,
+                                    price: {
+                                        [Op.gt]: 200000
+                                    },
+                                },
+                                
+                                include: [
+                                    {
+                                    association: "category",
+                                },
+                                {
+                                    association: "colour",
+                                    where: {
+                                        name: req.query.colour
+                                    }},
+                                {
+                                    association: "images"
+                                }],
+                                
+                            })
+                            break;
+                default:
+                    break;
+            }
+        }else if(req.query.category && req.query.colour && +req.query.price !==0){
+            switch (+req.query.price) {
+                case 1:
+                    products = await db.Product.findAll({
+                        where: {
+                            price: {
+                                [Op.lt]: 50000
+                            },
+                        },
+                        
+                        include: [
+                            {
+                            association: "category",
+                            where: {
+                                name: req.query.category
+                            }
+                        },
+                        {
+                            association: "colour",
+                            where: {
+                                name: req.query.colour
+                            }
+                        },
+                        {
+                            association: "images"
+                        }],
+                        
+                    })
+                    break;
+                    case 2:
+                        products = await db.Product.findAll({
+                            where: {
+                                price: {
+                                    [Op.between]: [50000, 100000]
+                                },
+                            },
+                            
+                            include: [
+                                {
+                                association: "category",
+                                where: {
+                                    name: req.query.category
+                                }
+                            },
+                            {
+                                association: "colour",
+                                where: {
+                                    name: req.query.colour
+                                }
+                            },
+                            {
+                                association: "images"
+                            }],
+                            
+                        })
+                        break;
+                        case 3:
+                            products = await db.Product.findAll({
+                                where: {
+                                    price: {
+                                        [Op.between]: [100000, 200000]
+                                    },
+                                },
+                                
+                                include: [
+                                    {
+                                    association: "category",
+                                    where: {
+                                        name: req.query.category
+                                    }
+                                },
+                                {
+                                    association: "colour",
+                                    where: {
+                                        name: req.query.colour
+                                    }
+                                },
+                                {
+                                    association: "images"
+                                }],
+                                
+                            })
+                            break;
+                        case 4:
+                            products = await db.Product.findAll({
+                                where: {
+                                    price: {
+                                        [Op.gt]: 200000
+                                    },
+                                },
+                                
+                                include: [
+                                    {
+                                    association: "category",
+                                    where: {
+                                        name: req.query.category
+                                    }
+                                },
+                                {
+                                    association: "colour",
+                                    where: {
+                                        name: req.query.colour
+                                    }},
+                                {
+                                    association: "images"
+                                }],
+                                
+                            })
+                            break;
+                default:
+                    break;
+            }
+        }else if(req.query.brand && req.query.category && req.query.colour){
+            products = await db.Product.findAll({
+                where: {
+                    brand: req.query.brand,
+                },
+                
+                include: [
+                    {
+                    association: "category",
+                    where: {
+                        name: req.query.category
+                    }
+                },
+                {
+                    association: "colour",
+                    where: {
+                        name: req.query.colour
+                    }
+                },
+                {
+                    association: "images"
+                }],
+                
+            })
+        }else if(req.query.brand && req.query.category){
+            products = await db.Product.findAll({
+                where: {
+                    brand: req.query.brand,
+                },
+                
+                include: [
+                    {
+                    association: "category",
+                    where: {
+                        name: req.query.category
+                    }
+                },
+                {
+                    association: "colour",
+                },
+                {
+                    association: "images"
+                }],
+                
+            })
+        }else if(req.query.brand && req.query.colour){
+            products = await db.Product.findAll({
+                where: {
+                    brand: req.query.brand,
+                },
+                
+                include: [
+                    {
+                    association: "category",
+                },
+                {
+                    association: "colour",
+                    where: {
+                        name: req.query.colour
+                    }
+                },
+                {
+                    association: "images"
+                }],
+                
+            })
+        }else if(req.query.brand && +req.query.price !==0){
+            switch (+req.query.price) {
+                case 1:
+                    products = await db.Product.findAll({
+                        where: {
+                            brand: req.query.brand,
+                            price: {
+                                [Op.lt]: 50000
+                            },
+                        },
+                        
+                        include: [
+                            {
+                            association: "category",
+                        },
+                        {
+                            association: "colour",
+                        },
+                        {
+                            association: "images"
+                        }],
+                        
+                    })
+                    break;
+                    case 2:
+                        products = await db.Product.findAll({
+                            where: {
+                                brand: req.query.brand,
+                                price: {
+                                    [Op.between]: [50000, 100000]
+                                },
+                            },
+                            
+                            include: [
+                                {
+                                association: "category",
+                            },
+                            {
+                                association: "colour",
+                            },
+                            {
+                                association: "images"
+                            }],
+                            
+                        })
+                        break;
+                        case 3:
+                            products = await db.Product.findAll({
+                                where: {
+                                    brand: req.query.brand,
+                                    price: {
+                                        [Op.between]: [100000, 200000]
+                                    },
+                                },
+                                
+                                include: [
+                                    {
+                                    association: "category"
+                                },
+                                {
+                                    association: "colour",
+                                    where: {
+                                        name: req.query.colour
+                                    }
+                                },
+                                {
+                                    association: "images"
+                                }],
+                                
+                            })
+                            break;
+                        case 4:
+                            products = await db.Product.findAll({
+                                where: {
+                                    brand: req.query.brand,
+                                    price: {
+                                        [Op.gt]: 200000
+                                    },
+                                },
+                                
+                                include: [
+                                    {
+                                    association: "category"
+                                },
+                                {
+                                    association: "colour",
+                                    where: {
+                                        name: req.query.colour
+                                    }},
+                                {
+                                    association: "images"
+                                }],
+                                            
+                            })
+                            break;
+                default:
+                    break;
+            }
+        }else if(req.query.category && req.query.colour){
+            products = await db.Product.findAll({
+                
+                include: [
+                    {
+                    association: "category",
+                    where: {
+                        name: req.query.category
+                    }
+                },
+                {
+                    association: "colour",
+                    where: {
+                        name: req.query.colour
+                    }
+                },
+                {
+                    association: "images"
+                }],
+                
+            })
+        }else if(req.query.category && +req.query.price !==0){
+            switch (+req.query.price) {
+                case 1:
+                    products = await db.Product.findAll({
+                        where: {
+                            price: {
+                                [Op.lt]: 50000
+                            },
+                        },
+                        
+                        include: [
+                            {
+                            association: "category",
+                            where: {
+                                name: req.query.category
+                            }
+                        },
+                        {
+                            association: "colour"
+                        },
+                        {
+                            association: "images"
+                        }],
+                        
+                    })
+                    break;
+                    case 2:
+                        products = await db.Product.findAll({
+                            where: {
+                                price: {
+                                    [Op.between]: [50000, 100000]
+                                },
+                            },
+                            
+                            include: [
+                                {
+                                association: "category",
+                                where: {
+                                    name: req.query.category
+                                }
+                            },
+                            {
+                                association: "colour"
+                            },
+                            {
+                                association: "images"
+                            }],
+                            
+                        })
+                        break;
+                        case 3:
+                            products = await db.Product.findAll({
+                                where: {
+                                    price: {
+                                        [Op.between]: [100000, 200000]
+                                    },
+                                },
+                                
+                                include: [
+                                    {
+                                    association: "category",
+                                    where: {
+                                        name: req.query.category
+                                    }
+                                },
+                                {
+                                    association: "colour",
+                                },
+                                {
+                                    association: "images"
+                                }],
+                                
+                            })
+                            break;
+                        case 4:
+                            products = await db.Product.findAll({
+                                where: {
+                                    price: {
+                                        [Op.gt]: 200000
+                                    },
+                                },
+                                
+                                include: [
+                                    {
+                                    association: "category",
+                                    where: {
+                                        name: req.query.category
+                                    }
+                                },
+                                {
+                                    association: "colour",
+                                },
+                                {
+                                    association: "images"
+                                }],
+                                
+            
+                            })
+                            break;
+                default:
+                    break;
+            }
+        }else if(req.query.colour && +req.query.price !==0){
+            switch (+req.query.price) {
+                case 1:
+                    products = await db.Product.findAll({
+                        where: {
+                            price: {
+                                [Op.lt]: 50000
+                            },
+                        },
+                        
+                        include: [
+                            {
+                            association: "category",
+                        },
+                        {
+                            association: "colour",
+                            where: {
+                                name: req.query.colour
+                            }
+                        },
+                        {
+                            association: "images"
+                        }],
+                        
+                    })
+                    break;
+                    case 2:
+                        products = await db.Product.findAll({
+                            where: {
+                                price: {
+                                    [Op.between]: [50000, 100000]
+                                },
+                            },
+                            
+                            include: [
+                                {
+                                association: "category",
+                            },
+                            {
+                                association: "colour",
+                                where: {
+                                    name: req.query.colour
+                                }
+                            },
+                            {
+                                association: "images"
+                            }],
+                            
+                        })
+                        break;
+                        case 3:
+                            products = await db.Product.findAll({
+                                where: {
+                                    price: {
+                                        [Op.between]: [100000, 200000]
+                                    },
+                                },
+                                
+                                include: [
+                                    {
+                                    association: "category",
+                                },
+                                {
+                                    association: "colour",
+                                    where: {
+                                        name: req.query.colour
+                                    }
+                                },
+                                {
+                                    association: "images"
+                                }],
+                                
+                            })
+                            break;
+                        case 4:
+                            products = await db.Product.findAll({
+                                where: {
+                                    price: {
+                                        [Op.gt]: 200000
+                                    },
+                                },
+                                
+                                include: [
+                                    {
+                                    association: "category",
+                                },
+                                {
+                                    association: "colour",
+                                    where: {
+                                        name: req.query.colour
+                                    }},
+                                {
+                                    association: "images"
+                                }],
+                                
+                            })
+                            break;
+                default:
+                    break;
+            }
+        }else if(req.query.brand){
+            products = await db.Product.findAll({
+                where: {
+                    brand: req.query.brand,
+                },
+                
+                include: [
+                    {
+                    association: "category"
+                },
+                {
+                    association: "colour"
+                },
+                {
+                    association: "images"
+                }],
+                
+            })
+        }else if(req.query.category){
+            products = await db.Product.findAll({
+                
+                include: [
+                    {
+                    association: "category",
+                    where: {
+                        name: req.query.category
+                    }
+                },
+                {
+                    association: "colour"
+                },
+                {
+                    association: "images"
+                }]
+            })
+        }else if(req.query.colour){
+            products = await db.Product.findAll({
+                
+                include: [
+                    {
+                    association: "category"
+                },
+                {
+                    association: "colour",
+                    where: {
+                        name: req.query.colour
+                    }
+                },
+                {
+                    association: "images"
+                }]
+            })
+        }else if(+req.query.price !==0){
+            switch (+req.query.price) {
+                case 1:
+                    products = await db.Product.findAll({
+                        where: {
+                            price: {
+                                [Op.lt]: 50000
+                            },
+                        },
+                        
+                        include: [
+                            {
+                            association: "category"
+                        },
+                        {
+                            association: "colour"
+                        },
+                        {
+                            association: "images"
+                        }]
+                    })
+                    break;
+                    case 2:
+                        products = await db.Product.findAll({
+                            where: {
+                                price: {
+                                    [Op.between]: [50000, 100000]
+                                },
+                            },
+                            
+                            include: [
+                                {
+                                association: "category"
+                            },
+                            {
+                                association: "colour"
+                            },
+                            {
+                                association: "images"
+                            }]
+                        })
+                        break;
+                        case 3:
+                            products = await db.Product.findAll({
+                                where: {
+                                    price: {
+                                        [Op.between]: [100000, 200000]
+                                    },
+                                },
+                                
+                                include: [
+                                    {
+                                    association: "category"
+                                },
+                                {
+                                    association: "colour"
+                                },
+                                {
+                                    association: "images"
+                                }]
+                            })
+                            break;
+                        case 4:
+                            products = await db.Product.findAll({
+                                where: {
+                                    price: {
+                                        [Op.gt]: 200000
+                                    },
+                                },
+                                
+                                include: [
+                                    {
+                                    association: "category"
+                                },
+                                {
+                                    association: "colour"
+                                },
+                                {
+                                    association: "images"
+                                }]
+            
+                            })
+                            break;
+                default:
+                    break;
+            }
+        }else{
+            products = await db.Product.findAll({
+                
+                include: [
+                    {
+                    association: "category"
+                },
+                {
+                    association: "colour"
+                },
+                {
+                    association: "images"
+                }]
+            })
+        }
+            let response = {
+                status: 200,
+                meta: {
+                    total: products.length,
+                    link: `${req.protocol}://${req.get('host')}${req.originalUrl}`
+                },
+                data: products
+            }
+            return res.status(200).json(response)
+        } catch(error) {
+            return res.status(500).json({ response: error })
     }
-
-
-
-
-
-
-
-    /*
-    try {
-        let products = db.Product.findAll({
-            where : {
-                brand : req.query.filter
-            },
-            include : ["images"]
-        })
-        return res.status(200).json({
-            meta: {
-                link : getUrl(req),
-                total : products.length
-            },
-            data: products
-        })
-
-    } catch (error) {
-        console.log(error)
-        throwError(res, error)
-
-    }*/
-},
+}
 
 }
