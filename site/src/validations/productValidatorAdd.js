@@ -87,7 +87,7 @@ const productValidatorAdd = [
 		.notEmpty()
 		.withMessage('Este campo es obligatorio'),
 
-	/* body('image')
+	 body('image')
 		.custom((value, { req }) => {
 			if (req.files.length != 0) {
 				return true
@@ -95,7 +95,7 @@ const productValidatorAdd = [
 				return false
 			}
 		})
-		.withMessage('Este campo es obligatorio'), */
+		.withMessage('Este campo es obligatorio'), 
 	body('image')
 		.custom((value, { req }) => {
 			if (req.files.length === 3) {

@@ -350,30 +350,24 @@
                                 <h2 class="centrar-titulos"> Imagenes</h2>
                             </div>
                             <div class="subir-imagen centrar">
-                                <input class="centrar subir-img" type="file" id="image" name="image" multiple>
+                                 
+                                <input id="file-input" name="image" type="file" multiple>
+                                <div id="preview"></div>  
                                 <span id="error-imagen" class="errorImagen centrar error">
                                     <%= locals.errores && errores.image ? errores.image.msg : null %>
                                 </span>
                             </div>
 
-
-                        </div>
                         <p id="errores"></p>
                         <div class="centrar agregar-producto"><button type="submit">Agregar producto</button></div>
                         <!--<div class="centrar"><button type="submit" class="boton-enviar">Agregar</button></div>-->
+                        
+                       
                     </form>
                     <!---->
 
-
-
-
-
-
-
-
                 </div>
                   
-
             </main>
 
 

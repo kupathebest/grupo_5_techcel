@@ -39,7 +39,7 @@ module.exports = {
     ,
     agregar: (req, res) => {
         let errors = validationResult(req);
-
+   
         if (req.fileValidationError) {
             let image = {
                 param: 'image',
