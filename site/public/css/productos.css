@@ -14,6 +14,14 @@
     margin: 0 auto;
 }
 
+.productos .ocultar{
+    display: none;
+}
+
+.productos .mostrar{
+    display: block;
+}
+
 
 
 /*seccion filtrar*/
@@ -155,8 +163,10 @@
 /*seccion filtrar*/
 
 .productos main section.filtrar{
+    display: block;
     width: 20%;
     border-bottom: none;
+    
 }
 
 
