@@ -1,3 +1,5 @@
+const fs = require('fs');
+const path = require('path');
 const db = require('../../database/models');
 const { Op } = require('sequelize');
 const throwError = (res, error) => {
@@ -1001,6 +1003,69 @@ module.exports = {
             return res.status(200).json(response)
         } catch(error) {
             return res.status(500).json({ response: error })
+    }
+},deleteImage: async (req, res) => {
+    try {
+        let image = await db.Image.findByPk(req.params.id);
+
+        fs.existsSync(path.join(__dirname, '../../public/images/equipos' + image.file)) && fs.unlinkSync(path.join(__dirname, '../../public/images/equipos' + image.file));
+
+        await db.Image.destroy({ where: { id: req.params.id } });
+
+        let images = await db.Image.findAll({
+            where: {
+                productId: image.productId
+            }
+        })
+        let response = {
+            status: 200,
+            meta: {
+                msg: 'imagen eliminada',
+            },
+            data: images
+        }
+        return res.status(201).json(response)
+
+    } catch (error) {
+        console.log(error)
+        return res.status(error.status || 500).json({
+            status: error.status || 500,
+            msg: error.message
+        })
+    }
+},
+addImage: async (req, res) => {
+    try {
+        let files = req.files.map(image => {
+            let img = {
+                file: image.filename,
+                productId: req.params.id
+            }
+            return img
+        })
+
+        await db.Image.bulkCreate(files, { validate: true });
+
+        let images = await db.Image.findAll({
+            where: {
+                productId: req.params.id
+            }
+        })
+        let response = {
+            status: 201,
+            meta: {
+                msg: 'imagenes agregadas',
+            },
+            data: images
+        }
+        return res.status(201).json(response)
+
+    } catch (error) {
+        console.log(error);
+        return res.status(error.status || 500).json({
+            status: error.status || 500,
+            msg: error.message
+        })
     }
 }
 

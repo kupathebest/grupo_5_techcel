@@ -67,7 +67,6 @@
 .productAdd main input{
     min-width: 200px;
  }
-
  
  .productAdd main .checkbox-flex{
      display: flex;
@@ -87,7 +86,27 @@
     color: red;
     text-align: center;
  }
+.productAdd main .miniaturas{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    border-radius: 7px;
+    border: solid 1px white;
+    margin: 0 auto;
+}
+.productAdd main .miniaturas img{
+    width: 25%;
+    border-radius: 7px;
+    border: solid 1px white;
+}
 
+.productAdd main .imagen-eliminar{
+    display: block;
+    margin: 0 auto;
+}
+.productAdd main .div-mini{
+    margin: 0 auto;
+}
  @media (min-width: 425px){
     .productAdd main .imagenes{
         width: 80%;

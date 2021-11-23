@@ -327,21 +327,37 @@
 
                             </div>
 
+                          
+                            <div id="preview" class="miniaturas" >
 
-                        </div>
-                        <div class="imagenes bloque">
+                                <% mobile.images.forEach(photo=> { %>
+                                    <div id="min-imagen" class="div-mini">
+                                        <img  class="imagen-eliminar" src="/images/equipos/<%= photo.file %>">
+                                    <button class="imagen-eliminar" onclick="deleteImage('<%= photo.id%>')">Eliminar</button>
+                                    </div>
+                                    <% }) %>
+                                </div>
+                           
+                           
 
-                            <div>
-                                <h2 class="centrar-titulos"> Imagenes</h2>
+                            <div class="imagenes bloque">
+
+                                <div>
+                                    <h2 class="centrar-titulos"> Imagenes</h2>
+                                </div>
+                                <div class="subir-imagen centrar">
+                                    <div class="centrar">
+                                        <label id="agregar-imagen" for="image" <%= mobile.images.length >= 3 && 'disabled' %> ">Agregar imágenes</label>
+                                        <input class="centrar subir-img" onchange="addImage('<%=mobile.id%>',this.files)" type="file" name="image" id="image" hidden multiple>
+                                        <span id="error-imagen"></span></div>
+                                </div>
+                                <div class="centrar agregar-producto"><button type="submit">Editar producto</button></div>
+
+    
                             </div>
-                            <div class="subir-imagen centrar">
-                                <input class="centrar subir-img" type="file" id="image" name="image" multiple>
-                                <span id="error-imagen"></span>
-                            </div>
-
-                        </div>
-                        <p id="errores"></p>
-                        <div class="centrar agregar-producto"><button type="submit">Editar producto</button></div>
+                            
+                    </div>
+                        
                         <!--<div class="centrar"><button type="submit" class="boton-enviar">Agregar</button></div>-->
                     </form>
                     <!---->
@@ -359,6 +375,7 @@
 
             <%- include('../partials/footer') %>
     <script src="/javascripts/productEdit.js"></script>
+    <script src="/javascripts/formProductEdit.js"></script>
     </body>
 
 </html>
