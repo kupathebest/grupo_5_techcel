@@ -1,74 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
-<%-include('../partials/head',{title:"INICIAR SESION"})  %> 
-<body class="login">
+<%-include('../partials/head',{title:"INICIAR SESION"})%>
 
-    <%-include('../partials/header')  %> 
+    <body class="login">
 
-    <main class="">
-     <form action="" method="POST" id= "form-login">
+        <%-include('../partials/header')%>
 
-    <div class="box-inicia">
-        
-        <h3>INICIA SESION</h3>
-    </div>   
+            <main class="">
+                <form action="" method="POST" id="form-login">
 
-    <div class="box-cuenta">
+                    <div class="box-inicia">
 
-        <h3>INICIA SESION EN TU CUENTA</h3>
+                        <h3>INICIA SESION</h3>
+                    </div>
 
-    </div>
+                    <div class="box-cuenta">
 
-    <div class= "box-techcel">
-        <h3>TECHCEL</h3>
-    </div>
+                        <h3>INICIA SESION EN TU CUENTA</h3>
 
-        <div class="box-form">
-            <div class="container-input">
-                <input class="email" type="text" name="email" id="email" placeholder= "Correo electronico">
-                <span id="email-error"></span>
-                
-            </div>
-            
-    </div>
+                    </div>
+
+                    <div class="box-techcel">
+                        <h3>TECHCEL</h3>
+                    </div>
+
+                    <div class="box-form">
+                        <div class="container-input">
+                            <input class="email" type="text" name="email" id="email" placeholder="Correo electronico">
+                            <span id="email-error"></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="box-form">
+                        <div class="container-input">
+                            <input class="password" type="password" name="password" id="password"
+                                placeholder="Contraseña">
+
+                            <i class="fas fa-eye eye" id="Eye"></i>
+                            <span class="errorPass" id="password-error"></span>
+
+                        </div>
+                    </div>
+                    <div class="mensaje">
+                        <span class="">
+                            <%= locals.errores && errores.email ? errores.email.msg : null %>
+                        </span>
+                        <span id="span-error"></span>
+                    </div>
+                    <div class="recordarId">
+
+
+                        <label name="recordar" id="recordar"> <input type="checkbox" name="recordar" id="recordar">
+                            Recordar
+
+                        </label>
+                    </div>
+
+
+                    <div class="inicio-sesion">
+
+                        <button type="submit">Iniciar sesion</button>
+                        
+
+                    </div>
+
+                    <div>
+                        <div class="nueva-cuenta">
+                            <h5><a class="crear-cuenta" href="/users/register">¿No tenes cuenta en Techcel?</a></h5>
+                        </div>
     
-    <div class="box-form">
-        <div class="container-input">
-            <input class="password" type="password" name= "password" id= "password"placeholder= "Contraseña">
-            
-            <i class="fas fa-eye eye" id="Eye"></i>
-            <span class="errorPass" id="password-error"></span>
-            
-        </div> 
-    </div>
-    <div class="mensaje">
-    <span class=""><%= locals.errores && errores.email ? errores.email.msg : null %> </span>
-    <span id="span-error"></span>
-</div>
-    <div class= "recordarId">
-        
+                        <div class="nueva-cuenta">
+                            <h5><a class="crear-cuenta" href="/users/register">¡Registrate!</a></h5>
+                        </div>
+                    </div>
 
-        <label name="recordar" id="recordar" > <input type="checkbox" name="recordar" id="recordar">
-            RECORDAR ID           
-        
-        </label>
-    </div>   
-    
+                </form>
+            </main>
 
-    <div class="inicio-sesion">
-        
-         <button type="submit">Iniciar sesion</button>
-   
-         <a href="/users/register"><button type="button">Crear cuenta</button></a>
-   
-        </div>
+            <%-include('../partials/footer')%>
+                <script src="/javascripts/login.js"></script>
+                <script src="/javascripts/showHidePassword.js"></script>
 
-    </form>
-</main>
+    </body>
 
-<%-include('../partials/footer')  %> 
-<script src="/javascripts/login.js"></script>
-<script src="/javascripts/showHidePassword.js"></script>
-    
-</body>
 </html>

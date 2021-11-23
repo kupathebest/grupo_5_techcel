@@ -6,7 +6,7 @@
         <%- include('./partials/header') %>
             <main class="admin-container">
                 <div class="container">
-                    <form id="formulario-edit" action="/admin/edit/<%= mobile.id %>?_method=PUT" method="POST"
+                    <form id="formulario-edit" action="/admin/products/edit/<%= mobile.id %>?_method=PUT" method="POST"
                         enctype="multipart/form-data">
                         <div class="general bloque">
                             <div>
@@ -328,15 +328,7 @@
                             </div>
 
                           
-                            <div id="preview" class="miniaturas" >
-
-                                <% mobile.images.forEach(photo=> { %>
-                                    <div id="min-imagen" class="div-mini">
-                                        <img  class="imagen-eliminar" src="/images/equipos/<%= photo.file %>">
-                                    <button class="imagen-eliminar" onclick="deleteImage('<%= photo.id%>')">Eliminar</button>
-                                    </div>
-                                    <% }) %>
-                                </div>
+                           
                            
                            
 
@@ -348,10 +340,22 @@
                                 <div class="subir-imagen centrar">
                                     <div class="centrar">
                                         <label id="agregar-imagen" for="image" <%= mobile.images.length >= 3 && 'disabled' %> ">Agregar imágenes</label>
-                                        <input class="centrar subir-img" onchange="addImage('<%=mobile.id%>',this.files)" type="file" name="image" id="image" hidden multiple>
+
+                                        <input class="centrar subir-img" onchange="addImage('<%=mobile.id%>',this.files)" type="file" name="image" id="image" multiple>
                                         <span id="error-imagen"></span></div>
                                 </div>
-                                <div class="centrar agregar-producto"><button type="submit">Editar producto</button></div>
+
+                                <div id="preview" class="miniaturas min-edit-prod" >
+
+                                    <% mobile.images.forEach(photo=> { %>
+                                        <div id="min-imagen" class="div-mini">
+                                            <img  class="imagen-eliminar" src="/images/equipos/<%= photo.file %>">
+                                        <button class="imagen-eliminar" onclick="deleteImage('<%= photo.id%>')">Eliminar</button>
+                                        </div>
+                                        <% }) %>
+                                    </div>
+
+                                <div class="centrar boton-editar-producto agregar-producto"><button type="submit">Editar producto</button></div>
 
     
                             </div>

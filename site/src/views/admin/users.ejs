@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <%- include('../partials/head',{title:"Admin usuarios"}) %>
+    <%- include('../partials/head',{title:"Admin Usuarios"}) %>
 <body class = "adminTable">
     <%- include('./partials/header') %>
     <main>
         <div class="table-responsive">
             <table class="table table-hover">
                 <thead>
-                  <tr>
+                  <tr class="fila">
                     <th scope="col">Id</th>
                     <th scope="col">Avatar</th>
                     <th scope="col">Nombre</th>
@@ -20,7 +20,7 @@
                 </thead>
                 <tbody>
                     <% users.forEach(user => { %>
-                        <tr>
+                        <tr class="fila">
                             <th scope="row"><%= user.id %> </th>
                             <td><img src="/images/usuarios/<%= user.avatar.file %>" alt="" height="80px" width="80px"> </td>
                             <td><%= user.name %> </td>

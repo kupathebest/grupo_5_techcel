@@ -70,14 +70,16 @@
                                     <%= locals.errores && errores.colour ? errores.colour.msg : null %>
                                 </span>
                             </div>
+
                             <div class="centrar">
-                                <label for="">Edge
-                                    <div class="checkbox-flex">
-                                        <div class="divs-input"><input class="inputs" for="si" type="radio" name="edge" id="edge" value="si"><label for="si">Si</label></div>
-                                        <div class="divs-input"><input class="inputs" for="no" type="radio" name="edge" id="edge" value="no"><label for="no">No</label></div>
-                                    </div>
-                            </label>
+                                <label for="edge">EDGE</label>
+                                <input type="text" name="edge" id="edge"
+                                    value="<%= locals.old && old.edge ? old.edge : null %>">
+
                             </div>
+
+
+
                         </div>
                         <div class="principal bloque">
                             <div>
@@ -195,35 +197,18 @@
                                 </span>
                             </div>
                             <div class="centrar">
-                                <label for="">5G
-                                    <div class="checkbox-flex">
-                                        <div class="divs-input">
-                                            <input class="inputs" for="si" type="radio" name="fiveg" id="fiveg" value="si"><label for="si">Si</label>
-                                        </div>
-                                        <div class="divs-input"><input for="no" type="radio" name="fiveg" id="fiveg" value="no"><label for="no">No</label>  
-                                    </div>
-                                </div>
-                                
-                            </label>
+                                <label for="fiveg">5G</label>
+                                <input class="" type="text" name="fiveg" id="fiveg"
+                                    value="<%= locals.old && old.fiveg ? old.fiveg : null %>">
+                                <span id="fiveg-span" class="">
+                                    <%= locals.errores && errores.fiveg ? errores.fiveg.msg : null %>
+                                </span>
                             </div>
                             <div class="centrar">
-                                <label for="">GPRS
-                                <div class="checkbox-flex">
-                                    <div class="divsi-input"><input class="inputs" for="si" type="radio" name="gprs" id="gprs" value="si"><label for="si">Si</label>
-                                    </div>
-                                    <div class="divs-input">
-                                        <input class="inputs" for="no" type="radio" name="gprs" id="gprs" value="no"><label for="no">No</label>  
-                                    </div>
-                                </div>
-                            </label>
-                            </div>
-                            <div class="centrar">
-                                <label for="">Edge
-                                    <div class="checkbox-flex">
-                                        <div class="divs-input"><input class="inputs" for="si" type="radio" name="edge" id="edge" value="si"><label for="si">Si</label></div>
-                                        <div class="divs-input"><input class="inputs" for="no" type="radio" name="edge" id="edge" value="no"><label for="no">No</label></div>
-                                    </div>
-                            </label>
+                                <label for="gprs">GPRS</label>
+                                <input type="text" name="gprs" id="gprs"
+                                    value="<%= locals.old && old.gprs ? old.gprs : null %>">
+
                             </div>
                             <div class="centrar">
                                 <label for="sim">SIM</label>
@@ -242,7 +227,7 @@
                                     value="<%= locals.old && old.mainCamera ? old.mainCamera : null %>">
 
                             </div>
-                             <div class="centrar">
+                            <div class="centrar">
                                 <label for="videoCamera">Cámara Video</label>
                                 <input type="text" name="videoCamera" id="videoCamera"
                                     value="<%= locals.old && old.videoCamera ? old.videoCamera : null %>">
@@ -260,25 +245,19 @@
                             <div>
                                 <h2 class="centrar-titulos"> Bateria</h2>
                             </div>
+
                             <div class="centrar">
-                                <label for="">Carga Rápida
-                                <div class="checkbox-flex">
-                                    <div class="divs-input"><input class="inputs" for="si" type="radio" name="fastCharge" id="fastCharge" value="si"><label for="si">Si</label></div>
-                                    <div class="divs-input"><input class="inputs" for="no" type="radio" name="fastCharge" id="fastCharge" value="no"><label for="no">No</label> </div>
-                                </div>      
-                            </label>
+                                <label for="fastCharge">Carga Rápida</label>
+                                <input type="text" name="fastCharge" id="fastCharge"
+                                    value="<%= locals.old && old.fastCharge ? old.fastCharge : null %>">
+
                             </div>
                             <div class="centrar">
-                                <label for="">Carga Inalambrica
-                                <div class="checkbox-flex">
-                                    <div class="divs-input"><input for="si" type="radio" name="wirelessCharge" id="wirelessCharge" value="si"><label for="si">Si</label>
-                                    </div>
-                                    <div class="divs-input"><input for="no" type="radio" name="wirelessCharge" id="wirelessCharge" value="no"><label for="no">No</label>  
-                                    </div>
-                                </div>
-                            </label>
+                                <label for="wirelessCharge">Carga Inalambrica</label>
+                                <input type="text" name="wirelessCharge" id="wirelessCharge"
+                                    value="<%= locals.old && old.wirelessCharge ? old.wirelessCharge : null %>">
+
                             </div>
-                           
 
                         </div>
 
@@ -316,25 +295,16 @@
                                 </span>
                             </div>
                             <div class="centrar">
-                                <label for="">NFC
-                                    <div class="checkbox-flex">
-                                        <div class="divs-input"><input class="inputs" for="si" type="radio" name="nfc" id="nfc" value="si"><label for="si">Si</label>
-                                        </div>
-                                        <div class="divs-input"><input class="inputs" for="no" type="radio" name="nfc" id="nfc" value="no"><label for="no">No</label>  
-                                        </div>                                    </div>
-                            </label>
+                                <label for="nfc">NFC</label>
+                                <input type="text" name="nfc" id="nfc"
+                                    value="<%= locals.old && old.nfc ? old.nfc : null %>">
+
                             </div>
                             <div class="centrar">
-                                <label for="">Infrarrojo
-                                    <div class="checkbox-flex">
-                                        <div class="divs-input"><input class="inputs" for="si" type="radio" name="infrared" id="infrared" value="si"><label for="si">Si</label>
-                                        </div>
-                                        <div class="divs-input"><input class="inputs" for="no" type="radio" name="infrared" id="infrared" value="no"><label for="no">No</label>  
-                                        </div>
-                                    </div>
-                            </label>
+                                <label for="infrared">Infrarrojo</label>
+                                <input type="text" name="infrared" id="infrared"
+                                    value="<%= locals.old && old.infrared ? old.infrared : null %>">
                             </div>
-
 
                         </div>
                         <div class="display bloque">
@@ -402,6 +372,8 @@
 
 
             <%- include('../partials/footer') %>
+            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
             <script src="/javascripts/productAdd.js"></script>
+
         </body>
 </html>

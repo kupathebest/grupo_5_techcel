@@ -8,18 +8,14 @@
     <main>
         <div class="slider">
             <ul>
-                <li><img src="/images/banner/banner-celulares.png" alt=""></li>
-                <li><img src="/images/banner/maxresdefault.jpg" alt=""></li>
-                <li><img src="/images/banner/banner_moto_edge_5g.jpg" alt=""></li>
-                <li><img src="/images/banner/101210_1045285.png" alt=""></li>
+                <li><a href="#ofertas"><img src="/images/banner/banner-celulares.png" alt=""></a></li>
+                <li><a href="#recomendados"><img src="/images/banner/maxresdefault.jpg" alt=""></a></li>
+                <li><a href="/productos/detail/6"><img src="/images/banner/banner_moto_edge_5g.jpg" alt=""></a></li>
+                <li><a href="/productos"><img src="/images/banner/101210_1045285.png" alt=""></a></li>
+                
             </ul>
         </div>
-        <div class="next-carousel">
-            <a class="circle" href="/"><i class="fas fa-circle"></i></a>
-            <a class="circle" href="/"><i class="fas fa-circle"></i></a>
-            <a class="circle" href="/"><i class="fas fa-circle"></i></a>
-            <a class="circle" href="/"><i class="fas fa-circle"></i></a>
-        </div>
+       
         <section class="seccion-main">
             <h2>NOVEDADES</h2>
             <div class="caja-completa">
@@ -33,10 +29,13 @@
                                         <p class=""><%= celular.shortName %> </p>
                                         <span>$ <%= toThousand(celular.price) %> </span>
                                     </a>
+
+                                    <div>
+                                        <button class="lo-quiero"><h3>¡ LO QUIERO !</h3></button>
+                                    </div>
                                 </article>
-                           
-                            
                         <% }) %>
+
                     </div>
                   
                     <button aria-label="Previous" class="glider-prev">«</button>
@@ -45,7 +44,7 @@
                 </div>
             </div>
         </section>
-        <section class="seccion-main">
+        <section id="ofertas"class="seccion-main">
             <h2>OFERTAS</h2>
             <div class="caja-completa">
                 <div class="glider-contain">
@@ -57,8 +56,15 @@
                                         <p class=""><%= celular.shortName %> </p>
                                         <span>$ <%= toThousand(celular.price) %> </span>
                                     </a>
+                                    
+                                <div>
+                                    <button class="lo-quiero"><h3>¡ LO QUIERO !</h3></button>
+                                </div>
                                 </article>
+                                
+
                         <% }) %>
+
                     </div>
                   
                     <button aria-label="Previous" class="glider-prev1">«</button>
@@ -67,22 +73,29 @@
                 </div>
             </div>
         </section>
-        <section class="seccion-main">
+
+        <section id="recomendados" class="seccion-main">
             <h2>LOS MÁS COMPRADOS</h2>
             <div class="caja-completa">
                 <div class="glider-contain">
                     <div class="glider2">
                         <% losMasComprados.forEach(celular => { %>
                             
-                                <article class="card-carrousel">
+                                <div class="tarjeta-producto"><article class="card-carrousel">
+
                                     <a href="/productos/detail/<%= celular.id %>">
                                         <img src="/images/equipos/<%= celular.images[0].file %>" alt="">
                                         <p class=""><%= celular.shortName %> </p>
                                         <span>$ <%= toThousand(celular.price) %> </span>
                                     </a>
-                                </article>
-                            
+                                <div>
+                                    <button class="lo-quiero"><h3 href="/cart">¡ LO QUIERO !</h3></button>
+                                </div>
+                                </article></div>
+                               
+
                         <% }) %>
+                        
                     </div>
                   
                     <button aria-label="Previous" class="glider-prev2">«</button>
