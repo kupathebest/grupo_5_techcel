@@ -350,7 +350,7 @@
                                     <% mobile.images.forEach(photo=> { %>
                                         <div id="min-imagen" class="div-mini">
                                             <img  class="imagen-eliminar" src="/images/equipos/<%= photo.file %>">
-                                        <button class="imagen-eliminar" onclick="deleteImage('<%= photo.id%>')">Eliminar</button>
+                                        <button id="button-eliminar" class="imagen-eliminar" onclick="deleteImage('<%= photo.id%>')">Eliminar</button>
                                         </div>
                                         <% }) %>
                                     </div>

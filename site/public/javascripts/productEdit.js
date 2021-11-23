@@ -506,14 +506,14 @@ window.addEventListener('load', () => {
 
         let error = false;
 
-        if(!elementosForm[39].value){
+        /*if(!elementosForm[39].value){
             $('error-imagen').innerText = 'No hay imagenes';
             error = true;
         }else{
             $('error-imagen').innerText = null;
-                }
+                }*/
 
-        for(let i = 0; i < elementosForm.length - 2; i++){
+        for(let i = 0; i < elementosForm.length - 5; i++){
             if(!elementosForm[i].value && elementosForm[i].classList.contains('error')){
                 $('errores').innerText = 'Faltan campos para rellenar en el formulario.';
                 error = true;

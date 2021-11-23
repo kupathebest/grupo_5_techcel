@@ -1,5 +1,5 @@
 const ids = id => document.getElementById(id);
-
+const buttonEliminar = document.querySelectorAll('#button-eliminar');
 
     const showPreview = data => {
         ids('preview').innerHTML = null;
@@ -13,12 +13,12 @@ const ids = id => document.getElementById(id);
             <div class="miniaturas" id="preview">   
             <div> 
             <img class="imagen-eliminar"  src="/images/equipos/${image.file}">
-            <button class="imagen-eliminar"  onclick="deleteImage(${image.id})">Eliminar</button>
+            <button id="button-eliminar" class="imagen-eliminar"  onclick="deleteImage(${image.id})">Eliminar</button>
             </div>         
             
             </div>
             `
-        })
+        }) 
     }
 
 
@@ -52,5 +52,10 @@ const ids = id => document.getElementById(id);
         } catch (error) {
             console.log(error)
         }
+    }
+    for (let i = 0; i < buttonEliminar.length; i++) {
+        buttonEliminar[i].addEventListener("submit" , e => {
+            e.preventDefault()
+        })
     }
  
