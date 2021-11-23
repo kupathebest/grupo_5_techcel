@@ -152,6 +152,11 @@
     font-size: 18px;
 }
 
+.productos .sin-coincidencias{
+    text-align: center;
+    margin: 20px auto;
+}
+
 
 /** TABLET **/
 @media (min-width:425px){

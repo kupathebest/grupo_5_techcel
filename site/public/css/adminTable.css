@@ -2,6 +2,7 @@
     max-width: 1124px;
     margin: 0 auto;
     padding: 20px;
+    min-height: 400px;
 }
 
 .adminTable td {
