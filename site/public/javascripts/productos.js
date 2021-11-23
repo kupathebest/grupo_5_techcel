@@ -14,23 +14,26 @@ const addItem = celular => {
                             <img src="/images/equipos/${celular.images[0].file}" alt="">
                             <p class="">${celular.shortName}</p>
                             <span>$ ${celular.price}</span>
-                        </a>
-                        </article>
+                            <div>
+                            <button class="lo-quiero"><h3>¡ LO QUIERO !</h3></button>
+                            </div>
+        </a>
+    </article>
     `
     contenido.innerHTML += item;
 }
 
-const getProducts = async (price,brand,colour,category) => {
+const getProducts = async (price, brand, colour, category) => {
     let response = await fetch(window.origin + `/apis/get-products?brand=${brand}&colour=${colour}&category=${category}&price=${price}`);
     let products = await response.json()
     contenido.innerHTML = null;
     console.log(products.meta.total)
-    
-    if(products.meta.total > 0){
+
+    if (products.meta.total > 0) {
         products.data.forEach(product => {
             addItem(product)
         })
-    }else{
+    } else {
         console.log("el array esta vacio")
         contenido.innerHTML += `                    
             <div class="sin-coincidencias">
@@ -40,22 +43,22 @@ const getProducts = async (price,brand,colour,category) => {
         `
     }
 }
-getProducts(0,"","","")
+getProducts(0, "", "", "")
 
-brand.addEventListener('change', e =>{
+brand.addEventListener('change', e => {
     getProducts(price.value, e.target.value, colour.value, category.value)
 })
-price.addEventListener('change', e =>{
+price.addEventListener('change', e => {
     getProducts(e.target.value, brand.value, colour.value, category.value)
 })
-category.addEventListener('change', e =>{
+category.addEventListener('change', e => {
     getProducts(price.value, brand.value, colour.value, e.target.value)
 })
-colour.addEventListener('change', e =>{
+colour.addEventListener('change', e => {
     getProducts(price.value, brand.value, e.target.value, category.value)
 })
 
-filterButton.addEventListener('click', e =>{
+filterButton.addEventListener('click', e => {
     e.preventDefault();
     filterContent.classList.toggle('ocultar')
 })

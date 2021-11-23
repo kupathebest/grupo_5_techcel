@@ -58,7 +58,7 @@
   border: 0;
   top: 38.5%;
   cursor: pointer;
-  color: #666;
+  color: rgba(255,255,255,0.9);
   opacity: 1;
   line-height: 1;
   transition: opacity .5s cubic-bezier(.17,.67,.83,.67),
@@ -76,7 +76,7 @@
 .glider-next2:hover,
 .glider-prev2:focus,
 .glider-next2:focus {
-  color: #a89cc8;
+  color: rgba(255,255,255,0.9);
 }
 .glider-next,.glider-next1,.glider-next2 {
   right: -0.5px;
@@ -89,7 +89,7 @@
 .glider-next2.disabled,
 .glider-prev2.disabled {
   opacity: .25;
-  color: #666;
+  color: rgba(255,255,255,0.9);
   cursor: default;
 }
 .glider-slide {

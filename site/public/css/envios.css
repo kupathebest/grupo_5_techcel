@@ -67,24 +67,6 @@ background-color:var(--Gris-Fondo);
     max-width: 1124px;
 }
 
-/*.metodo-envio div.box-Envios section ul li{
-   
-   display: flex;
-   flex-wrap: wrap;
-   font-size: 11px;
-        
-
-}*/
-/* por conflicto.metodo-envio div.box-detalle.envios p{
-
-.metodo-envio div.box-form{
-    display: flex;
-    justify-content: center;
-    width: 80%;
-    margin: 0 auto;
-    padding: 8px;
-}
-}*/
 
 
 .metodo-envio .envio .box-form select{
@@ -111,10 +93,47 @@ background-color:var(--Gris-Fondo);
     font-size: 20px;
     text-align: center;
     justify-content: center;
-    margin: 5px auto;
+    margin: 30px auto 20px;
+    
+ }
 
+ .metodo-envio .text1{
+     text-align: center;
+     margin: 20px auto;
+     background-color: whitesmoke;
+     border-radius: 5px;
+     border: grey 1px solid;
+     padding: 15px;
+     width: 70%;
+ }
+
+ .metodo-envio .box-detalle{
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+     border: none;
+     border-bottom: solid 2px thistle;
+     background-color: thistle;
+     margin: 0 auto;
+     display: flex;
+     justify-content: center;
+ }
+
+ .metodo-envio .box-form{
+    display: flex;
+    margin: -2px auto -2px;
+    justify-content: center;
+    border-radius: 0 0 5px 5px;
+    border: none;
+    border-top: solid 2px thistle;
+     background-color: thistle;
 
  }
+
+.metodo-envio .listado-precio{
+    background-color: thistle;
+    border-radius: 0 0 5px 5px;
+padding: 10px
+}
   
 
  @media (min-width: 425px){

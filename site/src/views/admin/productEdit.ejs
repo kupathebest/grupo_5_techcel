@@ -341,7 +341,7 @@
                                     <div class="centrar">
                                         <label id="agregar-imagen" for="image" <%= mobile.images.length >= 3 && 'disabled' %> ">Agregar imágenes</label>
 
-                                        <input class="centrar subir-img" onchange="addImage('<%=mobile.id%>',this.files)" type="file" name="image" id="image" multiple>
+                                        <input class="centrar subir-img ocultar-input" onchange="addImage('<%=mobile.id%>',this.files)" type="file" name="image" id="image" multiple>
                                         <span id="error-imagen"></span></div>
                                 </div>
 

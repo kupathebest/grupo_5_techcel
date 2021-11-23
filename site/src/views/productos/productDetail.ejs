@@ -312,131 +312,187 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="mas">
-            <h3 id = "mas"></h3>
-            <div id = "mas-datos" class="mas-datos ver-mas">
-                <h4 class="title">REDES</h4>
-                <div class="dato">
-                    <span class="titulo">2G</span>
-                    <span class="info"><%= celular.net.twog %> </span>
                 </div>
-                <div class="dato">
-                    <span class="titulo">3G</span>
-                    <span class="info"><%= celular.net.threeg %></span>
                 </div>
-                <div class="dato">
-                    <span class="titulo">4G</span>
-                    <span class="info"><%= celular.net.fourg %></span>
+                <div class="mas">
+                    <h3 id="mas"></h3>
+                    <div id="mas-datos" class="mas-datos ver-mas">
+                        <h4 class="title">REDES</h4>
+                        <div class="dato">
+                            <span class="titulo">2G</span>
+                            <span class="info">
+                                <%= celular.net.twog %>
+                            </span>
+                        </div>
+                        <div class="dato">
+                            <span class="titulo">3G</span>
+                            <span class="info">
+                                <%= celular.net.threeg %>
+                            </span>
+                        </div>
+                        <div class="dato">
+                            <span class="titulo">4G</span>
+                            <span class="info">
+                                <%= celular.net.fourg %>
+                            </span>
+                        </div>
+                        <div class="dato">
+                            <span class="titulo">5G</span>
+                            <span class="info">
+                                <%= celular.net.fiveg %>
+                            </span>
+                        </div>
+                        <div class="dato">
+                            <span class="titulo">GPRS</span>
+                            <span class="info">
+                                <%= celular.net.gprs %>
+                            </span>
+                        </div>
+                        <div class="dato">
+                            <span class="titulo">EDGE</span>
+                            <span class="info">
+                                <%= celular.edge %>
+                            </span>
+                        </div>
+                        <div class="dato">
+                            <span class="titulo">SIM</span>
+                            <span class="info">
+                                <%= celular.net.sim %>
+                            </span>
+                        </div>
+
+
+                        <h4 class="title">DISPLAY</h4>
+                        <div class="dato">
+                            <span class="titulo">Tipo</span>
+                            <span class="info">
+                                <%= celular.display.displayType %>
+                            </span>
+                        </div>
+                        <div class="dato">
+                            <span class="titulo">Tamaño</span>
+                            <span class="info">
+                                <%= celular.display.displaySize %>
+                            </span>
+                        </div>
+                        <div class="dato">
+                            <span class="titulo">Resolución</span>
+                            <span class="info">
+                                <%= celular.display.displayResolution %>
+                            </span>
+                        </div>
+                        <div class="dato">
+                            <span class="titulo">Densidad</span>
+                            <span class="info">
+                                <%= celular.display.density %>
+                            </span>
+                        </div>
+                        <div class="dato">
+                            <span class="titulo">Protección</span>
+                            <span class="info">
+                                <%= celular.display.protection %>
+                            </span>
+                        </div>
+
+                        <h4 class="title">CÁMARA</h4>
+                        <div class="dato">
+                            <span class="titulo">Principal</span>
+                            <span class="info">
+                                <%= celular.camera.mainCamera %>
+                            </span>
+                        </div>
+                        <div class="dato">
+                            <span class="titulo">Video</span>
+                            <span class="info">
+                                <%= celular.camera.videoCamera %>
+                            </span>
+                        </div>
+                        <div class="dato">
+                            <span class="titulo">Frontal</span>
+                            <span class="info">
+                                <%= celular.camera.frontCamera %>
+                            </span>
+                        </div>
+                        <h4 class="title">CONECTIVIDAD</h4>
+                        <div class="dato">
+                            <span class="titulo">Wi-Fi</span>
+                            <span class="info">
+                                <%= celular.connectivity.wifi %>
+                            </span>
+                        </div>
+                        <div class="dato">
+                            <span class="titulo">Bluetooth</span>
+                            <span class="info">
+                                <%= celular.connectivity.bluetooth %>
+                            </span>
+                        </div>
+                        <div class="dato">
+                            <span class="titulo">GPS</span>
+                            <span class="info">
+                                <%= celular.connectivity.gps %>
+                            </span>
+                        </div>
+                        <div class="dato">
+                            <span class="titulo">USB</span>
+                            <span class="info">
+                                <%= celular.connectivity.usb %>
+                            </span>
+                        </div>
+                        <div class="dato">
+                            <span class="titulo">NFC</span>
+                            <span class="info">
+                                <%= celular.connectivity.nfc %>
+                            </span>
+                        </div>
+                        <div class="dato">
+                            <span class="titulo">Puerto infrarrojo</span>
+                            <span class="info">
+                                <%= celular.connectivity.infrared %>
+                            </span>
+                        </div>
+                        <h4 class="title">BATERIA</h4>
+
+                        <div class="dato">
+                            <span class="titulo">Carga rápida</span>
+                            <span class="info">
+                                <%= celular.battery.fastCharge %>
+                            </span>
+                        </div>
+                        <div class="dato">
+                            <span class="titulo">Carga inalámbrica</span>
+                            <span class="info">
+                                <%= celular.battery.wirelessCharge %>
+                            </span>
+                        </div>
+                    </div>
                 </div>
-                <div class="dato">
-                    <span class="titulo">5G</span>
-                    <span class="info"><%= celular.net.fiveg %></span>
-                </div>
-                <div class="dato">
-                    <span class="titulo">GPRS</span>
-                    <span class="info"><%= celular.net.gprs %></span>
-                </div>
-                <div class="dato">
-                    <span class="titulo">EDGE</span>
-                    <span class="info"><%= celular.edge %></span>
-                </div>
-                <div class="dato">
-                    <span class="titulo">SIM</span>
-                    <span class="info"><%= celular.net.sim %></span>
-                </div>
-               
-               
-                <h4 class="title">DISPLAY</h4>
-                <div class="dato">
-                    <span class="titulo">Tipo</span>
-                    <span class="info"><%= celular.display.displayType %></span>
-                </div>
-                <div class="dato">
-                    <span class="titulo">Tamaño</span>
-                    <span class="info"><%= celular.display.displaySize %></span>
-                </div>
-                <div class="dato">
-                    <span class="titulo">Resolución</span>
-                    <span class="info"><%= celular.display.displayResolution %></span>
-                </div>
-                <div class="dato">
-                    <span class="titulo">Densidad</span>
-                    <span class="info"><%= celular.display.density %></span>
-                </div>
-                <div class="dato">
-                    <span class="titulo">Protección</span>
-                    <span class="info"><%= celular.display.protection %></span>
-                </div>
-               
-                <h4 class="title">CÁMARA</h4>
-                <div class="dato">
-                    <span class="titulo">Principal</span>
-                    <span class="info">	<%= celular.camera.mainCamera %></span>
-                </div>
-                <div class="dato">
-                    <span class="titulo">Video</span>
-                    <span class="info"><%= celular.camera.videoCamera %></span>
-                </div>
-                <div class="dato">
-                    <span class="titulo">Frontal</span>
-                    <span class="info"><%= celular.camera.frontCamera %></span>
-                </div>
-                <h4 class="title">CONECTIVIDAD</h4>
-                <div class="dato">
-                    <span class="titulo">Wi-Fi</span>
-                    <span class="info"><%= celular.connectivity.wifi %></span>
-                </div>
-                <div class="dato">
-                    <span class="titulo">Bluetooth</span>
-                    <span class="info"><%= celular.connectivity.bluetooth %></span>
-                </div>
-                <div class="dato">
-                    <span class="titulo">GPS</span>
-                    <span class="info"><%= celular.connectivity.gps %></span>
-                </div>
-                <div class="dato">
-                    <span class="titulo">USB</span>
-                    <span class="info"><%= celular.connectivity.usb %></span>
-                </div>
-                <div class="dato">
-                    <span class="titulo">NFC</span>
-                    <span class="info"><%= celular.connectivity.nfc %></span>
-                </div>
-                <div class="dato">
-                    <span class="titulo">Puerto infrarrojo</span>
-                    <span class="info"><%= celular.connectivity.infrared %></span>
-                </div>
-                <h4 class="title">BATERIA</h4>
-                
-                <div class="dato">
-                    <span class="titulo">Carga rápida</span>
-                    <span class="info"><%= celular.battery.fastCharge %></span>
-                </div>
-                <div class="dato">
-                    <span class="titulo">Carga inalámbrica</span>
-                    <span class="info"><%= celular.battery.wirelessCharge
-                        %></span>
-                </div>
-            </div>
-        </div>
-        <h4>tambien te pueden interesar</h4>
-        <div class="carrousel">
-            <div class="glider-contain">
-                <div class="glider">
-                    <% celulares.forEach(item => { %>
-                        <% if (item.brand === celular.brand && item.shortName != celular.shortName) { %>
-                            <article class="card-carrousel">
-                                <a href="/productos/detail/<%= item.id %>">
-                                    <img src="/images/equipos/<%= item.images[0].file %>" alt="">
-                                    <p class=""><%= item.shortName %> </p>
-                                    <span>$ <%= toThousand(item.price) %> </span>
-                                </a>
-                            </article>
-                        <% } %>
-                        
-                    <% }) %>
+
+                <div class="caja-carrousel">
+                    <h4>tambien te pueden interesar</h4>
+                    <div class="carrousel">
+                        <div class="glider-contain">
+                            <div class="glider">
+                                <% celulares.forEach(item=> { %>
+                                    <% if (item.brand===celular.brand && item.shortName !=celular.shortName) { %>
+                                        <article class="card-carrousel">
+                                            <a href="/productos/detail/<%= item.id %>">
+                                                <img src="/images/equipos/<%= item.images[0].file %>" alt="">
+                                                <p class="">
+                                                    <%= item.shortName %>
+                                                </p>
+                                                <span>$ <%= toThousand(item.price) %> </span>
+                                                <div>
+                                                    <button class="lo-quiero"><h3 href="/cart">¡ LO QUIERO !</h3></button>
+                                                </div>
+                                            </a>
+                                            
+                                        </article>
+                                        <% } %>
+
+                                            <% }) %>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </main>
             <%- include('../partials/footer') %>

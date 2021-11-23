@@ -541,8 +541,14 @@ window.addEventListener('load', () => {
         function readAndPreview(file) {
       
           // Make sure `file.name` matches our extensions criteria
-          if (!/\.(jpe?g|png|gif)$/i.test(file.name)) {
-            return alert(file.name + " is not an image");
+          if (!/\.(jpe?g|png|webp|gif)$/i.test(file.name)) {
+           // return alert(file.name + " is not an image");//
+            return Swal.fire({
+                title:"ERROR",
+                icon:"error",
+                text:"Formato de imagen no compatible",
+                showCancelButton: false
+            });
           } // else...
           
           var reader = new FileReader();

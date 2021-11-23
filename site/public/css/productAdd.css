@@ -31,8 +31,8 @@
 }
 
 .productAdd main .subir-img{
-    align-items: center;
-    margin: 5px;
+    position: relative;
+    left: -10000px
 }
 
 .productAdd main .imagenes{
@@ -78,10 +78,12 @@
 .productAdd main .divs-input{
     width: 204px;
 }
+
 .productAdd main .mini-imagen{
     width: 20px;
     height: 20px;
-}
+} 
+
  .productAdd span{
     color: red;
     text-align: center;
@@ -89,7 +91,7 @@
 .productAdd main .miniaturas{
     display: flex;
     flex-direction: row;
-    width: 50%;
+    width: 100%;
     border-radius: 7px;
     border: solid 1px white;
     margin: 0 auto;
@@ -107,16 +109,61 @@
 .productAdd main .div-mini{
     margin: 0 auto;
 }
+
+
+.productAdd .subir-imagen #preview{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.productAdd .subir-imagen #preview img{
+    width: 25%;
+    height:100px;
+}
+
+.productAdd .subir-imagen #file-input{
+    margin: 5px auto;
+}
+
+.productAdd #agregar-imagen{
+    border: solid 1px grey;
+    padding: 5px auto;
+    font-size: 20px;
+    margin-bottom: -30px;
+}
+
+
  @media (min-width: 425px){
     .productAdd main .imagenes{
         width: 80%;
     }
- }
 
+    .productAdd .subir-imagen #preview{
+        width: 255px;
+    }
+
+    .productAdd .subir-imagen #preview img{
+        height: 120px;
+    }
+
+ }
  @media (min-width: 768px){
     .productAdd main .imagenes{
         width: 60%;
     }
 
-   
- }
+    .productAdd .subir-imagen #preview{
+        width: 100%;
+   }
+
+   .productAdd .subir-imagen #preview img{
+       width: 100px;
+       height: 200px;
+    }
+
+    .productAdd .subir-imagen #file-input{
+        width:300px;
+        text-align: center;
+    }
+}

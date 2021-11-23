@@ -121,12 +121,14 @@
     flex-wrap: wrap;
     font-size: 0.8rem;
     padding: 2px;
+    text-align: left;
 }
 
 .detail .caracteristicas p{
     display: inline;
     margin-left: 5px;
     text-transform: capitalize;
+    text-align: left;
 }
 
 .detail .caracteristicas i{
@@ -180,7 +182,7 @@
     text-align: center;
     background-color: white;
     padding: 5px 0;
-    margin: 5px 15px;
+    margin: 15px;
     border-radius: 7px;
     border: solid 1px white;
 }
@@ -192,6 +194,32 @@
 .detail .carrousel .card-carrousel span{
     color: var(--Fucsia);
 }
+
+.detail div.caja-carrousel{
+    background-color: #5B9DE1;
+    background-image: url('/images/violeta-fondo.jpg');
+    padding: 20px 10px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: 100% 200%;
+}
+
+.detail .lo-quiero{
+    padding:1.5px 5px;
+    border-radius: 8px;
+    color: white;
+    background-color: var(--Fucsia);
+    border:none;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.detail .lo-quiero h3{
+    text-decoration: none;
+    padding: 0 8px;
+    font-size: 18px;
+}
+
 
 @media (min-width: 425px) {
 
@@ -241,7 +269,8 @@
     .detail .caracteristicas{
         flex-direction: row;
         justify-content: space-between;
-        font-size: 0.8rem;
+        font-size: 0.8rem;        
+        text-align: left;
     }
 
     .detail .caracteristicas div{
@@ -339,15 +368,18 @@
     
     .detail main .main-caracteristicas-desktop .caracteristicas{
         width: 100%;
-        margin: 0 auto;
+        margin: 0 auto;        
+        text-align: left;
     }
 
     .detail main .main-caracteristicas-desktop .caracteristicas div {
         margin: 4px;
+        text-align: left;
     }
 
     .detail main .main-caracteristicas-desktop .caracteristicas div p {
         text-transform: capitalize;
+        text-align: left;
     }
     .contenedor-img-principal{
         width: 280px;
@@ -357,5 +389,26 @@
         display: flex;
         justify-content: center;
         border-radius: 5px;
+    }
+
+    .detail .carrousel .card-carrousel{        
+        transition: all .3s;
+    }
+
+     .detail .carrousel .card-carrousel:hover{
+        transform: scale(1.1);
+        padding: 15px;
+        border-radius: 10px;
+     }
+
+     .detail .lo-quiero{
+        transition: all .3s
+    }
+
+    .detail .lo-quiero:hover{
+        transform: scale(1.1);
+        background-color: rgba(192, 146, 238, 0.5);
+        color: var(--Fucsia);
+        border: solid 2px var(--Fucsia);
     }
 }
