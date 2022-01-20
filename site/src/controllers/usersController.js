@@ -182,6 +182,38 @@ module.exports = {
                             })
                             .catch(error => console.log(error))
                     })
+            }else{
+                db.User.update({
+                    name: name.trim(),
+                    lastName: lastName.trim(),
+                    password: password1 ? bcryptjs.hashSync(password1, 10) : req.session.userLogin.password,
+                    avatarId: req.session.userLogin.avatarId
+                },
+                    {
+                        where: {
+                            id: req.session.userLogin.id
+                        }
+                    }
+                )
+                .then(user => {
+            
+                    db.User.findByPk(req.session.userLogin.id, {
+                        include: ['avatar']
+                    })
+                        .then(usuario => {
+
+                            req.session.userLogin.id = usuario.id
+                            req.session.userLogin.name = usuario.name
+                            req.session.userLogin.lastName = usuario.lastName
+                            req.session.userLogin.avatarId = usuario.avatarId
+                            req.session.userLogin.avatar = usuario.avatar.file
+                            req.session.userLogin.rolId = usuario.rolId
+
+                            return res.redirect('/')
+                        })
+
+                })
+                .catch(error => console.log(error))
             }
 
 
